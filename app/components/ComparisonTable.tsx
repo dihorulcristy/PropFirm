@@ -145,9 +145,9 @@ export default function ComparisonTable() {
     const [copiedId, setCopiedId] = useState<number | null>(null);
 
     // Level 2: Configurator filters
-    const [selectedCapital, setSelectedCapital] = useState<number | 'all'>(100000);
+    const [selectedCapital, setSelectedCapital] = useState<number | 'all'>('all');
     const [selectedPlatform, setSelectedPlatform] = useState<string>('all');
-    const [selectedChallengeType, setSelectedChallengeType] = useState<string>('2-Step');
+    const [selectedChallengeType, setSelectedChallengeType] = useState<string>('all');
 
     // Level 1: Quick Pills
     const [quickFilters, setQuickFilters] = useState({
@@ -239,12 +239,120 @@ export default function ComparisonTable() {
                     <div className="h-1 w-24 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full opacity-50"></div>
                 </div>
 
-                {/* Filters Container */}
-                <div className="mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6">
+                {/* Mobile Filter Bar (Horizontal Scroll) */}
+                <div className="md:hidden w-full mb-6">
+                    <div className="flex overflow-x-auto gap-3 pb-4 px-4 -mx-4 hide-scrollbar snap-x items-center">
+
+                        {/* Capital Filter */}
+                        <div className="snap-start flex-shrink-0">
+                            <div className="relative">
+                                <select
+                                    value={selectedCapital}
+                                    onChange={(e) => setSelectedCapital(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
+                                    className={clsx(
+                                        "appearance-none text-sm py-2.5 pl-4 pr-10 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none focus:ring-2 focus:ring-emerald-500/20",
+                                        selectedCapital !== 'all'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    <option value="all" className="bg-slate-900 text-slate-300">💰 All Sizes</option>
+                                    <option value="10000" className="bg-slate-900 text-slate-300">$10k</option>
+                                    <option value="25000" className="bg-slate-900 text-slate-300">$25k</option>
+                                    <option value="50000" className="bg-slate-900 text-slate-300">$50k</option>
+                                    <option value="100000" className="bg-slate-900 text-slate-300">$100k</option>
+                                    <option value="200000" className="bg-slate-900 text-slate-300">$200k+</option>
+                                </select>
+                                <ChevronDown className={clsx(
+                                    "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none transition-colors",
+                                    selectedCapital !== 'all' ? "text-emerald-500" : "text-slate-500"
+                                )} />
+                            </div>
+                        </div>
+
+                        {/* Platform Filter */}
+                        <div className="snap-start flex-shrink-0">
+                            <div className="relative">
+                                <select
+                                    value={selectedPlatform}
+                                    onChange={(e) => setSelectedPlatform(e.target.value)}
+                                    className={clsx(
+                                        "appearance-none text-sm py-2.5 pl-4 pr-10 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none focus:ring-2 focus:ring-emerald-500/20",
+                                        selectedPlatform !== 'all'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    <option value="all" className="bg-slate-900 text-slate-300">🖥️ Platform</option>
+                                    <option value="cTrader" className="bg-slate-900 text-slate-300">cTrader</option>
+                                    <option value="DXtrade" className="bg-slate-900 text-slate-300">DXtrade</option>
+                                    <option value="Match-Trader" className="bg-slate-900 text-slate-300">Match-Trader</option>
+                                    <option value="MT4/5" className="bg-slate-900 text-slate-300">MT4/5</option>
+                                </select>
+                                <ChevronDown className={clsx(
+                                    "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none transition-colors",
+                                    selectedPlatform !== 'all' ? "text-emerald-500" : "text-slate-500"
+                                )} />
+                            </div>
+                        </div>
+
+                        {/* Type Filter */}
+                        <div className="snap-start flex-shrink-0">
+                            <div className="relative">
+                                <select
+                                    value={selectedChallengeType}
+                                    onChange={(e) => setSelectedChallengeType(e.target.value)}
+                                    className={clsx(
+                                        "appearance-none text-sm py-2.5 pl-4 pr-10 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none focus:ring-2 focus:ring-emerald-500/20",
+                                        selectedChallengeType !== 'all'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    <option value="all" className="bg-slate-900 text-slate-300">⚡ Type</option>
+                                    <option value="2-Step" className="bg-slate-900 text-slate-300">2-Step</option>
+                                    <option value="1-Step" className="bg-slate-900 text-slate-300">1-Step</option>
+                                    <option value="Instant" className="bg-slate-900 text-slate-300">Instant</option>
+                                </select>
+                                <ChevronDown className={clsx(
+                                    "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none transition-colors",
+                                    selectedChallengeType !== 'all' ? "text-emerald-500" : "text-slate-500"
+                                )} />
+                            </div>
+                        </div>
+
+                        {/* Reset Button */}
+                        <button
+                            onClick={() => {
+                                setSelectedCapital('all');
+                                setSelectedPlatform('all');
+                                setSelectedChallengeType('all');
+                                setQuickFilters({
+                                    instantFunding: false,
+                                    hftAllowed: false,
+                                    balanceBasedDD: false,
+                                    newsTrading: false,
+                                    cryptoPayout: false,
+                                    usaAccepted: false,
+                                    noTimeLimit: false,
+                                    weeklyPayouts: false
+                                });
+                                setSortBy('recommended');
+                            }}
+                            className="snap-start flex-shrink-0 flex items-center gap-2 text-xs font-bold text-slate-400 border border-white/10 bg-slate-900/50 px-4 py-2.5 rounded-full active:scale-95 transition-all hover:text-white hover:bg-white/10 backdrop-blur-md shadow-lg shadow-black/20"
+                        >
+                            <span className="text-base">🔄</span> Reset
+                        </button>
+
+                    </div>
+                </div>
+
+                {/* Desktop Filters Container (Hidden on Mobile) */}
+                <div className="hidden md:block mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6">
                     {/* Level 2: Configurator Dropdowns + Sort & Reset */}
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6 pb-6 border-b border-white/10">
 
-                        <div className="flex gap-4 w-full md:w-auto flex-wrap">
+                        <div className="flex gap-4 w-full md:w-auto flex-nowrap">
                             {/* Capital Dropdown */}
                             <div className="relative group">
                                 <select
@@ -328,9 +436,9 @@ export default function ComparisonTable() {
                             {/* Reset Button */}
                             <button
                                 onClick={() => {
-                                    setSelectedCapital(100000);
+                                    setSelectedCapital('all');
                                     setSelectedPlatform('all');
-                                    setSelectedChallengeType('2-Step');
+                                    setSelectedChallengeType('all');
                                     setQuickFilters({
                                         instantFunding: false,
                                         hftAllowed: false,
