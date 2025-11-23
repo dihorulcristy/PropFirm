@@ -1,0 +1,641 @@
+name: string;
+rating: number;
+verified: boolean;
+rules: { maxDD: string; profit: string };
+price: string;
+oldPrice: string;
+coupon: string;
+action: string;
+link: string;
+logoUrl: string;
+// Filter properties
+capital: number;
+platform: string[];
+challengeType: '2-Step' | '1-Step' | 'Instant';
+instantFunding: boolean;
+hftAllowed: boolean;
+balanceBasedDD: boolean;
+newsTrading: boolean;
+cryptoPayout: boolean;
+usaAccepted: boolean;
+noTimeLimit: boolean;
+weeklyPayouts: boolean;
+payoutDays: number;
+// Pricing by capital size
+capitalPricing: {
+    [key: number]: {
+        price: string;
+        oldPrice: string;
+    };
+};
+}
+
+// Dummy Data with full filter properties
+const allFirms: Firm[] = [
+    {
+        id: 1,
+        name: 'FTMO',
+        rating: 4.9,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-90%' },
+        price: '$595',
+        oldPrice: '$595',
+        coupon: 'NOCODE',
+        action: 'Get Funded',
+        link: 'https://trader.ftmo.com/?affiliates=4354',
+        logoUrl: 'https://logo.clearbit.com/ftmo.com',
+        capital: 100000,
+        platform: ['MT4/5', 'cTrader', 'DXtrade'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: false,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            10000: { price: '$155', oldPrice: '$199' },
+            25000: { price: '$250', oldPrice: '$345' },
+            50000: { price: '$345', oldPrice: '$540' },
+            100000: { price: '$595', oldPrice: '$1080' },
+            200000: { price: '$1080', oldPrice: '$1620' },
+        }
+    },
+    {
+        id: 2,
+        name: 'TradingCult',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '12%', profit: '90%' },
+        price: '$550',
+        oldPrice: '$550',
+        coupon: 'HGC',
+        action: 'Get Funded',
+        link: 'https://my.tradingcult.com//challenges?affiliateId=hgc',
+        logoUrl: 'https://logo.clearbit.com/tradingcult.com',
+        capital: 100000,
+        platform: ['Match-Trader', 'cTrader'],
+        challengeType: '1-Step',
+        instantFunding: false,
+        hftAllowed: true,
+        balanceBasedDD: false,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 21,
+        capitalPricing: {
+            10000: { price: '$129', oldPrice: '$179' },
+            25000: { price: '$229', oldPrice: '$329' },
+            50000: { price: '$329', oldPrice: '$499' },
+            100000: { price: '$550', oldPrice: '$699' },
+            200000: { price: '$999', oldPrice: '$1399' },
+        }
+    },
+    {
+        id: 3,
+        name: 'FundedX',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-100%' },
+        price: '$489',
+        oldPrice: '$489',
+        coupon: 'd79822dc',
+        action: 'Get Funded',
+        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
+        logoUrl: '/logos/fundedx.jpg',
+        capital: 100000,
+        platform: ['DXtrade', 'Match-Trader', 'cTrader'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 1,
+        capitalPricing: {
+            10000: { price: '$99', oldPrice: '$149' },
+            25000: { price: '$199', oldPrice: '$299' },
+            50000: { price: '$349', oldPrice: '$549' },
+            100000: { price: '$489', oldPrice: '$799' },
+            200000: { price: '$899', oldPrice: '$1299' },
+        }
+    },
+];
+
+type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
+
+export default function ComparisonTable() {
+    const [copiedId, setCopiedId] = useState<number | null>(null);
+
+    // Level 2: Configurator filters
+    const [selectedCapital, setSelectedCapital] = useState<number | 'all'>(100000);
+    const [selectedPlatform, setSelectedPlatform] = useState<string>('all');
+    const [selectedChallengeType, setSelectedChallengeType] = useState<string>('2-Step');
+
+    // Level 1: Quick Pills
+    const [quickFilters, setQuickFilters] = useState({
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: false,
+        newsTrading: false,
+        cryptoPayout: false,
+        usaAccepted: false,
+        noTimeLimit: false,
+        weeklyPayouts: false
+    });
+
+    // Sorting
+    const [sortBy, setSortBy] = useState<SortOption>('recommended');
+
+    // Show/hide advanced filters
+    const [showMoreFilters, setShowMoreFilters] = useState(false);
+
+    const copyToClipboard = (text: string, id: number) => {
+        navigator.clipboard.writeText(text);
+        setCopiedId(id);
+        setTimeout(() => setCopiedId(null), 2000);
+    };
+
+    // Helper function to get pricing based on selected capital
+    const getPricing = (firm: Firm) => {
+        if (selectedCapital === 'all' || !firm.capitalPricing[selectedCapital]) {
+            return { price: firm.price, oldPrice: firm.oldPrice };
+        }
+        return firm.capitalPricing[selectedCapital];
+    };
+
+    const toggleQuickFilter = (filter: keyof typeof quickFilters) => {
+        setQuickFilters(prev => ({ ...prev, [filter]: !prev[filter] }));
+    };
+
+    // Filter and sort firms
+    const filteredAndSortedFirms = useMemo(() => {
+        let filtered = allFirms.filter(firm => {
+            // Level 2 filters
+            if (selectedCapital !== 'all' && !firm.capitalPricing[selectedCapital]) return false;
+            if (selectedPlatform !== 'all' && !firm.platform.includes(selectedPlatform)) return false;
+            if (selectedChallengeType !== 'all' && firm.challengeType !== selectedChallengeType) return false;
+
+            // Level 1 filters (AND logic)
+            if (quickFilters.instantFunding && !firm.instantFunding) return false;
+            if (quickFilters.hftAllowed && !firm.hftAllowed) return false;
+            if (quickFilters.balanceBasedDD && !firm.balanceBasedDD) return false;
+            if (quickFilters.newsTrading && !firm.newsTrading) return false;
+            if (quickFilters.cryptoPayout && !firm.cryptoPayout) return false;
+            if (quickFilters.usaAccepted && !firm.usaAccepted) return false;
+            if (quickFilters.noTimeLimit && !firm.noTimeLimit) return false;
+            if (quickFilters.weeklyPayouts && !firm.weeklyPayouts) return false;
+
+            return true;
+        });
+
+        // Sort
+        switch (sortBy) {
+            case 'cheapest':
+                filtered.sort((a, b) => parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')));
+                break;
+            case 'fastestPayout':
+                filtered.sort((a, b) => a.payoutDays - b.payoutDays);
+                break;
+            case 'bestValue':
+            case 'recommended':
+            default:
+                // Keep original order for now
+                break;
+        }
+
+        return filtered;
+    }, [selectedCapital, selectedPlatform, selectedChallengeType, quickFilters, sortBy]);
+
+    return (
+        <section className="py-20 bg-black relative overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-display uppercase tracking-tight">
+                        Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Evaluation Programs</span>
+                    </h2>
+                    <p className="text-slate-400 text-lg max-w-3xl mx-auto mb-2">
+                        Find the perfect simulated trading evaluation program for your needs
+                    </p>
+                    <div className="h-1 w-24 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full opacity-50"></div>
+                </div>
+
+                {/* Filters Container */}
+                <div className="mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6">
+                    {/* Level 2: Configurator Dropdowns + Sort & Reset */}
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6 pb-6 border-b border-white/10">
+
+                        <div className="flex gap-4 w-full md:w-auto flex-wrap">
+                            {/* Capital Dropdown */}
+                            <div className="relative group">
+                                <select
+                                    value={selectedCapital}
+                                    onChange={(e) => setSelectedCapital(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                >
+                                    <option value="all" className="bg-black text-slate-200">💰 All Sizes</option>
+                                    <option value="10000" className="bg-black text-slate-200">$10k (Starter)</option>
+                                    <option value="25000" className="bg-black text-slate-200">$25k (Growth)</option>
+                                    <option value="50000" className="bg-black text-slate-200">$50k (Standard)</option>
+                                    <option value="100000" className="bg-black text-slate-200">$100k (Pro)</option>
+                                    <option value="200000" className="bg-black text-slate-200">$200k+ (Whale)</option>
+                                </select>
+                                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
+                            </div>
+
+                            {/* Platform Dropdown */}
+                            <div className="relative group">
+                                <select
+                                    value={selectedPlatform}
+                                    onChange={(e) => setSelectedPlatform(e.target.value)}
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                >
+                                    <option value="all" className="bg-black text-slate-200">🖥️ Any Platform</option>
+                                    <option value="cTrader" className="bg-black text-slate-200">cTrader</option>
+                                    <option value="DXtrade" className="bg-black text-slate-200">DXtrade</option>
+                                    <option value="Match-Trader" className="bg-black text-slate-200">Match-Trader</option>
+                                    <option value="MT4/5" className="bg-black text-slate-200">MetaTrader 4/5</option>
+                                </select>
+                                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
+                            </div>
+
+                            {/* Challenge Type Dropdown */}
+                            <div className="relative group">
+                                <select
+                                    value={selectedChallengeType}
+                                    onChange={(e) => setSelectedChallengeType(e.target.value)}
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                >
+                                    <option value="all" className="bg-black text-slate-200">🎯 Any Type</option>
+                                    <option value="2-Step" className="bg-black text-slate-200">2-Step</option>
+                                    <option value="1-Step" className="bg-black text-slate-200">1-Step</option>
+                                    <option value="Instant" className="bg-black text-slate-200">Instant</option>
+                                </select>
+                                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
+                            </div>
+                        </div>
+
+                        {/* Sort, More Filters & Reset */}
+                        <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs text-slate-500 uppercase tracking-wider font-bold">Sort:</span>
+                                <select
+                                    value={sortBy}
+                                    onChange={(e) => setSortBy(e.target.value as SortOption)}
+                                    className="appearance-none bg-transparent text-sm font-bold text-white hover:text-yellow-400 transition cursor-pointer border-none outline-none"
+                                >
+                                    <option value="recommended" className="bg-black text-slate-200">Recommended</option>
+                                    <option value="bestValue" className="bg-black text-slate-200">Best Value</option>
+                                    <option value="cheapest" className="bg-black text-slate-200">Cheapest</option>
+                                    <option value="fastestPayout" className="bg-black text-slate-200">Fastest Payout</option>
+                                </select>
+                                <ChevronDown className="h-4 w-4 text-slate-500" />
+                            </div>
+
+                            {/* More Filters Button */}
+                            <button
+                                onClick={() => setShowMoreFilters(!showMoreFilters)}
+                                className={clsx(
+                                    "px-4 py-2 rounded-xl border text-sm font-medium transition-all flex items-center gap-2",
+                                    showMoreFilters
+                                        ? "border-emerald-500 bg-emerald-500/10 text-emerald-400"
+                                        : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+                                )}
+                            >
+                                ⚙️ More Filters
+                                <ChevronDown className={clsx("h-4 w-4 transition-transform", showMoreFilters && "rotate-180")} />
+                            </button>
+
+                            {/* Reset Button */}
+                            <button
+                                onClick={() => {
+                                    setSelectedCapital(100000);
+                                    setSelectedPlatform('all');
+                                    setSelectedChallengeType('2-Step');
+                                    setQuickFilters({
+                                        instantFunding: false,
+                                        hftAllowed: false,
+                                        balanceBasedDD: false,
+                                        newsTrading: false,
+                                        cryptoPayout: false,
+                                        usaAccepted: false,
+                                        noTimeLimit: false,
+                                        weeklyPayouts: false
+                                    });
+                                    setSortBy('recommended');
+                                    setShowMoreFilters(false);
+                                }}
+                                className="px-4 py-2 rounded-xl border border-white/10 bg-black/40 text-sm text-slate-300 hover:border-white/30 hover:text-white transition-all flex items-center gap-2"
+                            >
+                                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Level 1: Quick Pills - Hidden by default */}
+                    {showMoreFilters && (
+                        <div className="border-t border-white/10 pt-6">
+                            <div className="flex flex-wrap gap-3">
+                                <button
+                                    onClick={() => toggleQuickFilter('instantFunding')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.instantFunding
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>⚡</span> Instant Funding
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('hftAllowed')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.hftAllowed
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>🤖</span> HFT Allowed
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('balanceBasedDD')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.balanceBasedDD
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>📉</span> Balance Based DD
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('newsTrading')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.newsTrading
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>📰</span> News Trading
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('cryptoPayout')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.cryptoPayout
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>💰</span> Crypto Payout
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('usaAccepted')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.usaAccepted
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>🇺🇸</span> USA Accepted
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('noTimeLimit')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.noTimeLimit
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>🕒</span> No Time Limit
+                                </button>
+
+                                <button
+                                    onClick={() => toggleQuickFilter('weeklyPayouts')}
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300",
+                                        quickFilters.weeklyPayouts
+                                            ? "bg-yellow-400/10 border border-yellow-400 text-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.2)]"
+                                            : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
+                                    )}
+                                >
+                                    <span>💸</span> Weekly Payouts
+                                </button>
+                            </div>
+
+                            {/* Results count */}
+                            <div className="mt-4 text-xs text-slate-600 font-mono">
+                                Showing {filteredAndSortedFirms.length} {filteredAndSortedFirms.length === 1 ? 'firm' : 'firms'}
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+                {/* Table Container */}
+                <div className="overflow-hidden rounded-2xl border border-slate-800/50 bg-gradient-to-b from-slate-900/60 to-black/40 backdrop-blur-sm">
+                    <table className="w-full text-sm text-slate-400">
+                        <thead className="bg-black/60 text-xs uppercase text-slate-500 border-b border-slate-800/50">
+                            <tr>
+                                <th className="px-6 py-4 font-medium tracking-wider text-left">Firm</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Rating</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Key Rules</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Price</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Coupon</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Active Offers</th>
+                                <th className="px-6 py-4 font-medium tracking-wider text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-800/30">
+                            {filteredAndSortedFirms.length === 0 ? (
+                                <tr>
+                                    <td colSpan={7} className="px-6 py-12 text-center text-slate-500">
+                                        No firms match your filters. Try adjusting your criteria.
+                                    </td>
+                                </tr>
+                            ) : (
+                                filteredAndSortedFirms.map((firm) => (
+                                    <React.Fragment key={firm.id}>
+                                        {/* Desktop: Table Row */}
+                                        <tr className="hidden md:table-row group hover:bg-slate-800/20 transition-colors border-b border-slate-800/30">
+                                            <td className="px-6 py-5 text-left">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="h-10 w-10 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-slate-300 group-hover:ring-1 group-hover:ring-emerald-500/50 transition-all overflow-hidden">
+                                                        <img
+                                                            src={firm.logoUrl}
+                                                            alt={firm.name}
+                                                            className="h-full w-full object-cover"
+                                                        />
+                                                    </div>
+                                                    <span className="font-bold text-white text-base">{firm.name}</span>
+                                                </div>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <div className="flex flex-col gap-1 items-center justify-center">
+                                                    <div className="flex items-center gap-1 text-amber-400">
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <Star key={i} className={clsx("h-3.5 w-3.5 fill-current", i >= Math.floor(firm.rating) && "text-slate-600 fill-slate-600")} />
+                                                        ))}
+                                                    </div>
+                                                    {firm.verified && (
+                                                        <div className="flex items-center gap-1 text-[10px] text-blue-400 bg-blue-400/10 px-1.5 py-0.5 rounded w-fit">
+                                                            <ShieldCheck className="h-3 w-3" /> Verified
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <div className="flex flex-col gap-1.5 text-xs items-center">
+                                                    <div className="flex items-center gap-2 text-slate-300">
+                                                        <span className="text-emerald-500">Max DD:</span> {firm.rules.maxDD}
+                                                    </div>
+                                                    <div className="flex items-center gap-2 text-slate-300">
+                                                        <span className="text-emerald-500">Profit:</span> {firm.rules.profit}
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <div className="flex flex-col items-center">
+                                                    <span className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</span>
+                                                    <span className="text-lg font-bold text-emerald-400">{getPricing(firm).price}</span>
+                                                </div>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <button
+                                                    onClick={() => copyToClipboard(firm.coupon, firm.id)}
+                                                    className="group/btn relative inline-flex items-center gap-2 rounded-lg border-2 border-dashed border-emerald-500/40 bg-emerald-500/5 px-4 py-2 text-sm font-mono font-bold text-white hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 transition-all shadow-sm hover:shadow-emerald-500/20"
+                                                >
+                                                    {firm.coupon}
+                                                    {copiedId === firm.id ? (
+                                                        <Check className="h-4 w-4 text-emerald-400" />
+                                                    ) : (
+                                                        <Copy className="h-4 w-4 opacity-70 group-hover/btn:opacity-100" />
+                                                    )}
+                                                </button>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <a
+                                                    href="#offers"
+                                                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-emerald-500/30 transition-all"
+                                                >
+                                                    See More
+                                                </a>
+                                            </td>
+
+                                            <td className="px-6 py-5 text-center">
+                                                <a
+                                                    href={firm.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition-all hover:shadow-emerald-900/40 hover:scale-105 active:scale-95"
+                                                >
+                                                    {firm.action}
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        {/* Mobile: Card */}
+                                        <div className="md:hidden bg-white/5 border border-white/10 rounded-xl p-5 mb-4 relative overflow-hidden">
+                                            {/* Header: Logo, Name, Rating, Price */}
+                                            <div className="flex items-start gap-4 mb-4">
+                                                <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center border border-white/10 overflow-hidden flex-shrink-0">
+                                                    <img
+                                                        src={firm.logoUrl}
+                                                        alt={firm.name}
+                                                        className="h-full w-full object-cover"
+                                                    />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <h3 className="font-bold text-white text-lg">{firm.name}</h3>
+                                                    <div className="flex items-center gap-2 text-xs mt-1">
+                                                        <div className="flex items-center gap-1 text-amber-400">
+                                                            <Star className="h-3 w-3 fill-current" />
+                                                            <span>{firm.rating}/5</span>
+                                                        </div>
+                                                        {firm.verified && (
+                                                            <>
+                                                                <span className="text-slate-500">•</span>
+                                                                <span className="text-blue-400">Verified</span>
+                                                            </>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                                <div className="text-right flex-shrink-0">
+                                                    <div className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</div>
+                                                    <div className="text-xl font-bold text-emerald-400">{getPricing(firm).price}</div>
+                                                </div>
+                                            </div>
+
+                                            {/* Rules Grid */}
+                                            <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                                                <div className="bg-black/20 p-2 rounded border border-white/5">
+                                                    <span className="text-slate-500 text-xs block">Max Drawdown</span>
+                                                    <span className="text-red-400 font-bold">{firm.rules.maxDD}</span>
+                                                </div>
+                                                <div className="bg-black/20 p-2 rounded border border-white/5">
+                                                    <span className="text-slate-500 text-xs block">Profit Split</span>
+                                                    <span className="text-emerald-400 font-bold">{firm.rules.profit}</span>
+                                                </div>
+                                                <div className="bg-black/20 p-2 rounded border border-white/5 col-span-2 flex justify-between items-center">
+                                                    <span className="text-slate-500 text-xs">Coupon:</span>
+                                                    <button
+                                                        onClick={() => copyToClipboard(firm.coupon, firm.id)}
+                                                        className="text-white font-mono bg-emerald-500/10 px-2 py-0.5 rounded border border-dashed border-emerald-500/40 text-sm font-bold flex items-center gap-1"
+                                                    >
+                                                        {firm.coupon}
+                                                        {copiedId === firm.id ? (
+                                                            <Check className="h-3 w-3 text-emerald-400" />
+                                                        ) : (
+                                                            <Copy className="h-3 w-3 opacity-70" />
+                                                        )}
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            {/* CTA Button */}
+                                            <a
+                                                href={firm.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-emerald-500/20 transition active:scale-95 flex items-center justify-center"
+                                            >
+                                                {firm.action}
+                                            </a>
+                                        </div>
+                                    </React.Fragment>
+                                ))
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    );
+}
