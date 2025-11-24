@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Star, ShieldCheck, Check, Copy, ChevronDown } from 'lucide-react';
+import { Star, ShieldCheck, Check, Copy, ChevronDown, Zap, Trophy } from 'lucide-react';
 import { clsx } from 'clsx';
 
 // Firm interface with all filter properties
@@ -17,6 +17,7 @@ interface Firm {
     action: string;
     link: string;
     logoUrl: string;
+    offer?: string; // New field for active offers
     // Filter properties
     capital: number;
     platform: string[];
@@ -47,9 +48,10 @@ const allFirms: Firm[] = [
         rating: 4.9,
         verified: true,
         rules: { maxDD: '10%', profit: '80-90%' },
-        price: '$595',
+        price: '$482',
         oldPrice: '$595',
-        coupon: 'NOCODE',
+        coupon: '', // No code for FTMO
+        offer: '19% OFF (100k)', // Active offer
         action: 'Get Funded',
         link: 'https://trader.ftmo.com/?affiliates=4354',
         logoUrl: 'https://logo.clearbit.com/ftmo.com',
@@ -59,18 +61,18 @@ const allFirms: Firm[] = [
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
-        newsTrading: false,
+        newsTrading: true,
         cryptoPayout: true,
         usaAccepted: false,
         noTimeLimit: true,
         weeklyPayouts: false,
         payoutDays: 14,
         capitalPricing: {
-            10000: { price: '$155', oldPrice: '$199' },
-            25000: { price: '$250', oldPrice: '$345' },
-            50000: { price: '$345', oldPrice: '$540' },
-            100000: { price: '$595', oldPrice: '$1080' },
-            200000: { price: '$1080', oldPrice: '$1620' },
+            10000: { price: '$170', oldPrice: '$170' },
+            25000: { price: '$275', oldPrice: '$275' },
+            50000: { price: '$380', oldPrice: '$380' },
+            100000: { price: '$482', oldPrice: '$595' },
+            200000: { price: '$1190', oldPrice: '$1190' },
         }
     },
     {
@@ -78,31 +80,32 @@ const allFirms: Firm[] = [
         name: 'TradingCult',
         rating: 4.8,
         verified: true,
-        rules: { maxDD: '12%', profit: '90%' },
-        price: '$550',
-        oldPrice: '$550',
-        coupon: 'HGC',
+        rules: { maxDD: '10%', profit: 'Up to 95%' },
+        price: '$499',
+        oldPrice: '$499',
+        coupon: 'TC30',
+        offer: '30% OFF (All)',
         action: 'Get Funded',
         link: 'https://my.tradingcult.com//challenges?affiliateId=hgc',
         logoUrl: 'https://logo.clearbit.com/tradingcult.com',
         capital: 100000,
-        platform: ['Match-Trader', 'cTrader'],
-        challengeType: '1-Step',
-        instantFunding: false,
-        hftAllowed: true,
-        balanceBasedDD: false,
+        platform: ['MT4'],
+        challengeType: '2-Step',
+        instantFunding: true,
+        hftAllowed: false,
+        balanceBasedDD: true,
         newsTrading: true,
         cryptoPayout: true,
         usaAccepted: true,
         noTimeLimit: true,
         weeklyPayouts: false,
-        payoutDays: 21,
+        payoutDays: 14,
         capitalPricing: {
-            10000: { price: '$129', oldPrice: '$179' },
-            25000: { price: '$229', oldPrice: '$329' },
-            50000: { price: '$329', oldPrice: '$499' },
-            100000: { price: '$550', oldPrice: '$699' },
-            200000: { price: '$999', oldPrice: '$1399' },
+            10000: { price: '$99', oldPrice: '$99' },
+            25000: { price: '$199', oldPrice: '$199' },
+            50000: { price: '$299', oldPrice: '$299' },
+            100000: { price: '$499', oldPrice: '$499' },
+            200000: { price: '$999', oldPrice: '$999' },
         }
     },
     {
@@ -110,15 +113,16 @@ const allFirms: Firm[] = [
         name: 'FundedX',
         rating: 4.7,
         verified: true,
-        rules: { maxDD: '10%', profit: '80-100%' },
-        price: '$489',
-        oldPrice: '$489',
-        coupon: 'd79822dc',
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$500',
+        oldPrice: '$500',
+        coupon: 'BF30',
+        offer: '30% OFF',
         action: 'Get Funded',
         link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
         logoUrl: '/logos/fundedx.jpg',
         capital: 100000,
-        platform: ['DXtrade', 'Match-Trader', 'cTrader'],
+        platform: ['cTrader', 'DXtrade', 'Match-Trader'],
         challengeType: '2-Step',
         instantFunding: false,
         hftAllowed: false,
@@ -127,14 +131,178 @@ const allFirms: Firm[] = [
         cryptoPayout: true,
         usaAccepted: true,
         noTimeLimit: true,
-        weeklyPayouts: false,
+        weeklyPayouts: true,
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$50', oldPrice: '$50' },
+            10000: { price: '$95', oldPrice: '$95' },
+            25000: { price: '$200', oldPrice: '$200' },
+            50000: { price: '$300', oldPrice: '$300' },
+            100000: { price: '$500', oldPrice: '$500' },
+            200000: { price: '$950', oldPrice: '$950' },
+        }
+    },
+    {
+        id: 4,
+        name: 'FundedNext',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-95%' },
+        price: '$549',
+        oldPrice: '$549',
+        coupon: 'REF6ZHN86',
+        offer: '5% OFF',
+        action: 'Get Funded',
+        link: 'https://fundednext.com/',
+        logoUrl: 'https://logo.clearbit.com/fundednext.com',
+        capital: 100000,
+        platform: ['MT4', 'MT5', 'cTrader', 'Match-Trader'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: true,
         payoutDays: 1,
         capitalPricing: {
-            10000: { price: '$99', oldPrice: '$149' },
-            25000: { price: '$199', oldPrice: '$299' },
-            50000: { price: '$349', oldPrice: '$549' },
-            100000: { price: '$489', oldPrice: '$799' },
-            200000: { price: '$899', oldPrice: '$1299' },
+            6000: { price: '$59', oldPrice: '$59' },
+            15000: { price: '$119', oldPrice: '$119' },
+            25000: { price: '$199', oldPrice: '$199' },
+            50000: { price: '$299', oldPrice: '$299' },
+            100000: { price: '$549', oldPrice: '$549' },
+            200000: { price: '$1099', oldPrice: '$1099' },
+        }
+    },
+    {
+        id: 5,
+        name: 'FundingPips',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-100%' },
+        price: '$399',
+        oldPrice: '$399',
+        coupon: 'b5420489',
+        offer: '20% OFF',
+        action: 'Get Funded',
+        link: 'https://app.fundingpips.com/register?ref=b5420489',
+        logoUrl: 'https://logo.clearbit.com/fundingpips.com',
+        capital: 100000,
+        platform: ['Match-Trader', 'cTrader', 'TradeLocker'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 7,
+        capitalPricing: {
+            5000: { price: '$32', oldPrice: '$32' },
+            10000: { price: '$60', oldPrice: '$60' },
+            25000: { price: '$139', oldPrice: '$139' },
+            50000: { price: '$239', oldPrice: '$239' },
+            100000: { price: '$399', oldPrice: '$399' },
+        }
+    },
+    {
+        id: 6,
+        name: 'FunderPro',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-90%' },
+        price: '$549',
+        oldPrice: '$549',
+        coupon: 'hgc',
+        offer: '30% OFF',
+        action: 'Get Funded',
+        link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
+        logoUrl: 'https://logo.clearbit.com/funderpro.com',
+        capital: 100000,
+        platform: ['TradeLocker', 'MT4', 'MT5', 'cTrader'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 1,
+        capitalPricing: {
+            25000: { price: '$249', oldPrice: '$249' },
+            50000: { price: '$349', oldPrice: '$349' },
+            100000: { price: '$549', oldPrice: '$549' },
+            200000: { price: '$1099', oldPrice: '$1099' },
+        }
+    },
+    {
+        id: 7,
+        name: 'The Concept Trading',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '6% (Static)', profit: 'Up to 90%' },
+        price: '$997',
+        oldPrice: '$997',
+        coupon: 'SPECIAL_INSTANT20',
+        offer: '20% OFF (Instant)',
+        action: 'Start Career',
+        link: 'https://theconcepttrading.com/ref/1837/',
+        logoUrl: 'https://logo.clearbit.com/theconcepttrading.com',
+        capital: 100000,
+        platform: ['MT4', 'MT5'],
+        challengeType: '2-Step',
+        instantFunding: true,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 2,
+        capitalPricing: {
+            5000: { price: '$65', oldPrice: '$65' },
+            10000: { price: '$110', oldPrice: '$110' },
+            100000: { price: '$997', oldPrice: '$997' },
+        }
+    },
+    {
+        id: 8,
+        name: 'Blue Guardian',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '8%', profit: '85%' },
+        price: '$497',
+        oldPrice: '$497',
+        coupon: '1scz',
+        offer: '50% OFF (All)',
+        action: 'Get Funded',
+        link: 'https://blueguardian.com/?afmc=1scz',
+        logoUrl: 'https://unavatar.io/twitter/BlueGuardianCom',
+        capital: 100000,
+        platform: ['Match-Trader', 'cTrader', 'DXtrade'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: false, // Equity based usually
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            10000: { price: '$97', oldPrice: '$97' },
+            25000: { price: '$197', oldPrice: '$197' },
+            50000: { price: '$297', oldPrice: '$297' },
+            100000: { price: '$497', oldPrice: '$497' },
+            200000: { price: '$997', oldPrice: '$997' },
         }
     },
 ];
@@ -721,26 +889,42 @@ export default function ComparisonTable() {
                                         </td>
 
                                         <td className="px-6 py-5 text-center">
-                                            <button
-                                                onClick={() => copyToClipboard(firm.coupon, firm.id)}
-                                                className="group/btn relative inline-flex items-center gap-2 rounded-lg border-2 border-dashed border-emerald-500/40 bg-emerald-500/5 px-4 py-2 text-sm font-mono font-bold text-white hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 transition-all shadow-sm hover:shadow-emerald-500/20"
-                                            >
-                                                {firm.coupon}
-                                                {copiedId === firm.id ? (
-                                                    <Check className="h-4 w-4 text-emerald-400" />
-                                                ) : (
-                                                    <Copy className="h-4 w-4 opacity-70 group-hover/btn:opacity-100" />
-                                                )}
-                                            </button>
+                                            {firm.coupon ? (
+                                                <button
+                                                    onClick={() => copyToClipboard(firm.coupon, firm.id)}
+                                                    className="group/btn relative inline-flex items-center gap-2 rounded-lg border-2 border-dashed border-emerald-500/40 bg-emerald-500/5 px-4 py-2 text-sm font-mono font-bold text-white hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 transition-all shadow-sm hover:shadow-emerald-500/20"
+                                                >
+                                                    {firm.coupon}
+                                                    {copiedId === firm.id ? (
+                                                        <Check className="h-4 w-4 text-emerald-400" />
+                                                    ) : (
+                                                        <Copy className="h-4 w-4 opacity-70 group-hover/btn:opacity-100" />
+                                                    )}
+                                                </button>
+                                            ) : (
+                                                <span className="text-slate-600 text-xs italic">No Code</span>
+                                            )}
                                         </td>
 
                                         <td className="px-6 py-5 text-center">
-                                            <a
-                                                href="#offers"
-                                                className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 hover:border-emerald-500/30 transition-all"
-                                            >
-                                                See More
-                                            </a>
+                                            {firm.offer ? (
+                                                <div className="relative group overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 to-black border border-emerald-500/30 p-3 shadow-lg shadow-emerald-900/20 hover:shadow-emerald-500/20 transition-all hover:-translate-y-1">
+                                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
+                                                    <div className="flex items-center justify-center gap-1 mb-1">
+                                                        <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400 animate-pulse" />
+                                                        <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">New Offer</span>
+                                                    </div>
+                                                    <div className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 mb-1">
+                                                        {firm.offer}
+                                                    </div>
+                                                    <div className="inline-flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
+                                                        <Trophy className="w-3 h-3" />
+                                                        <span>Limited Time</span>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <span className="block w-full h-full min-h-[60px]"></span>
+                                            )}
                                         </td>
 
                                         <td className="px-6 py-5 text-center">

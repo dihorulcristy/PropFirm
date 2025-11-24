@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ComparisonTable from './components/ComparisonTable';
+import FAQ from './components/FAQ';
 import DealOfTheWeek from './components/DealOfTheWeek';
 import BlogSection from './components/BlogSection';
 
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <DealOfTheWeek />
         <ComparisonTable />
+        <FAQ />
         <BlogSection />
       </main>
       <Footer />
