@@ -316,7 +316,7 @@ const allFirms: Firm[] = [
         coupon: 'PROPHUB',
         offer: '30% OFF (All)',
         action: 'Get Funded',
-        link: '/dominion-funding', // Internal subpage
+        link: 'https://dominionfunding.trade//?affId=06bqracaI4',
         logoUrl: 'https://unavatar.io/twitter/DominionFunding',
         capital: 100000,
         platform: ['cTrader', 'Match-Trader'],

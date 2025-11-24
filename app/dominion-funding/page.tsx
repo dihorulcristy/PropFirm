@@ -1,11 +1,26 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Check, Star, Shield, Zap, Trophy, AlertTriangle } from 'lucide-react';
+import { Check, Star, Shield, Zap, Trophy, AlertTriangle, Copy } from 'lucide-react';
 
 export default function DominionFundingPage() {
+    const [copied, setCopied] = useState(false);
+    const [urlCopied, setUrlCopied] = useState(false);
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText('PROPHUB');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    const copyUrl = () => {
+        navigator.clipboard.writeText('https://dominionfunding.trade//?affId=06bqracaI4');
+        setUrlCopied(true);
+        setTimeout(() => setUrlCopied(false), 2000);
+    };
+
     const accounts = [
         { size: '$7,500', price: '$89', features: ['2-Step Evaluation', '10% Max Drawdown', '5% Daily Drawdown'] },
         { size: '$10,000', price: '$119', features: ['2-Step Evaluation', '10% Max Drawdown', '5% Daily Drawdown'] },
@@ -54,9 +69,21 @@ export default function DominionFundingPage() {
                         The Broker Backed Prop Firm. Trade with real market conditions on cTrader.
                     </p>
 
-                    <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 px-4 py-2 rounded-lg mb-8">
-                        <AlertTriangle className="w-5 h-5" />
-                        <span className="font-semibold">Note: Official site is currently experiencing issues. Use the info below.</span>
+                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+                        <p className="text-slate-300 mb-4">
+                            To use this discount, visit their official website and enter the code at checkout:
+                        </p>
+                        <div className="flex items-center justify-center gap-3 bg-black/30 p-3 rounded-lg border border-slate-800">
+                            <code className="text-emerald-400 font-mono text-sm md:text-lg break-all">https://dominionfunding.trade//?affId=06bqracaI4</code>
+                            <button
+                                onClick={copyUrl}
+                                className="p-2 hover:bg-slate-800 rounded-md transition-colors group relative flex-shrink-0"
+                                title="Copy URL"
+                            >
+                                {urlCopied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-slate-400 group-hover:text-white" />}
+                            </button>
+                        </div>
+                        {urlCopied && <p className="text-emerald-500 text-xs mt-2 font-bold animate-pulse">URL Copied!</p>}
                     </div>
                 </section>
 
@@ -70,9 +97,16 @@ export default function DominionFundingPage() {
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
                             <div className="text-center">
                                 <p className="text-slate-400 text-sm uppercase tracking-wider mb-1">Discount Code</p>
-                                <div className="text-4xl font-black text-emerald-400 tracking-widest font-mono bg-slate-950/50 px-6 py-3 rounded-xl border border-emerald-500/30 dashed border-2">
+                                <button
+                                    onClick={copyToClipboard}
+                                    className="relative group/btn flex items-center gap-3 text-4xl font-black text-emerald-400 tracking-widest font-mono bg-slate-950/50 px-6 py-3 rounded-xl border border-emerald-500/30 dashed border-2 hover:bg-slate-950/80 hover:border-emerald-400 transition-all cursor-pointer"
+                                >
                                     PROPHUB
-                                </div>
+                                    <div className="absolute -right-8 top-1/2 -translate-y-1/2 opacity-0 group-hover/btn:opacity-100 transition-opacity">
+                                        {copied ? <Check className="w-6 h-6 text-emerald-500" /> : <Copy className="w-6 h-6 text-slate-400" />}
+                                    </div>
+                                </button>
+                                {copied && <p className="text-emerald-500 text-xs mt-2 font-bold animate-pulse">Copied!</p>}
                             </div>
                             <div className="text-center">
                                 <p className="text-slate-400 text-sm uppercase tracking-wider mb-1">Discount</p>
