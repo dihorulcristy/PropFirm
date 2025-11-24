@@ -66,7 +66,7 @@ export default function DominionFundingPage() {
                         Dominion Funding
                     </h1>
                     <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
-                        The Broker Backed Prop Firm. Trade with real market conditions on cTrader.
+                        Educational platform for skill assessment. Backed by Dominion Markets broker.
                     </p>
 
                     <div className="bg-black/30 border border-slate-800 rounded-xl p-6 max-w-2xl mx-auto mb-8">
@@ -93,7 +93,7 @@ export default function DominionFundingPage() {
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
                         <div className="absolute -inset-1 bg-emerald-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                        <h2 className="text-2xl font-bold text-white mb-4 relative z-10">Exclusive Offer</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4 relative z-10">Discount Available</h2>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
                             <div className="text-center">
                                 <p className="text-slate-400 text-sm uppercase tracking-wider mb-1">Discount Code</p>
@@ -115,18 +115,18 @@ export default function DominionFundingPage() {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-6 text-slate-400 text-sm relative z-10">Valid for all account sizes.</p>
+                        <p className="mt-6 text-slate-400 text-sm relative z-10">Valid for all evaluation programs.</p>
                     </div>
                 </section>
 
                 {/* Pricing Table */}
                 <section className="container mx-auto px-4 mb-20">
-                    <h2 className="text-3xl font-bold text-center mb-10">Evaluation Accounts</h2>
+                    <h2 className="text-3xl font-bold text-center mb-10">Skill Assessment Programs</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full max-w-5xl mx-auto border-collapse">
                             <thead>
                                 <tr className="border-b border-slate-800">
-                                    <th className="p-4 text-left text-slate-400 font-medium">Account Size</th>
+                                    <th className="p-4 text-left text-slate-400 font-medium">Program Size</th>
                                     <th className="p-4 text-left text-slate-400 font-medium">Price</th>
                                     <th className="p-4 text-left text-slate-400 font-medium">Features</th>
                                     <th className="p-4 text-center text-slate-400 font-medium">Action</th>
@@ -202,14 +202,14 @@ export default function DominionFundingPage() {
                         <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
                             <h3 className="font-bold text-lg text-slate-200 mb-2">What makes Dominion Funding different?</h3>
                             <p className="text-slate-400 leading-relaxed">
-                                Dominion Funding is backed by Dominion Markets, a regulated broker. This means you trade with real market conditions, real spreads, and direct market access (DMA) through cTrader.
+                                Dominion Funding is an educational platform backed by Dominion Markets, a regulated broker. The assessment uses real market conditions and direct market access (DMA) through cTrader.
                             </p>
                         </div>
 
                         <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
-                            <h3 className="font-bold text-lg text-slate-200 mb-2">What are the evaluation rules?</h3>
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">What are the assessment criteria?</h3>
                             <p className="text-slate-400 leading-relaxed">
-                                Dominion uses a 2-Step Evaluation with 10% Max Drawdown (Balance Based) and 5% Daily Drawdown. There's no time limit to complete the evaluation.
+                                The skill assessment uses a 2-Step process with specific performance metrics including risk management parameters. There's no time limit to complete the assessment.
                             </p>
                         </div>
 
@@ -221,9 +221,9 @@ export default function DominionFundingPage() {
                         </div>
 
                         <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
-                            <h3 className="font-bold text-lg text-slate-200 mb-2">Is HFT allowed?</h3>
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">What strategies are permitted?</h3>
                             <p className="text-slate-400 leading-relaxed">
-                                No, High Frequency Trading (HFT) and arbitrage bots are not allowed. Dominion focuses on serious traders using legitimate strategies.
+                                High Frequency Trading (HFT) and arbitrage algorithms are not permitted. The platform is designed for skill-based assessment using standard methodologies.
                             </p>
                         </div>
                     </div>
