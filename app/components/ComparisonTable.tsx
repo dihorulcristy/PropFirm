@@ -305,6 +305,39 @@ const allFirms: Firm[] = [
             200000: { price: '$997', oldPrice: '$997' },
         }
     },
+    {
+        id: 9,
+        name: 'Dominion Funding',
+        rating: 4.6,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$549',
+        oldPrice: '$549',
+        coupon: 'PROPHUB',
+        offer: '30% OFF (All)',
+        action: 'Get Funded',
+        link: '#', // Site compromised, non-functional link
+        logoUrl: 'https://unavatar.io/twitter/DominionFunding',
+        capital: 100000,
+        platform: ['cTrader', 'Match-Trader'],
+        challengeType: '2-Step',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            7500: { price: '$89', oldPrice: '$89' },
+            10000: { price: '$119', oldPrice: '$119' },
+            25000: { price: '$249', oldPrice: '$249' },
+            50000: { price: '$349', oldPrice: '$349' },
+            100000: { price: '$549', oldPrice: '$549' },
+        }
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
