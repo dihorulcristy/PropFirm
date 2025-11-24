@@ -51,7 +51,7 @@ export default function DominionFundingPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-emerald-500/30">
+        <div className="min-h-screen bg-[#050505] text-slate-50 font-sans selection:bg-emerald-500/30">
             <Header />
 
             <main className="pt-24 pb-20">
@@ -69,7 +69,7 @@ export default function DominionFundingPage() {
                         The Broker Backed Prop Firm. Trade with real market conditions on cTrader.
                     </p>
 
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+                    <div className="bg-black/30 border border-slate-800 rounded-xl p-6 max-w-2xl mx-auto mb-8">
                         <p className="text-slate-300 mb-4">
                             To use this discount, visit their official website and enter the code at checkout:
                         </p>
@@ -89,7 +89,7 @@ export default function DominionFundingPage() {
 
                 {/* Discount Code Section */}
                 <section className="container mx-auto px-4 mb-20">
-                    <div className="max-w-3xl mx-auto bg-gradient-to-br from-emerald-900/20 to-slate-900 border border-emerald-500/30 rounded-2xl p-8 text-center relative overflow-hidden group">
+                    <div className="max-w-3xl mx-auto bg-gradient-to-br from-emerald-900/20 to-black/30 border border-emerald-500/30 rounded-2xl p-8 text-center relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
                         <div className="absolute -inset-1 bg-emerald-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -99,7 +99,7 @@ export default function DominionFundingPage() {
                                 <p className="text-slate-400 text-sm uppercase tracking-wider mb-1">Discount Code</p>
                                 <button
                                     onClick={copyToClipboard}
-                                    className="relative group/btn flex items-center gap-3 text-4xl font-black text-emerald-400 tracking-widest font-mono bg-slate-950/50 px-6 py-3 rounded-xl border border-emerald-500/30 dashed border-2 hover:bg-slate-950/80 hover:border-emerald-400 transition-all cursor-pointer"
+                                    className="relative group/btn flex items-center gap-3 text-4xl font-black text-emerald-400 tracking-widest font-mono bg-black/50 px-6 py-3 rounded-xl border border-emerald-500/30 dashed border-2 hover:bg-black/80 hover:border-emerald-400 transition-all cursor-pointer"
                                 >
                                     PROPHUB
                                     <div className="absolute -right-8 top-1/2 -translate-y-1/2 opacity-0 group-hover/btn:opacity-100 transition-opacity">
@@ -168,7 +168,7 @@ export default function DominionFundingPage() {
 
                     <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                         {reviews.map((review, index) => (
-                            <div key={index} className="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-emerald-500/30 transition-colors">
+                            <div key={index} className="bg-black/30 border border-slate-800 p-6 rounded-xl hover:border-emerald-500/30 transition-colors">
                                 <div className="flex items-center gap-1 mb-4">
                                     {[...Array(5)].map((_, i) => (
                                         <Star
@@ -184,6 +184,48 @@ export default function DominionFundingPage() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </section>
+
+                {/* FAQ Section */}
+                <section className="container mx-auto px-4 mb-20">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                            Frequently Asked Questions
+                        </h2>
+                        <p className="text-slate-400 max-w-2xl mx-auto">
+                            Common questions about Dominion Funding and their evaluation process.
+                        </p>
+                    </div>
+
+                    <div className="max-w-3xl mx-auto space-y-4">
+                        <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">What makes Dominion Funding different?</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                Dominion Funding is backed by Dominion Markets, a regulated broker. This means you trade with real market conditions, real spreads, and direct market access (DMA) through cTrader.
+                            </p>
+                        </div>
+
+                        <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">What are the evaluation rules?</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                Dominion uses a 2-Step Evaluation with 10% Max Drawdown (Balance Based) and 5% Daily Drawdown. There's no time limit to complete the evaluation.
+                            </p>
+                        </div>
+
+                        <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">How do I use the discount code?</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                Visit their website using the link above, select your account size, and enter the code "PROPHUB" at checkout to receive 30% off all account sizes.
+                            </p>
+                        </div>
+
+                        <div className="border border-slate-800 rounded-xl bg-black/30 p-6">
+                            <h3 className="font-bold text-lg text-slate-200 mb-2">Is HFT allowed?</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                No, High Frequency Trading (HFT) and arbitrage bots are not allowed. Dominion focuses on serious traders using legitimate strategies.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
