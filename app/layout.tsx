@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "PropFirmHub - Compare Top Prop Trading Firms 2025 | Exclusive Discounts",
-  description: "Compare the best prop trading firms of 2025. Find exclusive discount codes, compare evaluation rules, pricing, and payout speeds. FTMO, FunderPro, TradingCult & more.",
+  description: "Compare top prop firms 2025. Exclusive discounts, evaluation rules & pricing. FTMO, FunderPro, TradingCult & more. Find your perfect firm!",
   keywords: ["prop trading", "prop firms", "FTMO", "funded trading", "trading evaluation", "prop firm comparison", "FunderPro", "TradingCult", "forex prop firms", "futures prop firms"],
   authors: [{ name: "PropFirmHub Team" }],
   creator: "PropFirmHub",
