@@ -551,48 +551,48 @@ export default function ComparisonTable() {
                     <div className="h-1 w-24 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full opacity-50"></div>
                 </div>
 
-                {/* Mobile Filter Bar (Horizontal Scroll) */}
+                {/* Mobile Filter Bar - Row 1: Market Type */}
+                <div className="md:hidden w-full mb-3">
+                    <div className="flex justify-center gap-2 px-4">
+                        <button
+                            onClick={() => setSelectedMarketType('all')}
+                            className={clsx(
+                                "flex-1 text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                selectedMarketType === 'all'
+                                    ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                    : "bg-slate-900/80 border-white/10 text-slate-200"
+                            )}
+                        >
+                            📊 All
+                        </button>
+                        <button
+                            onClick={() => setSelectedMarketType('forex')}
+                            className={clsx(
+                                "flex-1 text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                selectedMarketType === 'forex'
+                                    ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                    : "bg-slate-900/80 border-white/10 text-slate-200"
+                            )}
+                        >
+                            💱 Forex
+                        </button>
+                        <button
+                            onClick={() => setSelectedMarketType('futures')}
+                            className={clsx(
+                                "flex-1 text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                selectedMarketType === 'futures'
+                                    ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                    : "bg-slate-900/80 border-white/10 text-slate-200"
+                            )}
+                        >
+                            📈 Futures
+                        </button>
+                    </div>
+                </div>
+
+                {/* Mobile Filter Bar - Row 2: Other Filters (Horizontal Scroll) */}
                 <div className="md:hidden w-full mb-6">
                     <div className="flex overflow-x-auto gap-3 pb-4 px-4 -mx-4 hide-scrollbar snap-x items-center">
-                        {/* Market Type Selector */}
-                        <div className="snap-start flex-shrink-0">
-                            <div className="flex gap-2">
-                                <button
-                                    onClick={() => setSelectedMarketType('all')}
-                                    className={clsx(
-                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
-                                        selectedMarketType === 'all'
-                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
-                                            : "bg-slate-900/80 border-white/10 text-slate-200"
-                                    )}
-                                >
-                                    📊 All
-                                </button>
-                                <button
-                                    onClick={() => setSelectedMarketType('forex')}
-                                    className={clsx(
-                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
-                                        selectedMarketType === 'forex'
-                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
-                                            : "bg-slate-900/80 border-white/10 text-slate-200"
-                                    )}
-                                >
-                                    💱 Forex
-                                </button>
-                                <button
-                                    onClick={() => setSelectedMarketType('futures')}
-                                    className={clsx(
-                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
-                                        selectedMarketType === 'futures'
-                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
-                                            : "bg-slate-900/80 border-white/10 text-slate-200"
-                                    )}
-                                >
-                                    📈 Futures
-                                </button>
-                            </div>
-                        </div>
-
                         {/* Capital Filter */}
                         <div className="snap-start flex-shrink-0">
                             <div className="relative">
@@ -677,6 +677,7 @@ export default function ComparisonTable() {
                                 setSelectedCapital('all');
                                 setSelectedPlatform('all');
                                 setSelectedChallengeType('all');
+                                setSelectedMarketType('all');
                                 setQuickFilters({
                                     instantFunding: false,
                                     hftAllowed: false,
@@ -693,7 +694,6 @@ export default function ComparisonTable() {
                         >
                             <span className="text-base">🔄</span> Reset
                         </button>
-
                     </div>
                 </div>
 
@@ -1023,6 +1023,20 @@ export default function ComparisonTable() {
                                         </button>
                                     </div>
                                 </div>
+
+                                {/* Active Offers */}
+                                {firm.offer && (
+                                    <div className="mb-4 relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-900 to-black border border-emerald-500/30 p-3 shadow-lg shadow-emerald-900/20 text-center">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
+                                        <div className="flex items-center justify-center gap-1 mb-1">
+                                            <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400 animate-pulse" />
+                                            <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Active Offer</span>
+                                        </div>
+                                        <div className="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">
+                                            {firm.offer}
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* CTA Button */}
                                 <a
