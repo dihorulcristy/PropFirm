@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: ['framer-motion'],
+  reactStrictMode: true,
 };
 
 export default nextConfig;
