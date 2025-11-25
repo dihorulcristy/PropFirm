@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function DealOfTheWeek() {
     // Simple countdown logic
@@ -21,7 +22,17 @@ export default function DealOfTheWeek() {
     return (
         <section className="py-6">
             <div className="container mx-auto px-4">
-                <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl md:rounded-2xl border border-blue-500/30 bg-gradient-to-r from-blue-950 via-slate-900 to-black shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                <motion.div
+                    className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl md:rounded-2xl border border-blue-500/30 bg-gradient-to-r from-blue-950 via-slate-900 to-black shadow-[0_0_40px_rgba(59,130,246,0.2)]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    whileHover={{ scale: 1.01 }}
+                >
+                    {/* Shimmer Effect */}
+                    <div className="absolute inset-0 animate-shimmer pointer-events-none"></div>
+
                     {/* Texture Overlay */}
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
 
@@ -29,10 +40,22 @@ export default function DealOfTheWeek() {
 
                         {/* Left: Badge + Timer */}
                         <div className="flex flex-col items-center md:items-start gap-2">
-                            <span className="text-[10px] md:text-xs font-bold tracking-widest text-cyan-400 uppercase border border-cyan-500/50 px-2 py-0.5 md:py-1 rounded bg-cyan-950/50">🔥 Deal of the Week</span>
-                            <div className="font-mono text-2xl md:text-3xl font-bold text-white tracking-widest drop-shadow-md">
+                            <motion.span
+                                className="text-[10px] md:text-xs font-bold tracking-widest text-cyan-400 uppercase border border-cyan-500/50 px-2 py-0.5 md:py-1 rounded bg-cyan-950/50"
+                                animate={{ scale: [1, 1.05, 1] }}
+                                transition={{ repeat: Infinity, duration: 2 }}
+                            >
+                                🔥 Deal of the Week
+                            </motion.span>
+                            <motion.div
+                                className="font-mono text-2xl md:text-3xl font-bold text-white tracking-widest drop-shadow-md"
+                                key={timeLeft.seconds}
+                                initial={{ scale: 1.1 }}
+                                animate={{ scale: 1 }}
+                                transition={{ duration: 0.3 }}
+                            >
                                 00 : {timeLeft.hours.toString().padStart(2, '0')} : {timeLeft.minutes.toString().padStart(2, '0')} : {timeLeft.seconds.toString().padStart(2, '0')}
-                            </div>
+                            </motion.div>
                             <span className="text-[10px] text-slate-400">Expires Nov 30th</span>
                         </div>
 
@@ -47,16 +70,18 @@ export default function DealOfTheWeek() {
                         </div>
 
                         {/* Right: CTA Button */}
-                        <a
+                        <motion.a
                             href="https://blueguardian.com/?afmc=1scz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full md:w-auto whitespace-nowrap bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm md:text-lg px-6 md:px-8 py-3 rounded-lg md:rounded-xl shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-200 text-center"
+                            className="w-full md:w-auto whitespace-nowrap bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm md:text-lg px-6 md:px-8 py-3 rounded-lg md:rounded-xl shadow-lg text-center"
+                            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)" }}
+                            whileTap={{ scale: 0.95 }}
                         >
                             Get Offer →
-                        </a>
+                        </motion.a>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,29 +1,60 @@
 'use client';
 
-import { ShieldCheck, Zap, TrendingUp, Star, Trophy, DollarSign, Bot } from 'lucide-react';
+import { ShieldCheck, Zap, TrendingUp, Star, Trophy, DollarSign, Bot, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
         <section className="relative overflow-hidden py-20 sm:py-24 lg:pb-32 xl:pb-36">
+            {/* Animated Gradient Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10 animate-gradient pointer-events-none" />
+
             {/* Background Glow Effects */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-4 text-center relative z-10">
-                <div className="mx-auto max-w-4xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display uppercase">
+                <motion.div
+                    className="mx-auto max-w-4xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <motion.h1
+                        className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display uppercase"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         Compare Evaluation Programs{' '}
                         <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 drop-shadow-[0_0_2px_rgba(52,211,153,0.2)] sm:drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">
                             Up to $1M Virtual Capital
                         </span>
-                    </h1>
-                    <p className="mt-6 text-lg leading-8 text-slate-400">
+                    </motion.h1>
+                    <motion.p
+                        className="mt-6 text-lg leading-8 text-slate-400"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         We compare trader evaluation programs and simulated funding opportunities. Find the best prop firm for your trading skills.
-                    </p>
-                    <p className="mt-2 text-[10px] sm:text-xs text-slate-600">
+                    </motion.p>
+                    <motion.p
+                        className="mt-2 text-[10px] sm:text-xs text-slate-600"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
                         All trading activities are performed in a simulated environment with virtual funds.
-                    </p>
-                </div>
+                    </motion.p>
+                </motion.div>
 
 
 
@@ -201,6 +232,18 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
+
+                {/* Scroll Indicator */}
+                <motion.button
+                    onClick={() => scrollToSection('comparison')}
+                    className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1, repeat: Infinity, repeatType: "reverse", repeatDelay: 0.5 }}
+                >
+                    <span className="text-xs uppercase tracking-wider">Scroll</span>
+                    <ChevronDown className="h-5 w-5 animate-bounce" />
+                </motion.button>
             </div>
         </section>
     );
