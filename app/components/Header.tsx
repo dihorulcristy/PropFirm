@@ -79,7 +79,7 @@ export default function Header() {
                     />
 
                     {/* Menu Panel */}
-                    <div className="fixed right-0 top-16 h-[calc(100vh-4rem)] w-64 bg-slate-900 border-l border-slate-800 md:hidden animate-slide-in">
+                    <div className="fixed right-0 top-16 h-[calc(100vh-4rem)] w-64 bg-black/80 backdrop-blur border-l border-slate-800 md:hidden animate-slide-in">
                         <nav className="flex flex-col p-4 gap-2">
                             <button
                                 onClick={() => scrollToSection('hero')}
