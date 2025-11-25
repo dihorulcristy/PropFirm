@@ -22,6 +22,7 @@ interface Firm {
     capital: number;
     platform: string[];
     challengeType: '2-Step' | '1-Step' | 'Instant';
+    marketType: 'forex' | 'futures';
     instantFunding: boolean;
     hftAllowed: boolean;
     balanceBasedDD: boolean;
@@ -58,6 +59,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['MT4/5', 'cTrader', 'DXtrade'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -91,6 +93,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['MT4'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: true,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -124,6 +127,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['cTrader', 'DXtrade', 'Match-Trader'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -158,6 +162,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['MT4', 'MT5', 'cTrader', 'Match-Trader'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -192,6 +197,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['Match-Trader', 'cTrader', 'TradeLocker'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -225,6 +231,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['TradeLocker', 'MT4', 'MT5', 'cTrader'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -257,6 +264,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['MT4', 'MT5'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: true,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -288,6 +296,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['Match-Trader', 'cTrader', 'DXtrade'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: false, // Equity based usually
@@ -321,6 +330,7 @@ const allFirms: Firm[] = [
         capital: 100000,
         platform: ['cTrader', 'Match-Trader'],
         challengeType: '2-Step',
+        marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
@@ -338,6 +348,105 @@ const allFirms: Firm[] = [
             100000: { price: '$549', oldPrice: '$549' },
         }
     },
+    {
+        id: 10,
+        name: 'FunderPro Futures',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80-90%' },
+        price: '$549',
+        oldPrice: '$549',
+        coupon: 'HGC',
+        offer: '30% OFF',
+        action: 'Get Funded',
+        link: 'https://checkout.funderprofutures.com/products?aff=hgc',
+        logoUrl: '/logos/funderpro-futures.png',
+        capital: 100000,
+        platform: ['TradeLocker', 'NinjaTrader', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 1,
+        capitalPricing: {
+            25000: { price: '$249', oldPrice: '$249' },
+            50000: { price: '$349', oldPrice: '$349' },
+            100000: { price: '$549', oldPrice: '$549' },
+            200000: { price: '$1099', oldPrice: '$1099' },
+        }
+    },
+    {
+        id: 11,
+        name: 'Funded Futures Network',
+        rating: 4.6,
+        verified: true,
+        rules: { maxDD: '8%', profit: '80%' },
+        price: '$299',
+        oldPrice: '$598',
+        coupon: 'T2ISFNWP',
+        offer: '50% OFF (All)',
+        action: 'Get Funded',
+        link: 'https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian',
+        logoUrl: '/logos/funded-futures-network.png',
+        capital: 100000,
+        platform: ['NinjaTrader', 'Rithmic', 'TradingView'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            25000: { price: '$149', oldPrice: '$298' },
+            50000: { price: '$199', oldPrice: '$398' },
+            100000: { price: '$299', oldPrice: '$598' },
+            150000: { price: '$449', oldPrice: '$898' },
+        }
+    },
+    {
+        id: 12,
+        name: 'FundingTicks',
+        rating: 4.5,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$399',
+        oldPrice: '$399',
+        coupon: 'BC954C87',
+        offer: '20% OFF',
+        action: 'Get Funded',
+        link: 'https://app.fundingticks.com/register?ref=BC954C87',
+        logoUrl: 'https://unavatar.io/twitter/FundingTicks',
+        capital: 100000,
+        platform: ['NinjaTrader', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 7,
+        capitalPricing: {
+            25000: { price: '$199', oldPrice: '$199' },
+            50000: { price: '$299', oldPrice: '$299' },
+            100000: { price: '$399', oldPrice: '$399' },
+            150000: { price: '$599', oldPrice: '$599' },
+        }
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
@@ -349,6 +458,7 @@ export default function ComparisonTable() {
     const [selectedCapital, setSelectedCapital] = useState<number | 'all'>('all');
     const [selectedPlatform, setSelectedPlatform] = useState<string>('all');
     const [selectedChallengeType, setSelectedChallengeType] = useState<string>('all');
+    const [selectedMarketType, setSelectedMarketType] = useState<'all' | 'forex' | 'futures'>('all');
 
     // Level 1: Quick Pills
     const [quickFilters, setQuickFilters] = useState({
@@ -393,6 +503,7 @@ export default function ComparisonTable() {
             if (selectedCapital !== 'all' && !firm.capitalPricing[selectedCapital]) return false;
             if (selectedPlatform !== 'all' && !firm.platform.includes(selectedPlatform)) return false;
             if (selectedChallengeType !== 'all' && firm.challengeType !== selectedChallengeType) return false;
+            if (selectedMarketType !== 'all' && firm.marketType !== selectedMarketType) return false;
 
             // Level 1 filters (AND logic)
             if (quickFilters.instantFunding && !firm.instantFunding) return false;
@@ -423,7 +534,7 @@ export default function ComparisonTable() {
         }
 
         return filtered;
-    }, [selectedCapital, selectedPlatform, selectedChallengeType, quickFilters, sortBy]);
+    }, [selectedCapital, selectedPlatform, selectedChallengeType, selectedMarketType, quickFilters, sortBy]);
 
     return (
         <section className="py-20 bg-black relative overflow-hidden">
@@ -443,6 +554,44 @@ export default function ComparisonTable() {
                 {/* Mobile Filter Bar (Horizontal Scroll) */}
                 <div className="md:hidden w-full mb-6">
                     <div className="flex overflow-x-auto gap-3 pb-4 px-4 -mx-4 hide-scrollbar snap-x items-center">
+                        {/* Market Type Selector */}
+                        <div className="snap-start flex-shrink-0">
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={() => setSelectedMarketType('all')}
+                                    className={clsx(
+                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                        selectedMarketType === 'all'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    📊 All
+                                </button>
+                                <button
+                                    onClick={() => setSelectedMarketType('forex')}
+                                    className={clsx(
+                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                        selectedMarketType === 'forex'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    💱 Forex
+                                </button>
+                                <button
+                                    onClick={() => setSelectedMarketType('futures')}
+                                    className={clsx(
+                                        "text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                        selectedMarketType === 'futures'
+                                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                            : "bg-slate-900/80 border-white/10 text-slate-200"
+                                    )}
+                                >
+                                    📈 Futures
+                                </button>
+                            </div>
+                        </div>
 
                         {/* Capital Filter */}
                         <div className="snap-start flex-shrink-0">
@@ -550,6 +699,44 @@ export default function ComparisonTable() {
 
                 {/* Desktop Filters Container (Hidden on Mobile) */}
                 <div className="hidden md:block mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6">
+                    {/* Market Type Selector */}
+                    <div className="mb-6">
+                        <div className="flex items-center justify-center gap-3">
+                            <button
+                                onClick={() => setSelectedMarketType('all')}
+                                className={clsx(
+                                    "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                                    selectedMarketType === 'all'
+                                        ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                                        : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+                                )}
+                            >
+                                📊 All Markets
+                            </button>
+                            <button
+                                onClick={() => setSelectedMarketType('forex')}
+                                className={clsx(
+                                    "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                                    selectedMarketType === 'forex'
+                                        ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                                        : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+                                )}
+                            >
+                                💱 Forex
+                            </button>
+                            <button
+                                onClick={() => setSelectedMarketType('futures')}
+                                className={clsx(
+                                    "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                                    selectedMarketType === 'futures'
+                                        ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                                        : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+                                )}
+                            >
+                                📈 Futures
+                            </button>
+                        </div>
+                    </div>
                     {/* Level 2: Configurator Dropdowns + Sort & Reset */}
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6 pb-6 border-b border-white/10">
 

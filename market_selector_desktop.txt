@@ -1,0 +1,38 @@
+<!-- Market Type Selector (Desktop) - Insert BEFORE Level 2 Configurator -->
+<div className="mb-6">
+    <div className="flex items-center justify-center gap-3">
+        <button
+            onClick={() => setSelectedMarketType('all')}
+            className={clsx(
+                "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                selectedMarketType === 'all'
+                    ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                    : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+            )}
+        >
+            📊 All Markets
+        </button>
+        <button
+            onClick={() => setSelectedMarketType('forex')}
+            className={clsx(
+                "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                selectedMarketType === 'forex'
+                    ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                    : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+            )}
+        >
+            💱 Forex
+        </button>
+        <button
+            onClick={() => setSelectedMarketType('futures')}
+            className={clsx(
+                "px-6 py-3 rounded-xl border text-sm font-bold transition-all flex items-center gap-2",
+                selectedMarketType === 'futures'
+                    ? "border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                    : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
+            )}
+        >
+            📈 Futures
+        </button>
+    </div>
+</div>
