@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: `${baseUrl}/how-to-get-funded-guide`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/blog/hft-vs-swing`,
             lastModified: new Date('2025-11-25'),
             changeFrequency: 'weekly',

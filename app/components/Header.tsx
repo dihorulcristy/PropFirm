@@ -2,13 +2,24 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter, usePathname } from 'next/navigation';
 import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const router = useRouter();
+    const pathname = usePathname();
 
     const scrollToSection = (sectionId: string) => {
+        // If we're not on the homepage, navigate there first
+        if (pathname !== '/') {
+            router.push(`/#${sectionId}`);
+            setMobileMenuOpen(false);
+            return;
+        }
+
+        // If we're on homepage, scroll to section
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -8,6 +11,22 @@ import BlogSection from './components/BlogSection';
 import Script from 'next/script';
 
 export default function Home() {
+  // Handle hash navigation when coming from other pages
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # and get the section id
+      const sectionId = hash.substring(1);
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
