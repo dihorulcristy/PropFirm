@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -8,7 +9,16 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                     {/* About Section */}
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-4">PropFirmHub</h3>
+                        <div className="flex items-center gap-3 mb-4">
+                            <Image
+                                src="/logo.png"
+                                alt="PropFirmHub Logo"
+                                width={32}
+                                height={32}
+                                className="rounded-lg"
+                            />
+                            <h3 className="text-white font-bold text-lg">PropFirmHub</h3>
+                        </div>
                         <p className="text-slate-400 text-sm mb-4">
                             Your trusted source for comparing proprietary trading firms. Find the best prop firm for your trading style.
                         </p>

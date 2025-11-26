@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Search, BarChart3, Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -19,10 +20,14 @@ export default function Header() {
         <header className="sticky top-0 z-50 w-full border-b border-slate-800 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/60">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 <div className="flex items-center gap-8">
-                    <Link href="/" className="flex items-center gap-2">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-500">
-                            <BarChart3 className="h-5 w-5" />
-                        </div>
+                    <Link href="/" className="flex items-center gap-3">
+                        <Image
+                            src="/logo.png"
+                            alt="PropFirmHub Logo"
+                            width={40}
+                            height={40}
+                            className="rounded-lg"
+                        />
                         <span className="text-xl font-bold text-white font-display">PropFirmHub</span>
                     </Link>
 
