@@ -61,7 +61,7 @@ export default function Taxes2025() {
 
                         {/* Tax Status Explanation */}
                         <h2 className="text-3xl font-bold text-white mt-12 mb-4">Your Tax Status: Independent Contractor</h2>
-                        
+
                         <p className="text-slate-300 leading-relaxed">
                             <strong className="text-white">Key Fact:</strong> As a prop firm trader, you're classified as an <strong className="text-emerald-400">independent contractor</strong>, not an employee. This means:
                         </p>
@@ -99,7 +99,7 @@ export default function Taxes2025() {
                         {/* United States */}
                         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 my-6">
                             <h3 className="text-xl font-bold text-white mt-0 mb-4">🇺🇸 United States</h3>
-                            
+
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-white font-bold mb-2">Federal Income Tax (Progressive):</h4>
@@ -131,7 +131,7 @@ export default function Taxes2025() {
                                         <p>• Self-Employment Tax: ~$14,130 (after deduction)</p>
                                         <p>• California State Tax: ~$6,000</p>
                                         <p className="text-emerald-400 font-bold pt-2 border-t border-emerald-500/30">
-                                            Total Tax: ~$38,130 (38.1%)<br/>
+                                            Total Tax: ~$38,130 (38.1%)<br />
                                             Take-Home: ~$61,870
                                         </p>
                                     </div>
@@ -142,7 +142,7 @@ export default function Taxes2025() {
                         {/* United Kingdom */}
                         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 my-6">
                             <h3 className="text-xl font-bold text-white mt-0 mb-4">🇬🇧 United Kingdom</h3>
-                            
+
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-white font-bold mb-2">Income Tax (Self-Employed):</h4>
@@ -156,7 +156,7 @@ export default function Taxes2025() {
 
                                 <div>
                                     <h4 className="text-white font-bold mb-2">National Insurance (Class 2 & 4):</h4>
-                                    <p className="text-slate-300 text-sm">Class 2: £3.45/week<br/>Class 4: 9% on profits £12,570-£50,270, then 2%</p>
+                                    <p className="text-slate-300 text-sm">Class 2: £3.45/week<br />Class 4: 9% on profits £12,570-£50,270, then 2%</p>
                                 </div>
 
                                 <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 mt-4">
@@ -165,7 +165,7 @@ export default function Taxes2025() {
                                         <p>• Income Tax: ~£11,432</p>
                                         <p>• National Insurance: ~£4,253</p>
                                         <p className="text-emerald-400 font-bold pt-2 border-t border-emerald-500/30">
-                                            Total Tax: ~£15,685 (26.1%)<br/>
+                                            Total Tax: ~£15,685 (26.1%)<br />
                                             Take-Home: ~£44,315
                                         </p>
                                     </div>
@@ -176,13 +176,13 @@ export default function Taxes2025() {
                         {/* European Union */}
                         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 my-6">
                             <h3 className="text-xl font-bold text-white mt-0 mb-4">🇪🇺 European Union (Selected Countries)</h3>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-black/30 rounded-lg p-4">
                                     <h4 className="text-white font-bold mb-2">🇩🇪 Germany</h4>
                                     <p className="text-slate-300 text-sm">
-                                        Income Tax: 14-45%<br/>
-                                        Solidarity Surcharge: 5.5%<br/>
+                                        Income Tax: 14-45%<br />
+                                        Solidarity Surcharge: 5.5%<br />
                                         <strong className="text-emerald-400">Total: 15-48%</strong>
                                     </p>
                                 </div>
@@ -190,8 +190,8 @@ export default function Taxes2025() {
                                 <div className="bg-black/30 rounded-lg p-4">
                                     <h4 className="text-white font-bold mb-2">🇫🇷 France</h4>
                                     <p className="text-slate-300 text-sm">
-                                        Income Tax: 0-45%<br/>
-                                        Social Contributions: 17.2%<br/>
+                                        Income Tax: 0-45%<br />
+                                        Social Contributions: 17.2%<br />
                                         <strong className="text-emerald-400">Total: 17-62%</strong>
                                     </p>
                                 </div>
@@ -199,8 +199,8 @@ export default function Taxes2025() {
                                 <div className="bg-black/30 rounded-lg p-4">
                                     <h4 className="text-white font-bold mb-2">🇪🇸 Spain</h4>
                                     <p className="text-slate-300 text-sm">
-                                        Income Tax: 19-47%<br/>
-                                        Social Security: ~30%<br/>
+                                        Income Tax: 19-47%<br />
+                                        Social Security: ~30%<br />
                                         <strong className="text-emerald-400">Total: 25-50%</strong>
                                     </p>
                                 </div>
@@ -208,8 +208,8 @@ export default function Taxes2025() {
                                 <div className="bg-black/30 rounded-lg p-4">
                                     <h4 className="text-white font-bold mb-2">🇮🇹 Italy</h4>
                                     <p className="text-slate-300 text-sm">
-                                        Income Tax: 23-43%<br/>
-                                        INPS (social): ~26%<br/>
+                                        Income Tax: 23-43%<br />
+                                        INPS (social): ~26%<br />
                                         <strong className="text-emerald-400">Total: 30-50%</strong>
                                     </p>
                                 </div>
@@ -237,7 +237,7 @@ export default function Taxes2025() {
                                             Deduct a portion of your rent/mortgage, utilities, internet, and insurance based on the percentage of your home used exclusively for trading.
                                         </p>
                                         <div className="bg-black/30 rounded-lg p-3 text-sm text-slate-300">
-                                            <strong className="text-emerald-400">Example:</strong> 200 sq ft office in 2,000 sq ft home = 10% deduction<br/>
+                                            <strong className="text-emerald-400">Example:</strong> 200 sq ft office in 2,000 sq ft home = 10% deduction<br />
                                             Monthly rent: $2,000 × 10% = $200/month = $2,400/year deduction
                                         </div>
                                     </div>
@@ -269,7 +269,7 @@ export default function Taxes2025() {
                                 <div className="flex items-start gap-3">
                                     <CheckCircle className="h-6 w-6 text-emerald-400 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3className="text-lg font-bold text-white mt-0 mb-2">Education & Training</h3>
+                                        <h3 className="text-lg font-bold text-white mt-0 mb-2">Education & Training</h3>
                                         <p className="text-slate-300 text-sm">
                                             Trading courses, books, webinars, conferences, and mentorship programs directly related to improving your trading skills.
                                         </p>
@@ -328,14 +328,14 @@ export default function Taxes2025() {
                                 <p className="text-slate-300 text-sm mb-4">
                                     Once you're consistently profitable ($75,000+/year), consider forming a business entity:
                                 </p>
-                                
+
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="bg-black/30 rounded-lg p-4">
                                         <h4 className="text-white font-bold mb-2">LLC (Limited Liability Company)</h4>
                                         <p className="text-slate-300 text-sm">
-                                            ✅ Asset protection<br/>
-                                            ✅ Pass-through taxation<br/>
-                                            ✅ Simple to manage<br/>
+                                            ✅ Asset protection<br />
+                                            ✅ Pass-through taxation<br />
+                                            ✅ Simple to manage<br />
                                             ❌ Still pay full self-employment tax
                                         </p>
                                     </div>
@@ -343,9 +343,9 @@ export default function Taxes2025() {
                                     <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4">
                                         <h4 className="text-white font-bold mb-2">S-Corp Election</h4>
                                         <p className="text-slate-300 text-sm">
-                                            ✅ Pay yourself reasonable salary<br/>
-                                            ✅ Take remaining as distributions<br/>
-                                            ✅ <strong className="text-emerald-400">Save 10-15% on taxes!</strong><br/>
+                                            ✅ Pay yourself reasonable salary<br />
+                                            ✅ Take remaining as distributions<br />
+                                            ✅ <strong className="text-emerald-400">Save 10-15% on taxes!</strong><br />
                                             ❌ More complex accounting
                                         </p>
                                     </div>
@@ -370,18 +370,18 @@ export default function Taxes2025() {
                                 <p className="text-slate-300 text-sm mb-4">
                                     Self-employed retirement accounts offer huge tax deductions:
                                 </p>
-                                
+
                                 <div className="bg-black/30 rounded-lg p-4 space-y-3 text-sm text-slate-300">
                                     <div>
-                                        <strong className="text-white">Solo 401(k):</strong> Contribute up to $69,000/year (2025)<br/>
+                                        <strong className="text-white">Solo 401(k):</strong> Contribute up to $69,000/year (2025)<br />
                                         <span className="text-xs text-slate-400">Best for high earners</span>
                                     </div>
                                     <div>
-                                        <strong className="text-white">SEP IRA:</strong> Contribute up to 25% of net earnings<br/>
+                                        <strong className="text-white">SEP IRA:</strong> Contribute up to 25% of net earnings<br />
                                         <span className="text-xs text-slate-400">Simpler setup than Solo 401(k)</span>
                                     </div>
                                     <div>
-                                        <strong className="text-white">Traditional IRA:</strong> $7,000/year ($8,000 if 50+)<br/>
+                                        <strong className="text-white">Traditional IRA:</strong> $7,000/year ($8,000 if 50+)<br />
                                         <span className="text-xs text-slate-400">Anyone can contribute</span>
                                     </div>
                                 </div>

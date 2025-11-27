@@ -394,7 +394,7 @@ export default function TopPayouts() {
                                     <li>✅ Crypto payouts available</li>
                                     <li>✅ Clear payout schedule posted</li>
                                     <li>✅ Multiple payout methods</li>
-                                    <li>✅ Fast support responses (< 24hrs)</li>
+                                    <li>✅ Fast support responses (&lt; 24hrs)</li>
                                     <li>✅ Transparent fees structure</li>
                                     <li>✅ Positive payout reviews from traders</li>
                                 </ul>
