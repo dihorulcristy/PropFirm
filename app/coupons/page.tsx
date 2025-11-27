@@ -29,7 +29,7 @@ const allDeals: DealFirm[] = [
         discount: '20% OFF',
         coupon: 'BLACKFRIDAY',
         offer: '20% OFF (Black Friday Sale - Until Nov 29th)',
-        link: 'https://ftmo.com/',
+        link: 'https://trader.ftmo.com/?affiliates=4354',
         verified: true,
         priority: 1,
         hasActiveCoupon: true
@@ -284,18 +284,18 @@ interface DealCardProps {
 
 function DealCard({ deal, isCopied, onCopyAndRedirect }: DealCardProps) {
     return (
-        <div className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10">
+        <div className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-lg border border-white/10 rounded-2xl p-4 sm:p-6 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10">
             {/* Verified Badge */}
             {deal.verified && (
-                <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1.5">
-                    <ShieldCheck className="h-4 w-4 text-emerald-400" />
-                    <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">Verified</span>
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 flex items-center gap-1 sm:gap-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-2 py-1 sm:px-3 sm:py-1.5">
+                    <ShieldCheck className="h-3 w-3 sm:h-4 sm:w-4 text-emerald-400" />
+                    <span className="text-[10px] sm:text-xs font-bold text-emerald-400 uppercase tracking-wider">Verified</span>
                 </div>
             )}
 
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-3 sm:gap-6">
                 {/* Logo */}
-                <div className="flex-shrink-0 w-20 h-20 bg-white/10 rounded-xl p-3 border border-white/10 group-hover:border-white/20 transition-all">
+                <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 bg-white/10 rounded-xl p-2 sm:p-3 border border-white/10 group-hover:border-white/20 transition-all">
                     <img
                         src={deal.logoUrl}
                         alt={`${deal.name} logo`}
@@ -307,33 +307,33 @@ function DealCard({ deal, isCopied, onCopyAndRedirect }: DealCardProps) {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                     {/* Firm Name */}
-                    <h3 className="text-2xl font-bold text-white mb-2">{deal.name}</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2 pr-16 sm:pr-0">{deal.name}</h3>
 
                     {/* Discount Badge */}
-                    <div className="inline-block mb-4">
-                        <div className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-600 animate-pulse">
+                    <div className="inline-block mb-2 sm:mb-4">
+                        <div className="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-600 animate-pulse">
                             {deal.discount}
                         </div>
                     </div>
 
                     {/* Coupon Code or Free Trial */}
                     {deal.hasActiveCoupon ? (
-                        <div className="mb-4">
-                            <p className="text-sm text-slate-400 mb-2">Coupon Code:</p>
-                            <div className="flex items-center gap-3">
-                                <div className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white font-mono text-lg tracking-wider">
+                        <div className="mb-3 sm:mb-4">
+                            <p className="text-xs sm:text-sm text-slate-400 mb-1 sm:mb-2">Coupon Code:</p>
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                                <div className="bg-black/40 border border-white/20 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 text-white font-mono text-sm sm:text-lg tracking-wider">
                                     {deal.coupon.slice(0, 4)}****
                                 </div>
-                                <div className="text-xs text-slate-500">
+                                <div className="text-[10px] sm:text-xs text-slate-500">
                                     (click button for full code)
                                 </div>
                             </div>
                         </div>
                     ) : (
-                        <div className="mb-4">
-                            <p className="text-slate-300 text-sm">
+                        <div className="mb-3 sm:mb-4">
+                            <p className="text-slate-300 text-xs sm:text-sm">
                                 No active codes at the moment, but you get a <span className="text-emerald-400 font-semibold">Free Trial</span>
                             </p>
                         </div>
@@ -342,24 +342,24 @@ function DealCard({ deal, isCopied, onCopyAndRedirect }: DealCardProps) {
                     {/* CTA Button */}
                     <button
                         onClick={() => onCopyAndRedirect(deal)}
-                        className="group/btn relative inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 overflow-hidden"
+                        className="group/btn relative inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2.5 sm:py-3.5 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 overflow-hidden text-xs sm:text-base w-full sm:w-auto justify-center"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
 
                         {isCopied ? (
                             <>
-                                <Check className="h-5 w-5 relative z-10" />
-                                <span className="relative z-10 text-sm sm:text-base">Copied! Redirecting...</span>
+                                <Check className="h-4 w-4 sm:h-5 sm:w-5 relative z-10" />
+                                <span className="relative z-10">Copied! Redirecting...</span>
                             </>
                         ) : deal.hasActiveCoupon ? (
                             <>
-                                <Copy className="h-5 w-5 relative z-10" />
-                                <span className="relative z-10 text-sm sm:text-base">Show Code & Copy</span>
+                                <Copy className="h-4 w-4 sm:h-5 sm:w-5 relative z-10" />
+                                <span className="relative z-10">Show Code & Copy</span>
                             </>
                         ) : (
                             <>
-                                <Zap className="h-5 w-5 relative z-10" />
-                                <span className="relative z-10 text-sm sm:text-base">Activate Free Trial</span>
+                                <Zap className="h-4 w-4 sm:h-5 sm:w-5 relative z-10" />
+                                <span className="relative z-10">Activate Free Trial</span>
                             </>
                         )}
                     </button>
