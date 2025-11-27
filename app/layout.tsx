@@ -90,6 +90,20 @@ export default function RootLayout({
         />
         {/* End Google tag */}
 
+        {/* Google Ads Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11042536372"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11042536372');
+            `,
+          }}
+        />
+        {/* End Google Ads Tag */}
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
