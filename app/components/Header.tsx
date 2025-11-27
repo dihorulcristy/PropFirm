@@ -50,6 +50,9 @@ export default function Header() {
                         <button onClick={() => scrollToSection('comparison')} className="hover:text-emerald-500 transition-colors">
                             Compare
                         </button>
+                        <Link href="/coupons" className="hover:text-emerald-500 transition-colors">
+                            Coupons
+                        </Link>
                         <button onClick={() => scrollToSection('blog')} className="hover:text-emerald-500 transition-colors">
                             Blog
                         </button>
@@ -109,6 +112,13 @@ export default function Header() {
                             >
                                 Compare
                             </button>
+                            <Link
+                                href="/coupons"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="text-left px-4 py-3 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"
+                            >
+                                Coupons
+                            </Link>
                             <button
                                 onClick={() => scrollToSection('blog')}
                                 className="text-left px-4 py-3 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"

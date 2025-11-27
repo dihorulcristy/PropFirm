@@ -35,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/coupons`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.95,
+        },
+        {
             url: `${baseUrl}/dominion-funding`,
             lastModified: new Date('2025-11-24'),
             changeFrequency: 'weekly',
