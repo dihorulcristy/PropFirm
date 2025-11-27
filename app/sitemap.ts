@@ -36,19 +36,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/blog/hft-vs-swing`,
-            lastModified: new Date('2025-11-25'),
+            lastModified: new Date('2025-11-27'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/blog/taxes-2025`,
-            lastModified: new Date('2025-11-25'),
+            lastModified: new Date('2025-11-27'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/blog/top-payouts`,
-            lastModified: new Date('2025-11-25'),
+            lastModified: new Date('2025-11-27'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
