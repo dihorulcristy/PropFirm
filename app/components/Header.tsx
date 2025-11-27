@@ -53,9 +53,9 @@ export default function Header() {
                         <Link href="/coupons" className="hover:text-emerald-500 transition-colors">
                             Coupons
                         </Link>
-                        <button onClick={() => scrollToSection('blog')} className="hover:text-emerald-500 transition-colors">
+                        <Link href="/blog" className="hover:text-emerald-500 transition-colors">
                             Blog
-                        </button>
+                        </Link>
                         <button onClick={() => scrollToSection('faq')} className="hover:text-emerald-500 transition-colors">
                             FAQ
                         </button>
@@ -119,12 +119,13 @@ export default function Header() {
                             >
                                 Coupons
                             </Link>
-                            <button
-                                onClick={() => scrollToSection('blog')}
+                            <Link
+                                href="/blog"
+                                onClick={() => setMobileMenuOpen(false)}
                                 className="text-left px-4 py-3 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"
                             >
                                 Blog
-                            </button>
+                            </Link>
                             <button
                                 onClick={() => scrollToSection('faq')}
                                 className="text-left px-4 py-3 text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"

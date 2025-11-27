@@ -11,10 +11,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.95,
+        },
+        {
+            url: `${baseUrl}/coupons`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.95,
+        },
+        {
             url: `${baseUrl}/how-to-get-funded-guide`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blog/how-hard-is-it-to-get-funded-trading`,
+            lastModified: new Date('2025-11-27'),
+            changeFrequency: 'weekly',
+            priority: 0.85,
         },
         {
             url: `${baseUrl}/blog/hft-vs-swing`,
@@ -33,12 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date('2025-11-25'),
             changeFrequency: 'weekly',
             priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/coupons`,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 0.95,
         },
         {
             url: `${baseUrl}/dominion-funding`,
