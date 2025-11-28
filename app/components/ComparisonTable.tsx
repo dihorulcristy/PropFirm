@@ -447,6 +447,39 @@ const allFirms: Firm[] = [
             150000: { price: '$599', oldPrice: '$599' },
         }
     },
+    {
+        id: 13,
+        name: 'YRM Prop',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '10%', profit: '90%' },
+        price: '$47',
+        oldPrice: '$59',
+        coupon: 'HGC',
+        offer: '20% OFF',
+        action: 'Get Funded',
+        link: 'https://yrmprop.com/ref/dihorulcristy/',
+        logoUrl: '/yrm-prop.png',
+        capital: 100000,
+        platform: ['NinjaTrader', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 14,
+        capitalPricing: {
+            25000: { price: '$47', oldPrice: '$59' },
+            50000: { price: '$47', oldPrice: '$59' },
+            100000: { price: '$47', oldPrice: '$59' },
+            150000: { price: '$47', oldPrice: '$59' },
+        }
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
