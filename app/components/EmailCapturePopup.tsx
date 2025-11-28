@@ -72,7 +72,7 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
 
     return (
         <div
-            className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'
+            className={`fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'
                 }`}
             onClick={handleClose}
         >
@@ -96,49 +96,49 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
                             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
                         </div>
 
-                        <div className="relative p-6 sm:p-8 md:p-12">
+                        <div className="relative p-5 sm:p-8 md:p-12">
                             {!isSuccess ? (
                                 <>
-                                    <div className="flex justify-center mb-6">
-                                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-sm font-bold text-gray-900 shadow-lg animate-pulse">
+                                    <div className="flex justify-center mb-4 sm:mb-6">
+                                        <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs sm:text-sm font-bold text-gray-900 shadow-lg animate-pulse">
                                             🎁 LIMITED TIME OFFER
                                         </div>
                                     </div>
 
-                                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-3 leading-tight">
+                                    <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-2 sm:mb-3 leading-tight">
                                         Get Your FREE
-                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-3xl sm:text-4xl md:text-5xl mt-2">
+                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-2xl sm:text-4xl md:text-5xl mt-1 sm:mt-2">
                                             $25,000 Funded Account
                                         </span>
                                     </h2>
 
-                                    <p className="text-center text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 max-w-md mx-auto">
+                                    <p className="text-center text-gray-300 text-sm sm:text-lg mb-4 sm:mb-8 max-w-md mx-auto">
                                         Join <span className="font-bold text-white">10,000+ traders</span> who are already trading with our capital. No strings attached!
                                     </p>
 
-                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                                        <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-2xl mb-1">⚡</div>
-                                            <div className="text-sm text-gray-300">Instant Access</div>
+                                    <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-8">
+                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-xl sm:text-2xl mb-1">⚡</div>
+                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Instant Access</div>
                                         </div>
-                                        <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-2xl mb-1">💎</div>
-                                            <div className="text-sm text-gray-300">Keep 80% Profits</div>
+                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-xl sm:text-2xl mb-1">💎</div>
+                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Keep 80% Profits</div>
                                         </div>
-                                        <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-2xl mb-1">🚀</div>
-                                            <div className="text-sm text-gray-300">Scale to $200K</div>
+                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-xl sm:text-2xl mb-1">🚀</div>
+                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Scale to $200K</div>
                                         </div>
                                     </div>
 
-                                    <form onSubmit={handleSubmit} className="space-y-4">
+                                    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                                         <input
                                             type="text"
                                             placeholder="Your Full Name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             required
-                                            className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                                            className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-sm sm:text-base"
                                         />
                                         <input
                                             type="email"
@@ -146,12 +146,12 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
-                                            className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                                            className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-sm sm:text-base"
                                         />
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full py-4 px-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-50"
+                                            className="w-full py-3 sm:py-4 px-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-gray-900 font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-50"
                                         >
                                             {isSubmitting ? (
                                                 <span className="flex items-center justify-center">
@@ -167,19 +167,19 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
                                         </button>
                                     </form>
 
-                                    <p className="text-center text-xs text-gray-400 mt-6">
+                                    <p className="text-center text-[10px] sm:text-xs text-gray-400 mt-4 sm:mt-6">
                                         🔒 Your information is 100% secure and will never be shared
                                     </p>
                                 </>
                             ) : (
                                 <div className="text-center py-8">
-                                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
-                                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 animate-bounce">
+                                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-white mb-3">Welcome Aboard! 🎉</h3>
-                                    <p className="text-gray-300 text-lg">
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">Welcome Aboard! 🎉</h3>
+                                    <p className="text-gray-300 text-base sm:text-lg">
                                         Check your email for instant access to your $25,000 funded account!
                                     </p>
                                 </div>
