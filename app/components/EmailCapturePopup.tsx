@@ -30,13 +30,55 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
     const handleClose = () => {
         setIsClosing(true);
         setTimeout(() => {
-        }`}
+            setIsVisible(false);
+            onClose?.();
+        }, 300);
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to subscribe');
+            }
+
+            // Save to localStorage that form was completed
+            localStorage.setItem('emailPopupCompleted', 'true');
+
+            setIsSubmitting(false);
+            setIsSuccess(true);
+
+            setTimeout(() => {
+                handleClose();
+            }, 2000);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setIsSubmitting(false);
+            alert('Something went wrong. Please try again.');
+        }
+    };
+
+    if (!isVisible) return null;
+
+    return (
+        <div
+            className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'
+                }`}
             onClick={handleClose}
         >
             <div
-                className={`relative w - full max - w - lg transform transition - all duration - 300 ${
-            isClosing? 'scale-95 opacity-0': 'scale-100 opacity-100'
-        }`}
+                className={`relative w-full max-w-lg transform transition-all duration-300 ${isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+                    }`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -155,15 +197,14 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
 
             <style jsx>{`
         @keyframes blob {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
+          0%, 100% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
           66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-            .animate - blob { animation: blob 7s infinite; }
-                .animation - delay - 2000 { animation- delay: 2s;
-    }
-        .animation - delay - 4000 { animation - delay: 4s; }
-    `}</style>
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+      `}</style>
         </div>
     );
 }
