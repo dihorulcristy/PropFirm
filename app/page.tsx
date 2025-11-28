@@ -8,6 +8,7 @@ import ComparisonTable from './components/ComparisonTable';
 import FAQ from './components/FAQ';
 import DealOfTheWeek from './components/DealOfTheWeek';
 import BlogSection from './components/BlogSection';
+import TelegramAnnouncement from './components/TelegramAnnouncement';
 import Script from 'next/script';
 
 export default function Home() {
@@ -141,6 +142,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
+      <TelegramAnnouncement />
       <main className="flex-1">
         <div id="hero">
           <Hero />

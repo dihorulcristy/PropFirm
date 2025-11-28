@@ -6,9 +6,10 @@ import { X } from 'lucide-react';
 interface EmailCapturePopupProps {
     onClose?: () => void;
     delay?: number;
+    forceShow?: boolean;
 }
 
-export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCapturePopupProps) {
+export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = false }: EmailCapturePopupProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '' });
@@ -18,14 +19,14 @@ export default function EmailCapturePopup({ onClose, delay = 3000 }: EmailCaptur
     useEffect(() => {
         const hasCompletedForm = localStorage.getItem('emailPopupCompleted');
 
-        if (!hasCompletedForm) {
+        if (!hasCompletedForm || forceShow) {
             const timer = setTimeout(() => {
                 setIsVisible(true);
             }, delay);
 
             return () => clearTimeout(timer);
         }
-    }, [delay]);
+    }, [delay, forceShow]);
 
     const handleClose = () => {
         setIsClosing(true);
