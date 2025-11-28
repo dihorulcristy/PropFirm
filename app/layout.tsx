@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import GDPRBanner from "./components/GDPRBanner";
+import EmailCapturePopup from "./components/EmailCapturePopup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -129,6 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <EmailCapturePopup delay={3000} />
         {children}
         <GDPRBanner />
       </body>
