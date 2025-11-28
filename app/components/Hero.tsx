@@ -27,7 +27,7 @@ export default function Hero() {
                     transition={{ duration: 0.6 }}
                 >
                     <motion.h1
-                        className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display uppercase"
+                        className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display uppercase"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -115,9 +115,9 @@ export default function Hero() {
                     </div>
 
                     {/* Desktop: Grid */}
-                    <div className="hidden sm:grid grid-cols-1 gap-6 sm:grid-cols-3 lg:gap-8 max-w-5xl mx-auto">
+                    <div className="hidden sm:grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-5 lg:gap-6 xl:gap-8 max-w-5xl mx-auto">
                         {/* Card 1: Best Overall */}
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
                             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-transparent to-emerald-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
@@ -134,7 +134,7 @@ export default function Hero() {
                         </div>
 
                         {/* Card 2: Cheapest */}
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
                             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-transparent to-emerald-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
@@ -151,7 +151,7 @@ export default function Hero() {
                         </div>
 
                         {/* Card 3: HFT Allowed */}
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
                             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-transparent to-emerald-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">

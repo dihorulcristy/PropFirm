@@ -542,7 +542,7 @@ export default function ComparisonTable() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-display uppercase tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 font-display uppercase tracking-tight">
                         Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Evaluation Programs</span>
                     </h2>
                     <p className="text-slate-400 text-lg max-w-3xl mx-auto mb-2">
@@ -698,7 +698,7 @@ export default function ComparisonTable() {
                 </div>
 
                 {/* Desktop Filters Container (Hidden on Mobile) */}
-                <div className="hidden md:block mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6">
+                <div className="hidden md:block mb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 lg:p-6">
                     {/* Market Type Selector */}
                     <div className="mb-6">
                         <div className="flex items-center justify-center gap-3">
@@ -746,7 +746,7 @@ export default function ComparisonTable() {
                                 <select
                                     value={selectedCapital}
                                     onChange={(e) => setSelectedCapital(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
-                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
                                     <option value="all" className="bg-black text-slate-200">💰 All Sizes</option>
                                     <option value="10000" className="bg-black text-slate-200">$10k (Starter)</option>
@@ -763,7 +763,7 @@ export default function ComparisonTable() {
                                 <select
                                     value={selectedPlatform}
                                     onChange={(e) => setSelectedPlatform(e.target.value)}
-                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
                                     <option value="all" className="bg-black text-slate-200">🖥️ Any Platform</option>
                                     <option value="cTrader" className="bg-black text-slate-200">cTrader</option>
@@ -779,7 +779,7 @@ export default function ComparisonTable() {
                                 <select
                                     value={selectedChallengeType}
                                     onChange={(e) => setSelectedChallengeType(e.target.value)}
-                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[160px] text-sm font-medium"
+                                    className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
                                     <option value="all" className="bg-black text-slate-200">🎯 Any Type</option>
                                     <option value="2-Step" className="bg-black text-slate-200">2-Step</option>
@@ -1057,26 +1057,26 @@ export default function ComparisonTable() {
                     <table className="w-full text-sm text-slate-400">
                         <thead className="bg-black/60 text-xs uppercase text-slate-500 border-b border-slate-800/50">
                             <tr>
-                                <th className="px-6 py-4 font-medium tracking-wider text-left">Firm</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Rating</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Key Rules</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Price</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Coupon</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Active Offers</th>
-                                <th className="px-6 py-4 font-medium tracking-wider text-center">Action</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-left">Firm</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Rating</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Key Rules</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Price</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Coupon</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Active Offers</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-800/30">
                             {filteredAndSortedFirms.length === 0 ? (
                                 <tr>
-                                    <td colSpan={7} className="px-6 py-12 text-center text-slate-500">
+                                    <td colSpan={5} className="px-6 py-12 text-center text-slate-500">
                                         No firms match your filters. Try adjusting your criteria.
                                     </td>
                                 </tr>
                             ) : (
                                 filteredAndSortedFirms.map((firm) => (
                                     <tr key={firm.id} className="group hover:bg-slate-800/20 transition-colors border-b border-slate-800/30">
-                                        <td className="px-6 py-5 text-left">
+                                        <td className="px-3 py-3 lg:px-6 lg:py-5 text-left">
                                             <div className="flex items-center gap-3">
                                                 <div className="h-10 w-10 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-slate-300 group-hover:ring-1 group-hover:ring-emerald-500/50 transition-all overflow-hidden">
                                                     <img
@@ -1089,7 +1089,7 @@ export default function ComparisonTable() {
                                             </div>
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <div className="flex flex-col gap-1 items-center justify-center">
                                                 <div className="flex items-center gap-1 text-amber-400">
                                                     {[...Array(5)].map((_, i) => (
@@ -1104,7 +1104,7 @@ export default function ComparisonTable() {
                                             </div>
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <div className="flex flex-col gap-1.5 text-xs items-center">
                                                 <div className="flex items-center gap-2 text-slate-300">
                                                     <span className="text-emerald-500">Max DD:</span> {firm.rules.maxDD}
@@ -1115,14 +1115,14 @@ export default function ComparisonTable() {
                                             </div>
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <div className="flex flex-col items-center">
                                                 <span className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</span>
                                                 <span className="text-lg font-bold text-emerald-400">{getPricing(firm).price}</span>
                                             </div>
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             {firm.coupon ? (
                                                 <button
                                                     onClick={() => copyToClipboard(firm.coupon, firm.id)}
@@ -1140,19 +1140,19 @@ export default function ComparisonTable() {
                                             )}
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             {firm.offer ? (
                                                 <div className="relative group overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 to-black border border-emerald-500/30 p-3 shadow-lg shadow-emerald-900/20 hover:shadow-emerald-500/20 transition-all hover:-translate-y-1">
                                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
-                                                    <div className="flex items-center justify-center gap-1 mb-1">
+                                                    <div className="flex items-center justify-center gap-1 mb-0.5 lg:mb-1">
                                                         <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400 animate-pulse" />
-                                                        <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">New Offer</span>
+                                                        <span className="text-[9px] lg:text-[10px] font-bold text-emerald-400 uppercase tracking-wider">New Offer</span>
                                                     </div>
-                                                    <div className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 mb-1">
+                                                    <div className="text-sm lg:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 mb-0.5 lg:mb-1">
                                                         {firm.offer}
                                                     </div>
-                                                    <div className="inline-flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
-                                                        <Trophy className="w-3 h-3" />
+                                                    <div className="inline-flex items-center gap-1 bg-emerald-500/10 px-1.5 py-0.5 rounded text-[9px] lg:text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
+                                                        <Trophy className="w-2.5 h-2.5 lg:w-3 lg:h-3" />
                                                         <span>Limited Time</span>
                                                     </div>
                                                 </div>
@@ -1161,12 +1161,12 @@ export default function ComparisonTable() {
                                             )}
                                         </td>
 
-                                        <td className="px-6 py-5 text-center">
+                                        <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <a
                                                 href={firm.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition-all hover:shadow-emerald-900/40 hover:scale-105 active:scale-95"
+                                                className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition-all hover:shadow-emerald-900/40 hover:scale-105 active:scale-95 whitespace-nowrap"
                                             >
                                                 {firm.action}
                                             </a>

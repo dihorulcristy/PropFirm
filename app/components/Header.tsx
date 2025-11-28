@@ -69,7 +69,7 @@ export default function Header() {
                         <input
                             type="search"
                             placeholder="Search firms..."
-                            className="h-9 w-64 rounded-md border border-slate-800 bg-black/60 pl-9 pr-4 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                            className="h-9 w-48 lg:w-56 xl:w-64 rounded-md border border-slate-800 bg-black/60 pl-9 pr-4 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
                         />
                     </div>
 

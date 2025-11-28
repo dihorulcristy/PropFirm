@@ -97,38 +97,38 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
                         </div>
 
-                        <div className="relative p-5 sm:p-8 md:p-12">
+                        <div className="relative p-5 sm:p-6 md:p-8">
                             {!isSuccess ? (
                                 <>
-                                    <div className="flex justify-center mb-4 sm:mb-6">
-                                        <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs sm:text-sm font-bold text-gray-900 shadow-lg animate-pulse">
+                                    <div className="flex justify-center mb-3 sm:mb-4">
+                                        <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-[10px] sm:text-xs font-bold text-gray-900 shadow-lg animate-pulse">
                                             🎁 LIMITED TIME OFFER
                                         </div>
                                     </div>
 
-                                    <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-2 sm:mb-3 leading-tight">
+                                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-2 sm:mb-3 leading-tight">
                                         Get Your FREE
-                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-2xl sm:text-4xl md:text-5xl mt-1 sm:mt-2">
+                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 sm:mt-2">
                                             $25,000 Funded Account
                                         </span>
                                     </h2>
 
-                                    <p className="text-center text-gray-300 text-sm sm:text-lg mb-4 sm:mb-8 max-w-md mx-auto">
+                                    <p className="text-center text-gray-300 text-xs sm:text-sm md:text-base mb-3 sm:mb-5 md:mb-6 max-w-md mx-auto">
                                         Join <span className="font-bold text-white">10,000+ traders</span> who are already trading with our capital. No strings attached!
                                     </p>
 
-                                    <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-8">
-                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-xl sm:text-2xl mb-1">⚡</div>
-                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Instant Access</div>
+                                    <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-5 md:mb-6">
+                                        <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-lg sm:text-xl mb-1">⚡</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Instant Access</div>
                                         </div>
-                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-xl sm:text-2xl mb-1">💎</div>
-                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Keep 80% Profits</div>
+                                        <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-lg sm:text-xl mb-1">💎</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Keep 80% Profits</div>
                                         </div>
-                                        <div className="text-center p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                                            <div className="text-xl sm:text-2xl mb-1">🚀</div>
-                                            <div className="text-[10px] sm:text-sm text-gray-300 leading-tight">Scale to $200K</div>
+                                        <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                                            <div className="text-lg sm:text-xl mb-1">🚀</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Scale to $200K</div>
                                         </div>
                                     </div>
 
@@ -139,7 +139,7 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             required
-                                            className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-sm sm:text-base"
+                                            className="w-full px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-xs sm:text-sm"
                                         />
                                         <input
                                             type="email"
@@ -147,12 +147,12 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
-                                            className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-sm sm:text-base"
+                                            className="w-full px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-xs sm:text-sm"
                                         />
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full py-3 sm:py-4 px-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-gray-900 font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-50"
+                                            className="w-full py-2.5 sm:py-3 px-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-gray-900 font-bold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-50"
                                         >
                                             {isSubmitting ? (
                                                 <span className="flex items-center justify-center">
