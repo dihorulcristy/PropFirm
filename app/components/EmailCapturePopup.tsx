@@ -73,12 +73,12 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
 
     return (
         <div
-            className={`fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'
+            className={`fixed inset-0 z-[100] flex items-start justify-center p-4 sm:p-6 md:p-8 bg-black/60 backdrop-blur-sm transition-opacity duration-300 overflow-y-auto ${isClosing ? 'opacity-0' : 'opacity-100'
                 }`}
             onClick={handleClose}
         >
             <div
-                className={`relative w-full max-w-lg transform transition-all duration-300 ${isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+                className={`relative w-full max-w-md my-4 sm:my-8 transform transition-all duration-300 ${isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
                     }`}
                 onClick={(e) => e.stopPropagation()}
             >
@@ -97,27 +97,27 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
                         </div>
 
-                        <div className="relative p-5 sm:p-6 md:p-8">
+                        <div className="relative p-4 sm:p-5 max-h-[80vh] overflow-y-auto">
                             {!isSuccess ? (
                                 <>
-                                    <div className="flex justify-center mb-3 sm:mb-4">
-                                        <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-[10px] sm:text-xs font-bold text-gray-900 shadow-lg animate-pulse">
+                                    <div className="flex justify-center mb-2 sm:mb-3">
+                                        <div className="inline-flex items-center px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-[10px] font-bold text-gray-900 shadow-lg animate-pulse">
                                             🎁 LIMITED TIME OFFER
                                         </div>
                                     </div>
 
-                                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-2 sm:mb-3 leading-tight">
+                                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center text-white mb-2 leading-tight">
                                         Get Your FREE
-                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 sm:mt-2">
+                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-xl sm:text-2xl md:text-3xl mt-1">
                                             $25,000 Funded Account
                                         </span>
                                     </h2>
 
-                                    <p className="text-center text-gray-300 text-xs sm:text-sm md:text-base mb-3 sm:mb-5 md:mb-6 max-w-md mx-auto">
+                                    <p className="text-center text-gray-300 text-xs sm:text-sm mb-3 max-w-md mx-auto">
                                         Join <span className="font-bold text-white">10,000+ traders</span> who are already trading with our capital. No strings attached!
                                     </p>
 
-                                    <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-5 md:mb-6">
+                                    <div className="grid grid-cols-3 gap-2 mb-3 sm:mb-4">
                                         <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
                                             <div className="text-lg sm:text-xl mb-1">⚡</div>
                                             <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Instant Access</div>

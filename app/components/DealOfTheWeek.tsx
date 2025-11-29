@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function DealOfTheWeek() {
     // Simple countdown logic
@@ -20,69 +21,188 @@ export default function DealOfTheWeek() {
     }, []);
 
     return (
-        <section className="py-6">
-            <div className="container mx-auto px-4">
-                <motion.div
-                    className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl md:rounded-2xl border border-blue-500/30 bg-gradient-to-r from-blue-950 via-slate-900 to-black shadow-[0_0_40px_rgba(59,130,246,0.2)]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    whileHover={{ scale: 1.01 }}
-                >
-                    {/* Shimmer Effect */}
-                    <div className="absolute inset-0 animate-shimmer pointer-events-none"></div>
+        <section className="py-4 sm:py-6">
+            <div className="container mx-auto px-3 sm:px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-7xl mx-auto">
 
-                    {/* Texture Overlay */}
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+                    {/* FOREX DEAL - Blue Guardian */}
+                    <motion.div
+                        className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-950/90 via-slate-900/90 to-black/90 backdrop-blur-sm shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ y: -4 }}
+                    >
+                        {/* Animated gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                    <div className="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-5 md:py-6 gap-3 md:gap-6">
+                        {/* Shimmer Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/5 to-transparent animate-shimmer"></div>
 
-                        {/* Left: Badge + Timer */}
-                        <div className="flex flex-col items-center md:items-start gap-2">
-                            <motion.span
-                                className="text-[10px] md:text-xs font-bold tracking-widest text-cyan-400 uppercase border border-cyan-500/50 px-2 py-0.5 md:py-1 rounded bg-cyan-950/50"
-                                animate={{ scale: [1, 1.05, 1] }}
-                                transition={{ repeat: Infinity, duration: 2 }}
-                            >
-                                🔥 Deal of the Week
-                            </motion.span>
-                            <motion.div
-                                className="font-mono text-2xl md:text-3xl font-bold text-white tracking-widest drop-shadow-md"
-                                key={timeLeft.seconds}
-                                initial={{ scale: 1.1 }}
-                                animate={{ scale: 1 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                00 : {timeLeft.hours.toString().padStart(2, '0')} : {timeLeft.minutes.toString().padStart(2, '0')} : {timeLeft.seconds.toString().padStart(2, '0')}
-                            </motion.div>
-                            <span className="text-[10px] text-slate-400">Expires Nov 30th</span>
+                        {/* Market Type Badge */}
+                        <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
+                            <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-blue-200 uppercase bg-blue-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-blue-400/30 shadow-lg">
+                                <span className="text-xs sm:text-sm">💱</span>
+                                <span className="hidden xs:inline">FOREX</span>
+                            </div>
                         </div>
 
-                        {/* Center: Offer Details */}
-                        <div className="text-center md:text-left flex-1">
-                            <h3 className="text-lg md:text-2xl lg:text-3xl font-extrabold text-white italic leading-tight">
-                                BLUE <span className="text-blue-500">GUARDIAN</span>
-                            </h3>
-                            <p className="text-slate-300 text-xs md:text-sm lg:text-base mt-1">
-                                Use code <span className="font-mono text-white bg-blue-600 px-1 rounded">1scz</span> for <strong className="text-white">50% OFF</strong> + <strong className="text-cyan-400">B1G1 Free</strong> (after 1st payout).
-                            </p>
+                        <div className="relative p-3 sm:p-4 md:p-5">
+                            {/* Badge + Timer */}
+                            <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                                <motion.div
+                                    className="inline-flex items-center gap-1 self-start text-[9px] sm:text-[10px] font-bold tracking-wider text-cyan-300 uppercase border border-cyan-400/40 bg-cyan-950/40 backdrop-blur-sm px-2 py-0.5 sm:py-1 rounded-md shadow-md"
+                                    animate={{ scale: [1, 1.03, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2.5 }}
+                                >
+                                    <span className="text-xs sm:text-sm">🔥</span>
+                                    <span>Deal of the Week</span>
+                                </motion.div>
+
+                                <motion.div
+                                    className="font-mono text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide drop-shadow-[0_2px_8px_rgba(59,130,246,0.5)]"
+                                    key={timeLeft.seconds}
+                                    initial={{ scale: 1.05 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {timeLeft.hours.toString().padStart(2, '0')}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
+                                </motion.div>
+                            </div>
+
+                            {/* Offer Details */}
+                            <div className="mb-3 sm:mb-4">
+                                <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
+                                    <img
+                                        src="https://unavatar.io/twitter/BlueGuardianCom"
+                                        alt="Blue Guardian Logo"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-cover bg-white/10"
+                                    />
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
+                                        BLUE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">GUARDIAN</span>
+                                    </h3>
+                                </div>
+                                <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                                    Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-blue-600 to-blue-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">1scz</span> for <strong className="text-white font-bold">50% OFF</strong> + <strong className="text-cyan-300 font-bold">B1G1 Free</strong>
+                                </p>
+                            </div>
+
+                            {/* CTA Button */}
+                            <motion.a
+                                href="https://blueguardian.com/?afmc=1scz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:via-blue-400 hover:to-cyan-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-blue-500/50 text-center transition-all duration-300"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <span className="flex items-center justify-center gap-1.5">
+                                    Get Forex Deal
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </span>
+                            </motion.a>
+                        </div>
+                    </motion.div>
+
+                    {/* FUTURES DEAL - YRM Prop */}
+                    <motion.div
+                        className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-orange-500/20 bg-gradient-to-br from-orange-950/90 via-slate-900/90 to-black/90 backdrop-blur-sm shadow-lg hover:shadow-orange-500/20 transition-all duration-300"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        whileHover={{ y: -4 }}
+                    >
+                        {/* Animated gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 via-transparent to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                        {/* Shimmer Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400/5 to-transparent animate-shimmer animation-delay-1000"></div>
+
+                        {/* Market Type Badge */}
+                        <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
+                            <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-orange-200 uppercase bg-orange-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-orange-400/30 shadow-lg">
+                                <span className="text-xs sm:text-sm">📈</span>
+                                <span className="hidden xs:inline">FUTURES</span>
+                            </div>
                         </div>
 
-                        {/* Right: CTA Button */}
-                        <motion.a
-                            href="https://blueguardian.com/?afmc=1scz"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full md:w-auto whitespace-nowrap bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm md:text-lg px-6 md:px-8 py-3 rounded-lg md:rounded-xl shadow-lg text-center"
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)" }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Get Offer →
-                        </motion.a>
-                    </div>
-                </motion.div>
+                        <div className="relative p-3 sm:p-4 md:p-5">
+                            {/* Badge */}
+                            <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                                <motion.div
+                                    className="inline-flex items-center gap-1 self-start text-[9px] sm:text-[10px] font-bold tracking-wider text-orange-300 uppercase border border-orange-400/40 bg-orange-950/40 backdrop-blur-sm px-2 py-0.5 sm:py-1 rounded-md shadow-md"
+                                    animate={{ scale: [1, 1.03, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2.5 }}
+                                >
+                                    <span className="text-xs sm:text-sm">🔥</span>
+                                    <span>BLACK FRIDAY</span>
+                                </motion.div>
+
+                                <div className="text-xs sm:text-sm text-orange-200 font-semibold">
+                                    Limited Time Offer
+                                </div>
+                            </div>
+
+                            {/* Offer Details */}
+                            <div className="mb-3 sm:mb-4">
+                                <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
+                                    <Image
+                                        src="/yrm-prop.png"
+                                        alt="YRM Prop Logo"
+                                        width={40}
+                                        height={40}
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white/10 p-1"
+                                    />
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
+                                        YRM <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">PROP</span>
+                                    </h3>
+                                </div>
+                                <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-1">
+                                    <strong className="text-orange-300 font-bold">$50K Challenge</strong> now just <strong className="text-white text-base sm:text-lg font-black">$37.6</strong>
+                                </p>
+                                <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                                    Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-orange-600 to-orange-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HGC</span> for <strong className="text-white font-bold">Extra 20% OFF</strong>
+                                </p>
+                            </div>
+
+                            {/* CTA Button */}
+                            <motion.a
+                                href="https://yrmprop.com/ref/dihorulcristy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 hover:from-orange-500 hover:via-orange-400 hover:to-red-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-orange-500/50 text-center transition-all duration-300"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <span className="flex items-center justify-center gap-1.5">
+                                    Get Futures Deal
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </span>
+                            </motion.a>
+                        </div>
+                    </motion.div>
+
+                </div>
             </div>
+
+            <style jsx>{`
+                @keyframes shimmer {
+                    0% { transform: translateX(-100%); }
+                    100% { transform: translateX(100%); }
+                }
+                .animate-shimmer {
+                    animation: shimmer 4s infinite;
+                }
+                .animation-delay-1000 {
+                    animation-delay: 1s;
+                }
+            `}</style>
         </section>
     );
 }
