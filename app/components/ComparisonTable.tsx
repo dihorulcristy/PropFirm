@@ -32,7 +32,7 @@ interface Firm {
     noTimeLimit: boolean;
     weeklyPayouts: boolean;
     payoutDays: number;
-    // Pricing by capital size
+    hiddenOnAll?: boolean;
     capitalPricing: {
         [key: number]: {
             price: string;
@@ -41,7 +41,6 @@ interface Firm {
     };
 }
 
-// Dummy Data with full filter properties
 const allFirms: Firm[] = [
     {
         id: 1,
@@ -51,8 +50,8 @@ const allFirms: Firm[] = [
         rules: { maxDD: '10%', profit: '80-90%' },
         price: '$482',
         oldPrice: '$595',
-        coupon: '', // No code for FTMO
-        offer: '19% OFF (100k)', // Active offer
+        coupon: '',
+        offer: '19% OFF (100k)',
         action: 'Get Funded',
         link: 'https://trader.ftmo.com/?affiliates=4354',
         logoUrl: 'https://logo.clearbit.com/ftmo.com',
@@ -299,7 +298,7 @@ const allFirms: Firm[] = [
         marketType: 'forex',
         instantFunding: false,
         hftAllowed: false,
-        balanceBasedDD: false, // Equity based usually
+        balanceBasedDD: false,
         newsTrading: true,
         cryptoPayout: true,
         usaAccepted: false,
@@ -480,6 +479,139 @@ const allFirms: Firm[] = [
             150000: { price: '$47', oldPrice: '$59' },
         }
     },
+    {
+        id: 14,
+        name: 'FundedHero',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$479',
+        oldPrice: '$479',
+        coupon: 'HERO40',
+        offer: '40% OFF',
+        action: 'Get Funded',
+        link: 'https://fundedhero.com/ref/5371/',
+        logoUrl: '/logos/fundedhero.jpg',
+        capital: 100000,
+        platform: ['MT4', 'MT5'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 14,
+        capitalPricing: {
+            10000: { price: '$65', oldPrice: '$65' },
+            25000: { price: '$129', oldPrice: '$129' },
+            50000: { price: '$249', oldPrice: '$249' },
+            100000: { price: '$479', oldPrice: '$479' },
+            200000: { price: '$949', oldPrice: '$949' },
+        }
+    },
+    {
+        id: 15,
+        name: 'FundedHero Futures',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '4.5%', profit: '90%' },
+        price: '$85',
+        oldPrice: '$160',
+        coupon: 'HERO',
+        offer: '50% OFF',
+        action: 'Get Funded',
+        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
+        logoUrl: '/logos/fundedhero.jpg',
+        capital: 100000,
+        platform: ['NinjaTrader', 'Tradovate', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 7,
+        capitalPricing: {
+            50000: { price: '$45', oldPrice: '$90' },
+            75000: { price: '$65', oldPrice: '$130' },
+            100000: { price: '$85', oldPrice: '$160' },
+        }
+    },
+    {
+        id: 16,
+        name: 'FundedHero Futures (1-Step)',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '4%', profit: '90%' },
+        price: '$70',
+        oldPrice: '$140',
+        coupon: 'HERO',
+        offer: '50% OFF',
+        action: 'Get Funded',
+        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
+        logoUrl: '/logos/fundedhero.jpg',
+        capital: 75000,
+        platform: ['NinjaTrader', 'Tradovate', 'Rithmic'],
+        challengeType: '1-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 7,
+        capitalPricing: {
+            25000: { price: '$35', oldPrice: '$70' },
+            50000: { price: '$45', oldPrice: '$90' },
+            75000: { price: '$70', oldPrice: '$140' },
+        },
+        hiddenOnAll: true
+    },
+    {
+        id: 17,
+        name: 'FundedHero Futures (Instant)',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '3%', profit: 'N/A' },
+        price: '$129',
+        oldPrice: '$258',
+        coupon: 'HERO',
+        offer: '50% OFF',
+        action: 'Get Funded',
+        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
+        logoUrl: '/logos/fundedhero.jpg',
+        capital: 10000,
+        platform: ['NinjaTrader', 'Tradovate', 'Rithmic'],
+        challengeType: 'Instant',
+        marketType: 'futures',
+        instantFunding: true,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 7,
+        capitalPricing: {
+            10000: { price: '$129', oldPrice: '$258' },
+            25000: { price: '$250', oldPrice: '$500' },
+            50000: { price: '$350', oldPrice: '$700' },
+            75000: { price: '$499', oldPrice: '$998' },
+        },
+        hiddenOnAll: true
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
@@ -535,7 +667,16 @@ export default function ComparisonTable() {
             // Level 2 filters
             if (selectedCapital !== 'all' && !firm.capitalPricing[selectedCapital]) return false;
             if (selectedPlatform !== 'all' && !firm.platform.includes(selectedPlatform)) return false;
-            if (selectedChallengeType !== 'all' && firm.challengeType !== selectedChallengeType) return false;
+
+            // Challenge Type Logic
+            if (selectedChallengeType === 'all') {
+                // If "All" is selected, hide firms marked as hiddenOnAll
+                if (firm.hiddenOnAll) return false;
+            } else {
+                // If specific type is selected, only show firms matching that type
+                if (firm.challengeType !== selectedChallengeType) return false;
+            }
+
             if (selectedMarketType !== 'all' && firm.marketType !== selectedMarketType) return false;
 
             // Level 1 filters (AND logic)
