@@ -22,6 +22,15 @@ const blogPosts = [
         featured: true,
     },
     {
+        slug: 'what-is-prop-firm-account',
+        title: 'What Is a Prop Firm Account?',
+        description: 'Learn everything about prop firm accounts: how they work, benefits, risks, and how to get one. Complete guide to proprietary trading accounts for forex and futures traders.',
+        date: 'December 2, 2025',
+        readTime: '10 min read',
+        category: 'Guide',
+        featured: false,
+    },
+    {
         slug: 'top-payouts',
         title: 'Top 30 Fastest Prop Firm Payouts in 2025',
         description: 'Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ days. We\'ve analyzed thousands of payouts to rank the 30 fastest-paying prop firms.',

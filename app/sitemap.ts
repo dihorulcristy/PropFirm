@@ -35,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.85,
         },
         {
+            url: `${baseUrl}/blog/what-is-prop-firm-account`,
+            lastModified: new Date('2025-12-02'),
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        {
             url: `${baseUrl}/blog/hft-vs-swing`,
             lastModified: new Date('2025-11-27'),
             changeFrequency: 'weekly',
