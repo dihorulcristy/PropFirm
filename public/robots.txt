@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://propfirmhub.com/sitemap.xml
+Sitemap: https://propfirms-hub.com/sitemap.xml
 
 # Disallow admin and API routes
 Disallow: /api/
