@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Star, ShieldCheck, Check, Copy, ChevronDown, Zap, Trophy } from 'lucide-react';
+import { Star, ShieldCheck, Check, Copy, ChevronDown, Zap, Trophy, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { clsx } from 'clsx';
 
 // Firm interface with all filter properties
@@ -748,6 +748,62 @@ export default function ComparisonTable() {
     // Show/hide advanced filters
     const [showMoreFilters, setShowMoreFilters] = useState(false);
 
+    // Voting System State
+    const [votes, setVotes] = useState<Record<number, { likes: number; dislikes: number }>>({});
+    const [userVotes, setUserVotes] = useState<Record<number, 'like' | 'dislike' | null>>({});
+
+    // Fetch votes on mount
+    React.useEffect(() => {
+        const fetchVotes = async () => {
+            try {
+                const res = await fetch('/api/vote');
+                const data = await res.json();
+                setVotes(data);
+            } catch (error) {
+                console.error('Failed to fetch votes:', error);
+            }
+        };
+
+        // Load user votes from localStorage
+        const savedUserVotes = localStorage.getItem('propfirm_user_votes');
+        if (savedUserVotes) {
+            setUserVotes(JSON.parse(savedUserVotes));
+        }
+
+        fetchVotes();
+    }, []);
+
+    const handleVote = async (firmId: number, type: 'like' | 'dislike') => {
+        // Prevent voting if already voted for this firm
+        if (userVotes[firmId]) return;
+
+        // Optimistic update
+        setVotes(prev => ({
+            ...prev,
+            [firmId]: {
+                likes: prev[firmId]?.likes + (type === 'like' ? 1 : 0) || (type === 'like' ? 1 : 0),
+                dislikes: prev[firmId]?.dislikes + (type === 'dislike' ? 1 : 0) || (type === 'dislike' ? 1 : 0)
+            }
+        }));
+
+        // Update user vote state
+        const newUserVotes = { ...userVotes, [firmId]: type };
+        setUserVotes(newUserVotes);
+        localStorage.setItem('propfirm_user_votes', JSON.stringify(newUserVotes));
+
+        // API call
+        try {
+            await fetch('/api/vote', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ firmId, type })
+            });
+        } catch (error) {
+            console.error('Failed to submit vote:', error);
+            // Revert optimistic update on error (optional, but good practice)
+        }
+    };
+
     const copyToClipboard = (text: string, id: number) => {
         navigator.clipboard.writeText(text);
         setCopiedId(id);
@@ -1274,6 +1330,33 @@ export default function ComparisonTable() {
                                                 </>
                                             )}
                                         </div>
+                                        {/* Voting UI - Mobile */}
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <button
+                                                onClick={() => handleVote(firm.id, 'like')}
+                                                disabled={!!userVotes[firm.id]}
+                                                className={clsx(
+                                                    "flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md transition-colors",
+                                                    userVotes[firm.id] === 'like' ? "text-emerald-400 bg-emerald-400/10" : "text-slate-500 hover:text-emerald-400 hover:bg-emerald-400/5",
+                                                    userVotes[firm.id] && userVotes[firm.id] !== 'like' && "opacity-50 cursor-not-allowed"
+                                                )}
+                                            >
+                                                <ThumbsUp className="w-3 h-3" />
+                                                <span>{votes[firm.id]?.likes || 0}</span>
+                                            </button>
+                                            <button
+                                                onClick={() => handleVote(firm.id, 'dislike')}
+                                                disabled={!!userVotes[firm.id]}
+                                                className={clsx(
+                                                    "flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md transition-colors",
+                                                    userVotes[firm.id] === 'dislike' ? "text-red-400 bg-red-400/10" : "text-slate-500 hover:text-red-400 hover:bg-red-400/5",
+                                                    userVotes[firm.id] && userVotes[firm.id] !== 'dislike' && "opacity-50 cursor-not-allowed"
+                                                )}
+                                            >
+                                                <ThumbsDown className="w-3 h-3" />
+                                                <span>{votes[firm.id]?.dislikes || 0}</span>
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className="text-right flex-shrink-0">
                                         <div className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</div>
@@ -1342,6 +1425,7 @@ export default function ComparisonTable() {
                             <tr>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-left">Firm</th>
                                 <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Rating</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Community</th>
                                 <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Key Rules</th>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Price</th>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Coupon</th>
@@ -1459,8 +1543,8 @@ export default function ComparisonTable() {
                             )}
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </section>
+                </div >
+            </div >
+        </section >
     );
 }

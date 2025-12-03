@@ -41,7 +41,7 @@ export default function TelegramAnnouncement() {
 
                             {/* Telegram Button */}
                             <a
-                                href="https://t.me/+hVHKv0J6w1owYTU0"
+                                href="https://t.me/PrpFirmHub"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#0088cc] hover:bg-[#0077b3] text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-200"

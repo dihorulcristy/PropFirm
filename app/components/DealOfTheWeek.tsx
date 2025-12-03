@@ -49,7 +49,7 @@ export default function DealOfTheWeek() {
                         </div>
 
                         <div className="relative p-3 sm:p-4 md:p-5">
-                            {/* Badge + Timer */}
+                            {/* Badge + Date */}
                             <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                                 <motion.div
                                     className="inline-flex items-center gap-1 self-start text-[9px] sm:text-[10px] font-bold tracking-wider text-cyan-300 uppercase border border-cyan-400/40 bg-cyan-950/40 backdrop-blur-sm px-2 py-0.5 sm:py-1 rounded-md shadow-md"
@@ -57,18 +57,12 @@ export default function DealOfTheWeek() {
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
                                     <span className="text-xs sm:text-sm">🔥</span>
-                                    <span>Deal of the Week</span>
+                                    <span>CYBER MONDAY</span>
                                 </motion.div>
 
-                                <motion.div
-                                    className="font-mono text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide drop-shadow-[0_2px_8px_rgba(59,130,246,0.5)]"
-                                    key={timeLeft.seconds}
-                                    initial={{ scale: 1.05 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    {timeLeft.hours.toString().padStart(2, '0')}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
-                                </motion.div>
+                                <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-slate-800/80 px-2 py-1 rounded-md border border-white/10">
+                                    <span>📅</span> Dec. 1st - 10th
+                                </div>
                             </div>
 
                             {/* Offer Details */}
@@ -83,9 +77,17 @@ export default function DealOfTheWeek() {
                                         BLUE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">GUARDIAN</span>
                                     </h3>
                                 </div>
-                                <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
-                                    Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-blue-600 to-blue-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">1scz</span> for <strong className="text-white font-bold">50% OFF</strong> + <strong className="text-cyan-300 font-bold">B1G1 Free</strong>
-                                </p>
+                                <div className="space-y-1">
+                                    <p className="text-white text-lg sm:text-xl font-black leading-tight">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">40% OFF</span> ALL ACCOUNTS
+                                    </p>
+                                    <p className="text-slate-300 text-[10px] sm:text-xs font-medium">
+                                        2-STEP, CLASSIC & IFS → <span className="text-cyan-300 font-bold">30% OFF</span>
+                                    </p>
+                                    <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
+                                        Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-blue-600 to-blue-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">CYBER</span>
+                                    </p>
+                                </div>
                             </div>
 
                             {/* CTA Button */}
@@ -98,7 +100,7 @@ export default function DealOfTheWeek() {
                                 whileTap={{ scale: 0.98 }}
                             >
                                 <span className="flex items-center justify-center gap-1.5">
-                                    Get Forex Deal
+                                    Get Cyber Deal
                                     <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
