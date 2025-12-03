@@ -190,6 +190,18 @@ const allDeals: DealFirm[] = [
         priority: 14,
         hasActiveCoupon: true
     },
+    {
+        id: 15,
+        name: 'InstantFunding',
+        logoUrl: 'https://logo.clearbit.com/instantfunding.com',
+        discount: 'Get Started',
+        coupon: '',
+        offer: 'Multiple Program Options (Instant, 1-Step, 2-Step)',
+        link: 'https://instantfunding.com/?partner=419',
+        verified: true,
+        priority: 15,
+        hasActiveCoupon: false
+    },
 ];
 
 export default function CouponsPage() {

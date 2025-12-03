@@ -612,6 +612,111 @@ const allFirms: Firm[] = [
         },
         hiddenOnAll: true
     },
+    {
+        id: 18,
+        name: 'InstantFunding (Instant)',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$239',
+        oldPrice: '$239',
+        coupon: '',
+        offer: '',
+        action: 'Get Funded',
+        link: 'https://instantfunding.com/?partner=419',
+        logoUrl: 'https://logo.clearbit.com/instantfunding.com',
+        capital: 5000,
+        platform: ['MT5', 'cTrader', 'Match-Trader'],
+        challengeType: 'Instant',
+        marketType: 'forex',
+        instantFunding: true,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$239', oldPrice: '$239' },
+            10000: { price: '$459', oldPrice: '$459' },
+            40000: { price: '$1849', oldPrice: '$1849' },
+            120000: { price: '$5499', oldPrice: '$5499' },
+        },
+        hiddenOnAll: true
+    },
+    {
+        id: 19,
+        name: 'InstantFunding (One-Phase)',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$49',
+        oldPrice: '$49',
+        coupon: '',
+        offer: '',
+        action: 'Get Funded',
+        link: 'https://instantfunding.com/?partner=419',
+        logoUrl: 'https://logo.clearbit.com/instantfunding.com',
+        capital: 5000,
+        platform: ['MT5', 'cTrader', 'Match-Trader'],
+        challengeType: '1-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$49', oldPrice: '$49' },
+            10000: { price: '$94', oldPrice: '$94' },
+            25000: { price: '$199', oldPrice: '$199' },
+            50000: { price: '$329', oldPrice: '$329' },
+            100000: { price: '$599', oldPrice: '$599' },
+            200000: { price: '$1199', oldPrice: '$1199' },
+        },
+        hiddenOnAll: true
+    },
+    {
+        id: 20,
+        name: 'InstantFunding',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$39',
+        oldPrice: '$39',
+        coupon: '',
+        offer: '',
+        action: 'Get Funded',
+        link: 'https://instantfunding.com/?partner=419',
+        logoUrl: 'https://logo.clearbit.com/instantfunding.com',
+        capital: 5000,
+        platform: ['MT5', 'cTrader', 'Match-Trader'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$39', oldPrice: '$39' },
+            10000: { price: '$63', oldPrice: '$63' },
+            25000: { price: '$149', oldPrice: '$149' },
+            50000: { price: '$254', oldPrice: '$254' },
+            100000: { price: '$439', oldPrice: '$439' },
+            200000: { price: '$999', oldPrice: '$999' },
+        },
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
@@ -781,6 +886,7 @@ export default function ComparisonTable() {
                                     )}
                                 >
                                     <option value="all" className="bg-slate-900 text-slate-300">💰 All Sizes</option>
+                                    <option value="5000" className="bg-slate-900 text-slate-300">$5k</option>
                                     <option value="10000" className="bg-slate-900 text-slate-300">$10k</option>
                                     <option value="25000" className="bg-slate-900 text-slate-300">$25k</option>
                                     <option value="50000" className="bg-slate-900 text-slate-300">$50k</option>
@@ -812,6 +918,7 @@ export default function ComparisonTable() {
                                     <option value="DXtrade" className="bg-slate-900 text-slate-300">DXtrade</option>
                                     <option value="Match-Trader" className="bg-slate-900 text-slate-300">Match-Trader</option>
                                     <option value="MT4/5" className="bg-slate-900 text-slate-300">MT4/5</option>
+                                    <option value="MT5" className="bg-slate-900 text-slate-300">MT5</option>
                                 </select>
                                 <ChevronDown className={clsx(
                                     "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none transition-colors",
@@ -923,6 +1030,7 @@ export default function ComparisonTable() {
                                     className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
                                     <option value="all" className="bg-black text-slate-200">💰 All Sizes</option>
+                                    <option value="5000" className="bg-black text-slate-200">$5k (Mini)</option>
                                     <option value="10000" className="bg-black text-slate-200">$10k (Starter)</option>
                                     <option value="25000" className="bg-black text-slate-200">$25k (Growth)</option>
                                     <option value="50000" className="bg-black text-slate-200">$50k (Standard)</option>
@@ -944,6 +1052,7 @@ export default function ComparisonTable() {
                                     <option value="DXtrade" className="bg-black text-slate-200">DXtrade</option>
                                     <option value="Match-Trader" className="bg-black text-slate-200">Match-Trader</option>
                                     <option value="MT4/5" className="bg-black text-slate-200">MetaTrader 4/5</option>
+                                    <option value="MT5" className="bg-black text-slate-200">MetaTrader 5</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
                             </div>
