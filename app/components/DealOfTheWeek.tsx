@@ -43,8 +43,7 @@ export default function DealOfTheWeek() {
                         {/* Market Type Badge */}
                         <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
                             <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-blue-200 uppercase bg-blue-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-blue-400/30 shadow-lg">
-                                <span className="text-xs sm:text-sm">💱</span>
-                                <span className="hidden xs:inline">FOREX</span>
+                                <span className="text-xs sm:text-sm">FOREX</span>
                             </div>
                         </div>
 
@@ -127,8 +126,7 @@ export default function DealOfTheWeek() {
                         {/* Market Type Badge */}
                         <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
                             <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-orange-200 uppercase bg-orange-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-orange-400/30 shadow-lg">
-                                <span className="text-xs sm:text-sm">📈</span>
-                                <span className="hidden xs:inline">FUTURES</span>
+                                <span className="text-xs sm:text-sm">FUTURES</span>
                             </div>
                         </div>
 
