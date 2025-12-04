@@ -1472,6 +1472,38 @@ export default function ComparisonTable() {
                                         </td>
 
                                         <td className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-5 text-center">
+                                            <div className="flex flex-col gap-2 items-center">
+                                                {/* Voting Buttons */}
+                                                <div className="flex items-center gap-2">
+                                                    <button
+                                                        onClick={() => handleVote(firm.id, 'like')}
+                                                        disabled={!!userVotes[firm.id]}
+                                                        className={clsx(
+                                                            "flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md transition-colors",
+                                                            userVotes[firm.id] === 'like' ? "text-emerald-400 bg-emerald-400/10" : "text-slate-500 hover:text-emerald-400 hover:bg-emerald-400/5",
+                                                            userVotes[firm.id] && userVotes[firm.id] !== 'like' && "opacity-50 cursor-not-allowed"
+                                                        )}
+                                                    >
+                                                        <ThumbsUp className="w-3.5 h-3.5" />
+                                                        <span>{votes[firm.id]?.likes || 0}</span>
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleVote(firm.id, 'dislike')}
+                                                        disabled={!!userVotes[firm.id]}
+                                                        className={clsx(
+                                                            "flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md transition-colors",
+                                                            userVotes[firm.id] === 'dislike' ? "text-red-400 bg-red-400/10" : "text-slate-500 hover:text-red-400 hover:bg-red-400/5",
+                                                            userVotes[firm.id] && userVotes[firm.id] !== 'dislike' && "opacity-50 cursor-not-allowed"
+                                                        )}
+                                                    >
+                                                        <ThumbsDown className="w-3.5 h-3.5" />
+                                                        <span>{votes[firm.id]?.dislikes || 0}</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <div className="flex flex-col gap-1.5 text-xs items-center">
                                                 <div className="flex items-center gap-2 text-slate-300">
                                                     <span className="text-emerald-500">Max DD:</span> {firm.rules.maxDD}

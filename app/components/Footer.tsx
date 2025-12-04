@@ -50,7 +50,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-semibold mb-4">Contact</h4>
                         <ul className="space-y-2 text-sm text-slate-400">
-                            <li>Email: support@propfirmhub.com</li>
+                            <li>Email: support@propfirms-hub.com</li>
                             <li>Address: 123 Trading St, Suite 100</li>
                             <li>Dubai, UAE</li>
                             <li><Link href="/contact" className="text-emerald-400 hover:text-emerald-300 transition-colors">Contact Form →</Link></li>

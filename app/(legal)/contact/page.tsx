@@ -125,7 +125,7 @@ export default function Contact() {
                 <div className="mt-12 pt-8 border-t border-slate-800">
                     <h2 className="text-xl font-semibold text-white mb-4">Other Ways to Reach Us</h2>
                     <p className="text-slate-300">
-                        Email: <a href="mailto:support@propfirmhub.com" className="text-emerald-400 hover:text-emerald-300">support@propfirmhub.com</a>
+                        Email: <a href="mailto:support@propfirms-hub.com" className="text-emerald-400 hover:text-emerald-300">support@propfirms-hub.com</a>
                     </p>
                 </div>
             </main>
