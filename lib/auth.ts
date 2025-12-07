@@ -2,21 +2,18 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const secret = process.env.SECRET_KEY;
-const email = process.env.ADMIN_EMAIL;
-const password = process.env.ADMIN_PASSWORD;
-
-if (!secret || !email || !password) {
-    throw new Error('Missing environment variables for authentication');
-}
-
-const SECRET_KEY = new TextEncoder().encode(secret);
+const SECRET_KEY = process.env.SECRET_KEY ? new TextEncoder().encode(process.env.SECRET_KEY) : null;
 const ALG = 'HS256';
 
-const ADMIN_EMAIL = email;
-const ADMIN_PASSWORD = password;
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 export async function login(email: string, password: string): Promise<boolean> {
+    if (!SECRET_KEY || !ADMIN_EMAIL || !ADMIN_PASSWORD) {
+        console.error('Missing environment variables for authentication');
+        return false;
+    }
+
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
         const token = await new SignJWT({ email })
             .setProtectedHeader({ alg: ALG })
@@ -45,6 +42,9 @@ export async function verifySession() {
     if (!token) return null;
 
     try {
+        if (!SECRET_KEY) {
+            return null;
+        }
         const { payload } = await jwtVerify(token, SECRET_KEY, {
             algorithms: [ALG],
         });
