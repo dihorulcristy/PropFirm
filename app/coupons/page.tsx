@@ -202,6 +202,18 @@ const allDeals: DealFirm[] = [
         priority: 15,
         hasActiveCoupon: false
     },
+    {
+        id: 16,
+        name: 'Blue Guardian Futures',
+        logoUrl: 'https://unavatar.io/twitter/BlueGuardianCom',
+        discount: '60% OFF',
+        coupon: 'CYBER',
+        offer: '60% OFF (Cyber Monday)',
+        link: 'https://checkout.blueguardianfutures.com/ref/1105/',
+        verified: true,
+        priority: 1,
+        hasActiveCoupon: true
+    },
 ];
 
 export default function CouponsPage() {
@@ -260,7 +272,7 @@ export default function CouponsPage() {
                                         placeholder="Search for your firm here..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
-                                        className="w-full bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl pl-14 pr-6 py-5 text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 text-lg"
+                                        className="w-full bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl pl-14 pr-6 py-5 text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500/50 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 text-lg"
                                     />
                                 </div>
                             </div>
@@ -416,6 +428,25 @@ function FlashSalesSection() {
                 </div>
 
                 <div className="space-y-4">
+                    {/* Flash Sale - Blue Guardian Futures */}
+                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                            <div>
+                                <p className="text-sm font-bold text-red-400 mb-1">🔥 HUGE SAVINGS!</p>
+                                <p className="text-white font-semibold">Blue Guardian Futures</p>
+                                <p className="text-sm text-slate-300">60% OFF with code <span className="text-emerald-400 font-mono">CYBER</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="https://checkout.blueguardianfutures.com/ref/1105/"
+                            target="_blank"
+                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
+                        >
+                            View Offer →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale 1 - FTMO Black Friday */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
@@ -428,24 +459,6 @@ function FlashSalesSection() {
                         </div>
                         <Link
                             href="#ftmo"
-                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
-                        >
-                            View Offer →
-                        </Link>
-                    </div>
-
-                    {/* Flash Sale 2 - Blue Guardian */}
-                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
-                        <div className="flex items-start gap-3 mb-3">
-                            <Clock className="h-5 w-5 text-orange-400 flex-shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-orange-400 mb-1">Limited Time</p>
-                                <p className="text-white font-semibold">Blue Guardian</p>
-                                <p className="text-sm text-slate-300">50% OFF with code <span className="text-emerald-400 font-mono">1scz</span></p>
-                            </div>
-                        </div>
-                        <Link
-                            href="#blue-guardian"
                             className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
                         >
                             View Offer →

@@ -717,6 +717,37 @@ const allFirms: Firm[] = [
             200000: { price: '$999', oldPrice: '$999' },
         },
     },
+    {
+        id: 21,
+        name: 'Blue Guardian Futures',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '4%', profit: 'Goal' },
+        price: '$100',
+        oldPrice: '$200',
+        coupon: 'CYBER',
+        offer: '60% OFF',
+        action: 'Get Funded',
+        link: 'https://checkout.blueguardianfutures.com/ref/1105/',
+        logoUrl: 'https://unavatar.io/twitter/BlueGuardianCom',
+        capital: 50000,
+        platform: ['NinjaTrader', 'Tradovate', 'Rithmic'],
+        challengeType: '1-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            50000: { price: '$100', oldPrice: '$200' },
+            100000: { price: '$200', oldPrice: '$400' },
+        }
+    },
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
