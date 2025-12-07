@@ -1,50 +1,22 @@
-
-import fs from 'fs';
-import path from 'path';
-
-const DATA_FILE = path.join(process.cwd(), 'data', 'analytics.json');
+import { sql } from '@vercel/postgres';
 
 type Click = {
-    id: string;
+    id: number;
     firm: string;
     destination: string;
-    timestamp: number;
-    ip?: string; // Anonymize or omit in prod if not needed
+    click_timestamp: string; // Postgres returns bigints as strings
+    ip_address?: string;
 };
 
-type AnalyticsData = {
-    clicks: Click[];
-};
-
-// Initialize file if not exists
-if (!fs.existsSync(DATA_FILE)) {
-    try {
-        const dir = path.dirname(DATA_FILE);
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir, { recursive: true });
-        }
-        fs.writeFileSync(DATA_FILE, JSON.stringify({ clicks: [] }, null, 2));
-    } catch (e) {
-        console.error("Error initializing analytics file", e);
-    }
-}
+// No initialization needed for DB connection in serverless (handled by @vercel/postgres)
 
 export async function trackClick(firm: string, destination: string) {
     try {
-        const data: AnalyticsData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-
-        // Simple ID generation
-        const id = Math.random().toString(36).substring(2, 15);
-
-        const newClick: Click = {
-            id,
-            firm,
-            destination,
-            timestamp: Date.now(),
-        };
-
-        data.clicks.push(newClick);
-        fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+        const timestamp = Date.now();
+        await sql`
+            INSERT INTO analytics_clicks (firm, destination, click_timestamp)
+            VALUES (${firm}, ${destination}, ${timestamp})
+        `;
     } catch (error) {
         console.error('Failed to track click:', error);
     }
@@ -52,36 +24,64 @@ export async function trackClick(firm: string, destination: string) {
 
 export async function getStats(period: 'today' | 'yesterday' | '7d' | '30d' | 'all' = 'all') {
     try {
-        if (!fs.existsSync(DATA_FILE)) return { clicks: [], summary: {} };
-
-        const data: AnalyticsData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
         const now = new Date();
         const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
-
-        let filteredClicks = data.clicks;
+        let startTime = 0;
+        let endTime = Infinity;
 
         if (period === 'today') {
-            filteredClicks = data.clicks.filter(c => c.timestamp >= todayStart);
+            startTime = todayStart;
         } else if (period === 'yesterday') {
-            const yesterdayStart = todayStart - 86400000;
-            filteredClicks = data.clicks.filter(c => c.timestamp >= yesterdayStart && c.timestamp < todayStart);
+            startTime = todayStart - 86400000;
+            endTime = todayStart;
         } else if (period === '7d') {
-            const start = now.getTime() - (7 * 86400000);
-            filteredClicks = data.clicks.filter(c => c.timestamp >= start);
+            startTime = now.getTime() - (7 * 86400000);
         } else if (period === '30d') {
-            const start = now.getTime() - (30 * 86400000);
-            filteredClicks = data.clicks.filter(c => c.timestamp >= start);
+            startTime = now.getTime() - (30 * 86400000);
         }
+
+        // Fetch clicks based on time range
+        // Note: We fetch all for 'all', or filter by timestamp column
+        // Postgres BIGINT comparisons
+
+        let result;
+        if (period === 'all') {
+            result = await sql`SELECT * FROM analytics_clicks ORDER BY click_timestamp DESC`;
+        } else {
+            // For simplicity in this migration, we can query safely with a WHERE clause
+            // Use simple string interpolation for BigInt comparison or parameterized query if possible
+            // Parameterized is better:
+            if (endTime !== Infinity) {
+                result = await sql`
+                    SELECT * FROM analytics_clicks 
+                    WHERE click_timestamp >= ${startTime} AND click_timestamp < ${endTime}
+                    ORDER BY click_timestamp DESC
+                 `;
+            } else {
+                result = await sql`
+                    SELECT * FROM analytics_clicks 
+                    WHERE click_timestamp >= ${startTime}
+                    ORDER BY click_timestamp DESC
+                 `;
+            }
+        }
+
+        const clicks = result.rows.map(row => ({
+            id: row.id,
+            firm: row.firm,
+            destination: row.destination,
+            timestamp: Number(row.click_timestamp), // Convert BigInt string to number for frontend
+        }));
 
         // Group by Firm
         const summary: Record<string, number> = {};
-        filteredClicks.forEach(click => {
+        clicks.forEach(click => {
             summary[click.firm] = (summary[click.firm] || 0) + 1;
         });
 
         return {
-            total: filteredClicks.length,
-            clicks: filteredClicks.sort((a, b) => b.timestamp - a.timestamp), // Newest first
+            total: clicks.length,
+            clicks: clicks,
             summary
         };
 
