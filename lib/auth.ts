@@ -8,13 +8,17 @@ const ALG = 'HS256';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
+export function checkConfig() {
+    return !!SECRET_KEY && !!ADMIN_EMAIL && !!ADMIN_PASSWORD;
+}
+
 export async function login(email: string, password: string): Promise<boolean> {
     if (!SECRET_KEY || !ADMIN_EMAIL || !ADMIN_PASSWORD) {
         console.error('Missing environment variables for authentication');
         return false;
     }
 
-    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    if (email.trim() === ADMIN_EMAIL.trim() && password.trim() === ADMIN_PASSWORD.trim()) {
         const token = await new SignJWT({ email })
             .setProtectedHeader({ alg: ALG })
             .setIssuedAt()
