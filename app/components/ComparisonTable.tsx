@@ -1406,7 +1406,7 @@ export default function ComparisonTable() {
 
                                 {/* CTA Button */}
                                 <a
-                                    href={firm.link}
+                                    href={`/api/analytics/track?dest=${encodeURIComponent(firm.link)}&firm=${encodeURIComponent(firm.name)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-emerald-500/20 transition active:scale-95 flex items-center justify-center"
@@ -1562,7 +1562,7 @@ export default function ComparisonTable() {
 
                                         <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <a
-                                                href={firm.link}
+                                                href={`/api/analytics/track?dest=${encodeURIComponent(firm.link)}&firm=${encodeURIComponent(firm.name)}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition-all hover:shadow-emerald-900/40 hover:scale-105 active:scale-95 whitespace-nowrap"
