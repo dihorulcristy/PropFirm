@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { useState } from 'react';
 
 export default function FunderProFuturesPage() {
-    const affiliateLink = "https://dashboard.funderprofutures.com/identity/account/register?aff=hgc";
+    const affiliateLink = `/api/analytics/track?dest=${encodeURIComponent("https://dashboard.funderprofutures.com/identity/account/register?aff=hgc")}&firm=${encodeURIComponent("FunderPro Futures")}`;
     const [copied, setCopied] = useState(false);
 
     const copyCode = () => {

@@ -435,14 +435,15 @@ export default function HowToGetFundedGuide() {
                                                 </span>
                                             </td>
                                             <td className="p-4">
-                                                <Link
-                                                    href={firm.link}
+                                                <a
+                                                    href={`/api/analytics/track?dest=${encodeURIComponent(firm.link)}&firm=${encodeURIComponent(firm.name)}`}
                                                     target="_blank"
+                                                    rel="noopener noreferrer"
                                                     className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold transition-all"
                                                 >
                                                     Visit Site
                                                     <ArrowRight className="h-4 w-4" />
-                                                </Link>
+                                                </a>
                                             </td>
                                         </tr>
                                     ))}
@@ -493,14 +494,15 @@ export default function HowToGetFundedGuide() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <Link
-                                        href={firm.link}
+                                    <a
+                                        href={`/api/analytics/track?dest=${encodeURIComponent(firm.link)}&firm=${encodeURIComponent(firm.name)}`}
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-bold transition-all"
                                     >
                                         Visit Site
                                         <ArrowRight className="h-5 w-5" />
-                                    </Link>
+                                    </a>
                                 </div>
                             ))}
                         </div>

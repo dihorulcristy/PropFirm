@@ -2,12 +2,19 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const SECRET_KEY = new TextEncoder().encode('this-is-a-secure-secret-key-change-in-prod');
+const secret = process.env.SECRET_KEY;
+const email = process.env.ADMIN_EMAIL;
+const password = process.env.ADMIN_PASSWORD;
+
+if (!secret || !email || !password) {
+    throw new Error('Missing environment variables for authentication');
+}
+
+const SECRET_KEY = new TextEncoder().encode(secret);
 const ALG = 'HS256';
 
-// Hardcoded for this request
-const ADMIN_EMAIL = 'herghiligiu.cristian@yahoo.ro';
-const ADMIN_PASSWORD = 'National1';
+const ADMIN_EMAIL = email;
+const ADMIN_PASSWORD = password;
 
 export async function login(email: string, password: string): Promise<boolean> {
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {

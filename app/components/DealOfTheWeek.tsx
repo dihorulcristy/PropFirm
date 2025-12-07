@@ -91,7 +91,7 @@ export default function DealOfTheWeek() {
 
                             {/* CTA Button */}
                             <motion.a
-                                href="https://blueguardian.com/?afmc=1scz"
+                                href={`/api/analytics/track?dest=${encodeURIComponent('https://blueguardian.com/?afmc=1scz')}&firm=${encodeURIComponent('Blue Guardian')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:via-blue-400 hover:to-cyan-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-blue-500/50 text-center transition-all duration-300"
@@ -171,7 +171,7 @@ export default function DealOfTheWeek() {
 
                             {/* CTA Button */}
                             <motion.a
-                                href="https://yrmprop.com/ref/dihorulcristy/"
+                                href={`/api/analytics/track?dest=${encodeURIComponent('https://yrmprop.com/ref/dihorulcristy/')}&firm=${encodeURIComponent('YRM Prop')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 hover:from-orange-500 hover:via-orange-400 hover:to-red-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-orange-500/50 text-center transition-all duration-300"
