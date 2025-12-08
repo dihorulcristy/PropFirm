@@ -26,9 +26,9 @@ const allDeals: DealFirm[] = [
         id: 1,
         name: 'FTMO',
         logoUrl: 'https://logo.clearbit.com/ftmo.com',
-        discount: '20% OFF',
-        coupon: 'BLACKFRIDAY',
-        offer: '20% OFF (Black Friday Sale - Until Nov 29th)',
+        discount: '10% OFF',
+        coupon: 'SAVE10',
+        offer: '10% OFF (Special Deal)',
         link: 'https://trader.ftmo.com/?affiliates=4354',
         verified: true,
         priority: 1,
@@ -464,9 +464,9 @@ function FlashSalesSection() {
                         <div className="flex items-start gap-3 mb-3">
                             <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
                             <div>
-                                <p className="text-sm font-bold text-red-400 mb-1">🔥 Ends Nov 29th!</p>
-                                <p className="text-white font-semibold">FTMO - Black Friday</p>
-                                <p className="text-sm text-slate-300">20% OFF all challenges with code <span className="text-emerald-400 font-mono">BLACKFRIDAY</span></p>
+                                <p className="text-sm font-bold text-red-400 mb-1">🔥 Limited Time!</p>
+                                <p className="text-white font-semibold">FTMO - Special Deal</p>
+                                <p className="text-sm text-slate-300">10% OFF all challenges with code <span className="text-emerald-400 font-mono">SAVE10</span></p>
                             </div>
                         </div>
                         <Link

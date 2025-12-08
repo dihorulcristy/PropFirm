@@ -155,7 +155,7 @@ export default function DealOfTheWeek() {
                                         alt="The Concept Trading"
                                         width={40}
                                         height={40}
-                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white/10 p-1"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white p-1"
                                     />
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
                                         CONCEPT <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">TRADING</span>
