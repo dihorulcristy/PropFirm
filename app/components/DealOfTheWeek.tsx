@@ -151,7 +151,7 @@ export default function DealOfTheWeek() {
                             <div className="mb-3 sm:mb-4">
                                 <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                                     <Image
-                                        src="https://logo.clearbit.com/theconcepttrading.com"
+                                        src="https://unavatar.io/theconcepttrading.com"
                                         alt="The Concept Trading"
                                         width={40}
                                         height={40}

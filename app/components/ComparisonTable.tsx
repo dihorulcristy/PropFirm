@@ -259,7 +259,7 @@ const allFirms: Firm[] = [
         offer: '30% OFF (Ex. Instant)',
         action: 'Start Career',
         link: 'https://theconcepttrading.com/ref/1837/',
-        logoUrl: 'https://logo.clearbit.com/theconcepttrading.com',
+        logoUrl: 'https://unavatar.io/theconcepttrading.com',
         capital: 100000,
         platform: ['MT4', 'MT5'],
         challengeType: '2-Step',
