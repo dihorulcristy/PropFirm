@@ -151,14 +151,14 @@ export default function DealOfTheWeek() {
                             <div className="mb-3 sm:mb-4">
                                 <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                                     <Image
-                                        src="https://unavatar.io/theconcepttrading.com"
+                                        src="/logos/the-trading-concept.jpg"
                                         alt="The Concept Trading"
                                         width={40}
                                         height={40}
-                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white p-1"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-black p-1"
                                     />
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
-                                        CONCEPT <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">TRADING</span>
+                                        THE TRADING <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">CONCEPT</span>
                                     </h3>
                                 </div>
                                 <div className="space-y-1">
