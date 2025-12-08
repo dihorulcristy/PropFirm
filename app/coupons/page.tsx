@@ -214,6 +214,18 @@ const allDeals: DealFirm[] = [
         priority: 1,
         hasActiveCoupon: true
     },
+    {
+        id: 22,
+        name: 'DnaFunded',
+        logoUrl: 'https://logo.clearbit.com/dnafunded.com',
+        discount: '15% OFF',
+        coupon: 'DNAFUNDED15',
+        offer: '15% OFF (All)',
+        link: 'https://partners.dnafunded.com/click?campaign_id=1&ref_id=259',
+        verified: true,
+        priority: 2,
+        hasActiveCoupon: true
+    },
 ];
 
 export default function CouponsPage() {

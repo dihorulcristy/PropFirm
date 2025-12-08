@@ -748,6 +748,41 @@ const allFirms: Firm[] = [
             100000: { price: '$200', oldPrice: '$400' },
         }
     },
+    {
+        id: 22,
+        name: 'DnaFunded',
+        rating: 4.6,
+        verified: true,
+        rules: { maxDD: '10%', profit: '10% / 5%' },
+        price: '$42',
+        oldPrice: '$49',
+        coupon: 'DNAFUNDED15',
+        offer: '15% OFF (All)',
+        action: 'Get Funded',
+        link: 'https://partners.dnafunded.com/click?campaign_id=1&ref_id=259',
+        logoUrl: 'https://logo.clearbit.com/dnafunded.com',
+        capital: 5000,
+        platform: ['TradeLocker'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$42', oldPrice: '$49' },
+            10000: { price: '$84', oldPrice: '$99' },
+            25000: { price: '$161', oldPrice: '$189' },
+            50000: { price: '$297', oldPrice: '$349' },
+            100000: { price: '$526', oldPrice: '$619' },
+            200000: { price: '$892', oldPrice: '$1049' },
+        }
+    }
 ];
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
@@ -1140,6 +1175,7 @@ export default function ComparisonTable() {
                                     <option value="Match-Trader" className="bg-black text-slate-200">Match-Trader</option>
                                     <option value="MT4/5" className="bg-black text-slate-200">MetaTrader 4/5</option>
                                     <option value="MT5" className="bg-black text-slate-200">MetaTrader 5</option>
+                                    <option value="TradeLocker" className="bg-black text-slate-200">TradeLocker</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
                             </div>
