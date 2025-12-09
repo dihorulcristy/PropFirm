@@ -477,6 +477,24 @@ function FlashSalesSection() {
                         </Link>
                     </div>
 
+                    {/* Flash Sale 2 - FundedNext */}
+                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                            <div>
+                                <p className="text-sm font-bold text-red-400 mb-1">🔥 New Offer!</p>
+                                <p className="text-white font-semibold">FundedNext</p>
+                                <p className="text-sm text-slate-300">10% OFF with code <span className="text-emerald-400 font-mono">REF6ZHN86</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="#fundednext"
+                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
+                        >
+                            View Offer →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale 3 - FunderPro */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
