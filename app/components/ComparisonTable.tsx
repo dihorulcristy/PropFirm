@@ -154,7 +154,7 @@ const allFirms: Firm[] = [
         price: '$549',
         oldPrice: '$549',
         coupon: 'REF6ZHN86',
-        offer: '5% OFF',
+        offer: '10% OFF',
         action: 'Get Funded',
         link: 'https://fundednext.com/',
         logoUrl: 'https://logo.clearbit.com/fundednext.com',
