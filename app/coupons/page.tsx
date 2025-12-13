@@ -25,7 +25,7 @@ const allDeals: DealFirm[] = [
     {
         id: 1,
         name: 'FTMO',
-        logoUrl: 'https://logo.clearbit.com/ftmo.com',
+        logoUrl: '/logos/ftmo.png',
         discount: '10% OFF',
         coupon: 'SAVE10',
         offer: '10% OFF (Special Deal)',
@@ -37,7 +37,7 @@ const allDeals: DealFirm[] = [
     {
         id: 6,
         name: 'FunderPro',
-        logoUrl: 'https://logo.clearbit.com/funderpro.com',
+        logoUrl: '/logos/funderpro.png',
         discount: '30% OFF',
         coupon: 'hgc',
         offer: '30% OFF (All)',
@@ -49,7 +49,7 @@ const allDeals: DealFirm[] = [
     {
         id: 5,
         name: 'FundingPips',
-        logoUrl: 'https://logo.clearbit.com/fundingpips.com',
+        logoUrl: '/logos/fundingpips.png',
         discount: '20% OFF',
         coupon: 'b5420489',
         offer: '20% OFF',
@@ -61,7 +61,7 @@ const allDeals: DealFirm[] = [
     {
         id: 2,
         name: 'TradingCult',
-        logoUrl: 'https://logo.clearbit.com/tradingcult.com',
+        logoUrl: '/logos/tradingcult.png',
         discount: '30% OFF',
         coupon: 'TC30',
         offer: '30% OFF (All)',
@@ -73,10 +73,10 @@ const allDeals: DealFirm[] = [
     {
         id: 3,
         name: 'FundedX',
-        logoUrl: 'https://logo.clearbit.com/fundedx.com',
-        discount: '30% OFF',
-        coupon: 'BF30',
-        offer: '30% OFF',
+        logoUrl: '/logos/fundedx.jpg',
+        discount: '40% OFF',
+        coupon: 'BF40',
+        offer: '40% OFF',
         link: 'https://fundedx.com/',
         verified: true,
         priority: 5,
@@ -85,7 +85,7 @@ const allDeals: DealFirm[] = [
     {
         id: 4,
         name: 'FundedNext',
-        logoUrl: 'https://logo.clearbit.com/fundednext.com',
+        logoUrl: '/logos/fundednext.png',
         discount: '10% OFF',
         coupon: 'REF6ZHN86',
         offer: '10% OFF',
@@ -109,10 +109,10 @@ const allDeals: DealFirm[] = [
     {
         id: 8,
         name: 'Blue Guardian',
-        logoUrl: 'https://unavatar.io/twitter/BlueGuardianCom',
-        discount: '50% OFF',
-        coupon: '1scz',
-        offer: '50% OFF (All)',
+        logoUrl: '/logos/blue-guardian.png',
+        discount: '40% OFF',
+        coupon: 'XMAS',
+        offer: '40% OFF',
         link: 'https://blueguardian.com/?afmc=1scz',
         verified: true,
         priority: 8,
@@ -121,7 +121,7 @@ const allDeals: DealFirm[] = [
     {
         id: 9,
         name: 'Dominion Funding',
-        logoUrl: 'https://unavatar.io/twitter/DominionFunding',
+        logoUrl: '/logos/dominion-funding.png',
         discount: '30% OFF',
         coupon: 'PROPHUB',
         offer: '30% OFF (All)',
@@ -157,7 +157,7 @@ const allDeals: DealFirm[] = [
     {
         id: 12,
         name: 'FundingTicks',
-        logoUrl: 'https://unavatar.io/twitter/FundingTicks',
+        logoUrl: '/logos/fundingticks.png',
         discount: '20% OFF',
         coupon: 'BC954C87',
         offer: '20% OFF',
@@ -170,9 +170,9 @@ const allDeals: DealFirm[] = [
         id: 13,
         name: 'FundedHero',
         logoUrl: '/logos/fundedhero.jpg',
-        discount: '40% OFF',
-        coupon: 'HERO40',
-        offer: '40% OFF',
+        discount: '50% OFF (Crypto)',
+        coupon: 'CRYPTO50',
+        offer: '50% OFF (Crypto) / 40% OFF (Card)',
         link: 'https://fundedhero.com/ref/5371/',
         verified: true,
         priority: 13,
@@ -182,9 +182,9 @@ const allDeals: DealFirm[] = [
         id: 14,
         name: 'FundedHero Futures',
         logoUrl: '/logos/fundedhero.jpg',
-        discount: '50% OFF',
+        discount: '90% OFF',
         coupon: 'HERO',
-        offer: '50% OFF',
+        offer: '90% OFF',
         link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
         verified: true,
         priority: 14,
@@ -193,7 +193,7 @@ const allDeals: DealFirm[] = [
     {
         id: 15,
         name: 'InstantFunding',
-        logoUrl: 'https://logo.clearbit.com/instantfunding.com',
+        logoUrl: '/logos/instantfunding.png',
         discount: 'Get Started',
         coupon: '',
         offer: 'Multiple Program Options (Instant, 1-Step, 2-Step)',
@@ -205,7 +205,7 @@ const allDeals: DealFirm[] = [
     {
         id: 16,
         name: 'Blue Guardian Futures',
-        logoUrl: 'https://unavatar.io/twitter/BlueGuardianCom',
+        logoUrl: '/logos/blue-guardian.png',
         discount: '60% OFF',
         coupon: 'CYBER',
         offer: '60% OFF (Cyber Monday)',
@@ -217,7 +217,7 @@ const allDeals: DealFirm[] = [
     {
         id: 22,
         name: 'DnaFunded',
-        logoUrl: 'https://logo.clearbit.com/dnafunded.com',
+        logoUrl: '/logos/dnafunded.png',
         discount: '15% OFF',
         coupon: 'DNAFUNDED15',
         offer: '15% OFF (All)',
@@ -440,6 +440,24 @@ function FlashSalesSection() {
                 </div>
 
                 <div className="space-y-4">
+                    {/* Flash Sale - FundedX Black Friday */}
+                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                            <div>
+                                <p className="text-sm font-bold text-red-400 mb-1">🔥 24H FLASH SALE!</p>
+                                <p className="text-white font-semibold">FundedX</p>
+                                <p className="text-sm text-slate-300">40% OFF with code <span className="text-emerald-400 font-mono">BF40</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="https://fundedx.com/"
+                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
+                        >
+                            View Offer →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale - Blue Guardian Futures */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">

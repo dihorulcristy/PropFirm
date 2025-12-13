@@ -176,7 +176,7 @@ export default function Hero() {
                         {/* cTrader */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="https://logo.clearbit.com/ctrader.com"
+                                src="/logos/ctrader.png"
                                 alt="cTrader"
                                 className="h-6 w-6 grayscale brightness-200"
                             />
@@ -186,7 +186,7 @@ export default function Hero() {
                         {/* MetaTrader */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="https://logo.clearbit.com/metatrader5.com"
+                                src="/logos/metatrader.png"
                                 alt="MetaTrader"
                                 className="h-6 w-6 grayscale brightness-200"
                             />
@@ -196,7 +196,7 @@ export default function Hero() {
                         {/* DXtrade */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="https://logo.clearbit.com/devexperts.com"
+                                src="/logos/dxtrade.png"
                                 alt="DXtrade"
                                 className="h-6 w-6 grayscale brightness-200"
                             />
@@ -206,7 +206,7 @@ export default function Hero() {
                         {/* Match-Trader */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="https://logo.clearbit.com/match-trader.com"
+                                src="/logos/match-trader.png"
                                 alt="Match-Trader"
                                 className="h-6 w-6 grayscale brightness-200"
                             />
@@ -224,7 +224,7 @@ export default function Hero() {
                         {/* Trustpilot */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="https://logo.clearbit.com/trustpilot.com"
+                                src="/logos/trustpilot.png"
                                 alt="Trustpilot"
                                 className="h-6 w-6 grayscale brightness-200"
                             />
