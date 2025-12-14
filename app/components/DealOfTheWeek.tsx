@@ -25,7 +25,7 @@ export default function DealOfTheWeek() {
             <div className="container mx-auto px-3 sm:px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-7xl mx-auto">
 
-                    {/* FOREX DEAL - Blue Guardian */}
+
                     {/* FOREX DEAL - FundedNext */}
                     <motion.div
                         className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-950/90 via-slate-900/90 to-purple-950/90 backdrop-blur-sm shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"

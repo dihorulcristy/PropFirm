@@ -106,18 +106,7 @@ const allDeals: DealFirm[] = [
         priority: 7,
         hasActiveCoupon: true
     },
-    {
-        id: 8,
-        name: 'Blue Guardian',
-        logoUrl: '/logos/blue-guardian.png',
-        discount: '40% OFF',
-        coupon: 'XMAS',
-        offer: '40% OFF',
-        link: 'https://blueguardian.com/?afmc=1scz',
-        verified: true,
-        priority: 8,
-        hasActiveCoupon: true
-    },
+
     {
         id: 9,
         name: 'Dominion Funding',
@@ -202,18 +191,7 @@ const allDeals: DealFirm[] = [
         priority: 15,
         hasActiveCoupon: false
     },
-    {
-        id: 16,
-        name: 'Blue Guardian Futures',
-        logoUrl: '/logos/blue-guardian.png',
-        discount: '60% OFF',
-        coupon: 'CYBER',
-        offer: '60% OFF (Cyber Monday)',
-        link: 'https://checkout.blueguardianfutures.com/ref/1105/',
-        verified: true,
-        priority: 1,
-        hasActiveCoupon: true
-    },
+
     {
         id: 22,
         name: 'DnaFunded',
@@ -458,24 +436,7 @@ function FlashSalesSection() {
                         </Link>
                     </div>
 
-                    {/* Flash Sale - Blue Guardian Futures */}
-                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
-                        <div className="flex items-start gap-3 mb-3">
-                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-red-400 mb-1">🔥 HUGE SAVINGS!</p>
-                                <p className="text-white font-semibold">Blue Guardian Futures</p>
-                                <p className="text-sm text-slate-300">60% OFF with code <span className="text-emerald-400 font-mono">CYBER</span></p>
-                            </div>
-                        </div>
-                        <Link
-                            href="https://checkout.blueguardianfutures.com/ref/1105/"
-                            target="_blank"
-                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
-                        >
-                            View Offer →
-                        </Link>
-                    </div>
+
 
                     {/* Flash Sale 1 - FTMO Black Friday */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
