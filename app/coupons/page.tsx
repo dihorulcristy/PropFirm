@@ -285,8 +285,13 @@ export default function CouponsPage() {
                     <section className="pb-20">
                         <div className="container mx-auto px-4">
                             <div className="grid lg:grid-cols-3 gap-8">
-                                {/* Deals Grid */}
-                                <div className="lg:col-span-2">
+                                {/* Flash Sales Sidebar - First on mobile */}
+                                <div className="lg:col-span-1 order-first lg:order-last">
+                                    <FlashSalesSection />
+                                </div>
+
+                                {/* Deals Grid - Second on mobile */}
+                                <div className="lg:col-span-2 order-last lg:order-first">
                                     <div className="grid gap-6">
                                         {filteredDeals.map((deal) => (
                                             <DealCard
@@ -309,11 +314,6 @@ export default function CouponsPage() {
                                             </button>
                                         </div>
                                     )}
-                                </div>
-
-                                {/* Flash Sales Sidebar */}
-                                <div className="lg:col-span-1">
-                                    <FlashSalesSection />
                                 </div>
                             </div>
                         </div>
