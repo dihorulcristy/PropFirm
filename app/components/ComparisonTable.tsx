@@ -719,6 +719,42 @@ const allFirms: Firm[] = [
             100000: { price: '$526', oldPrice: '$619' },
             200000: { price: '$892', oldPrice: '$1049' },
         }
+    },
+    {
+        id: 23,
+        name: 'SpiceProp',
+        rating: 4.8,
+        verified: true,
+        rules: { maxDD: '11%', profit: '80-85%' },
+        price: '€479',
+        oldPrice: '€479',
+        coupon: 'SANTANEXT',
+        offer: '10% OFF + 5% Profit Split',
+        action: 'Get Funded',
+        link: 'https://my.spiceprop.com/agent_pp.html?agent_pp=28203897',
+        logoUrl: '/logos/spiceprop.png',
+        capital: 100000,
+        platform: ['MT5'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: false,
+        noTimeLimit: true,
+        weeklyPayouts: true,
+        payoutDays: 14,
+        capitalPricing: {
+            6000: { price: '€45', oldPrice: '€45' },
+            10000: { price: '€99', oldPrice: '€99' },
+            25000: { price: '€159', oldPrice: '€159' },
+            50000: { price: '€295', oldPrice: '€295' },
+            100000: { price: '€479', oldPrice: '€479' },
+            150000: { price: '€689', oldPrice: '€689' },
+            300000: { price: '€1499', oldPrice: '€1499' },
+        }
     }
 ];
 

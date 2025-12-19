@@ -79,20 +79,20 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* Card 2: Cheapest */}
+                        {/* Card 2: Best Value */}
                         <div className="min-w-[85%] snap-center group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex-shrink-0">
                             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-transparent to-emerald-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <DollarSign className="h-4 w-4" />
-                                    Cheapest
+                                    Best Value
                                 </div>
-                                <h3 className="text-xl font-bold text-white">FundedX</h3>
+                                <h3 className="text-xl font-bold text-white">SpiceProp</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
-                                    <span className="text-sm font-medium text-slate-300">4.7/5</span>
+                                    <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">From $489</p>
+                                <p className="text-sm text-slate-400">From €45</p>
                             </div>
                         </div>
 
@@ -133,20 +133,20 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* Card 2: Cheapest */}
+                        {/* Card 2: Best Value */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur-lg transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1">
                             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-transparent to-emerald-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <DollarSign className="h-4 w-4" />
-                                    Cheapest
+                                    Best Value
                                 </div>
-                                <h3 className="text-xl font-bold text-white">FundedX</h3>
+                                <h3 className="text-xl font-bold text-white">SpiceProp</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
-                                    <span className="text-sm font-medium text-slate-300">4.7/5</span>
+                                    <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">From $489</p>
+                                <p className="text-sm text-slate-400">From €45</p>
                             </div>
                         </div>
 
@@ -178,7 +178,7 @@ export default function Hero() {
                             <img
                                 src="/logos/ctrader.png"
                                 alt="cTrader"
-                                className="h-6 w-6 grayscale brightness-200"
+                                className="h-6 w-6"
                             />
                             <span className="text-sm font-bold text-white">cTrader</span>
                         </div>
@@ -188,7 +188,7 @@ export default function Hero() {
                             <img
                                 src="/logos/metatrader.png"
                                 alt="MetaTrader"
-                                className="h-6 w-6 grayscale brightness-200"
+                                className="h-6 w-6"
                             />
                             <span className="text-sm font-bold text-white">MT4/MT5</span>
                         </div>
@@ -198,7 +198,7 @@ export default function Hero() {
                             <img
                                 src="/logos/dxtrade.png"
                                 alt="DXtrade"
-                                className="h-6 w-6 grayscale brightness-200"
+                                className="h-6 w-6"
                             />
                             <span className="text-sm font-bold text-white">DXtrade</span>
                         </div>
@@ -208,7 +208,7 @@ export default function Hero() {
                             <img
                                 src="/logos/match-trader.png"
                                 alt="Match-Trader"
-                                className="h-6 w-6 grayscale brightness-200"
+                                className="h-6 w-6"
                             />
                             <span className="text-sm font-bold text-white">Match-Trader</span>
                         </div>
@@ -224,9 +224,9 @@ export default function Hero() {
                         {/* Trustpilot */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
                             <img
-                                src="/logos/trustpilot.png"
+                                src="/logos/trustpilot.svg"
                                 alt="Trustpilot"
-                                className="h-6 w-6 grayscale brightness-200"
+                                className="h-6 w-6"
                             />
                             <span className="text-sm font-bold text-white">Trustpilot</span>
                         </div>

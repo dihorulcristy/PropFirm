@@ -26,9 +26,9 @@ export default function DealOfTheWeek() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-7xl mx-auto">
 
 
-                    {/* FOREX DEAL - FundedNext */}
+                    {/* FOREX DEAL - SpiceProp */}
                     <motion.div
-                        className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-950/90 via-slate-900/90 to-purple-950/90 backdrop-blur-sm shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
+                        className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-red-500/20 bg-gradient-to-br from-red-950/90 via-slate-900/90 to-orange-950/90 backdrop-blur-sm shadow-lg hover:shadow-red-500/20 transition-all duration-300"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -36,14 +36,14 @@ export default function DealOfTheWeek() {
                         whileHover={{ y: -4 }}
                     >
                         {/* Animated gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-transparent to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 via-transparent to-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                         {/* Shimmer Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-400/5 to-transparent animate-shimmer"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-400/5 to-transparent animate-shimmer"></div>
 
                         {/* Market Type Badge */}
                         <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
-                            <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-indigo-200 uppercase bg-indigo-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-indigo-400/30 shadow-lg">
+                            <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-red-200 uppercase bg-red-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-red-400/30 shadow-lg">
                                 <span className="text-xs sm:text-sm">FOREX</span>
                             </div>
                         </div>
@@ -52,16 +52,16 @@ export default function DealOfTheWeek() {
                             {/* Badge */}
                             <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                                 <motion.div
-                                    className="inline-flex items-center gap-1 self-start text-[9px] sm:text-[10px] font-bold tracking-wider text-purple-300 uppercase border border-purple-400/40 bg-purple-950/40 backdrop-blur-sm px-2 py-0.5 sm:py-1 rounded-md shadow-md"
+                                    className="inline-flex items-center gap-1 self-start text-[9px] sm:text-[10px] font-bold tracking-wider text-red-300 uppercase border border-red-400/40 bg-red-950/40 backdrop-blur-sm px-2 py-0.5 sm:py-1 rounded-md shadow-md"
                                     animate={{ scale: [1, 1.03, 1] }}
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
-                                    <span className="text-xs sm:text-sm">🚀</span>
-                                    <span>LIMITED OFFER</span>
+                                    <span className="text-xs sm:text-sm">🔄</span>
+                                    <span>FREE RESET</span>
                                 </motion.div>
 
-                                <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-slate-800/80 px-2 py-1 rounded-md border border-white/10">
-                                    <span>⏳</span> Limited Time
+                                <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-red-900/80 px-2 py-1 rounded-md border border-red-500/30">
+                                    <span>🌶️</span> SpiceProp Exclusive
                                 </div>
                             </div>
 
@@ -69,35 +69,35 @@ export default function DealOfTheWeek() {
                             <div className="mb-3 sm:mb-4">
                                 <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                                     <Image
-                                        src="/logos/fundednext.png"
-                                        alt="FundedNext Logo"
+                                        src="/logos/spiceprop.png"
+                                        alt="SpiceProp Logo"
                                         width={40}
                                         height={40}
                                         className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white/10 p-1"
                                     />
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
-                                        FUNDED<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">NEXT</span>
+                                        SPICE<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">PROP</span>
                                     </h3>
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">10% OFF</span> ALL ACCOUNTS
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">FREE RESET</span> ON 1ST STEP
                                     </p>
                                     <p className="text-slate-300 text-[10px] sm:text-xs font-medium">
-                                        BEST TRADING CONDITIONS
+                                        + 10% OFF & EXTRA 5% PROFIT SPLIT
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
-                                        Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-indigo-600 to-purple-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">REF6ZHN86</span>
+                                        Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-red-600 to-red-700 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">SANTARESET</span>
                                     </p>
                                 </div>
                             </div>
 
                             {/* CTA Button */}
                             <motion.a
-                                href={`/api/analytics/track?dest=${encodeURIComponent('https://fundednext.com/')}&firm=${encodeURIComponent('FundedNext')}`}
+                                href={`/api/analytics/track?dest=${encodeURIComponent('https://my.spiceprop.com/agent_pp.html?agent_pp=28203897')}&firm=${encodeURIComponent('SpiceProp')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block w-full bg-gradient-to-r from-indigo-600 via-purple-500 to-indigo-500 hover:from-indigo-500 hover:via-purple-400 hover:to-indigo-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-indigo-500/50 text-center transition-all duration-300"
+                                className="block w-full bg-gradient-to-r from-red-600 via-orange-500 to-red-500 hover:from-red-500 hover:via-orange-400 hover:to-red-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-red-500/50 text-center transition-all duration-300"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                             >

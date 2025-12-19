@@ -204,6 +204,18 @@ const allDeals: DealFirm[] = [
         priority: 2,
         hasActiveCoupon: true
     },
+    {
+        id: 23,
+        name: 'SpiceProp',
+        logoUrl: '/logos/spiceprop.png',
+        discount: '10% OFF + 5% Profit',
+        coupon: 'SANTANEXT',
+        offer: '10% OFF + 5% Extra Profit Split + Free Reset',
+        link: 'https://my.spiceprop.com/agent_pp.html?agent_pp=28203897',
+        verified: true,
+        priority: 1,
+        hasActiveCoupon: true
+    },
 ];
 
 export default function CouponsPage() {
@@ -418,6 +430,25 @@ function FlashSalesSection() {
                 </div>
 
                 <div className="space-y-4">
+                    {/* Flash Sale - SpiceProp FREE RESET */}
+                    <div className="bg-gradient-to-br from-red-900/60 to-red-950/60 border border-red-500/30 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Zap className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5 animate-pulse" />
+                            <div>
+                                <p className="text-sm font-bold text-red-400 mb-1">🌶️ FREE RESET!</p>
+                                <p className="text-white font-semibold">SpiceProp</p>
+                                <p className="text-sm text-slate-300">Free Reset + 10% OFF with code <span className="text-red-400 font-mono">SANTARESET</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="https://my.spiceprop.com/agent_pp.html?agent_pp=28203897"
+                            target="_blank"
+                            className="text-xs text-red-400 hover:text-red-300 font-medium underline"
+                        >
+                            Get Free Reset →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale - FundedX Black Friday */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
