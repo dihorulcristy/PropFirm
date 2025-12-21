@@ -2,8 +2,47 @@
 
 import { ShieldCheck, Zap, TrendingUp, Star, Trophy, DollarSign, Bot, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import type { Locale } from '@/lib/i18n/config';
 
-export default function Hero() {
+// Translations inline for client component
+const translations = {
+    en: {
+        title: "Compare Evaluation Programs",
+        titleHighlight: "Up to $1M Virtual Capital",
+        subtitle: "We compare trader evaluation programs and simulated funding opportunities. Find the best prop firm for your trading skills.",
+        disclaimer: "All trading activities are performed in a simulated environment with virtual funds.",
+        trustedPlatforms: "Trusted Trading Platforms",
+        scroll: "Scroll",
+        bestOverall: "Best Overall",
+        bestValue: "Best Value",
+        hftAllowed: "HFT Allowed",
+        maximumSafety: "Maximum Safety",
+        from: "From",
+        passIn1Step: "Pass in 1 Step"
+    },
+    ro: {
+        title: "Compară Programele de Evaluare",
+        titleHighlight: "Până la $1M Capital Virtual",
+        subtitle: "Comparăm programele de evaluare pentru traderi și oportunitățile de finanțare simulate. Găsește cea mai bună prop firm pentru abilitățile tale de trading.",
+        disclaimer: "Toate activitățile de tranzacționare se desfășoară într-un mediu simulat cu fonduri virtuale.",
+        trustedPlatforms: "Platforme de Trading de Încredere",
+        scroll: "Derulează",
+        bestOverall: "Cel Mai Bun Overall",
+        bestValue: "Cea Mai Bună Valoare",
+        hftAllowed: "HFT Permis",
+        maximumSafety: "Siguranță Maximă",
+        from: "De la",
+        passIn1Step: "Treci în 1 Pas"
+    }
+};
+
+interface HeroProps {
+    lang?: Locale;
+}
+
+export default function Hero({ lang = 'en' }: HeroProps) {
+    const t = translations[lang] || translations.en;
+
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -32,10 +71,10 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        Compare Evaluation Programs{' '}
+                        {t.title}{' '}
                         <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 drop-shadow-[0_0_2px_rgba(52,211,153,0.2)] sm:drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">
-                            Up to $1M Virtual Capital
+                            {t.titleHighlight}
                         </span>
                     </motion.h1>
                     <motion.p
@@ -44,7 +83,7 @@ export default function Hero() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        We compare trader evaluation programs and simulated funding opportunities. Find the best prop firm for your trading skills.
+                        {t.subtitle}
                     </motion.p>
                     <motion.p
                         className="mt-2 text-[10px] sm:text-xs text-slate-600"
@@ -52,7 +91,7 @@ export default function Hero() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
                     >
-                        All trading activities are performed in a simulated environment with virtual funds.
+                        {t.disclaimer}
                     </motion.p>
                 </motion.div>
 
@@ -68,14 +107,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <Trophy className="h-4 w-4" />
-                                    Best Overall
+                                    {t.bestOverall}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">FTMO</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.9/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">Maximum Safety</p>
+                                <p className="text-sm text-slate-400">{t.maximumSafety}</p>
                             </div>
                         </div>
 
@@ -85,14 +124,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <DollarSign className="h-4 w-4" />
-                                    Best Value
+                                    {t.bestValue}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">SpiceProp</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">From €45</p>
+                                <p className="text-sm text-slate-400">{t.from} €45</p>
                             </div>
                         </div>
 
@@ -102,14 +141,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <Bot className="h-4 w-4" />
-                                    HFT Allowed
+                                    {t.hftAllowed}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">TradingCult</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">Pass in 1 Step</p>
+                                <p className="text-sm text-slate-400">{t.passIn1Step}</p>
                             </div>
                         </div>
                     </div>
@@ -122,14 +161,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <Trophy className="h-4 w-4" />
-                                    Best Overall
+                                    {t.bestOverall}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">FTMO</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.9/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">Maximum Safety</p>
+                                <p className="text-sm text-slate-400">{t.maximumSafety}</p>
                             </div>
                         </div>
 
@@ -139,14 +178,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <DollarSign className="h-4 w-4" />
-                                    Best Value
+                                    {t.bestValue}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">SpiceProp</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">From €45</p>
+                                <p className="text-sm text-slate-400">{t.from} €45</p>
                             </div>
                         </div>
 
@@ -156,14 +195,14 @@ export default function Hero() {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2">
                                     <Bot className="h-4 w-4" />
-                                    HFT Allowed
+                                    {t.hftAllowed}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">TradingCult</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">Pass in 1 Step</p>
+                                <p className="text-sm text-slate-400">{t.passIn1Step}</p>
                             </div>
                         </div>
                     </div>
@@ -171,7 +210,7 @@ export default function Hero() {
 
                 {/* Trust Badge Bar */}
                 <div className="mt-12 sm:mt-16 border-t border-white/5 pt-8">
-                    <p className="text-center text-xs text-slate-600 uppercase tracking-wider mb-6">Trusted Trading Platforms</p>
+                    <p className="text-center text-xs text-slate-600 uppercase tracking-wider mb-6">{t.trustedPlatforms}</p>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
                         {/* cTrader */}
                         <div className="flex items-center gap-2 opacity-60 hover:opacity-80 transition-opacity">
@@ -241,13 +280,10 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 1, repeat: Infinity, repeatType: "reverse", repeatDelay: 0.5 }}
                 >
-                    <span className="text-xs uppercase tracking-wider">Scroll</span>
+                    <span className="text-xs uppercase tracking-wider">{t.scroll}</span>
                     <ChevronDown className="h-5 w-5 animate-bounce" />
                 </motion.button>
             </div>
         </section>
     );
 }
-
-
-

@@ -1,20 +1,92 @@
-
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { verifySession } from './lib/auth';
+import { locales, defaultLocale, getLocaleFromHeaders, type Locale } from './lib/i18n/config';
+
+// Paths that should not be localized
+const publicPaths = [
+    '/api',
+    '/_next',
+    '/favicon.ico',
+    '/logo.png',
+    '/og-image.jpg',
+    '/logos',
+    '/admin',
+];
+
+function getLocaleFromPath(pathname: string): Locale | null {
+    const segments = pathname.split('/');
+    const potentialLocale = segments[1];
+    if (locales.includes(potentialLocale as Locale)) {
+        return potentialLocale as Locale;
+    }
+    return null;
+}
 
 export async function middleware(request: NextRequest) {
-    // Only protect /admin/dashboard
-    if (request.nextUrl.pathname.startsWith('/admin/dashboard')) {
-        const session = await verifySession();
-        if (!session) {
-            return NextResponse.redirect(new URL('/admin/login', request.url));
-        }
+    const { pathname } = request.nextUrl;
+
+    // Skip public paths
+    if (publicPaths.some(path => pathname.startsWith(path))) {
+        return NextResponse.next();
     }
 
-    return NextResponse.next();
+    // Check if path already has a locale
+    const pathnameLocale = getLocaleFromPath(pathname);
+
+    if (pathnameLocale) {
+        // Path has locale, save preference to cookie
+        const response = NextResponse.next();
+        response.cookies.set('NEXT_LOCALE', pathnameLocale, {
+            maxAge: 60 * 60 * 24 * 365, // 1 year
+            path: '/',
+        });
+        return response;
+    }
+
+    // Path doesn't have locale - determine which one to use
+    let locale: Locale;
+
+    // 1. Check cookie for saved preference
+    const savedLocale = request.cookies.get('NEXT_LOCALE')?.value as Locale | undefined;
+    if (savedLocale && locales.includes(savedLocale)) {
+        locale = savedLocale;
+    } else {
+        // 2. Detect from headers (geo/language)
+        const acceptLanguage = request.headers.get('accept-language');
+        // Vercel provides x-vercel-ip-country, Netlify provides x-country
+        const country = request.headers.get('x-vercel-ip-country') ||
+            request.headers.get('x-country') ||
+            null;
+
+        locale = getLocaleFromHeaders(acceptLanguage, country);
+    }
+
+    // Don't redirect for default locale (keep URLs clean)
+    if (locale === defaultLocale) {
+        const response = NextResponse.next();
+        response.cookies.set('NEXT_LOCALE', locale, {
+            maxAge: 60 * 60 * 24 * 365,
+            path: '/',
+        });
+        return response;
+    }
+
+    // Redirect to localized path
+    const url = request.nextUrl.clone();
+    url.pathname = `/${locale}${pathname}`;
+
+    const response = NextResponse.redirect(url);
+    response.cookies.set('NEXT_LOCALE', locale, {
+        maxAge: 60 * 60 * 24 * 365,
+        path: '/',
+    });
+
+    return response;
 }
 
 export const config = {
-    matcher: ['/admin/dashboard/:path*'],
+    matcher: [
+        // Match all paths except static files and api
+        '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)',
+    ],
 };

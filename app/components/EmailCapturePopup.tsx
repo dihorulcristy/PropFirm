@@ -2,19 +2,69 @@
 
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import type { Locale } from '@/lib/i18n/config';
+
+// Translations for the popup
+const translations = {
+    en: {
+        limitedTimeOffer: "LIMITED TIME OFFER",
+        getYourFree: "Get Your FREE",
+        fundedAccount: "$25,000 Funded Account",
+        joinTraders: "Join",
+        tradersCount: "10,000+ traders",
+        tradersText: "who are already trading with our capital. No strings attached!",
+        instantAccess: "Instant Access",
+        keepProfits: "Keep 80% Profits",
+        scaleTo: "Scale to $200K",
+        yourFullName: "Your Full Name",
+        yourEmail: "Your Email Address",
+        processing: "Processing...",
+        claimButton: "🎯 Claim My FREE $25K Account Now",
+        secureInfo: "🔒 Your information is 100% secure and will never be shared",
+        welcomeAboard: "Welcome Aboard! 🎉",
+        checkEmail: "Check your email for instant access to your $25,000 funded account!",
+        spotsLeft: "Only 7 spots left",
+        todayOffer: "today at this offer price",
+        error: "Something went wrong. Please try again."
+    },
+    ro: {
+        limitedTimeOffer: "OFERTĂ LIMITATĂ",
+        getYourFree: "Primește GRATUIT",
+        fundedAccount: "Cont Finanțat de $25,000",
+        joinTraders: "Alătură-te celor",
+        tradersCount: "10,000+ traderi",
+        tradersText: "care deja tranzacționează cu capitalul nostru. Fără obligații!",
+        instantAccess: "Acces Instant",
+        keepProfits: "Păstrezi 80% Profit",
+        scaleTo: "Scalează la $200K",
+        yourFullName: "Numele Tău Complet",
+        yourEmail: "Adresa Ta de Email",
+        processing: "Se procesează...",
+        claimButton: "🎯 Revendică Contul Meu GRATUIT de $25K",
+        secureInfo: "🔒 Informațiile tale sunt 100% sigure și nu vor fi partajate",
+        welcomeAboard: "Bine ai venit! 🎉",
+        checkEmail: "Verifică emailul pentru acces instant la contul tău finanțat de $25,000!",
+        spotsLeft: "Doar 7 locuri rămase",
+        todayOffer: "astăzi la acest preț",
+        error: "Ceva nu a funcționat. Te rugăm să încerci din nou."
+    }
+};
 
 interface EmailCapturePopupProps {
     onClose?: () => void;
     delay?: number;
     forceShow?: boolean;
+    lang?: Locale;
 }
 
-export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = false }: EmailCapturePopupProps) {
+export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = false, lang = 'en' }: EmailCapturePopupProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+
+    const t = translations[lang] || translations.en;
 
     useEffect(() => {
         const hasCompletedForm = localStorage.getItem('emailPopupCompleted');
@@ -65,7 +115,7 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
         } catch (error) {
             console.error('Error submitting form:', error);
             setIsSubmitting(false);
-            alert('Something went wrong. Please try again.');
+            alert(t.error);
         }
     };
 
@@ -102,40 +152,40 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                 <>
                                     <div className="flex justify-center mb-2 sm:mb-3">
                                         <div className="inline-flex items-center px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-[10px] font-bold text-gray-900 shadow-lg animate-pulse">
-                                            🎁 LIMITED TIME OFFER
+                                            🎁 {t.limitedTimeOffer}
                                         </div>
                                     </div>
 
                                     <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center text-white mb-2 leading-tight">
-                                        Get Your FREE
+                                        {t.getYourFree}
                                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-xl sm:text-2xl md:text-3xl mt-1">
-                                            $25,000 Funded Account
+                                            {t.fundedAccount}
                                         </span>
                                     </h2>
 
                                     <p className="text-center text-gray-300 text-xs sm:text-sm mb-3 max-w-md mx-auto">
-                                        Join <span className="font-bold text-white">10,000+ traders</span> who are already trading with our capital. No strings attached!
+                                        {t.joinTraders} <span className="font-bold text-white">{t.tradersCount}</span> {t.tradersText}
                                     </p>
 
                                     <div className="grid grid-cols-3 gap-2 mb-3 sm:mb-4">
                                         <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
                                             <div className="text-lg sm:text-xl mb-1">⚡</div>
-                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Instant Access</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">{t.instantAccess}</div>
                                         </div>
                                         <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
                                             <div className="text-lg sm:text-xl mb-1">💎</div>
-                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Keep 80% Profits</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">{t.keepProfits}</div>
                                         </div>
                                         <div className="text-center p-2 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
                                             <div className="text-lg sm:text-xl mb-1">🚀</div>
-                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">Scale to $200K</div>
+                                            <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 leading-tight">{t.scaleTo}</div>
                                         </div>
                                     </div>
 
                                     <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                                         <input
                                             type="text"
-                                            placeholder="Your Full Name"
+                                            placeholder={t.yourFullName}
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             required
@@ -143,7 +193,7 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                         />
                                         <input
                                             type="email"
-                                            placeholder="Your Email Address"
+                                            placeholder={t.yourEmail}
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
@@ -160,16 +210,16 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                                     </svg>
-                                                    Processing...
+                                                    {t.processing}
                                                 </span>
                                             ) : (
-                                                '🎯 Claim My FREE $25K Account Now'
+                                                t.claimButton
                                             )}
                                         </button>
                                     </form>
 
                                     <p className="text-center text-[10px] sm:text-xs text-gray-400 mt-4 sm:mt-6">
-                                        🔒 Your information is 100% secure and will never be shared
+                                        {t.secureInfo}
                                     </p>
                                 </>
                             ) : (
@@ -179,9 +229,9 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
-                                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">Welcome Aboard! 🎉</h3>
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">{t.welcomeAboard}</h3>
                                     <p className="text-gray-300 text-base sm:text-lg">
-                                        Check your email for instant access to your $25,000 funded account!
+                                        {t.checkEmail}
                                     </p>
                                 </div>
                             )}
@@ -191,7 +241,7 @@ export default function EmailCapturePopup({ onClose, delay = 3000, forceShow = f
 
                 <div className="text-center mt-4">
                     <p className="text-sm text-gray-300">
-                        ⏰ <span className="font-bold">Only 7 spots left</span> today at this offer price
+                        ⏰ <span className="font-bold">{t.spotsLeft}</span> {t.todayOffer}
                     </p>
                 </div>
             </div>

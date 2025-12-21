@@ -3,8 +3,49 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import type { Locale } from '@/lib/i18n/config';
 
-export default function DealOfTheWeek() {
+// Translations
+const translations = {
+    en: {
+        forex: "FOREX",
+        futures: "FUTURES",
+        freeReset: "FREE RESET",
+        exclusive: "SpiceProp Exclusive",
+        freeResetOn1stStep: "FREE RESET ON 1ST STEP",
+        extraBonus: "+ 10% OFF & EXTRA 5% PROFIT SPLIT",
+        useCode: "Use code",
+        getStarted: "Get Started",
+        hugeSavings: "HUGE SAVINGS",
+        limitedTime: "Limited Time Offer",
+        allFutures: "ALL FUTURES",
+        insaneDiscount: "INSANE DISCOUNT ON ALL CHALLENGES",
+        get90Off: "Get 90% OFF"
+    },
+    ro: {
+        forex: "FOREX",
+        futures: "FUTURES",
+        freeReset: "RESETARE GRATUITĂ",
+        exclusive: "Exclusiv SpiceProp",
+        freeResetOn1stStep: "RESETARE GRATUITĂ LA PASUL 1",
+        extraBonus: "+ 10% REDUCERE & 5% PROFIT EXTRA",
+        useCode: "Folosește codul",
+        getStarted: "Începe Acum",
+        hugeSavings: "REDUCERI MARI",
+        limitedTime: "Ofertă Limitată",
+        allFutures: "LA TOATE FUTURES",
+        insaneDiscount: "REDUCERE INCREDIBILĂ LA TOATE PROVOCĂRILE",
+        get90Off: "Obține 90% REDUCERE"
+    }
+};
+
+interface DealOfTheWeekProps {
+    lang?: Locale;
+}
+
+export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
+    const t = translations[lang] || translations.en;
+
     // Simple countdown logic
     const [timeLeft, setTimeLeft] = useState({ hours: 14, minutes: 22, seconds: 5 });
 
@@ -44,7 +85,7 @@ export default function DealOfTheWeek() {
                         {/* Market Type Badge */}
                         <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
                             <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-red-200 uppercase bg-red-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-red-400/30 shadow-lg">
-                                <span className="text-xs sm:text-sm">FOREX</span>
+                                <span className="text-xs sm:text-sm">{t.forex}</span>
                             </div>
                         </div>
 
@@ -57,11 +98,11 @@ export default function DealOfTheWeek() {
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
                                     <span className="text-xs sm:text-sm">🔄</span>
-                                    <span>FREE RESET</span>
+                                    <span>{t.freeReset}</span>
                                 </motion.div>
 
                                 <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-red-900/80 px-2 py-1 rounded-md border border-red-500/30">
-                                    <span>🌶️</span> SpiceProp Exclusive
+                                    <span>🌶️</span> {t.exclusive}
                                 </div>
                             </div>
 
@@ -81,13 +122,13 @@ export default function DealOfTheWeek() {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">FREE RESET</span> ON 1ST STEP
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">{t.freeReset}</span> {lang === 'en' ? 'ON 1ST STEP' : 'LA PASUL 1'}
                                     </p>
                                     <p className="text-slate-300 text-[10px] sm:text-xs font-medium">
-                                        + 10% OFF & EXTRA 5% PROFIT SPLIT
+                                        {t.extraBonus}
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
-                                        Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-red-600 to-red-700 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">SANTARESET</span>
+                                        {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-red-600 to-red-700 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">SANTARESET</span>
                                     </p>
                                 </div>
                             </div>
@@ -102,7 +143,7 @@ export default function DealOfTheWeek() {
                                 whileTap={{ scale: 0.98 }}
                             >
                                 <span className="flex items-center justify-center gap-1.5">
-                                    Get Started
+                                    {t.getStarted}
                                     <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
@@ -111,7 +152,6 @@ export default function DealOfTheWeek() {
                         </div>
                     </motion.div>
 
-                    {/* SPECIAL DEAL - The Concept Trading */}
                     {/* FUTURES DEAL - FundedHero Futures */}
                     <motion.div
                         className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-yellow-500/20 bg-gradient-to-br from-yellow-950/90 via-slate-900/90 to-orange-950/90 backdrop-blur-sm shadow-lg hover:shadow-yellow-500/20 transition-all duration-300"
@@ -130,7 +170,7 @@ export default function DealOfTheWeek() {
                         {/* Market Type Badge */}
                         <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-10">
                             <div className="flex items-center gap-1 text-[8px] sm:text-[9px] font-bold tracking-wider text-yellow-200 uppercase bg-yellow-900/60 backdrop-blur-md px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md border border-yellow-400/30 shadow-lg">
-                                <span className="text-xs sm:text-sm">FUTURES</span>
+                                <span className="text-xs sm:text-sm">{t.futures}</span>
                             </div>
                         </div>
 
@@ -143,11 +183,11 @@ export default function DealOfTheWeek() {
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
                                     <span className="text-xs sm:text-sm">🔥</span>
-                                    <span>HUGE SAVINGS</span>
+                                    <span>{t.hugeSavings}</span>
                                 </motion.div>
 
                                 <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-slate-800/80 px-2 py-1 rounded-md border border-white/10">
-                                    <span>⏳</span> Limited Time Offer
+                                    <span>⏳</span> {t.limitedTime}
                                 </div>
                             </div>
 
@@ -167,13 +207,13 @@ export default function DealOfTheWeek() {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">90% OFF</span> ALL FUTURES
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">90% OFF</span> {t.allFutures}
                                     </p>
                                     <p className="text-slate-300 text-[10px] sm:text-xs font-medium">
-                                        INSANE DISCOUNT ON ALL CHALLENGES
+                                        {t.insaneDiscount}
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
-                                        Use code <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-yellow-600 to-orange-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HERO</span>
+                                        {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-yellow-600 to-orange-500 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HERO</span>
                                     </p>
                                 </div>
                             </div>
@@ -188,7 +228,7 @@ export default function DealOfTheWeek() {
                                 whileTap={{ scale: 0.98 }}
                             >
                                 <span className="flex items-center justify-center gap-1.5">
-                                    Get 90% OFF
+                                    {t.get90Off}
                                     <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>

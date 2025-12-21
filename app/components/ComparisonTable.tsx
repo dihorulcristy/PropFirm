@@ -3,6 +3,147 @@
 import React, { useState, useMemo } from 'react';
 import { Star, ShieldCheck, Check, Copy, ChevronDown, Zap, Trophy, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { clsx } from 'clsx';
+import type { Locale } from '@/lib/i18n/config';
+
+// UI Translations
+const translations = {
+    en: {
+        title: "Compare",
+        titleHighlight: "Evaluation Programs",
+        subtitle: "Find the perfect simulated trading evaluation program for your needs",
+        allMarkets: "All Markets",
+        forex: "Forex",
+        futures: "Futures",
+        all: "All",
+        allSizes: "All Sizes",
+        platform: "Platform",
+        anyPlatform: "Any Platform",
+        type: "Type",
+        anyType: "Any Type",
+        sort: "Sort",
+        recommended: "Recommended",
+        bestValue: "Best Value",
+        cheapest: "Cheapest",
+        fastestPayout: "Fastest Payout",
+        moreFilters: "More Filters",
+        reset: "Reset",
+        instantFunding: "Instant Funding",
+        hftAllowed: "HFT Allowed",
+        balanceBasedDD: "Balance-Based DD",
+        newsTrading: "News Trading",
+        cryptoPayout: "Crypto Payout",
+        usaAccepted: "USA Accepted",
+        noTimeLimit: "No Time Limit",
+        weeklyPayouts: "Weekly Payouts",
+        verified: "Verified",
+        rules: "Rules",
+        maxDD: "Max DD",
+        profitSplit: "Profit Split",
+        startFrom: "Start from",
+        getFunded: "Get Funded",
+        copyCoupon: "Copy coupon",
+        copied: "Copied!",
+        noFirmsFound: "No firms match your filters",
+        tryAdjusting: "Try adjusting your filters to see more options",
+        clearFilters: "Clear Filters",
+        payout: "Payout",
+        days: "days",
+        // Capital sizes
+        mini: "Mini",
+        starter: "Starter",
+        growth: "Growth",
+        standard: "Standard",
+        pro: "Pro",
+        whale: "Whale",
+        // Filter labels
+        firm: "Firm",
+        rating: "Rating",
+        keyRules: "Key Rules",
+        price: "Price",
+        action: "Action",
+        offer: "Offer",
+        // New offer labels
+        newOffer: "New Offer",
+        limitedTime: "Limited Time",
+        hotDeal: "Hot Deal",
+        // Table headers
+        community: "Community",
+        coupon: "Coupon",
+        activeOffers: "Active Offers",
+        activeOffer: "Active Offer",
+        showing: "Showing",
+        firms: "firms",
+        noCode: "No Code"
+    },
+    ro: {
+        title: "Compară",
+        titleHighlight: "Programele de Evaluare",
+        subtitle: "Găsește programul de evaluare de trading simulat perfect pentru nevoile tale",
+        allMarkets: "Toate Piețele",
+        forex: "Forex",
+        futures: "Futures",
+        all: "Toate",
+        allSizes: "Toate Dimensiunile",
+        platform: "Platformă",
+        anyPlatform: "Orice Platformă",
+        type: "Tip",
+        anyType: "Orice Tip",
+        sort: "Sortare",
+        recommended: "Recomandat",
+        bestValue: "Cea Mai Bună Valoare",
+        cheapest: "Cel Mai Ieftin",
+        fastestPayout: "Cea Mai Rapidă Plată",
+        moreFilters: "Mai Multe Filtre",
+        reset: "Resetează",
+        instantFunding: "Finanțare Instantă",
+        hftAllowed: "HFT Permis",
+        balanceBasedDD: "DD pe Sold",
+        newsTrading: "Trading pe Știri",
+        cryptoPayout: "Plată Crypto",
+        usaAccepted: "SUA Acceptat",
+        noTimeLimit: "Fără Limită de Timp",
+        weeklyPayouts: "Plăți Săptămânale",
+        verified: "Verificat",
+        rules: "Reguli",
+        maxDD: "DD Max",
+        profitSplit: "Împărțire Profit",
+        startFrom: "Începe de la",
+        getFunded: "Începe Acum",
+        copyCoupon: "Copiază cupon",
+        copied: "Copiat!",
+        noFirmsFound: "Nicio firmă nu corespunde filtrelor",
+        tryAdjusting: "Încearcă să ajustezi filtrele pentru mai multe opțiuni",
+        clearFilters: "Șterge Filtrele",
+        payout: "Plată",
+        days: "zile",
+        // Capital sizes
+        mini: "Mini",
+        starter: "Începător",
+        growth: "Creștere",
+        standard: "Standard",
+        pro: "Pro",
+        whale: "Avansat",
+        // Filter labels
+        firm: "Firmă",
+        rating: "Rating",
+        keyRules: "Reguli Cheie",
+        price: "Preț",
+        action: "Acțiune",
+        offer: "Ofertă",
+        // New offer labels
+        newOffer: "Ofertă Nouă",
+        limitedTime: "Timp Limitat",
+        hotDeal: "Ofertă Fierbinte",
+        // Table headers
+        community: "Comunitate",
+        coupon: "Cupon",
+        activeOffers: "Oferte Active",
+        activeOffer: "Ofertă Activă",
+        showing: "Afișare",
+        firms: "firme",
+        noCode: "Fără Cod"
+    }
+};
 
 // Firm interface with all filter properties
 interface Firm {
@@ -760,7 +901,12 @@ const allFirms: Firm[] = [
 
 type SortOption = 'recommended' | 'bestValue' | 'cheapest' | 'fastestPayout';
 
-export default function ComparisonTable() {
+interface ComparisonTableProps {
+    lang?: Locale;
+}
+
+export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
+    const t = translations[lang] || translations.en;
     const [copiedId, setCopiedId] = useState<number | null>(null);
 
     // Level 2: Configurator filters
@@ -917,10 +1063,10 @@ export default function ComparisonTable() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 font-display uppercase tracking-tight">
-                        Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Evaluation Programs</span>
+                        {t.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">{t.titleHighlight}</span>
                     </h2>
                     <p className="text-slate-400 text-lg max-w-3xl mx-auto mb-2">
-                        Find the perfect simulated trading evaluation program for your needs
+                        {t.subtitle}
                     </p>
                     <div className="h-1 w-24 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full opacity-50"></div>
                 </div>
@@ -937,7 +1083,7 @@ export default function ComparisonTable() {
                                     : "bg-slate-900/80 border-white/10 text-slate-200"
                             )}
                         >
-                            📊 All
+                            📊 {t.all}
                         </button>
                         <button
                             onClick={() => setSelectedMarketType('forex')}
@@ -948,7 +1094,7 @@ export default function ComparisonTable() {
                                     : "bg-slate-900/80 border-white/10 text-slate-200"
                             )}
                         >
-                            💱 Forex
+                            💱 {t.forex}
                         </button>
                         <button
                             onClick={() => setSelectedMarketType('futures')}
@@ -959,7 +1105,7 @@ export default function ComparisonTable() {
                                     : "bg-slate-900/80 border-white/10 text-slate-200"
                             )}
                         >
-                            📈 Futures
+                            📈 {t.futures}
                         </button>
                     </div>
                 </div>
@@ -980,7 +1126,7 @@ export default function ComparisonTable() {
                                             : "bg-slate-900/80 border-white/10 text-slate-200"
                                     )}
                                 >
-                                    <option value="all" className="bg-slate-900 text-slate-300">💰 All Sizes</option>
+                                    <option value="all" className="bg-slate-900 text-slate-300">💰 {t.allSizes}</option>
                                     <option value="5000" className="bg-slate-900 text-slate-300">$5k</option>
                                     <option value="10000" className="bg-slate-900 text-slate-300">$10k</option>
                                     <option value="25000" className="bg-slate-900 text-slate-300">$25k</option>
@@ -1008,7 +1154,7 @@ export default function ComparisonTable() {
                                             : "bg-slate-900/80 border-white/10 text-slate-200"
                                     )}
                                 >
-                                    <option value="all" className="bg-slate-900 text-slate-300">🖥️ Platform</option>
+                                    <option value="all" className="bg-slate-900 text-slate-300">🖥️ {t.platform}</option>
                                     <option value="cTrader" className="bg-slate-900 text-slate-300">cTrader</option>
                                     <option value="DXtrade" className="bg-slate-900 text-slate-300">DXtrade</option>
                                     <option value="Match-Trader" className="bg-slate-900 text-slate-300">Match-Trader</option>
@@ -1035,7 +1181,7 @@ export default function ComparisonTable() {
                                             : "bg-slate-900/80 border-white/10 text-slate-200"
                                     )}
                                 >
-                                    <option value="all" className="bg-slate-900 text-slate-300">⚡ Type</option>
+                                    <option value="all" className="bg-slate-900 text-slate-300">⚡ {t.type}</option>
                                     <option value="2-Step" className="bg-slate-900 text-slate-300">2-Step</option>
                                     <option value="1-Step" className="bg-slate-900 text-slate-300">1-Step</option>
                                     <option value="Instant" className="bg-slate-900 text-slate-300">Instant</option>
@@ -1068,7 +1214,7 @@ export default function ComparisonTable() {
                             }}
                             className="snap-start flex-shrink-0 flex items-center gap-2 text-xs font-bold text-slate-400 border border-white/10 bg-slate-900/50 px-4 py-2.5 rounded-full active:scale-95 transition-all hover:text-white hover:bg-white/10 backdrop-blur-md shadow-lg shadow-black/20"
                         >
-                            <span className="text-base">🔄</span> Reset
+                            <span className="text-base">🔄</span> {t.reset}
                         </button>
                     </div>
                 </div>
@@ -1087,7 +1233,7 @@ export default function ComparisonTable() {
                                         : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
                                 )}
                             >
-                                📊 All Markets
+                                📊 {t.allMarkets}
                             </button>
                             <button
                                 onClick={() => setSelectedMarketType('forex')}
@@ -1098,7 +1244,7 @@ export default function ComparisonTable() {
                                         : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
                                 )}
                             >
-                                💱 Forex
+                                💱 {t.forex}
                             </button>
                             <button
                                 onClick={() => setSelectedMarketType('futures')}
@@ -1109,7 +1255,7 @@ export default function ComparisonTable() {
                                         : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
                                 )}
                             >
-                                📈 Futures
+                                📈 {t.futures}
                             </button>
                         </div>
                     </div>
@@ -1124,13 +1270,13 @@ export default function ComparisonTable() {
                                     onChange={(e) => setSelectedCapital(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
                                     className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
-                                    <option value="all" className="bg-black text-slate-200">💰 All Sizes</option>
-                                    <option value="5000" className="bg-black text-slate-200">$5k (Mini)</option>
-                                    <option value="10000" className="bg-black text-slate-200">$10k (Starter)</option>
-                                    <option value="25000" className="bg-black text-slate-200">$25k (Growth)</option>
-                                    <option value="50000" className="bg-black text-slate-200">$50k (Standard)</option>
-                                    <option value="100000" className="bg-black text-slate-200">$100k (Pro)</option>
-                                    <option value="200000" className="bg-black text-slate-200">$200k+ (Whale)</option>
+                                    <option value="all" className="bg-black text-slate-200">💰 {t.allSizes}</option>
+                                    <option value="5000" className="bg-black text-slate-200">$5k ({t.mini})</option>
+                                    <option value="10000" className="bg-black text-slate-200">$10k ({t.starter})</option>
+                                    <option value="25000" className="bg-black text-slate-200">$25k ({t.growth})</option>
+                                    <option value="50000" className="bg-black text-slate-200">$50k ({t.standard})</option>
+                                    <option value="100000" className="bg-black text-slate-200">$100k ({t.pro})</option>
+                                    <option value="200000" className="bg-black text-slate-200">$200k+ ({t.whale})</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
                             </div>
@@ -1142,7 +1288,7 @@ export default function ComparisonTable() {
                                     onChange={(e) => setSelectedPlatform(e.target.value)}
                                     className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
-                                    <option value="all" className="bg-black text-slate-200">🖥️ Any Platform</option>
+                                    <option value="all" className="bg-black text-slate-200">🖥️ {t.anyPlatform}</option>
                                     <option value="cTrader" className="bg-black text-slate-200">cTrader</option>
                                     <option value="DXtrade" className="bg-black text-slate-200">DXtrade</option>
                                     <option value="Match-Trader" className="bg-black text-slate-200">Match-Trader</option>
@@ -1160,7 +1306,7 @@ export default function ComparisonTable() {
                                     onChange={(e) => setSelectedChallengeType(e.target.value)}
                                     className="appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-slate-300 px-5 py-3 pr-10 rounded-xl transition-all duration-300 cursor-pointer min-w-[140px] lg:min-w-[160px] text-sm font-medium"
                                 >
-                                    <option value="all" className="bg-black text-slate-200">🎯 Any Type</option>
+                                    <option value="all" className="bg-black text-slate-200">🎯 {t.anyType}</option>
                                     <option value="2-Step" className="bg-black text-slate-200">2-Step</option>
                                     <option value="1-Step" className="bg-black text-slate-200">1-Step</option>
                                     <option value="Instant" className="bg-black text-slate-200">Instant</option>
@@ -1172,16 +1318,16 @@ export default function ComparisonTable() {
                         {/* Sort, More Filters & Reset */}
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-500 uppercase tracking-wider font-bold">Sort:</span>
+                                <span className="text-xs text-slate-500 uppercase tracking-wider font-bold">{t.sort}:</span>
                                 <select
                                     value={sortBy}
                                     onChange={(e) => setSortBy(e.target.value as SortOption)}
                                     className="appearance-none bg-transparent text-sm font-bold text-white hover:text-yellow-400 transition cursor-pointer border-none outline-none"
                                 >
-                                    <option value="recommended" className="bg-black text-slate-200">Recommended</option>
-                                    <option value="bestValue" className="bg-black text-slate-200">Best Value</option>
-                                    <option value="cheapest" className="bg-black text-slate-200">Cheapest</option>
-                                    <option value="fastestPayout" className="bg-black text-slate-200">Fastest Payout</option>
+                                    <option value="recommended" className="bg-black text-slate-200">{t.recommended}</option>
+                                    <option value="bestValue" className="bg-black text-slate-200">{t.bestValue}</option>
+                                    <option value="cheapest" className="bg-black text-slate-200">{t.cheapest}</option>
+                                    <option value="fastestPayout" className="bg-black text-slate-200">{t.fastestPayout}</option>
                                 </select>
                                 <ChevronDown className="h-4 w-4 text-slate-500" />
                             </div>
@@ -1196,7 +1342,7 @@ export default function ComparisonTable() {
                                         : "border-white/10 bg-black/40 text-slate-300 hover:border-white/30 hover:text-white"
                                 )}
                             >
-                                ⚙️ More Filters
+                                ⚙️ {t.moreFilters}
                                 <ChevronDown className={clsx("h-4 w-4 transition-transform", showMoreFilters && "rotate-180")} />
                             </button>
 
@@ -1224,7 +1370,7 @@ export default function ComparisonTable() {
                                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                 </svg>
-                                Reset
+                                {t.reset}
                             </button>
                         </div>
                     </div>
@@ -1242,7 +1388,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>⚡</span> Instant Funding
+                                    <span>⚡</span> {t.instantFunding}
                                 </button>
 
                                 <button
@@ -1254,7 +1400,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>🤖</span> HFT Allowed
+                                    <span>🤖</span> {t.hftAllowed}
                                 </button>
 
                                 <button
@@ -1266,7 +1412,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>📉</span> Balance Based DD
+                                    <span>📉</span> {t.balanceBasedDD}
                                 </button>
 
                                 <button
@@ -1278,7 +1424,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>📰</span> News Trading
+                                    <span>📰</span> {t.newsTrading}
                                 </button>
 
                                 <button
@@ -1290,7 +1436,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>💰</span> Crypto Payout
+                                    <span>💰</span> {t.cryptoPayout}
                                 </button>
 
                                 <button
@@ -1302,7 +1448,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>🇺🇸</span> USA Accepted
+                                    <span>🇺🇸</span> {t.usaAccepted}
                                 </button>
 
                                 <button
@@ -1314,7 +1460,7 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>🕒</span> No Time Limit
+                                    <span>🕒</span> {t.noTimeLimit}
                                 </button>
 
                                 <button
@@ -1326,13 +1472,13 @@ export default function ComparisonTable() {
                                             : "bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:border-yellow-400/50 hover:-translate-y-0.5"
                                     )}
                                 >
-                                    <span>💸</span> Weekly Payouts
+                                    <span>💸</span> {t.weeklyPayouts}
                                 </button>
                             </div>
 
                             {/* Results count */}
                             <div className="mt-4 text-xs text-slate-600 font-mono">
-                                Showing {filteredAndSortedFirms.length} {filteredAndSortedFirms.length === 1 ? 'firm' : 'firms'}
+                                {t.showing} {filteredAndSortedFirms.length} {t.firms}
                             </div>
                         </div>
                     )}
@@ -1342,7 +1488,7 @@ export default function ComparisonTable() {
                 <div className="md:hidden space-y-4">
                     {filteredAndSortedFirms.length === 0 ? (
                         <div className="text-center py-12 text-slate-500 bg-white/5 rounded-xl border border-white/10">
-                            No firms match your filters. Try adjusting your criteria.
+                            {t.noFirmsFound}. {t.tryAdjusting}
                         </div>
                     ) : (
                         filteredAndSortedFirms.map((firm) => (
@@ -1366,7 +1512,7 @@ export default function ComparisonTable() {
                                             {firm.verified && (
                                                 <>
                                                     <span className="text-slate-500">•</span>
-                                                    <span className="text-blue-400">Verified</span>
+                                                    <span className="text-blue-400">{t.verified}</span>
                                                 </>
                                             )}
                                         </div>
@@ -1415,7 +1561,7 @@ export default function ComparisonTable() {
                                         <span className="text-emerald-400 font-bold">{firm.rules.profit}</span>
                                     </div>
                                     <div className="bg-black/20 p-2 rounded border border-white/5 col-span-2 flex justify-between items-center">
-                                        <span className="text-slate-500 text-xs">Coupon:</span>
+                                        <span className="text-slate-500 text-xs">{t.coupon}:</span>
                                         <button
                                             onClick={() => copyToClipboard(firm.coupon, firm.id)}
                                             className="text-white font-mono bg-emerald-500/10 px-2 py-0.5 rounded border border-dashed border-emerald-500/40 text-sm font-bold flex items-center gap-1"
@@ -1436,7 +1582,7 @@ export default function ComparisonTable() {
                                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
                                         <div className="flex items-center justify-center gap-1 mb-1">
                                             <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400 animate-pulse" />
-                                            <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Active Offer</span>
+                                            <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">{t.activeOffer}</span>
                                         </div>
                                         <div className="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">
                                             {firm.offer}
@@ -1451,7 +1597,7 @@ export default function ComparisonTable() {
                                     rel="noopener noreferrer"
                                     className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-emerald-500/20 transition active:scale-95 flex items-center justify-center"
                                 >
-                                    {firm.action}
+                                    {t.getFunded}
                                 </a>
                             </div>
                         ))
@@ -1463,21 +1609,21 @@ export default function ComparisonTable() {
                     <table className="w-full text-sm text-slate-400">
                         <thead className="bg-black/60 text-xs uppercase text-slate-500 border-b border-slate-800/50">
                             <tr>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-left">Firm</th>
-                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Rating</th>
-                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Community</th>
-                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Key Rules</th>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Price</th>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Coupon</th>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Active Offers</th>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">Action</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-left">{t.firm}</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.rating}</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.community}</th>
+                                <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.keyRules}</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.price}</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.coupon}</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.activeOffers}</th>
+                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.action}</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-800/30">
                             {filteredAndSortedFirms.length === 0 ? (
                                 <tr>
                                     <td colSpan={5} className="px-6 py-12 text-center text-slate-500">
-                                        No firms match your filters. Try adjusting your criteria.
+                                        {t.noFirmsFound}. {t.tryAdjusting}
                                     </td>
                                 </tr>
                             ) : (
@@ -1505,7 +1651,7 @@ export default function ComparisonTable() {
                                                 </div>
                                                 {firm.verified && (
                                                     <div className="flex items-center gap-1 text-[10px] text-blue-400 bg-blue-400/10 px-1.5 py-0.5 rounded w-fit">
-                                                        <ShieldCheck className="h-3 w-3" /> Verified
+                                                        <ShieldCheck className="h-3 w-3" /> {t.verified}
                                                     </div>
                                                 )}
                                             </div>
@@ -1575,7 +1721,7 @@ export default function ComparisonTable() {
                                                     )}
                                                 </button>
                                             ) : (
-                                                <span className="text-slate-600 text-xs italic">No Code</span>
+                                                <span className="text-slate-600 text-xs italic">{t.noCode}</span>
                                             )}
                                         </td>
 
@@ -1585,14 +1731,14 @@ export default function ComparisonTable() {
                                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-500"></div>
                                                     <div className="flex items-center justify-center gap-1 mb-0.5 lg:mb-1">
                                                         <Zap className="w-3 h-3 text-yellow-400 fill-yellow-400 animate-pulse" />
-                                                        <span className="text-[9px] lg:text-[10px] font-bold text-emerald-400 uppercase tracking-wider">New Offer</span>
+                                                        <span className="text-[9px] lg:text-[10px] font-bold text-emerald-400 uppercase tracking-wider">{t.newOffer}</span>
                                                     </div>
                                                     <div className="text-sm lg:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 mb-0.5 lg:mb-1">
                                                         {firm.offer}
                                                     </div>
                                                     <div className="inline-flex items-center gap-1 bg-emerald-500/10 px-1.5 py-0.5 rounded text-[9px] lg:text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
                                                         <Trophy className="w-2.5 h-2.5 lg:w-3 lg:h-3" />
-                                                        <span>Limited Time</span>
+                                                        <span>{t.limitedTime}</span>
                                                     </div>
                                                 </div>
                                             ) : (
@@ -1607,7 +1753,7 @@ export default function ComparisonTable() {
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition-all hover:shadow-emerald-900/40 hover:scale-105 active:scale-95 whitespace-nowrap"
                                             >
-                                                {firm.action}
+                                                {t.getFunded}
                                             </a>
                                         </td>
                                     </tr>

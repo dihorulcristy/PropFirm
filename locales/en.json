@@ -1,0 +1,77 @@
+{
+    "seo": {
+        "title": "PropFirmHub - Compare Top Prop Trading Firms 2025 | Exclusive Discounts",
+        "description": "Compare top prop firms 2025. Exclusive discounts, evaluation rules & pricing. FTMO, FunderPro, TradingCult & more. Find your perfect firm!",
+        "keywords": "prop trading, prop firms, FTMO, funded trading, trading evaluation, prop firm comparison"
+    },
+    "header": {
+        "home": "Home",
+        "compare": "Compare",
+        "coupons": "Coupons",
+        "blog": "Blog",
+        "faq": "FAQ",
+        "searchPlaceholder": "Search firms..."
+    },
+    "hero": {
+        "title": "Compare Evaluation Programs",
+        "titleHighlight": "Up to $1M Virtual Capital",
+        "subtitle": "We compare trader evaluation programs and simulated funding opportunities. Find the best prop firm for your trading skills.",
+        "disclaimer": "All trading activities are performed in a simulated environment with virtual funds.",
+        "trustedPlatforms": "Trusted Trading Platforms",
+        "scroll": "Scroll",
+        "cards": {
+            "bestOverall": "Best Overall",
+            "bestValue": "Best Value",
+            "hftAllowed": "HFT Allowed",
+            "maximumSafety": "Maximum Safety",
+            "from": "From",
+            "passIn1Step": "Pass in 1 Step"
+        }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Answers to the most common questions about prop trading firms and the funding process.",
+        "questions": [
+            {
+                "question": "What is a prop trading firm?",
+                "answer": "A proprietary trading firm (prop firm) provides capital to talented traders to trade on financial markets. In exchange for an evaluation fee and demonstrating your skills, traders can keep a significant percentage of the profits generated (usually between 80% and 90%)."
+            },
+            {
+                "question": "How does the evaluation process work?",
+                "answer": "Most firms require traders to pass a 1 or 2-phase evaluation. You need to reach a profit target without violating drawdown rules (maximum loss). Once you pass the test, you receive a funded account."
+            },
+            {
+                "question": "What are the main rules?",
+                "answer": "Common rules include: Maximum Daily Drawdown (how much you can lose in a day), Maximum Total Drawdown (how much you can lose in total from the account), and sometimes trading restrictions during major economic news events."
+            },
+            {
+                "question": "How fast can I withdraw profits?",
+                "answer": "Each firm has its own policy. Some allow withdrawals every 14 days, others monthly, and some even weekly or on-demand after the first withdrawal."
+            },
+            {
+                "question": "Is automated trading (EA) allowed?",
+                "answer": "Many firms allow the use of Expert Advisors (EAs), but often with the condition that it must be your own strategy and not a public arbitrage EA or HFT (High Frequency Trading) that exploits server latency."
+            }
+        ]
+    },
+    "footer": {
+        "about": "Your trusted source for comparing proprietary trading firms. Find the best prop firm for your trading style.",
+        "quickLinks": "Quick Links",
+        "compareFirms": "Compare Firms",
+        "dealOfTheWeek": "Deal of the Week",
+        "howToGetFunded": "How to Get Funded",
+        "contactUs": "Contact Us",
+        "legal": "Legal",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "cookiePolicy": "Cookie Policy",
+        "affiliateDisclosure": "Affiliate Disclosure",
+        "contact": "Contact",
+        "contactForm": "Contact Form →",
+        "riskDisclaimer": "⚠️ Risk Disclaimer",
+        "riskText1": "All trading activities involve significant risks and are not suitable for all investors. PropFirmHub does not provide investment services or financial advice. All accounts offered by the listed firms are demo accounts (simulated) with virtual funds. No transactions occur in the real market. Past performance does not guarantee future results.",
+        "riskText2": "Simulated Trading Environment: All proprietary trading firm evaluations and funded accounts operate in a simulated trading environment. Traders receive virtual capital allocation and trade on demo accounts. Profit splits are based on performance in this simulated environment.",
+        "affiliateText": "Affiliate Disclosure: Some links on this site are affiliate links. If you purchase a service through these links, we may receive a commission at no additional cost to you. This helps us maintain the site free of charge. We only recommend evaluation programs we believe will add value to traders.",
+        "copyright": "© {year} PropFirmHub. All rights reserved."
+    }
+}

@@ -141,24 +141,24 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Header />
-      <TelegramAnnouncement />
+      <Header lang="en" />
+      <TelegramAnnouncement lang="en" />
       <main className="flex-1">
         <div id="hero">
-          <Hero />
+          <Hero lang="en" />
         </div>
-        <DealOfTheWeek />
+        <DealOfTheWeek lang="en" />
         <div id="comparison">
-          <ComparisonTable />
+          <ComparisonTable lang="en" />
         </div>
         <div id="faq">
-          <FAQ />
+          <FAQ lang="en" />
         </div>
         <div id="blog">
-          <BlogSection />
+          <BlogSection lang="en" />
         </div>
       </main>
-      <Footer />
+      <Footer lang="en" />
     </div>
   );
 }
