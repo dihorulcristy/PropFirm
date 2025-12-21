@@ -24,9 +24,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
     params,
 }: {
-    params: Promise<{ lang: Locale }>;
+    params: Promise<any>;
 }): Promise<Metadata> {
-    const { lang } = await params;
+    const resolvedParams = await params;
+    const lang = resolvedParams.lang as Locale;
     const dict = await getDictionary(lang);
 
     const baseUrl = 'https://propfirmhub.com';
@@ -92,14 +93,13 @@ export async function generateMetadata({
     };
 }
 
-export default async function LocaleLayout({
-    children,
-    params,
-}: Readonly<{
+export default async function LocaleLayout(props: {
     children: React.ReactNode;
-    params: Promise<{ lang: Locale }>;
-}>) {
-    const { lang } = await params;
+    params: Promise<any>;
+}) {
+    const params = await props.params;
+    const lang = params.lang as Locale;
+    const { children } = props;
 
     return (
         <html lang={lang}>
