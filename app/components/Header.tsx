@@ -66,6 +66,9 @@ export default function Header({ lang = 'en' }: HeaderProps) {
     };
 
     const switchLanguage = (newLang: Locale) => {
+        // Set cookie to persist preference
+        document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+
         // Get current path without locale prefix
         let newPath = pathname;
 
@@ -82,9 +85,12 @@ export default function Header({ lang = 'en' }: HeaderProps) {
 
         // Add new locale prefix (skip for default 'en')
         if (newLang === 'en') {
-            router.push(newPath || '/');
+            const dest = newPath || '/';
+            // Force reload for root path to ensure middleware re-runs with new cookie
+            window.location.href = dest;
         } else {
-            router.push(`/${newLang}${newPath === '/' ? '' : newPath}`);
+            const dest = `/${newLang}${newPath === '/' ? '' : newPath}`;
+            window.location.href = dest;
         }
 
         setLangMenuOpen(false);
@@ -161,8 +167,8 @@ export default function Header({ lang = 'en' }: HeaderProps) {
                                         key={locale}
                                         onClick={() => switchLanguage(locale)}
                                         className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors ${locale === lang
-                                                ? 'bg-emerald-500/20 text-emerald-400'
-                                                : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+                                            ? 'bg-emerald-500/20 text-emerald-400'
+                                            : 'text-slate-400 hover:bg-slate-800 hover:text-white'
                                             }`}
                                     >
                                         <span className="text-lg">{localeFlags[locale]}</span>
@@ -209,8 +215,8 @@ export default function Header({ lang = 'en' }: HeaderProps) {
                                             key={locale}
                                             onClick={() => switchLanguage(locale)}
                                             className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${locale === lang
-                                                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50'
-                                                    : 'text-slate-400 hover:bg-slate-800 border border-slate-700'
+                                                ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50'
+                                                : 'text-slate-400 hover:bg-slate-800 border border-slate-700'
                                                 }`}
                                         >
                                             <span>{localeFlags[locale]}</span>
