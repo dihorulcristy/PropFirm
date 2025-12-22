@@ -22,6 +22,14 @@ const translations = {
         signUp: "Înscrie-te",
         joinTelegram: "Intră pe",
         telegram: "Telegram"
+    },
+    es: {
+        giveaway: "SORTEO",
+        message: "🎁 Únete a nuestro Telegram para el",
+        fundedDraw: "Sorteo de Cuenta Fondeada",
+        signUp: "Regístrate",
+        joinTelegram: "Únete a",
+        telegram: "Telegram"
     }
 };
 
