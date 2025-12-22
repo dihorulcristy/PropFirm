@@ -69,6 +69,37 @@ const translations = {
                 linkText: "pagina noastră de contact"
             }
         ]
+    },
+    es: {
+        title: "Política de Privacidad",
+        lastUpdated: "Última actualización:",
+        sections: [
+            {
+                title: "1. Información que Recopilamos",
+                content: "Recopilamos información que nos proporcionas directamente, incluso cuando utilizas nuestro sitio web, te suscribes a nuestro boletín o nos contactas para obtener soporte."
+            },
+            {
+                title: "2. Cómo Usamos tu Información",
+                content: "Utilizamos la información recopilada para proporcionar, mantener y mejorar nuestros servicios, comunicarnos contigo y cumplir con obligaciones legales."
+            },
+            {
+                title: "3. Cookies",
+                content: "Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro sitio web y mantener cierta información. Puedes configurar tu navegador para rechazar todas las cookies o para indicar cuándo se envía una cookie."
+            },
+            {
+                title: "4. Seguridad de los Datos",
+                content: "Implementamos medidas técnicas y organizativas adecuadas para proteger tus datos personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental, destrucción o daño."
+            },
+            {
+                title: "5. Tus Derechos",
+                content: "Tienes derecho a acceder, corregir o eliminar tus datos personales. También puedes oponerte al procesamiento o solicitar la restricción del procesamiento de tus datos personales."
+            },
+            {
+                title: "6. Contáctanos",
+                content: "Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos en",
+                linkText: "nuestra página de contacto"
+            }
+        ]
     }
 };
 

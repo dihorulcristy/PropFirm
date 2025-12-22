@@ -57,6 +57,30 @@ const translations = {
         success: "Vă mulțumim! Mesajul dumneavoastră a fost trimis cu succes. Vă vom răspunde în curând.",
         otherWays: "Alte Moduri de a Ne Contacta",
         emailLabel: "Email:"
+    },
+    es: {
+        title: "Contáctanos",
+        intro: "¿Tienes una pregunta o comentario? Nos encantaría saber de ti. Completa el formulario a continuación y te responderemos lo antes posible.",
+        labels: {
+            name: "Nombre *",
+            email: "Correo electrónico *",
+            subject: "Asunto *",
+            message: "Mensaje *"
+        },
+        placeholders: {
+            name: "Tu nombre",
+            email: "tu@email.com",
+            subject: "¿Sobre qué es esto?",
+            message: "Tu mensaje..."
+        },
+        buttons: {
+            send: "Enviar Mensaje",
+            sending: "Enviando...",
+            sent: "✓ Enviado!"
+        },
+        success: "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.",
+        otherWays: "Otras Formas de Contactarnos",
+        emailLabel: "Correo electrónico:"
     }
 };
 

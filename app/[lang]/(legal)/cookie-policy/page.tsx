@@ -66,6 +66,36 @@ const translations = {
                 list: []
             }
         ]
+    },
+    es: {
+        title: "Política de Cookies",
+        lastUpdated: "Última actualización:",
+        sections: [
+            {
+                title: "Qué Son las Cookies",
+                content: "Las cookies son pequeños archivos de texto que se colocan en tu computadora o dispositivo móvil cuando visitas nuestro sitio web.",
+                list: []
+            },
+            {
+                title: "Cómo Usamos las Cookies",
+                content: "Usamos cookies para entender cómo usas nuestro sitio web y mejorar tu experiencia. Esto incluye personalizar contenido y publicidad.",
+                list: []
+            },
+            {
+                title: "Tipos de Cookies que Usamos",
+                content: "",
+                list: [
+                    "<strong>Cookies Esenciales:</strong> Necesarias para que el sitio web funcione correctamente",
+                    "<strong>Cookies de Análisis:</strong> Nos ayudan a entender cómo interactúan los visitantes con nuestro sitio web",
+                    "<strong>Cookies de Publicidad:</strong> Usadas para entregar anuncios relevantes"
+                ]
+            },
+            {
+                title: "Gestión de Cookies",
+                content: "Puedes controlar y/o eliminar las cookies como desees. Puedes eliminar todas las cookies que ya están en tu computadora y puedes configurar la mayoría de los navegadores para evitar que se coloquen.",
+                list: []
+            }
+        ]
     }
 };
 

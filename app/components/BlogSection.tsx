@@ -44,6 +44,25 @@ const translations = {
                 description: "Top 10 plăți procesate luna trecută. Vezi cine plătește cel mai rapid."
             }
         ]
+    },
+    es: {
+        blogs: [
+            {
+                slug: "hft-vs-swing",
+                title: "HFT vs Swing",
+                description: "Comparamos y probamos la innovación. HFT vs Swing y el impacto en la rentabilidad."
+            },
+            {
+                slug: "taxes-2025",
+                title: "Impuestos 2025",
+                description: "Compara impuestos y tarifas para 2025. Guía completa para traders."
+            },
+            {
+                slug: "top-payouts",
+                title: "Mejores Pagos",
+                description: "Top 10 pagos procesados el mes pasado. Mira quién paga más rápido."
+            }
+        ]
     }
 };
 

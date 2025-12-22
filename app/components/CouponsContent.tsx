@@ -52,6 +52,28 @@ const translations = {
         weekendSpecial: "Ofertă de Weekend",
         couponCode: "Cod Cupon",
         showCode: "Arată Codul"
+    },
+    es: {
+        title: "Mejores",
+        titleHighlight: "Códigos de Descuento",
+        activeToday: "Activos Hoy",
+        subtitle: "Negociamos directamente con las firmas para descuentos exclusivos",
+        searchPlaceholder: "Busca tu firma aquí...",
+        flashSales: "Ventas Flash",
+        flashSalesSubtitle: "Ofertas por tiempo limitado que expiran pronto",
+        viewOffer: "Ver Oferta →",
+        proTip: "Consejo Pro:",
+        proTipText: "Los códigos se verifican diariamente. ¡Úsalos lo antes posible para el mejor precio!",
+        verified: "Verificado",
+        copyCoupon: "Copiar",
+        copied: "¡Copiado!",
+        noCoupon: "Usar Enlace",
+        off: "DTO",
+        flashSale24h: "¡VENTA FLASH 24H!",
+        limitedTime: "¡Tiempo Limitado!",
+        weekendSpecial: "Especial Fin de Semana",
+        couponCode: "Código Cupón",
+        showCode: "Mostrar Código"
     }
 };
 

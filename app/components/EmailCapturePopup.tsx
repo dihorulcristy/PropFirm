@@ -47,6 +47,27 @@ const translations = {
         spotsLeft: "Doar 7 locuri rămase",
         todayOffer: "astăzi la acest preț",
         error: "Ceva nu a funcționat. Te rugăm să încerci din nou."
+    },
+    es: {
+        limitedTimeOffer: "OFERTA LIMITADA",
+        getYourFree: "Obtén tu GRATIS",
+        fundedAccount: "Cuenta Financiada de $25,000",
+        joinTraders: "Únete a",
+        tradersCount: "10,000+ traders",
+        tradersText: "que ya están operando con nuestro capital. ¡Sin ataduras!",
+        instantAccess: "Acceso Instantáneo",
+        keepProfits: "Quédate 80% Beneficios",
+        scaleTo: "Escala a $200K",
+        yourFullName: "Tu Nombre Completo",
+        yourEmail: "Tu Dirección de Email",
+        processing: "Procesando...",
+        claimButton: "🎯 Reclamar Mi Cuenta GRATIS de $25K",
+        secureInfo: "🔒 Tu información es 100% segura y nunca será compartida",
+        welcomeAboard: "¡Bienvenido a bordo! 🎉",
+        checkEmail: "¡Revisa tu correo para acceso instantáneo a tu cuenta financiada de $25,000!",
+        spotsLeft: "Solo quedan 7 lugares",
+        todayOffer: "hoy a este precio de oferta",
+        error: "Algo salió mal. Por favor inténtalo de nuevo."
     }
 };
 

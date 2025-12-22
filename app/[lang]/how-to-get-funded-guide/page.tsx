@@ -162,6 +162,81 @@ const translations = {
         finalCtaTitle: "Ești Pregătit să Scalezi Tranzacționarea?",
         finalCtaButton: "Găsește Firma Perfectă",
         disclaimer: "Declinare a responsabilității: Tranzacționarea implică riscuri semnificative și nu este potrivită pentru toți investitorii. Acesta este doar un ghid informativ. Toate conturile prop firm sunt medii demo/simulate."
+    },
+    es: {
+        title: "Cómo Convertirse en un Trader Financiado en 2025",
+        subtitle: "Guía Completa: Pasos para una Cuenta Forex Financiada & Financiación para Traders",
+        description: "Aprende los pasos exactos para obtener una cuenta forex financiada y acceder a financiación para traders forex sin arriesgar tu propio capital. Comienza con hasta $100,000 en capital de trading.",
+        community: "Comunidad de 10,000+ Traders",
+        jumpToFirms: "Saltar a Firmas Recomendadas",
+        journeyTitle: "Tu Viaje hacia la Financiación",
+        steps: [
+            { number: "1", title: "Empieza Aquí", desc: "Elige la firma adecuada" },
+            { number: "2", title: "Pasa la Evaluación", desc: "Demuestra tus habilidades" },
+            { number: "3", title: "¡Obtén Financiación!", desc: "Gana hasta 90% de ganancia" }
+        ],
+        educationalTitle: "Pasos para la Cuenta Forex Financiada:",
+        educationalSubtitle: "Cómo Convertirse en un Trader Financiado",
+        cards: [
+            {
+                step: "Paso 1: Elige la Firma",
+                tag: "CRÍTICO",
+                text: "No todas las firmas pagan. Necesitas elegir una firma verificada con reglas transparentes y spreads ajustados. Una elección incorrecta aquí significa dinero y tiempo perdido."
+            },
+            {
+                step: "Paso 2: Pasa el Desafío",
+                tag: "LA PRUEBA",
+                text: "Demuestra que puedes hacer 8-10% de ganancia sin exceder el límite de pérdida. Esta es la prueba de disciplina, no solo de habilidad. Apégate a tu estrategia."
+            },
+            {
+                step: "Paso 3: Financiación & Pago",
+                tag: "HORA DEL BENEFICIO",
+                text: "Una vez financiado, te quedas con hasta el 90% de las ganancias. El dinero se transfiere directamente a tu cuenta bancaria o billetera cripto. Escala hasta millones en poder adquisitivo."
+            }
+        ],
+        bridgeTitle: "Encontrando la Financiación Adecuada para Traders:",
+        bridgeSubtitle: "Dónde Aplicar para Cuentas Financiadas",
+        bridgeText: "Hemos analizado más de 50+ firmas prop que ofrecen financiación. La mayoría tiene reglas ocultas y mala ejecución. Hemos seleccionado solo las mejores firmas verificadas donde puedes obtener con éxito una cuenta financiada con condiciones transparentes.",
+        filters: {
+            cheapest: "💰 Más Baratas",
+            noTimeLimit: "⏰ Sin Límite de Tiempo",
+            instant: "⚡ Financiación Instantánea"
+        },
+        tableHeaders: {
+            firm: "Firma",
+            rating: "Calificación",
+            price: "Precio (100k)",
+            advantage: "Ventaja Única",
+            action: "Acción"
+        },
+        visitSite: "Visitar Sitio",
+        seeFullTable: "Ver la tabla de comparación completa con 20+ firmas",
+        faqTitle: "Preguntas Frecuentes",
+        faqs: [
+            {
+                question: '¿Realmente recibo dinero real?',
+                answer: '¡Sí! Una vez que pasas la evaluación y te conviertes en un trader financiado, recibes divisiones de ganancias reales (típicamente 70-90%) pagadas directamente a tu cuenta. Las firmas ganan dinero con las tarifas de evaluación y manteniendo su parte de tus ganancias.'
+            },
+            {
+                question: '¿Cuánto cuesta empezar?',
+                answer: 'Los precios varían según la firma y el tamaño de la cuenta. Para una cuenta de $100,000, las tarifas suelen oscilar entre $450 y $600. Las cuentas más pequeñas ($10k-$50k) pueden comenzar desde tan solo $49-$250. Muchas firmas ofrecen reembolsos cuando pasas la evaluación.'
+            },
+            {
+                question: '¿Puedo operar con Cripto o durante noticias?',
+                answer: 'Las reglas varían. Algunas permiten operar con cripto y durante noticias, mientras que otras tienen restricciones. Siempre verifica las reglas específicas antes de comprar. Nuestra tabla de comparación destaca qué firmas permiten estos estilos.'
+            },
+            {
+                question: '¿Qué pasa si fallo la evaluación?',
+                answer: 'Si fallas la evaluación, puedes comprar un nuevo desafío o a veces obtener un reintento con descuento. La tarifa de evaluación es el modelo de ingresos de la firma. Por eso es crucial elegir una firma con reglas justas.'
+            },
+            {
+                question: '¿Cuánto tiempo toma obtener financiación?',
+                answer: 'Depende de tu estilo y las reglas de la firma. Algunos traders pasan en 2-3 semanas con trading agresivo, mientras que los conservadores pueden tardar 2-3 meses. Las firmas con opciones de "financiación instantánea" pueden ponerte en vivo inmediatamente, pero aún necesitas demostrar consistencia.'
+            }
+        ],
+        finalCtaTitle: "¿Listo para Escalar tu Trading?",
+        finalCtaButton: "Encuentra Mi Firma Perfecta",
+        disclaimer: "Descargo de responsabilidad: El trading implica riesgos significativos y no es adecuado para todos los inversores. Esta es solo una guía informativa. Todas las cuentas de firma prop son entornos demo/simulados."
     }
 };
 

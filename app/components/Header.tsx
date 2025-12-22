@@ -24,6 +24,14 @@ const translations = {
         blog: "Blog",
         faq: "Întrebări",
         searchPlaceholder: "Caută firme..."
+    },
+    es: {
+        home: "Inicio",
+        compare: "Comparar",
+        coupons: "Cupones",
+        blog: "Blog",
+        faq: "Preguntas",
+        searchPlaceholder: "Buscar firmas..."
     }
 };
 

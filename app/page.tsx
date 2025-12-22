@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import GDPRBanner from './components/GDPRBanner';
+import EmailCapturePopup from './components/EmailCapturePopup';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -159,6 +161,8 @@ export default function Home() {
         </div>
       </main>
       <Footer lang="en" />
+      <EmailCapturePopup delay={3000} />
+      <GDPRBanner />
     </div>
   );
 }

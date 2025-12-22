@@ -27,6 +27,17 @@ const translations = {
         ctaTitle: "Ești Pregătit să Găsești Firma Potrivită?",
         ctaSubtitle: "Compară cele mai bune firme prop și găsește-o pe cea potrivită stilului tău de trading.",
         ctaButton: "Compară Firmele Prop →"
+    },
+    es: {
+        title: "Blog PropFirmHub",
+        subtitle: "Perspectivas de expertos, guías detalladas y las últimas tendencias en prop trading. Todo lo que necesitas para tener éxito como trader financiado.",
+        featured: "Destacado",
+        readArticle: "Leer Artículo",
+        latestArticles: "Artículos Recientes",
+        readMore: "Leer Más",
+        ctaTitle: "¿Listo para Encontrar tu Firma Perfecta?",
+        ctaSubtitle: "Compara las mejores firmas prop una al lado de la otra y encuentra la que mejor se adapte a tu estilo de trading.",
+        ctaButton: "Comparar Firmas Prop →"
     }
 };
 
@@ -105,6 +116,44 @@ const blogPosts = {
             date: '25 Noiembrie, 2025',
             readTime: '18 min citire',
             category: 'Finanțe',
+            featured: false,
+        },
+    ],
+    es: [
+        {
+            slug: 'how-hard-is-it-to-get-funded-trading',
+            title: '¿Qué tan difícil es conseguir financiación para operar?',
+            description: 'Descubre la verdadera dificultad de conseguir financiación en prop trading. Aprende tasas de éxito, desafíos clave y estrategias probadas para aumentar tus posibilidades de pasar las evaluaciones.',
+            date: '27 Noviembre, 2025',
+            readTime: '12 min lectura',
+            category: 'Guía',
+            featured: true,
+        },
+        {
+            slug: 'what-is-prop-firm-account',
+            title: '¿Qué es una Cuenta de Firma Prop?',
+            description: 'Aprende todo sobre las cuentas de firmas prop: cómo funcionan, beneficios, riesgos y cómo obtener una. Guía completa para cuentas de trading propietario para traders de forex y futuros.',
+            date: '2 Diciembre, 2025',
+            readTime: '10 min lectura',
+            category: 'Guía',
+            featured: false,
+        },
+        {
+            slug: 'top-payouts',
+            title: 'Top 30 Pagos Más Rápidos de Firmas Prop en 2025',
+            description: 'Recibir el pago rápidamente es crucial. Algunas firmas pagan en 24 horas, otras tardan más de 60 días. Hemos analizado miles de pagos para clasificar las 30 firmas prop que pagan más rápido.',
+            date: '25 Noviembre, 2025',
+            readTime: '20 min lectura',
+            category: 'Análisis',
+            featured: false,
+        },
+        {
+            slug: 'taxes-2025',
+            title: 'Impuestos de Firmas Prop 2025: Guía Completa para Traders',
+            description: 'Los impuestos sobre las ganancias de firmas prop pueden ser confusos. ¿Eres empleado? ¿Contratista independiente? Esta guía completa responde a todas tus preguntas sobre la tributación de firmas prop.',
+            date: '25 Noviembre, 2025',
+            readTime: '18 min lectura',
+            category: 'Finanzas',
             featured: false,
         },
     ]

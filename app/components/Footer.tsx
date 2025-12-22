@@ -41,10 +41,30 @@ const translations = {
         contact: "Contact",
         contactForm: "Formular Contact →",
         riskDisclaimer: "⚠️ Avertisment Risc",
-        riskText1: "Toate activitățile de tranzacționare implică riscuri semnificative și nu sunt potrivite pentru toți investitorii. PropFirmHub nu oferă servicii de investiții sau consiliere financiară. Toate conturile oferite de firmele listate sunt conturi demo (simulate) cu fonduri virtuale. Nu au loc tranzacții pe piața reală. Performanța trecută nu garantează rezultate viitoare.",
+        riskText1: "Toate activitățile de tranzacționare implică riscuri semnificative și nu sunt potrivite pentru toți investitorii. PropFirmHub nu oferă servicii de investiții sau consiliere financiară. Toate conturile oferite de firmele listate sunt conturi demo (simuladas) cu fonduri virtuale. Nu au loc tranzacții pe piața reală. Performanța trecută nu garantează rezultate viitoare.",
         riskText2: "Mediu de Trading Simulat: Toate evaluările firmelor de tranzacționare proprietară și conturile finanțate operează într-un mediu de tranzacționare simulat. Traderii primesc alocare de capital virtual și tranzacționează pe conturi demo. Împărțirea profitului se bazează pe performanța în acest mediu simulat.",
         affiliateText: "Declarație Afiliere: Unele link-uri de pe acest site sunt link-uri afiliate. Dacă achiziționezi un serviciu prin aceste link-uri, este posibil să primim un comision fără costuri suplimentare pentru tine. Acest lucru ne ajută să menținem site-ul gratuit. Recomandăm doar programele de evaluare despre care credem că vor adăuga valoare traderilor.",
         copyright: "PropFirmHub. Toate drepturile rezervate."
+    },
+    es: {
+        about: "Tu fuente confiable para comparar firmas de trading propietario. Encuentra la mejor firma prop para tu estilo de trading.",
+        quickLinks: "Enlaces Rápidos",
+        compareFirms: "Comparar Firmas",
+        dealOfTheWeek: "Oferta de la Semana",
+        howToGetFunded: "Cómo Conseguir Financiación",
+        contactUs: "Contáctanos",
+        legal: "Legal",
+        privacyPolicy: "Política de Privacidad",
+        termsOfService: "Términos de Servicio",
+        cookiePolicy: "Política de Cookies",
+        affiliateDisclosure: "Divulgación de Afiliados",
+        contact: "Contacto",
+        contactForm: "Formulario de Contacto →",
+        riskDisclaimer: "⚠️ Descargo de Responsabilidad de Riesgo",
+        riskText1: "Todas las actividades de trading implican riesgos significativos y no son adecuadas para todos los inversores. PropFirmHub no proporciona servicios de inversión ni asesoramiento financiero. Todas las cuentas ofrecidas por las firmas listadas son cuentas demo (simuladas) con fondos virtuales. No ocurren transacciones en el mercado real. El rendimiento pasado no garantiza resultados futuros.",
+        riskText2: "Entorno de Trading Simulado: Todas las evaluaciones de firmas de trading propietario y cuentas financiadas operan en un entorno de trading simulado. Los traders reciben asignación de capital virtual y operan en cuentas demo. La división de ganancias se basa en el rendimiento en este entorno simulado.",
+        affiliateText: "Divulgación de Afiliados: Algunos enlaces en este sitio son enlaces de afiliados. Si compras un servicio a través de estos enlaces, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el sitio gratuito. Solo recomendamos programas de evaluación que creemos que agregarán valor a los traders.",
+        copyright: "PropFirmHub. Todos los derechos reservados."
     }
 };
 

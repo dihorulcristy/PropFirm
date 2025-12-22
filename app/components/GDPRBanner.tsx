@@ -28,6 +28,16 @@ const translations = {
         moreInfo: "pentru mai multe informații.",
         decline: "Refuză",
         accept: "Acceptă Cookie-uri"
+    },
+    es: {
+        title: "🍪 Consentimiento de Cookies",
+        text: "Utilizamos cookies para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en \"Aceptar\", das tu consentimiento para nuestro uso de cookies. Lee nuestra",
+        privacy: "Política de Privacidad",
+        and: "y",
+        cookie: "Política de Cookies",
+        moreInfo: "para más información.",
+        decline: "Rechazar",
+        accept: "Aceptar Cookies"
     }
 };
 

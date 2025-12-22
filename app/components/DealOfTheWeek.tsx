@@ -36,6 +36,21 @@ const translations = {
         allFutures: "LA TOATE FUTURES",
         insaneDiscount: "REDUCERE INCREDIBILĂ LA TOATE PROVOCĂRILE",
         get90Off: "Obține 90% REDUCERE"
+    },
+    es: {
+        forex: "FOREX",
+        futures: "FUTUROS",
+        freeReset: "REINICIO GRATIS",
+        exclusive: "Exclusivo SpiceProp",
+        freeResetOn1stStep: "REINICIO GRATIS EN EL PASO 1",
+        extraBonus: "+ 10% DTO & 5% DIVISION DE GANANCIAS EXTRA",
+        useCode: "Usa el código",
+        getStarted: "Empieza Ahora",
+        hugeSavings: "AHORROS MASIVOS",
+        limitedTime: "Oferta Limitada",
+        allFutures: "EN TODOS LOS FUTUROS",
+        insaneDiscount: "DESCUENTO INCREÍBLE EN TODOS LOS DESAFÍOS",
+        get90Off: "Obtén 90% DTO"
     }
 };
 

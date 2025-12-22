@@ -58,6 +58,32 @@ const translations = {
                 content: "În prezent avem relații de afiliere cu următoarele firme de trading proprietar:"
             }
         ]
+    },
+    es: {
+        title: "Divulgación de Afiliados",
+        lastUpdated: "Última actualización:",
+        sections: [
+            {
+                title: "Relaciones de Afiliados",
+                content: "PropFirmHub participa en programas de marketing de afiliados. Esto significa que podemos recibir una comisión cuando haces clic en enlaces a productos o servicios y realizas una compra."
+            },
+            {
+                title: "Cómo Funciona",
+                content: "Cuando haces clic en un enlace de afiliado y realizas una compra, la compañía nos paga una comisión. Esto no tiene costo adicional para ti. El precio que pagas es el mismo, ya sea que uses nuestro enlace de afiliado o no."
+            },
+            {
+                title: "Nuestro Compromiso contigo",
+                content: "Solo recomendamos productos y servicios que creemos que agregarán valor a nuestros lectores. Nuestras relaciones de afiliados no influyen en nuestra independencia editorial ni en la precisión de nuestras reseñas."
+            },
+            {
+                title: "Transparencia",
+                content: "Estamos comprometidos con la transparencia. Todos los enlaces de afiliados están claramente marcados, y divulgamos nuestras relaciones de afiliados de acuerdo con las pautas de la FTC y las leyes aplicables."
+            },
+            {
+                title: "Socios Afiliados Actuales",
+                content: "Actualmente tenemos relaciones de afiliados con las siguientes firmas de trading propietario:"
+            }
+        ]
     }
 };
 

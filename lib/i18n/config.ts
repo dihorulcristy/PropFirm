@@ -1,4 +1,4 @@
-export const locales = ['en', 'ro'] as const;
+export const locales = ['en', 'ro', 'es'] as const;
 export const defaultLocale = 'en' as const;
 
 export type Locale = (typeof locales)[number];
@@ -6,11 +6,13 @@ export type Locale = (typeof locales)[number];
 export const localeNames: Record<Locale, string> = {
     en: 'English',
     ro: 'Română',
+    es: 'Español',
 };
 
 export const localeFlags: Record<Locale, string> = {
     en: '🇬🇧',
     ro: '🇷🇴',
+    es: '🇪🇸',
 };
 
 // Country codes that should default to Romanian

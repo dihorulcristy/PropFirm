@@ -33,6 +33,20 @@ const translations = {
         maximumSafety: "Siguranță Maximă",
         from: "De la",
         passIn1Step: "Treci în 1 Pas"
+    },
+    es: {
+        title: "Compara Programas de Evaluación",
+        titleHighlight: "Hasta $1M Capital Virtual",
+        subtitle: "Comparamos programas de evaluación para traders y oportunidades de financiación simulada. Encuentra la mejor prop firm para tus habilidades de trading.",
+        disclaimer: "Todas las actividades de trading se realizan en un entorno simulado con fondos virtuales.",
+        trustedPlatforms: "Plataformas de Trading Confiables",
+        scroll: "Desplazarse",
+        bestOverall: "Mejor General",
+        bestValue: "Mejor Valor",
+        hftAllowed: "HFT Permitido",
+        maximumSafety: "Máxima Seguridad",
+        from: "Desde",
+        passIn1Step: "Pasa en 1 Paso"
     }
 };
 

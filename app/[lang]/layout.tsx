@@ -6,16 +6,7 @@ import EmailCapturePopup from "../components/EmailCapturePopup";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { locales, type Locale } from "@/lib/i18n/config";
 
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "600", "700"],
-    variable: "--font-poppins",
-});
+// Fonts and globals are already handled in root layout
 
 export async function generateStaticParams() {
     return locales.map((locale) => ({ lang: locale }));
@@ -102,70 +93,15 @@ export default async function LocaleLayout(props: {
     const { children } = props;
 
     return (
-        <html lang={lang}>
-            <head>
-                {/* hreflang tags for SEO */}
-                <link rel="alternate" hrefLang="en" href="https://propfirmhub.com" />
-                <link rel="alternate" hrefLang="ro" href="https://propfirmhub.com/ro" />
-                <link rel="alternate" hrefLang="x-default" href="https://propfirmhub.com" />
+        <>
+            {/* Note: Metadata, Fonts, and Scripts are inherited from Root Layout (app/layout.tsx).
+                We only include content specific to this layout segment here to avoid hydration errors 
+                (double html/body tags) and duplicate scripts. 
+            */}
 
-                {/* Google tag (gtag.js) */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-M10QTFTVBQ"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-M10QTFTVBQ');
-            `,
-                    }}
-                />
-                {/* End Google tag */}
-
-                {/* Google Ads Tag */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11042536372"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11042536372');
-            `,
-                    }}
-                />
-                {/* End Google Ads Tag */}
-
-                {/* Google Tag Manager */}
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P543DXDD');`,
-                    }}
-                />
-                {/* End Google Tag Manager */}
-            </head>
-            <body
-                className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-slate-950 text-white`}
-            >
-                {/* Google Tag Manager (noscript) */}
-                <noscript>
-                    <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-P543DXDD"
-                        height="0"
-                        width="0"
-                        style={{ display: "none", visibility: "hidden" }}
-                    ></iframe>
-                </noscript>
-                {/* End Google Tag Manager (noscript) */}
-                <EmailCapturePopup delay={3000} lang={lang} />
-                {children}
-                <GDPRBanner lang={lang} />
-            </body>
-        </html>
+            <EmailCapturePopup delay={3000} lang={lang} />
+            {children}
+            <GDPRBanner lang={lang} />
+        </>
     );
 }

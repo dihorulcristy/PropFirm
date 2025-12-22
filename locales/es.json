@@ -1,0 +1,77 @@
+{
+    "seo": {
+        "title": "PropFirmHub - Comparar Mejores Firmas de Prop Trading 2025 | Descuentos Exclusivos",
+        "description": "Compara las mejores firmas de prop trading 2025. Descuentos exclusivos, reglas de evaluación y precios. FTMO, FunderPro, TradingCult y más. ¡Encuentra tu firma perfecta!",
+        "keywords": "prop trading, firmas de prop, FTMO, trading financiado, evaluación de trading, comparación de firmas prop"
+    },
+    "header": {
+        "home": "Inicio",
+        "compare": "Comparar",
+        "coupons": "Cupones",
+        "blog": "Blog",
+        "faq": "Preguntas",
+        "searchPlaceholder": "Buscar firmas..."
+    },
+    "hero": {
+        "title": "Compara Programas de Evaluación",
+        "titleHighlight": "Hasta $1M de Capital Virtual",
+        "subtitle": "Comparamos programas de evaluación para traders y oportunidades de financiación simulada. Encuentra la mejor firma prop para tus habilidades de trading.",
+        "disclaimer": "Todas las actividades de trading se realizan en un entorno simulado con fondos virtuales.",
+        "trustedPlatforms": "Plataformas de Trading Confiables",
+        "scroll": "Desplazarse",
+        "cards": {
+            "bestOverall": "Mejor General",
+            "bestValue": "Mejor Valor",
+            "hftAllowed": "HFT Permitido",
+            "maximumSafety": "Máxima Seguridad",
+            "from": "Desde",
+            "passIn1Step": "Pasa en 1 Paso"
+        }
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes",
+        "subtitle": "Respuestas a las preguntas más comunes sobre firmas de prop trading y el proceso de financiación.",
+        "questions": [
+            {
+                "question": "¿Qué es una firma de prop trading?",
+                "answer": "Una firma de trading propietario (prop firm) proporciona capital a traders talentosos para operar en los mercados financieros. A cambio de una tarifa de evaluación y demostrar tus habilidades, los traders pueden quedarse con un porcentaje significativo de las ganancias generadas (generalmente entre el 80% y el 90%)."
+            },
+            {
+                "question": "¿Cómo funciona el proceso de evaluación?",
+                "answer": "La mayoría de las firmas requieren que los traders pasen una evaluación de 1 o 2 fases. Necesitas alcanzar un objetivo de ganancias sin violar las reglas de pérdida (pérdida máxima). Una vez que pasas la prueba, recibes una cuenta financiada."
+            },
+            {
+                "question": "¿Cuáles son las reglas principales?",
+                "answer": "Las reglas comunes incluyen: Pérdida Diaria Máxima (cuánto puedes perder en un día), Pérdida Total Máxima (cuánto puedes perder en total de la cuenta) y a veces restricciones de trading durante eventos económicos importantes."
+            },
+            {
+                "question": "¿Qué tan rápido puedo retirar ganancias?",
+                "answer": "Cada firma tiene su propia política. Algunas permiten retiros cada 14 días, otras mensualmente, y algunas incluso semanalmente o bajo demanda después del primer retiro."
+            },
+            {
+                "question": "¿Se permite el trading automatizado (EA)?",
+                "answer": "Muchas firmas permiten el uso de Asesores Expertos (EAs), pero a menudo con la condición de que debe ser tu propia estrategia y no un EA de arbitraje público o HFT (Trading de Alta Frecuencia) que explote la latencia del servidor."
+            }
+        ]
+    },
+    "footer": {
+        "about": "Tu fuente confiable para comparar firmas de trading propietario. Encuentra la mejor firma prop para tu estilo de trading.",
+        "quickLinks": "Enlaces Rápidos",
+        "compareFirms": "Comparar Firmas",
+        "dealOfTheWeek": "Oferta de la Semana",
+        "howToGetFunded": "Cómo Conseguir Financiación",
+        "contactUs": "Contáctanos",
+        "legal": "Legal",
+        "privacyPolicy": "Política de Privacidad",
+        "termsOfService": "Términos de Servicio",
+        "cookiePolicy": "Política de Cookies",
+        "affiliateDisclosure": "Divulgación de Afiliados",
+        "contact": "Contacto",
+        "contactForm": "Formulario de Contacto →",
+        "riskDisclaimer": "⚠️ Descargo de Responsabilidad de Riesgo",
+        "riskText1": "Todas las actividades de trading implican riesgos significativos y no son adecuadas para todos los inversores. PropFirmHub no proporciona servicios de inversión ni asesoramiento financiero. Todas las cuentas ofrecidas por las firmas listadas son cuentas demo (simuladas) con fondos virtuales. No ocurren transacciones en el mercado real. El rendimiento pasado no garantiza resultados futuros.",
+        "riskText2": "Entorno de Trading Simulado: Todas las evaluaciones de firmas de trading propietario y cuentas financiadas operan en un entorno de trading simulado. Los traders reciben asignación de capital virtual y operan en cuentas demo. La división de ganancias se basa en el rendimiento en este entorno simulado.",
+        "affiliateText": "Divulgación de Afiliados: Algunos enlaces en este sitio son enlaces de afiliados. Si compras un servicio a través de estos enlaces, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el sitio gratuito. Solo recomendamos programas de evaluación que creemos que agregarán valor a los traders.",
+        "copyright": "© {year} PropFirmHub. Todos los derechos reservados."
+    }
+}
