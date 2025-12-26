@@ -628,10 +628,10 @@ const allFirms: Firm[] = [
         rating: 4.8,
         verified: true,
         rules: { maxDD: '10%', profit: '90%' },
-        price: '$47',
-        oldPrice: '$59',
+        price: '$45',
+        oldPrice: '$149',
         coupon: 'HGC',
-        offer: '20% OFF',
+        offer: 'EXTRA 10% OFF',
         action: 'Get Funded',
         link: 'https://yrmprop.com/ref/dihorulcristy/',
         logoUrl: '/yrm-prop.png',
@@ -650,9 +650,9 @@ const allFirms: Firm[] = [
         payoutDays: 14,
         capitalPricing: {
             25000: { price: '$47', oldPrice: '$59' },
-            50000: { price: '$47', oldPrice: '$59' },
-            100000: { price: '$47', oldPrice: '$59' },
-            150000: { price: '$47', oldPrice: '$59' },
+            50000: { price: '$45', oldPrice: '$149' },
+            100000: { price: '$95', oldPrice: '$249' },
+            150000: { price: '$145', oldPrice: '$349' },
         }
     },
     {
