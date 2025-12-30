@@ -26,9 +26,9 @@ const allDeals: DealFirm[] = [
         id: 1,
         name: 'FTMO',
         logoUrl: '/logos/ftmo.png',
-        discount: '10% OFF',
-        coupon: 'SAVE10',
-        offer: '10% OFF (Special Deal)',
+        discount: '20% OFF',
+        coupon: 'No Code Used',
+        offer: '20% OFF (New Year Sale)',
         link: 'https://trader.ftmo.com/?affiliates=4354',
         verified: true,
         priority: 1,
@@ -430,6 +430,25 @@ function FlashSalesSection() {
                 </div>
 
                 <div className="space-y-4">
+                    {/* Flash Sale 1 - FTMO New Year Sale */}
+                    <div className="bg-gradient-to-br from-emerald-900/60 to-emerald-950/60 border border-emerald-500/30 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Clock className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                            <div>
+                                <p className="text-sm font-bold text-emerald-400 mb-1">🔥 Kickstart 2026!</p>
+                                <p className="text-white font-semibold">FTMO - New Year Sale</p>
+                                <p className="text-sm text-slate-300">20% OFF all challenges <span className="text-emerald-400 font-mono">(Discount on Link)</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="https://trader.ftmo.com/?affiliates=4354"
+                            target="_blank"
+                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
+                        >
+                            Claim 20% OFF →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale - SpiceProp FREE RESET */}
                     <div className="bg-gradient-to-br from-red-900/60 to-red-950/60 border border-red-500/30 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
@@ -461,26 +480,6 @@ function FlashSalesSection() {
                         </div>
                         <Link
                             href="https://fundedx.com/"
-                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
-                        >
-                            View Offer →
-                        </Link>
-                    </div>
-
-
-
-                    {/* Flash Sale 1 - FTMO Black Friday */}
-                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
-                        <div className="flex items-start gap-3 mb-3">
-                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-red-400 mb-1">🔥 Limited Time!</p>
-                                <p className="text-white font-semibold">FTMO - Special Deal</p>
-                                <p className="text-sm text-slate-300">10% OFF all challenges with code <span className="text-emerald-400 font-mono">SAVE10</span></p>
-                            </div>
-                        </div>
-                        <Link
-                            href="#ftmo"
                             className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
                         >
                             View Offer →
