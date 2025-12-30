@@ -29,7 +29,13 @@ const translations = {
         limitedTime: "Limited Time!",
         weekendSpecial: "Weekend Special",
         couponCode: "Coupon Code",
-        showCode: "Show Code & Copy"
+        showCode: "Show Code & Copy",
+        kickstart: "Kickstart 2026!",
+        newYearSale: "New Year Sale",
+        claimOffer: "Claim 20% OFF →",
+        discountOnLink: "(Discount on Link)",
+        freeReset: "FREE RESET!",
+        newOffer: "New Offer!"
     },
     ro: {
         title: "Cele Mai Bune",
@@ -51,7 +57,13 @@ const translations = {
         limitedTime: "Timp Limitat!",
         weekendSpecial: "Ofertă de Weekend",
         couponCode: "Cod Cupon",
-        showCode: "Arată Codul"
+        showCode: "Arată Codul",
+        kickstart: "Start 2026!",
+        newYearSale: "Promoție Anul Nou",
+        claimOffer: "Ia 20% REDUCERE →",
+        discountOnLink: "(Reducere pe Link)",
+        freeReset: "RESETARE GRATUITĂ!",
+        newOffer: "Ofertă Nouă!"
     },
     es: {
         title: "Mejores",
@@ -73,7 +85,13 @@ const translations = {
         limitedTime: "¡Tiempo Limitado!",
         weekendSpecial: "Especial Fin de Semana",
         couponCode: "Código Cupón",
-        showCode: "Mostrar Código"
+        showCode: "Mostrar Código",
+        kickstart: "¡Inicio 2026!",
+        newYearSale: "Oferta Año Nuevo",
+        claimOffer: "Obtén 20% DTO →",
+        discountOnLink: "(Descuento en Enlace)",
+        freeReset: "¡REINICIO GRATIS!",
+        newOffer: "¡Nueva Oferta!"
     }
 };
 
@@ -94,6 +112,18 @@ interface DealFirm {
 // All firms with deals - ordered by priority
 const allDeals: DealFirm[] = [
     {
+        id: 1,
+        name: 'FTMO',
+        logoUrl: '/logos/ftmo.png',
+        discount: '20% OFF',
+        coupon: 'No Code Used',
+        offer: '20% OFF (New Year Sale)',
+        link: 'https://trader.ftmo.com/?affiliates=4354',
+        verified: true,
+        priority: 1,
+        hasActiveCoupon: true
+    },
+    {
         id: 23,
         name: 'SpiceProp',
         logoUrl: '/logos/spiceprop.png',
@@ -101,18 +131,6 @@ const allDeals: DealFirm[] = [
         coupon: 'SANTANEXT',
         offer: '10% OFF + 5% Extra Profit Split + Free Reset',
         link: 'https://my.spiceprop.com/agent_pp.html?agent_pp=28203897',
-        verified: true,
-        priority: 1,
-        hasActiveCoupon: true
-    },
-    {
-        id: 1,
-        name: 'FTMO',
-        logoUrl: '/logos/ftmo.png',
-        discount: '10% OFF',
-        coupon: 'SAVE10',
-        offer: '10% OFF (Special Deal)',
-        link: 'https://trader.ftmo.com/?affiliates=4354',
         verified: true,
         priority: 2,
         hasActiveCoupon: true
@@ -154,6 +172,18 @@ const allDeals: DealFirm[] = [
         hasActiveCoupon: true
     },
     {
+        id: 3,
+        name: 'FundedX',
+        logoUrl: '/logos/fundedx.jpg',
+        discount: '40% OFF',
+        coupon: 'BF40',
+        offer: '40% OFF',
+        link: 'https://fundedx.com/',
+        verified: true,
+        priority: 6,
+        hasActiveCoupon: true
+    },
+    {
         id: 4,
         name: 'FundedNext',
         logoUrl: '/logos/fundednext.png',
@@ -162,7 +192,7 @@ const allDeals: DealFirm[] = [
         offer: '10% OFF',
         link: 'https://fundednext.com/',
         verified: true,
-        priority: 6,
+        priority: 7,
         hasActiveCoupon: true
     }
 ];
@@ -185,7 +215,7 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
     }, [searchQuery]);
 
     const handleCopyAndRedirect = (deal: DealFirm) => {
-        if (deal.hasActiveCoupon) {
+        if (deal.hasActiveCoupon && deal.coupon !== 'No Code Used') {
             navigator.clipboard.writeText(deal.coupon);
             setCopiedId(deal.id);
             setTimeout(() => setCopiedId(null), 3000);
@@ -242,14 +272,27 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                             </div>
 
                                             <div className="space-y-4">
+                                                {/* Flash Sale 1 - FTMO New Year Sale */}
+                                                <div className="bg-gradient-to-br from-emerald-900/60 to-emerald-950/60 border border-emerald-500/30 rounded-xl p-4">
+                                                    <div className="flex items-start gap-3 mb-3">
+                                                        <Clock className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                                                        <div>
+                                                            <p className="text-sm font-bold text-emerald-400 mb-1">🔥 {t.kickstart}</p>
+                                                            <p className="text-white font-semibold">FTMO - {t.newYearSale}</p>
+                                                            <p className="text-sm text-slate-300">20% {t.off} <span className="text-emerald-400 font-mono">{t.discountOnLink}</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="https://trader.ftmo.com/?affiliates=4354" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.claimOffer}</a>
+                                                </div>
+
                                                 {/* SpiceProp */}
                                                 <div className="bg-gradient-to-br from-red-900/60 to-red-950/60 border border-red-500/30 rounded-xl p-4">
                                                     <div className="flex items-start gap-3 mb-3">
                                                         <Zap className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5 animate-pulse" />
                                                         <div>
-                                                            <p className="text-sm font-bold text-red-400 mb-1">🌶️ FREE RESET!</p>
+                                                            <p className="text-sm font-bold text-red-400 mb-1">🌶️ {t.freeReset}</p>
                                                             <p className="text-white font-semibold">SpiceProp</p>
-                                                            <p className="text-sm text-slate-300">Free Reset + 10% OFF <span className="text-red-400 font-mono">SANTARESET</span></p>
+                                                            <p className="text-sm text-slate-300">Free Reset + 10% {t.off} <span className="text-red-400 font-mono">SANTARESET</span></p>
                                                         </div>
                                                     </div>
                                                     <a href="https://my.spiceprop.com/agent_pp.html?agent_pp=28203897" target="_blank" rel="noopener noreferrer" className="text-xs text-red-400 hover:text-red-300 font-medium underline">{t.viewOffer}</a>
@@ -262,23 +305,23 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                         <div>
                                                             <p className="text-sm font-bold text-red-400 mb-1">🔥 {t.flashSale24h}</p>
                                                             <p className="text-white font-semibold">FundedX</p>
-                                                            <p className="text-sm text-slate-300">40% OFF <span className="text-emerald-400 font-mono">BF40</span></p>
+                                                            <p className="text-sm text-slate-300">40% {t.off} <span className="text-emerald-400 font-mono">BF40</span></p>
                                                         </div>
                                                     </div>
                                                     <a href="https://fundedx.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
 
-                                                {/* FTMO */}
+                                                {/* FundedNext */}
                                                 <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                                                     <div className="flex items-start gap-3 mb-3">
                                                         <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
                                                         <div>
-                                                            <p className="text-sm font-bold text-red-400 mb-1">🔥 {t.limitedTime}</p>
-                                                            <p className="text-white font-semibold">FTMO</p>
-                                                            <p className="text-sm text-slate-300">10% OFF <span className="text-emerald-400 font-mono">SAVE10</span></p>
+                                                            <p className="text-sm font-bold text-red-400 mb-1">🔥 {t.newOffer}</p>
+                                                            <p className="text-white font-semibold">FundedNext</p>
+                                                            <p className="text-sm text-slate-300">10% {t.off} <span className="text-emerald-400 font-mono">REF6ZHN86</span></p>
                                                         </div>
                                                     </div>
-                                                    <a href="https://trader.ftmo.com/?affiliates=4354" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
+                                                    <a href="https://fundednext.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
 
                                                 {/* FunderPro */}
@@ -288,7 +331,7 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                         <div>
                                                             <p className="text-sm font-bold text-yellow-400 mb-1">{t.weekendSpecial}</p>
                                                             <p className="text-white font-semibold">FunderPro</p>
-                                                            <p className="text-sm text-slate-300">30% OFF <span className="text-emerald-400 font-mono">hgc</span></p>
+                                                            <p className="text-sm text-slate-300">30% {t.off} <span className="text-emerald-400 font-mono">hgc</span></p>
                                                         </div>
                                                     </div>
                                                     <a href="https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
@@ -341,10 +384,15 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                             <Check className="h-5 w-5" />
                                                             {t.copied}
                                                         </>
-                                                    ) : (
+                                                    ) : deal.coupon !== 'No Code Used' ? (
                                                         <>
                                                             <Copy className="h-5 w-5" />
                                                             {t.copyCoupon}
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <Zap className="h-5 w-5" />
+                                                            {t.noCoupon}
                                                         </>
                                                     )}
                                                 </button>
