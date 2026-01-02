@@ -45,13 +45,22 @@ const translations = {
 const blogPosts = {
     en: [
         {
+            slug: 'how-to-pass-prop-firm-challenge',
+            title: 'How to Pass a Prop Firm Challenge: 10 Proven Steps',
+            description: 'Learn exactly how to pass prop firm challenges with our comprehensive guide. Discover risk management strategies, profit targets, drawdown rules, and psychology tips.',
+            date: 'December 30, 2025',
+            readTime: '15 min read',
+            category: 'Guide',
+            featured: true,
+        },
+        {
             slug: 'how-hard-is-it-to-get-funded-trading',
             title: 'How Hard Is It To Get Funded Trading?',
             description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to increase your chances of passing prop firm evaluations.',
             date: 'November 27, 2025',
             readTime: '12 min read',
             category: 'Guide',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'what-is-prop-firm-account',
@@ -83,13 +92,22 @@ const blogPosts = {
     ],
     ro: [
         {
+            slug: 'how-to-pass-prop-firm-challenge',
+            title: 'Cum să Treci un Challenge Prop Firm: 10 Pași Dovediți',
+            description: 'Învață exact cum să treci challenge-urile prop firm cu ghidul nostru complet. Descoperă strategii de risk management, obiective de profit și sfaturi de psihologie.',
+            date: '30 Decembrie, 2025',
+            readTime: '15 min citire',
+            category: 'Ghid',
+            featured: true,
+        },
+        {
             slug: 'how-hard-is-it-to-get-funded-trading',
             title: 'Cât de Greu Este să Fii Finanțat la Trading?',
             description: 'Descoperă dificultatea reală de a fi finanțat în prop trading. Află ratele de succes, provocările cheie și strategii dovedite pentru a-ți crește șansele de a trece evaluările.',
             date: '27 Noiembrie, 2025',
             readTime: '12 min citire',
             category: 'Ghid',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'what-is-prop-firm-account',
@@ -121,13 +139,22 @@ const blogPosts = {
     ],
     es: [
         {
+            slug: 'how-to-pass-prop-firm-challenge',
+            title: 'Cómo Pasar un Desafío de Firma Prop: 10 Pasos Probados',
+            description: 'Aprende exactamente cómo pasar los desafíos de firmas prop con nuestra guía completa. Descubre estrategias de gestión de riesgos y consejos de psicología.',
+            date: '30 Diciembre, 2025',
+            readTime: '15 min lectura',
+            category: 'Guía',
+            featured: true,
+        },
+        {
             slug: 'how-hard-is-it-to-get-funded-trading',
             title: '¿Qué tan difícil es conseguir financiación para operar?',
             description: 'Descubre la verdadera dificultad de conseguir financiación en prop trading. Aprende tasas de éxito, desafíos clave y estrategias probadas para aumentar tus posibilidades de pasar las evaluaciones.',
             date: '27 Noviembre, 2025',
             readTime: '12 min lectura',
             category: 'Guía',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'what-is-prop-firm-account',

@@ -10,9 +10,9 @@ const translations = {
     en: {
         blogs: [
             {
-                slug: "hft-vs-swing",
-                title: "HFT vs Swing",
-                description: "We compare and test innovation. HFT vs Swing and the impact on profitability."
+                slug: "how-to-pass-prop-firm-challenge",
+                title: "Pass Prop Firm Challenge",
+                description: "10 proven steps to pass your prop firm evaluation and get funded."
             },
             {
                 slug: "taxes-2025",
@@ -29,9 +29,9 @@ const translations = {
     ro: {
         blogs: [
             {
-                slug: "hft-vs-swing",
-                title: "HFT vs Swing",
-                description: "Comparăm și testăm inovația. HFT vs Swing și impactul asupra profitabilității."
+                slug: "how-to-pass-prop-firm-challenge",
+                title: "Treci Challenge-ul Prop",
+                description: "10 pași dovediți pentru a trece evaluarea prop firm și a fi finanțat."
             },
             {
                 slug: "taxes-2025",
@@ -48,9 +48,9 @@ const translations = {
     es: {
         blogs: [
             {
-                slug: "hft-vs-swing",
-                title: "HFT vs Swing",
-                description: "Comparamos y probamos la innovación. HFT vs Swing y el impacto en la rentabilidad."
+                slug: "how-to-pass-prop-firm-challenge",
+                title: "Pasa el Desafío Prop",
+                description: "10 pasos probados para pasar tu evaluación prop firm y obtener financiación."
             },
             {
                 slug: "taxes-2025",
