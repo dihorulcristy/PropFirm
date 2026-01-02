@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Blog posts
     const blogPosts = [
+        { slug: 'how-to-pass-prop-firm-challenge', lastMod: '2026-01-02', priority: 0.9 },
         { slug: 'how-hard-is-it-to-get-funded-trading', lastMod: '2025-11-27', priority: 0.85 },
         { slug: 'what-is-prop-firm-account', lastMod: '2025-12-02', priority: 0.85 },
         { slug: 'hft-vs-swing', lastMod: '2025-11-27', priority: 0.8 },
@@ -28,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
-    // 1. Generate core routes (EN + RO)
+    // 1. Generate core routes (EN + RO + ES)
     for (const route of routes) {
         // English (default)
         sitemapEntries.push({
@@ -44,9 +45,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: route.changeFreq as any,
             priority: route.priority,
         })
+        // Spanish
+        sitemapEntries.push({
+            url: `${baseUrl}/es${route.path}`,
+            lastModified: new Date(),
+            changeFrequency: route.changeFreq as any,
+            priority: route.priority,
+        })
     }
 
-    // 2. Generate blog routes (EN + RO)
+    // 2. Generate blog routes (EN + RO + ES)
     for (const post of blogPosts) {
         // English
         sitemapEntries.push({
@@ -58,6 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Romanian
         sitemapEntries.push({
             url: `${baseUrl}/ro/blog/${post.slug}`,
+            lastModified: new Date(post.lastMod),
+            changeFrequency: 'weekly',
+            priority: post.priority,
+        })
+        // Spanish
+        sitemapEntries.push({
+            url: `${baseUrl}/es/blog/${post.slug}`,
             lastModified: new Date(post.lastMod),
             changeFrequency: 'weekly',
             priority: post.priority,

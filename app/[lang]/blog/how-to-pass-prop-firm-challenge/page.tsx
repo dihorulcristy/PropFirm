@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 
     const m = meta[lang] || meta.en;
-    const baseUrl = 'https://propfirmhub.com';
+    const baseUrl = 'https://propfirms-hub.com';
     const articlePath = '/blog/how-to-pass-prop-firm-challenge';
     const canonicalUrl = `${baseUrl}/${lang}${articlePath}`;
 
@@ -414,7 +414,7 @@ export default async function HowToPassPropFirmChallengePage({ params }: PagePro
     const blogLink = lang === 'en' ? '/blog' : `/${lang}/blog`;
 
     // Base URL for structured data
-    const baseUrl = 'https://propfirmhub.com';
+    const baseUrl = 'https://propfirms-hub.com';
     const articleUrl = `${baseUrl}/${lang}/blog/how-to-pass-prop-firm-challenge`;
 
     // Article Schema (JSON-LD)
