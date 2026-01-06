@@ -305,7 +305,7 @@ Friday: Close swing positions or hold over weekend
 ## Recommended Firms by Strategy
 
 ### Best for HFT/Scalping:
-1. **TradingCult** - Unlimited trades, 30% OFF (code: TC30)
+1. **TradingCult** - Unlimited trades, 40% OFF + Free Account (code: NEWYEAR)
 2. **FundingPips** - HFT friendly, 20% OFF (code: b5420489)
 3. **FunderPro** - Moderate limits, 30% OFF (code: hgc)
 
@@ -316,7 +316,7 @@ Friday: Close swing positions or hold over weekend
 
 ### Best for Hybrid:
 1. **FunderPro** - Balanced approach, 30% OFF (code: hgc)
-2. **TradingCult** - Maximum flexibility, 30% OFF (code: TC30)
+2. **TradingCult** - Maximum flexibility, 40% OFF + Free Account (code: NEWYEAR)
 3. **FundingPips** - All strategies welcome, 20% OFF (code: b5420489)
 
 ---

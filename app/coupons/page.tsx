@@ -62,10 +62,10 @@ const allDeals: DealFirm[] = [
         id: 2,
         name: 'TradingCult',
         logoUrl: '/logos/tradingcult.png',
-        discount: '30% OFF',
-        coupon: 'TC30',
-        offer: '30% OFF (All)',
-        link: 'https://tradingcult.com/',
+        discount: '40% OFF + Free Account',
+        coupon: 'NEWYEAR',
+        offer: '40% OFF + Free Account on Payout',
+        link: 'https://my.tradingcult.com//challenges?affiliateId=hgc',
         verified: true,
         priority: 4,
         hasActiveCoupon: true
@@ -74,10 +74,10 @@ const allDeals: DealFirm[] = [
         id: 3,
         name: 'FundedX',
         logoUrl: '/logos/fundedx.jpg',
-        discount: '40% OFF',
-        coupon: 'BF40',
-        offer: '40% OFF',
-        link: 'https://fundedx.com/',
+        discount: '20% OFF',
+        coupon: 'HELLO2026',
+        offer: '20% OFF (New Year Promo)',
+        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
         verified: true,
         priority: 5,
         hasActiveCoupon: true
@@ -98,9 +98,9 @@ const allDeals: DealFirm[] = [
         id: 7,
         name: 'The Concept Trading',
         logoUrl: 'https://logo.clearbit.com/theconcepttrading.com',
-        discount: '20% OFF + Instant Funding',
-        coupon: 'SPECIAL_INSTANT20',
-        offer: '20% OFF (Instant)',
+        discount: '35% OFF',
+        coupon: 'RESOLVE35',
+        offer: '35% OFF (Ex-Instant)',
         link: 'https://theconcepttrading.com/ref/1837/',
         verified: true,
         priority: 7,
@@ -468,21 +468,22 @@ function FlashSalesSection() {
                         </Link>
                     </div>
 
-                    {/* Flash Sale - FundedX Black Friday */}
-                    <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                    {/* Flash Sale - FundedX New Year Promo */}
+                    <div className="bg-gradient-to-br from-amber-900/60 to-amber-950/60 border border-amber-500/30 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
-                            <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                            <Zap className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5 animate-pulse" />
                             <div>
-                                <p className="text-sm font-bold text-red-400 mb-1">🔥 24H FLASH SALE!</p>
+                                <p className="text-sm font-bold text-amber-400 mb-1">🎆 NEW YEAR PROMO!</p>
                                 <p className="text-white font-semibold">FundedX</p>
-                                <p className="text-sm text-slate-300">40% OFF with code <span className="text-emerald-400 font-mono">BF40</span></p>
+                                <p className="text-sm text-slate-300">20% OFF with code <span className="text-amber-400 font-mono">HELLO2026</span></p>
                             </div>
                         </div>
                         <Link
-                            href="https://fundedx.com/"
-                            className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline"
+                            href="https://prop.fundedx.com/buy-challenge/?referral=d79822dc"
+                            target="_blank"
+                            className="text-xs text-amber-400 hover:text-amber-300 font-medium underline"
                         >
-                            View Offer →
+                            Get 20% OFF →
                         </Link>
                     </div>
 

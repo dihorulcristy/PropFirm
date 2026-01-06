@@ -77,7 +77,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $50
 - **Frequency**: Bi-weekly
 - **Rating**: 4.8/5
-- **Discount**: 20% OFF (code: SPECIAL_INSTANT20)
+- **Discount**: 35% OFF (code: RESOLVE35)
 - [Get Funded →](https://theconcepttrading.com/ref/1837/)
 
 #### 5. FundingPips (7 Days)
@@ -95,7 +95,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: Bi-weekly
 - **Rating**: 4.8/5
-- **Discount**: 30% OFF (code: TC30)
+- **Discount**: 40% OFF + Free Account (code: NEWYEAR)
 - [Get Funded →](https://my.tradingcult.com//challenges?affiliateId=hgc)
 
 #### 7. FundingTicks (7 Days)
@@ -146,7 +146,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: Weekly
 - **Rating**: 4.7/5
-- **Discount**: 30% OFF (code: BF30)
+- **Discount**: 20% OFF (code: HELLO2026)
 - [Get Funded →](https://prop.fundedx.com/buy-challenge/?referral=d79822dc)
 
 #### 12. Funded Futures Network (14 Days)
@@ -493,7 +493,7 @@ Result: Income every week!
 
 ### Best Value + Speed:
 1. **FunderPro** - 1 day + 30% OFF
-2. **TradingCult** - 7 days + 30% OFF
+2. **TradingCult** - 7 days + 40% OFF + Free Account
 3. **Blue Guardian** - 14 days + 50% OFF
 
 ---

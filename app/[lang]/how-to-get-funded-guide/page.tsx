@@ -264,13 +264,13 @@ export default function HowToGetFundedGuide({ params }: PageProps) {
             { name: 'Blue Guardian', logo: 'https://unavatar.io/twitter/BlueGuardianCom', rating: 4.7, price: '$497', advantage: lang === 'ro' ? 'Valoare Excelentă' : 'Great Value', link: 'https://blueguardian.com/?afmc=1scz', coupon: '1scz', offer: '50% OFF (All)' }
         ],
         'no-time-limit': [
-            { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$499', advantage: lang === 'ro' ? 'Fără Limită de Timp' : 'No Time Limit + Instant Funding', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'TC30', offer: '30% OFF (All)' },
-            { name: 'FundedX', logo: '/logos/fundedx.jpg', rating: 4.7, price: '$500', advantage: lang === 'ro' ? 'Timp Nelimitat' : 'Unlimited Time', link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc', coupon: 'BF30', offer: '30% OFF' },
+            { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$299', advantage: lang === 'ro' ? 'Fără Limită de Timp' : 'No Time Limit + Instant Funding', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'NEWYEAR', offer: '40% OFF + Free Account' },
+            { name: 'FundedX', logo: '/logos/fundedx.jpg', rating: 4.7, price: '$500', advantage: lang === 'ro' ? 'Timp Nelimitat' : 'Unlimited Time', link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc', coupon: 'HELLO2026', offer: '20% OFF (New Year)' },
             { name: 'FTMO', logo: 'https://logo.clearbit.com/ftmo.com', rating: 4.9, price: '$482', advantage: lang === 'ro' ? 'Cel Mai De Încredere' : 'Most Trusted', link: 'https://trader.ftmo.com/?affiliates=4354', coupon: '', offer: '19% OFF (100k)' }
         ],
         instant: [
-            { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$499', advantage: lang === 'ro' ? 'Finanțare Instantă' : 'Instant Funding Available', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'TC30', offer: '30% OFF (All)' },
-            { name: 'The Concept Trading', logo: 'https://logo.clearbit.com/theconcepttrading.com', rating: 4.8, price: '$997', advantage: lang === 'ro' ? 'Cale Expresă' : 'Express Path', link: 'https://theconcepttrading.com/ref/1837/', coupon: 'SPECIAL_INSTANT20', offer: '20% OFF (Instant)' },
+            { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$299', advantage: lang === 'ro' ? 'Finanțare Instantă' : 'Instant Funding Available', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'NEWYEAR', offer: '40% OFF + Free Account' },
+            { name: 'The Concept Trading', logo: 'https://logo.clearbit.com/theconcepttrading.com', rating: 4.8, price: '$648', advantage: lang === 'ro' ? 'Cale Expresă' : 'Express Path', link: 'https://theconcepttrading.com/ref/1837/', coupon: 'RESOLVE35', offer: '35% OFF (Ex-Instant)' },
             { name: 'FunderPro', logo: 'https://logo.clearbit.com/funderpro.com', rating: 4.8, price: '$549', advantage: lang === 'ro' ? 'Acces Rapid' : 'Quick Access', link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro', coupon: 'hgc', offer: '30% OFF' }
         ]
     };

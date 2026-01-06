@@ -163,10 +163,10 @@ const allDeals: DealFirm[] = [
         id: 2,
         name: 'TradingCult',
         logoUrl: '/logos/tradingcult.png',
-        discount: '30% OFF',
-        coupon: 'TC30',
-        offer: '30% OFF (All)',
-        link: 'https://tradingcult.com/',
+        discount: '40% OFF + Free Account',
+        coupon: 'NEWYEAR',
+        offer: '40% OFF + Free Account on Payout',
+        link: 'https://my.tradingcult.com//challenges?affiliateId=hgc',
         verified: true,
         priority: 5,
         hasActiveCoupon: true
@@ -175,10 +175,10 @@ const allDeals: DealFirm[] = [
         id: 3,
         name: 'FundedX',
         logoUrl: '/logos/fundedx.jpg',
-        discount: '40% OFF',
-        coupon: 'BF40',
-        offer: '40% OFF',
-        link: 'https://fundedx.com/',
+        discount: '20% OFF',
+        coupon: 'HELLO2026',
+        offer: '20% OFF (New Year Promo)',
+        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
         verified: true,
         priority: 6,
         hasActiveCoupon: true
@@ -298,17 +298,17 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                     <a href="https://my.spiceprop.com/agent_pp.html?agent_pp=28203897" target="_blank" rel="noopener noreferrer" className="text-xs text-red-400 hover:text-red-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
 
-                                                {/* FundedX */}
-                                                <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                                                {/* FundedX - New Year Promo */}
+                                                <div className="bg-gradient-to-br from-amber-900/60 to-amber-950/60 border border-amber-500/30 rounded-xl p-4">
                                                     <div className="flex items-start gap-3 mb-3">
-                                                        <Clock className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                                                        <Zap className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5 animate-pulse" />
                                                         <div>
-                                                            <p className="text-sm font-bold text-red-400 mb-1">🔥 {t.flashSale24h}</p>
+                                                            <p className="text-sm font-bold text-amber-400 mb-1">🎆 NEW YEAR PROMO!</p>
                                                             <p className="text-white font-semibold">FundedX</p>
-                                                            <p className="text-sm text-slate-300">40% {t.off} <span className="text-emerald-400 font-mono">BF40</span></p>
+                                                            <p className="text-sm text-slate-300">20% {t.off} <span className="text-amber-400 font-mono">HELLO2026</span></p>
                                                         </div>
                                                     </div>
-                                                    <a href="https://fundedx.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
+                                                    <a href="https://prop.fundedx.com/buy-challenge/?referral=d79822dc" target="_blank" rel="noopener noreferrer" className="text-xs text-amber-400 hover:text-amber-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
 
                                                 {/* FundedNext */}
