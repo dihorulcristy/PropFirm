@@ -1,5 +1,6 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import RelatedArticles from '../../../components/RelatedArticles';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Target, Shield, Brain, TrendingUp, AlertTriangle, Clock, DollarSign, Award, Zap } from 'lucide-react';
 import type { Locale } from '@/lib/i18n/config';
@@ -774,6 +775,9 @@ export default async function HowToPassPropFirmChallengePage({ params }: PagePro
                                     {t.ctaButton}
                                 </Link>
                             </div>
+
+                            {/* Related Articles */}
+                            <RelatedArticles lang={lang} currentSlug="how-to-pass-prop-firm-challenge" />
                         </div>
                     </article>
                 </main>

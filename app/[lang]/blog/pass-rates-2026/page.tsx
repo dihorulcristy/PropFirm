@@ -1,5 +1,6 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import RelatedArticles from '../../../components/RelatedArticles';
 import Link from 'next/link';
 import { ArrowLeft, BarChart3, TrendingUp, AlertTriangle, CheckCircle, Target, Users, Percent, Award, XCircle } from 'lucide-react';
 import type { Locale } from '@/lib/i18n/config';
@@ -707,6 +708,9 @@ export default async function PassRates2026Page({ params }: PageProps) {
                             {/* Conclusion */}
                             <h2 className="text-2xl font-bold text-white mt-12 mb-4">{t.conclusion}</h2>
                             <p className="text-slate-300">{t.conclusionText}</p>
+
+                            {/* Related Articles */}
+                            <RelatedArticles lang={lang} currentSlug="pass-rates-2026" />
                         </div>
                     </article>
                 </main>
