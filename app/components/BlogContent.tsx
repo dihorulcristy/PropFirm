@@ -54,6 +54,15 @@ const blogPosts = {
             featured: true,
         },
         {
+            slug: 'pass-rates-2026',
+            title: 'Prop Firm Challenge Pass Rates 2026: Real Statistics & Data',
+            description: 'Discover the real prop firm challenge pass rates in 2026. We analyzed 15+ firms to reveal actual success rates, from FTMO\'s 10% to firms with 25%+ pass rates.',
+            date: 'January 7, 2026',
+            readTime: '12 min read',
+            category: 'Statistics',
+            featured: false,
+        },
+        {
             slug: 'how-hard-is-it-to-get-funded-trading',
             title: 'How Hard Is It To Get Funded Trading?',
             description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to increase your chances of passing prop firm evaluations.',
@@ -101,6 +110,15 @@ const blogPosts = {
             featured: true,
         },
         {
+            slug: 'pass-rates-2026',
+            title: 'Rate de Trecere Prop Firm Challenge 2026: Statistici Reale',
+            description: 'Descoperă ratele reale de trecere a challenge-urilor prop firm în 2026. Am analizat peste 15 firme pentru a dezvălui ratele de succes.',
+            date: '7 Ianuarie, 2026',
+            readTime: '12 min citire',
+            category: 'Statistici',
+            featured: false,
+        },
+        {
             slug: 'how-hard-is-it-to-get-funded-trading',
             title: 'Cât de Greu Este să Fii Finanțat la Trading?',
             description: 'Descoperă dificultatea reală de a fi finanțat în prop trading. Află ratele de succes, provocările cheie și strategii dovedite pentru a-ți crește șansele de a trece evaluările.',
@@ -146,6 +164,15 @@ const blogPosts = {
             readTime: '15 min lectura',
             category: 'Guía',
             featured: true,
+        },
+        {
+            slug: 'pass-rates-2026',
+            title: 'Tasas de Aprobación Prop Firm Challenge 2026: Estadísticas Reales',
+            description: 'Descubre las tasas reales de aprobación de desafíos prop firm en 2026. Analizamos más de 15 firmas para revelar las tasas de éxito reales.',
+            date: '7 Enero, 2026',
+            readTime: '12 min lectura',
+            category: 'Estadísticas',
+            featured: false,
         },
         {
             slug: 'how-hard-is-it-to-get-funded-trading',

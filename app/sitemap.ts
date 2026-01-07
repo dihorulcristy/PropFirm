@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog posts that exist in all 3 languages under /[lang]/blog/
     const localizedBlogPosts = [
         { slug: 'how-to-pass-prop-firm-challenge', lastMod: '2026-01-02', priority: 0.9 },
+        { slug: 'pass-rates-2026', lastMod: '2026-01-07', priority: 0.9 },
         { slug: 'how-hard-is-it-to-get-funded-trading', lastMod: '2025-11-27', priority: 0.85 },
         { slug: 'what-is-prop-firm-account', lastMod: '2025-12-02', priority: 0.85 },
         { slug: 'taxes-2025', lastMod: '2025-11-27', priority: 0.8 },
