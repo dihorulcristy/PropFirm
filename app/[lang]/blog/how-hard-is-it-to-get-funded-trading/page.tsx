@@ -1,5 +1,6 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import RelatedArticles from '../../../components/RelatedArticles';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, AlertCircle, TrendingUp, Clock, Target, Award } from 'lucide-react';
 import type { Locale } from '@/lib/i18n/config';
@@ -503,6 +504,9 @@ export default async function HowHardToGetFundedPage({ params }: PageProps) {
                                 {t.ctaButton}
                             </Link>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles lang={lang} currentSlug="how-hard-is-it-to-get-funded-trading" />
                     </div>
                 </article>
             </main>

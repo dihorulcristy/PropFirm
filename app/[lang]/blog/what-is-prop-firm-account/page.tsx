@@ -1,5 +1,6 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import RelatedArticles from '../../../components/RelatedArticles';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, TrendingUp, DollarSign, Shield, Users, Target, Briefcase, AlertTriangle, Award } from 'lucide-react';
 import type { Locale } from '@/lib/i18n/config';
@@ -626,6 +627,9 @@ export default async function WhatIsPropFirmAccountPage({ params }: PageProps) {
                                 {t.ctaButton}
                             </Link>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles lang={lang} currentSlug="what-is-prop-firm-account" />
                     </div>
                 </article>
             </main>
