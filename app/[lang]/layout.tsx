@@ -21,7 +21,7 @@ export async function generateMetadata({
     const lang = resolvedParams.lang as Locale;
     const dict = await getDictionary(lang);
 
-    const baseUrl = 'https://propfirmhub.com';
+    const baseUrl = 'https://propfirms-hub.com';
     const currentUrl = lang === 'en' ? baseUrl : `${baseUrl}/${lang}`;
 
     return {
@@ -42,6 +42,7 @@ export async function generateMetadata({
             languages: {
                 'en': baseUrl,
                 'ro': `${baseUrl}/ro`,
+                'es': `${baseUrl}/es`,
                 'x-default': baseUrl,
             },
         },

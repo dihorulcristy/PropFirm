@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://propfirmhub.com'),
+  metadataBase: new URL('https://propfirms-hub.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'PropFirmHub - Compare Top Prop Trading Firms 2025',
     description: 'Compare the best prop trading firms with exclusive discount codes. FTMO, FunderPro, TradingCult & more. Find the perfect firm for your trading style.',
-    url: 'https://propfirmhub.com',
+    url: 'https://propfirms-hub.com',
     siteName: 'PropFirmHub',
     images: [
       {
