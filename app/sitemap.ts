@@ -3,7 +3,8 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://propfirms-hub.com'
 
-    // Base routes and their localized versions (EN + RO + ES)
+    // Base routes - use /en/, /ro/, /es/ prefixes for all languages
+    // This avoids generating URLs that redirect (e.g., /blog -> /en/blog)
     const routes = [
         { path: '', changeFreq: 'daily', priority: 1 },
         { path: '/blog', changeFreq: 'daily', priority: 0.95 },
@@ -21,28 +22,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { slug: 'top-payouts', lastMod: '2025-11-27', priority: 0.8 },
     ]
 
-    // Blog posts that exist only in English (under /blog/)
+    // Blog posts that exist only in English - use /en/blog/ prefix for consistency
     const englishOnlyBlogPosts = [
         { slug: 'hft-vs-swing', lastMod: '2025-11-27', priority: 0.8 },
     ]
 
-    // Other landing pages (English only)
+    // Other landing pages (English only - no redirect issues)
     const landingPages = [
         { path: '/dominion-funding', lastMod: '2025-11-24', priority: 0.7 },
         { path: '/funderprofutures', lastMod: new Date(), priority: 0.8 },
         { path: '/dnafunded', lastMod: new Date(), priority: 0.8 },
     ]
 
-    // Legal Pages - only EN and RO have translations
+    // Legal Pages - exist under /[lang]/(legal)/
     const legalPages = ['privacy-policy', 'terms-of-service', 'cookie-policy', 'affiliate-disclosure', 'contact']
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
-    // 1. Generate core routes (EN + RO + ES)
+    // 1. Generate core routes with explicit language prefixes (EN + RO + ES)
+    // All routes now use /en/, /ro/, /es/ to avoid redirect chains
     for (const route of routes) {
-        // English (default - no prefix)
+        // English - use /en/ prefix
         sitemapEntries.push({
-            url: `${baseUrl}${route.path}`,
+            url: `${baseUrl}/en${route.path}`,
             lastModified: new Date(),
             changeFrequency: route.changeFreq as any,
             priority: route.priority,
@@ -63,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     }
 
-    // 2. Generate localized blog routes (EN + RO + ES) - these exist under /[lang]/blog/
+    // 2. Generate localized blog routes (EN + RO + ES) - under /[lang]/blog/
     for (const post of localizedBlogPosts) {
         // English
         sitemapEntries.push({
@@ -88,17 +90,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     }
 
-    // 3. Generate English-only blog routes (under /blog/)
+    // 3. Generate English-only blog routes - use /en/blog/ for consistency
     for (const post of englishOnlyBlogPosts) {
         sitemapEntries.push({
-            url: `${baseUrl}/blog/${post.slug}`,
+            url: `${baseUrl}/en/blog/${post.slug}`,
             lastModified: new Date(post.lastMod),
             changeFrequency: 'weekly',
             priority: post.priority,
         })
     }
 
-    // 4. Generate landing pages (English only)
+    // 4. Generate landing pages (English only - these don't redirect)
     for (const page of landingPages) {
         sitemapEntries.push({
             url: `${baseUrl}${page.path}`,
@@ -108,11 +110,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     }
 
-    // 5. Add Legal Pages (EN + RO only - no Spanish translations yet)
+    // 5. Add Legal Pages with correct /[lang]/ prefix (EN + RO)
     for (const page of legalPages) {
-        // English
+        // English - use /en/ prefix to match actual page location
         sitemapEntries.push({
-            url: `${baseUrl}/${page}`,
+            url: `${baseUrl}/en/${page}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.5,

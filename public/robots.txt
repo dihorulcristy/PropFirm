@@ -1,16 +1,14 @@
+# robots.txt for propfirms-hub.com
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://propfirms-hub.com/sitemap.xml
-
-# Disallow admin and API routes
-Disallow: /api/
+# Block internal Next.js files (expected - not user-facing pages)
 Disallow: /_next/
+Disallow: /api/
 Disallow: /admin/
 
-# Allow all other pages
-Allow: /
-Allow: /blog/
-Allow: /dominion-funding/
+# Sitemap location
+Sitemap: https://propfirms-hub.com/sitemap.xml
+

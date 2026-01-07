@@ -30,13 +30,32 @@ const nextConfig: NextConfig = {
         destination: '/en/how-to-get-funded-guide',
         permanent: true,
       },
-      // Redirect root to /en (optional - keeps / as default English)
-      // Uncomment if you want / to redirect to /en
-      // {
-      //   source: '/',
-      //   destination: '/en',
-      //   permanent: false,
-      // },
+      // Redirect legal pages to /en/ prefixed versions
+      {
+        source: '/privacy-policy',
+        destination: '/en/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/terms-of-service',
+        destination: '/en/terms-of-service',
+        permanent: true,
+      },
+      {
+        source: '/cookie-policy',
+        destination: '/en/cookie-policy',
+        permanent: true,
+      },
+      {
+        source: '/affiliate-disclosure',
+        destination: '/en/affiliate-disclosure',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/en/contact',
+        permanent: true,
+      },
     ];
   },
 };

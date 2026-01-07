@@ -8,6 +8,14 @@ export const metadata: Metadata = {
     title: 'PropFirmHub Blog - Latest Prop Trading Insights & Guides',
     description: 'Explore expert articles, guides, and insights about prop trading firms. Learn strategies, compare firms, and stay updated with the latest trends in proprietary trading.',
     keywords: 'prop trading blog, prop firm guides, funded trading articles, prop trading insights, trading education',
+    alternates: {
+        canonical: 'https://propfirms-hub.com/en/blog',
+        languages: {
+            'en': 'https://propfirms-hub.com/en/blog',
+            'ro': 'https://propfirms-hub.com/ro/blog',
+            'es': 'https://propfirms-hub.com/es/blog',
+        },
+    },
 };
 
 // Blog posts data

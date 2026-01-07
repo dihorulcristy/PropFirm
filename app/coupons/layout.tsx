@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         siteName: 'PropFirms Hub',
     },
     alternates: {
-        canonical: 'https://propfirms-hub.com/coupons'
+        canonical: 'https://propfirms-hub.com/en/coupons'
     },
     robots: {
         index: true,
