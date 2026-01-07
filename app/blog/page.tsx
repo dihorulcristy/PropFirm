@@ -13,13 +13,31 @@ export const metadata: Metadata = {
 // Blog posts data
 const blogPosts = [
     {
+        slug: 'how-to-pass-prop-firm-challenge',
+        title: 'How to Pass a Prop Firm Challenge: 10 Proven Steps',
+        description: 'Learn exactly how to pass prop firm challenges with our comprehensive guide. Discover risk management strategies, profit targets, drawdown rules, and psychology tips.',
+        date: 'December 30, 2025',
+        readTime: '15 min read',
+        category: 'Guide',
+        featured: true,
+    },
+    {
+        slug: 'pass-rates-2026',
+        title: 'Prop Firm Challenge Pass Rates 2026: Real Statistics & Data',
+        description: 'Discover the real prop firm challenge pass rates in 2026. We analyzed 15+ firms to reveal actual success rates, from FTMO\'s 10% to firms with 25%+ pass rates.',
+        date: 'January 7, 2026',
+        readTime: '12 min read',
+        category: 'Statistics',
+        featured: false,
+    },
+    {
         slug: 'how-hard-is-it-to-get-funded-trading',
         title: 'How Hard Is It To Get Funded Trading?',
         description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to increase your chances of passing prop firm evaluations.',
         date: 'November 27, 2025',
         readTime: '12 min read',
         category: 'Guide',
-        featured: true,
+        featured: false,
     },
     {
         slug: 'what-is-prop-firm-account',
@@ -99,7 +117,7 @@ export default function BlogPage() {
                                     {featuredPost.description}
                                 </p>
                                 <Link
-                                    href={`/blog/${featuredPost.slug}`}
+                                    href={`/en/blog/${featuredPost.slug}`}
                                     className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-emerald-900/40 transition-all hover:scale-105"
                                 >
                                     Read Article
@@ -143,7 +161,7 @@ export default function BlogPage() {
                                             {post.readTime}
                                         </span>
                                         <Link
-                                            href={`/blog/${post.slug}`}
+                                            href={`/en/blog/${post.slug}`}
                                             className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-medium text-sm"
                                         >
                                             Read More
