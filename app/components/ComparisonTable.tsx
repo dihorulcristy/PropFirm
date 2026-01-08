@@ -964,6 +964,40 @@ const allFirms: Firm[] = [
             150000: { price: '€689', oldPrice: '€689' },
             300000: { price: '€1499', oldPrice: '€1499' },
         }
+    },
+    {
+        id: 24,
+        name: 'QTFunded',
+        rating: 4.7,
+        verified: true,
+        rules: { maxDD: '10%', profit: '80%' },
+        price: '$299',
+        oldPrice: '$499',
+        coupon: 'NDOGUBVVSK',
+        offer: '40% OFF',
+        action: 'Get Funded',
+        link: 'https://qtfunded.quanttekel.com/ref/5570/',
+        logoUrl: '/logos/qtfunded.png',
+        capital: 100000,
+        platform: ['MT4', 'MT5'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: true,
+        newsTrading: true,
+        cryptoPayout: true,
+        usaAccepted: true,
+        noTimeLimit: true,
+        weeklyPayouts: false,
+        payoutDays: 14,
+        capitalPricing: {
+            10000: { price: '$59', oldPrice: '$99' },
+            25000: { price: '$119', oldPrice: '$199' },
+            50000: { price: '$179', oldPrice: '$299' },
+            100000: { price: '$299', oldPrice: '$499' },
+            200000: { price: '$599', oldPrice: '$999' },
+        }
     }
 ];
 
@@ -978,7 +1012,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
     const [copiedId, setCopiedId] = useState<number | null>(null);
 
     // Level 2: Configurator filters
-    const [selectedCapital, setSelectedCapital] = useState<number | 'all'>('all');
+    const [selectedCapital, setSelectedCapital] = useState<number | 'all'>(100000);
     const [selectedPlatform, setSelectedPlatform] = useState<string>('all');
     const [selectedChallengeType, setSelectedChallengeType] = useState<string>('all');
     const [selectedMarketType, setSelectedMarketType] = useState<'all' | 'forex' | 'futures'>('all');
@@ -1000,6 +1034,9 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
 
     // Show/hide advanced filters
     const [showMoreFilters, setShowMoreFilters] = useState(false);
+
+    // Price sort direction (null = no sort, 'asc' = ascending, 'desc' = descending)
+    const [priceSortDirection, setPriceSortDirection] = useState<'asc' | 'desc' | null>(null);
 
     // Voting System State
     const [votes, setVotes] = useState<Record<number, { likes: number; dislikes: number }>>({});
@@ -1109,7 +1146,11 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
         // Sort
         switch (sortBy) {
             case 'cheapest':
-                filtered.sort((a, b) => parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')));
+                filtered.sort((a, b) => {
+                    const priceA = parseInt(getPricingForSort(a).price.replace(/[^0-9]/g, '')) || 0;
+                    const priceB = parseInt(getPricingForSort(b).price.replace(/[^0-9]/g, '')) || 0;
+                    return priceA - priceB;
+                });
                 break;
             case 'fastestPayout':
                 filtered.sort((a, b) => a.payoutDays - b.payoutDays);
@@ -1121,8 +1162,25 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                 break;
         }
 
+        // Apply price column sort if active
+        if (priceSortDirection) {
+            filtered.sort((a, b) => {
+                const priceA = parseInt(getPricingForSort(a).price.replace(/[^0-9]/g, '')) || 0;
+                const priceB = parseInt(getPricingForSort(b).price.replace(/[^0-9]/g, '')) || 0;
+                return priceSortDirection === 'asc' ? priceA - priceB : priceB - priceA;
+            });
+        }
+
         return filtered;
-    }, [selectedCapital, selectedPlatform, selectedChallengeType, selectedMarketType, quickFilters, sortBy]);
+
+        // Helper function for sorting
+        function getPricingForSort(firm: Firm) {
+            if (selectedCapital === 'all' || !firm.capitalPricing[selectedCapital]) {
+                return { price: firm.price, oldPrice: firm.oldPrice };
+            }
+            return firm.capitalPricing[selectedCapital];
+        }
+    }, [selectedCapital, selectedPlatform, selectedChallengeType, selectedMarketType, quickFilters, sortBy, priceSortDirection]);
 
     return (
         <section className="py-20 bg-black relative overflow-hidden">
@@ -1259,6 +1317,34 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                     selectedChallengeType !== 'all' ? "text-emerald-500" : "text-slate-500"
                                 )} />
                             </div>
+                        </div>
+
+                        {/* Price Sort Button - Mobile */}
+                        <div className="snap-start flex-shrink-0">
+                            <button
+                                onClick={() => {
+                                    if (priceSortDirection === null) {
+                                        setPriceSortDirection('asc');
+                                    } else if (priceSortDirection === 'asc') {
+                                        setPriceSortDirection('desc');
+                                    } else {
+                                        setPriceSortDirection(null);
+                                    }
+                                }}
+                                className={clsx(
+                                    "flex items-center gap-2 text-sm py-2.5 px-4 rounded-full border transition-all duration-300 backdrop-blur-md shadow-lg shadow-black/20 font-medium outline-none",
+                                    priceSortDirection !== null
+                                        ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400"
+                                        : "bg-slate-900/80 border-white/10 text-slate-200"
+                                )}
+                            >
+                                💰 {t.price}
+                                <span className="text-emerald-400 font-bold">
+                                    {priceSortDirection === 'asc' && '↑'}
+                                    {priceSortDirection === 'desc' && '↓'}
+                                    {priceSortDirection === null && '↕'}
+                                </span>
+                            </button>
                         </div>
 
                         {/* Reset Button */}
@@ -1681,7 +1767,32 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                 <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.rating}</th>
                                 <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.community}</th>
                                 <th className="hidden xl:table-cell px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.keyRules}</th>
-                                <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.price}</th>
+                                <th
+                                    className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center cursor-pointer hover:bg-white/5 transition-colors select-none"
+                                    onClick={() => {
+                                        if (priceSortDirection === null) {
+                                            setPriceSortDirection('asc');
+                                        } else if (priceSortDirection === 'asc') {
+                                            setPriceSortDirection('desc');
+                                        } else {
+                                            setPriceSortDirection(null);
+                                        }
+                                    }}
+                                >
+                                    <div className="flex flex-col items-center gap-1">
+                                        <div className="flex items-center gap-1">
+                                            <span>{t.price}</span>
+                                            <span className="text-emerald-400">
+                                                {priceSortDirection === 'asc' && '↑'}
+                                                {priceSortDirection === 'desc' && '↓'}
+                                                {priceSortDirection === null && '↕'}
+                                            </span>
+                                        </div>
+                                        <span className="text-[10px] px-2 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full font-bold normal-case">
+                                            {selectedCapital === 'all' ? 'Base' : `$${(selectedCapital as number / 1000).toFixed(0)}K`}
+                                        </span>
+                                    </div>
+                                </th>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.coupon}</th>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.activeOffers}</th>
                                 <th className="px-3 py-3 lg:px-6 lg:py-4 font-medium tracking-wider text-center">{t.action}</th>

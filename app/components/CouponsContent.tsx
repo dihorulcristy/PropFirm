@@ -194,6 +194,18 @@ const allDeals: DealFirm[] = [
         verified: true,
         priority: 7,
         hasActiveCoupon: true
+    },
+    {
+        id: 24,
+        name: 'QTFunded',
+        logoUrl: '/logos/qtfunded.png',
+        discount: '40% OFF',
+        coupon: 'NDOGUBVVSK',
+        offer: '40% OFF (All Challenges)',
+        link: 'https://qtfunded.quanttekel.com/ref/5570/',
+        verified: true,
+        priority: 4,
+        hasActiveCoupon: true
     }
 ];
 
