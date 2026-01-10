@@ -446,6 +446,506 @@ export const allPropFirms: PropFirm[] = [
             ro: ['Nu este disponibil în SUA', 'Ciclu de plată de 14 zile', 'Doar 80% împărțire profit'],
             es: ['No disponible en EE.UU.', 'Ciclo de pago de 14 días', 'Solo 80% división de ganancias']
         }
+    },
+    {
+        id: 9,
+        slug: 'fundedx',
+        name: 'FundedX',
+        rating: 4.7,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$500',
+        oldPrice: '$500',
+        coupon: 'HELLO2026',
+        offer: '20% OFF',
+        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
+        logoUrl: '/logos/fundedx.jpg',
+        platforms: ['cTrader', 'DXtrade', 'Match-Trader'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$50', oldPrice: '$50' },
+            10000: { price: '$95', oldPrice: '$95' },
+            25000: { price: '$200', oldPrice: '$200' },
+            50000: { price: '$300', oldPrice: '$300' },
+            100000: { price: '$500', oldPrice: '$500' },
+            200000: { price: '$950', oldPrice: '$950' },
+        },
+        description: {
+            en: 'FundedX accepts USA traders and offers weekly payouts with multiple modern trading platforms. A solid choice for traders seeking flexibility.',
+            ro: 'FundedX acceptă traderi din SUA și oferă plăți săptămânale cu platforme moderne de trading. O alegere solidă pentru traderii care caută flexibilitate.',
+            es: 'FundedX acepta traders de EE.UU. y ofrece pagos semanales con múltiples plataformas modernas. Una elección sólida para traders que buscan flexibilidad.'
+        },
+        pros: {
+            en: ['USA traders accepted', 'Weekly payouts', 'Multiple platforms', 'No time limit', 'Competitive pricing'],
+            ro: ['Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple', 'Fără limită de timp', 'Prețuri competitive'],
+            es: ['Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas', 'Sin límite de tiempo', 'Precios competitivos']
+        },
+        cons: {
+            en: ['Only 80% profit split', '14-day payout cycle', 'No MT4/MT5'],
+            ro: ['Doar 80% împărțire profit', 'Ciclu de plată de 14 zile', 'Fără MT4/MT5'],
+            es: ['Solo 80% división de ganancias', 'Ciclo de pago de 14 días', 'Sin MT4/MT5']
+        }
+    },
+    {
+        id: 10,
+        slug: 'dominion-funding',
+        name: 'Dominion Funding',
+        rating: 4.6,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$549',
+        oldPrice: '$549',
+        coupon: 'PROPHUB',
+        offer: '30% OFF',
+        link: 'https://dominionfunding.trade//?affId=06bqracaI4',
+        logoUrl: '/logos/dominion-funding.png',
+        platforms: ['cTrader', 'Match-Trader'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: false,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            7500: { price: '$89', oldPrice: '$89' },
+            10000: { price: '$119', oldPrice: '$119' },
+            25000: { price: '$249', oldPrice: '$249' },
+            50000: { price: '$349', oldPrice: '$349' },
+            100000: { price: '$549', oldPrice: '$549' },
+        },
+        description: {
+            en: 'Dominion Funding offers a 30% discount with modern platforms. Good option for forex traders looking for value.',
+            ro: 'Dominion Funding oferă o reducere de 30% cu platforme moderne. Opțiune bună pentru traderii forex care caută valoare.',
+            es: 'Dominion Funding ofrece un 30% de descuento con plataformas modernas. Buena opción para traders de forex que buscan valor.'
+        },
+        pros: {
+            en: ['30% permanent discount', 'Modern platforms', 'No time limit', 'Competitive pricing', 'Crypto payouts'],
+            ro: ['30% reducere permanentă', 'Platforme moderne', 'Fără limită de timp', 'Prețuri competitive', 'Plăți crypto'],
+            es: ['30% descuento permanente', 'Plataformas modernas', 'Sin límite de tiempo', 'Precios competitivos', 'Pagos crypto']
+        },
+        cons: {
+            en: ['Not available in USA', 'Only 80% profit split', 'No weekly payouts'],
+            ro: ['Nu este disponibil în SUA', 'Doar 80% împărțire profit', 'Fără plăți săptămânale'],
+            es: ['No disponible en EE.UU.', 'Solo 80% división de ganancias', 'Sin pagos semanales']
+        }
+    },
+    {
+        id: 11,
+        slug: 'funded-futures-network',
+        name: 'Funded Futures Network',
+        rating: 4.6,
+        verified: true,
+        maxDD: '8%',
+        profitSplit: '80%',
+        price: '$299',
+        oldPrice: '$598',
+        coupon: 'T2ISFNWP',
+        offer: '50% OFF',
+        link: 'https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian',
+        logoUrl: '/logos/funded-futures-network.png',
+        platforms: ['NinjaTrader', 'Rithmic', 'TradingView'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            25000: { price: '$149', oldPrice: '$298' },
+            50000: { price: '$199', oldPrice: '$398' },
+            100000: { price: '$299', oldPrice: '$598' },
+            150000: { price: '$449', oldPrice: '$898' },
+        },
+        description: {
+            en: 'Funded Futures Network offers 50% off for futures traders with USA accepted. Great value for aspiring futures traders.',
+            ro: 'Funded Futures Network oferă 50% reducere pentru traderii de futures cu SUA acceptat. Valoare excelentă pentru aspiranții traderi de futures.',
+            es: 'Funded Futures Network ofrece 50% de descuento para traders de futuros con EE.UU. aceptado. Gran valor para aspirantes a traders de futuros.'
+        },
+        pros: {
+            en: ['50% discount available', 'USA traders accepted', 'TradingView integration', 'No time limit', 'Multiple platforms'],
+            ro: ['50% reducere disponibilă', 'Traderi din SUA acceptați', 'Integrare TradingView', 'Fără limită de timp', 'Platforme multiple'],
+            es: ['50% descuento disponible', 'Traders de EE.UU. aceptados', 'Integración TradingView', 'Sin límite de tiempo', 'Múltiples plataformas']
+        },
+        cons: {
+            en: ['Stricter 8% drawdown', 'Only 80% profit split', 'Futures only'],
+            ro: ['Drawdown mai strict de 8%', 'Doar 80% împărțire profit', 'Doar futures'],
+            es: ['Drawdown más estricto del 8%', 'Solo 80% división de ganancias', 'Solo futuros']
+        }
+    },
+    {
+        id: 12,
+        slug: 'fundingticks',
+        name: 'FundingTicks',
+        rating: 4.5,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$399',
+        oldPrice: '$399',
+        coupon: 'BC954C87',
+        offer: '20% OFF',
+        link: 'https://app.fundingticks.com/register?ref=BC954C87',
+        logoUrl: '/logos/fundingticks.png',
+        platforms: ['NinjaTrader', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 7,
+        capitalPricing: {
+            25000: { price: '$199', oldPrice: '$199' },
+            50000: { price: '$299', oldPrice: '$299' },
+            100000: { price: '$399', oldPrice: '$399' },
+            150000: { price: '$599', oldPrice: '$599' },
+        },
+        description: {
+            en: 'FundingTicks offers weekly payouts for futures traders with USA accepted. Solid choice for futures trading.',
+            ro: 'FundingTicks oferă plăți săptămânale pentru traderii de futures cu SUA acceptat. Alegere solidă pentru trading pe futures.',
+            es: 'FundingTicks ofrece pagos semanales para traders de futuros con EE.UU. aceptado. Elección sólida para trading de futuros.'
+        },
+        pros: {
+            en: ['Weekly payouts', 'USA traders accepted', 'No time limit', 'Competitive pricing', 'Crypto payouts'],
+            ro: ['Plăți săptămânale', 'Traderi din SUA acceptați', 'Fără limită de timp', 'Prețuri competitive', 'Plăți crypto'],
+            es: ['Pagos semanales', 'Traders de EE.UU. aceptados', 'Sin límite de tiempo', 'Precios competitivos', 'Pagos crypto']
+        },
+        cons: {
+            en: ['Futures only', 'Limited platforms', 'Only 80% profit split'],
+            ro: ['Doar futures', 'Platforme limitate', 'Doar 80% împărțire profit'],
+            es: ['Solo futuros', 'Plataformas limitadas', 'Solo 80% división de ganancias']
+        }
+    },
+    {
+        id: 13,
+        slug: 'yrm-prop',
+        name: 'YRM Prop',
+        rating: 4.8,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '90%',
+        price: '$45',
+        oldPrice: '$149',
+        coupon: 'HGC',
+        offer: 'EXTRA 10% OFF',
+        link: 'https://yrmprop.com/ref/dihorulcristy/',
+        logoUrl: '/yrm-prop.png',
+        platforms: ['NinjaTrader', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            25000: { price: '$47', oldPrice: '$59' },
+            50000: { price: '$45', oldPrice: '$149' },
+            100000: { price: '$95', oldPrice: '$249' },
+            150000: { price: '$145', oldPrice: '$349' },
+        },
+        description: {
+            en: 'YRM Prop offers the lowest prices in the futures prop trading industry with 90% profit split. Incredible value for beginners.',
+            ro: 'YRM Prop oferă cele mai mici prețuri din industria prop trading pe futures cu 90% împărțire profit. Valoare incredibilă pentru începători.',
+            es: 'YRM Prop ofrece los precios más bajos en la industria de prop trading de futuros con 90% división de ganancias. Valor increíble para principiantes.'
+        },
+        pros: {
+            en: ['Lowest prices in industry', '90% profit split', 'USA traders accepted', 'Weekly payouts', 'Extra 10% discount'],
+            ro: ['Cele mai mici prețuri din industrie', '90% împărțire profit', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Extra 10% reducere'],
+            es: ['Precios más bajos de la industria', '90% división de ganancias', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Extra 10% descuento']
+        },
+        cons: {
+            en: ['Futures only', 'Limited platforms', 'Newer firm'],
+            ro: ['Doar futures', 'Platforme limitate', 'Firmă mai nouă'],
+            es: ['Solo futuros', 'Plataformas limitadas', 'Firma más nueva']
+        }
+    },
+    {
+        id: 14,
+        slug: 'fundedhero-futures',
+        name: 'FundedHero Futures',
+        rating: 4.8,
+        verified: true,
+        maxDD: '4.5%',
+        profitSplit: '90%',
+        price: '$85',
+        oldPrice: '$160',
+        coupon: 'HERO',
+        offer: '90% OFF',
+        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
+        logoUrl: '/logos/fundedhero.jpg',
+        platforms: ['NinjaTrader', 'Tradovate', 'Rithmic'],
+        challengeType: '2-Step',
+        marketType: 'futures',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 7,
+        capitalPricing: {
+            50000: { price: '$45', oldPrice: '$90' },
+            75000: { price: '$65', oldPrice: '$130' },
+            100000: { price: '$85', oldPrice: '$160' },
+        },
+        description: {
+            en: 'FundedHero Futures offers exceptional 90% discount with 90% profit split. Best value for futures traders.',
+            ro: 'FundedHero Futures oferă o reducere excepțională de 90% cu 90% împărțire profit. Cea mai bună valoare pentru traderii de futures.',
+            es: 'FundedHero Futures ofrece un descuento excepcional del 90% con 90% división de ganancias. Mejor valor para traders de futuros.'
+        },
+        pros: {
+            en: ['90% OFF discount', '90% profit split', 'USA traders accepted', 'Weekly payouts', 'Multiple platforms'],
+            ro: ['90% REDUCERE', '90% împărțire profit', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple'],
+            es: ['90% DESCUENTO', '90% división de ganancias', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas']
+        },
+        cons: {
+            en: ['Stricter 4.5% drawdown', 'Futures only', 'Limited account sizes'],
+            ro: ['Drawdown mai strict de 4.5%', 'Doar futures', 'Dimensiuni de cont limitate'],
+            es: ['Drawdown más estricto del 4.5%', 'Solo futuros', 'Tamaños de cuenta limitados']
+        }
+    },
+    {
+        id: 15,
+        slug: 'instantfunding',
+        name: 'InstantFunding',
+        rating: 4.7,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$39',
+        oldPrice: '$39',
+        coupon: '',
+        offer: '',
+        link: 'https://instantfunding.com/?partner=419',
+        logoUrl: '/logos/instantfunding.png',
+        platforms: ['MT5', 'cTrader', 'Match-Trader'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$39', oldPrice: '$39' },
+            10000: { price: '$63', oldPrice: '$63' },
+            25000: { price: '$149', oldPrice: '$149' },
+            50000: { price: '$254', oldPrice: '$254' },
+            100000: { price: '$439', oldPrice: '$439' },
+            200000: { price: '$999', oldPrice: '$999' },
+        },
+        description: {
+            en: 'InstantFunding offers competitive pricing and accepts USA traders with multiple platform options.',
+            ro: 'InstantFunding oferă prețuri competitive și acceptă traderi din SUA cu multiple opțiuni de platformă.',
+            es: 'InstantFunding ofrece precios competitivos y acepta traders de EE.UU. con múltiples opciones de plataforma.'
+        },
+        pros: {
+            en: ['USA traders accepted', 'Low starting prices', 'Multiple platforms', 'No time limit', 'Crypto payouts'],
+            ro: ['Traderi din SUA acceptați', 'Prețuri de start mici', 'Platforme multiple', 'Fără limită de timp', 'Plăți crypto'],
+            es: ['Traders de EE.UU. aceptados', 'Precios iniciales bajos', 'Múltiples plataformas', 'Sin límite de tiempo', 'Pagos crypto']
+        },
+        cons: {
+            en: ['Only 80% profit split', 'No current discount', '14-day payout cycle'],
+            ro: ['Doar 80% împărțire profit', 'Fără reducere curentă', 'Ciclu de plată de 14 zile'],
+            es: ['Solo 80% división de ganancias', 'Sin descuento actual', 'Ciclo de pago de 14 días']
+        }
+    },
+    {
+        id: 16,
+        slug: 'dnafunded',
+        name: 'DnaFunded',
+        rating: 4.6,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$42',
+        oldPrice: '$49',
+        coupon: 'DNAFUNDED15',
+        offer: '15% OFF',
+        link: 'https://partners.dnafunded.com/click?campaign_id=1&ref_id=259',
+        logoUrl: '/logos/dnafunded.png',
+        platforms: ['TradeLocker'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: false,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$42', oldPrice: '$49' },
+            10000: { price: '$84', oldPrice: '$99' },
+            25000: { price: '$161', oldPrice: '$189' },
+            50000: { price: '$297', oldPrice: '$349' },
+            100000: { price: '$526', oldPrice: '$619' },
+            200000: { price: '$892', oldPrice: '$1049' },
+        },
+        description: {
+            en: 'DnaFunded offers affordable entry points with TradeLocker platform. Good for traders on a budget.',
+            ro: 'DnaFunded oferă puncte de intrare accesibile cu platforma TradeLocker. Bun pentru traderii cu buget limitat.',
+            es: 'DnaFunded ofrece puntos de entrada asequibles con la plataforma TradeLocker. Bueno para traders con presupuesto limitado.'
+        },
+        pros: {
+            en: ['Affordable pricing', '15% discount available', 'No time limit', 'TradeLocker platform', 'Crypto payouts'],
+            ro: ['Prețuri accesibile', '15% reducere disponibilă', 'Fără limită de timp', 'Platforma TradeLocker', 'Plăți crypto'],
+            es: ['Precios asequibles', '15% descuento disponible', 'Sin límite de tiempo', 'Plataforma TradeLocker', 'Pagos crypto']
+        },
+        cons: {
+            en: ['Not available in USA', 'Single platform only', 'Only 80% profit split'],
+            ro: ['Nu este disponibil în SUA', 'O singură platformă', 'Doar 80% împărțire profit'],
+            es: ['No disponible en EE.UU.', 'Solo una plataforma', 'Solo 80% división de ganancias']
+        }
+    },
+    {
+        id: 17,
+        slug: 'spiceprop',
+        name: 'SpiceProp',
+        rating: 4.8,
+        verified: true,
+        maxDD: '11%',
+        profitSplit: '80-85%',
+        price: '€479',
+        oldPrice: '€479',
+        coupon: 'SANTANEXT',
+        offer: '10% OFF + 5% Profit Split',
+        link: 'https://my.spiceprop.com/agent_pp.html?agent_pp=28203897',
+        logoUrl: '/logos/spiceprop.png',
+        platforms: ['MT5'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: false,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            6000: { price: '€45', oldPrice: '€45' },
+            10000: { price: '€99', oldPrice: '€99' },
+            25000: { price: '€159', oldPrice: '€159' },
+            50000: { price: '€295', oldPrice: '€295' },
+            100000: { price: '€479', oldPrice: '€479' },
+            150000: { price: '€689', oldPrice: '€689' },
+            300000: { price: '€1499', oldPrice: '€1499' },
+        },
+        description: {
+            en: 'SpiceProp offers higher 11% drawdown limit and weekly payouts with competitive Euro-based pricing.',
+            ro: 'SpiceProp oferă o limită de drawdown mai mare de 11% și plăți săptămânale cu prețuri competitive în Euro.',
+            es: 'SpiceProp ofrece un límite de drawdown más alto del 11% y pagos semanales con precios competitivos en Euro.'
+        },
+        pros: {
+            en: ['Higher 11% drawdown', 'Weekly payouts', 'Euro pricing', 'Extra profit split bonus', 'Up to €300k accounts'],
+            ro: ['Drawdown mai mare de 11%', 'Plăți săptămânale', 'Prețuri în Euro', 'Bonus profit split extra', 'Conturi până la €300k'],
+            es: ['Drawdown más alto del 11%', 'Pagos semanales', 'Precios en Euro', 'Bono extra de profit split', 'Cuentas hasta €300k']
+        },
+        cons: {
+            en: ['Not available in USA', 'MT5 only', 'Only 80-85% profit split'],
+            ro: ['Nu este disponibil în SUA', 'Doar MT5', 'Doar 80-85% împărțire profit'],
+            es: ['No disponible en EE.UU.', 'Solo MT5', 'Solo 80-85% división de ganancias']
+        }
+    },
+    {
+        id: 18,
+        slug: 'qtfunded',
+        name: 'QTFunded',
+        rating: 4.7,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: '80%',
+        price: '$299',
+        oldPrice: '$499',
+        coupon: 'NDOGUBVVSK',
+        offer: '40% OFF',
+        link: 'https://qtfunded.quanttekel.com/ref/5570/',
+        logoUrl: '/logos/qtfunded.png',
+        platforms: ['MT4', 'MT5'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: true,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            10000: { price: '$59', oldPrice: '$99' },
+            25000: { price: '$119', oldPrice: '$199' },
+            50000: { price: '$179', oldPrice: '$299' },
+            100000: { price: '$299', oldPrice: '$499' },
+            200000: { price: '$599', oldPrice: '$999' },
+        },
+        description: {
+            en: 'QTFunded offers 40% discount and accepts USA traders with MT4/MT5 platforms. Great value for forex trading.',
+            ro: 'QTFunded oferă 40% reducere și acceptă traderi din SUA cu platformele MT4/MT5. Valoare excelentă pentru trading forex.',
+            es: 'QTFunded ofrece 40% de descuento y acepta traders de EE.UU. con plataformas MT4/MT5. Gran valor para trading de forex.'
+        },
+        pros: {
+            en: ['40% discount available', 'USA traders accepted', 'MT4/MT5 platforms', 'No time limit', 'Crypto payouts'],
+            ro: ['40% reducere disponibilă', 'Traderi din SUA acceptați', 'Platforme MT4/MT5', 'Fără limită de timp', 'Plăți crypto'],
+            es: ['40% descuento disponible', 'Traders de EE.UU. aceptados', 'Plataformas MT4/MT5', 'Sin límite de tiempo', 'Pagos crypto']
+        },
+        cons: {
+            en: ['Only 80% profit split', '14-day payout cycle', 'No weekly payouts'],
+            ro: ['Doar 80% împărțire profit', 'Ciclu de plată de 14 zile', 'Fără plăți săptămânale'],
+            es: ['Solo 80% división de ganancias', 'Ciclo de pago de 14 días', 'Sin pagos semanales']
+        }
     }
 ];
 

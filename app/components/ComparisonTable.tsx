@@ -1,9 +1,19 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { Star, ShieldCheck, Check, Copy, ChevronDown, Zap, Trophy, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { clsx } from 'clsx';
 import type { Locale } from '@/lib/i18n/config';
+
+// Helper to generate slug from firm name
+const generateSlug = (name: string): string => {
+    return name
+        .toLowerCase()
+        .replace(/\s*\([^)]*\)\s*/g, '') // Remove parentheses and content
+        .replace(/[^a-z0-9]+/g, '-')     // Replace non-alphanumeric with hyphens
+        .replace(/^-+|-+$/g, '');        // Trim leading/trailing hyphens
+};
 
 // UI Translations
 const translations = {
@@ -1657,7 +1667,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                         />
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="font-bold text-white text-lg">{firm.name}</h3>
+                                        <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="font-bold text-white text-lg hover:text-emerald-400 transition-colors">{firm.name}</Link>
                                         <div className="flex items-center gap-2 text-xs mt-1">
                                             <div className="flex items-center gap-1 text-amber-400">
                                                 <Star className="h-3 w-3 fill-current" />
@@ -1817,7 +1827,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
-                                                <span className="font-bold text-white text-base">{firm.name}</span>
+                                                <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="font-bold text-white text-base hover:text-emerald-400 transition-colors">{firm.name}</Link>
                                             </div>
                                         </td>
 
