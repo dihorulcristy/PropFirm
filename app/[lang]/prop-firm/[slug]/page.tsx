@@ -74,7 +74,7 @@ export default async function PropFirmPage({ params }: PageProps) {
     }
 
     const t = pageTranslations[lang] || pageTranslations.en;
-    const homeLink = lang === 'en' ? '/' : `/${lang}`;
+    const homeLink = `/${lang}`;
 
     // Get related firms (same market type, exclude current)
     const relatedFirms = allPropFirms
@@ -340,7 +340,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                                 {relatedFirms.map(related => (
                                     <Link
                                         key={related.slug}
-                                        href={lang === 'en' ? `/prop-firm/${related.slug}` : `/${lang}/prop-firm/${related.slug}`}
+                                        href={`/${lang}/prop-firm/${related.slug}`}
                                         className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/50 transition-all group"
                                     >
                                         <div className="flex items-center gap-4 mb-3">
