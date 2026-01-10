@@ -1659,13 +1659,13 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                             <div key={firm.id} className="bg-white/5 border border-white/10 rounded-xl p-5 relative overflow-hidden">
                                 {/* Header: Logo, Name, Rating, Price */}
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center border border-white/10 overflow-hidden flex-shrink-0">
+                                    <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center border border-white/10 overflow-hidden flex-shrink-0 hover:border-emerald-500/50 transition-all">
                                         <img
                                             src={firm.logoUrl}
                                             alt={firm.name}
                                             className="h-full w-full object-cover"
                                         />
-                                    </div>
+                                    </Link>
                                     <div className="flex-1 min-w-0">
                                         <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="font-bold text-white text-lg hover:text-emerald-400 transition-colors">{firm.name}</Link>
                                         <div className="flex items-center gap-2 text-xs mt-1">
@@ -1820,13 +1820,13 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                     <tr key={firm.id} className="group hover:bg-slate-800/20 transition-colors border-b border-slate-800/30">
                                         <td className="px-3 py-3 lg:px-6 lg:py-5 text-left">
                                             <div className="flex items-center gap-3">
-                                                <div className="h-10 w-10 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-slate-300 group-hover:ring-1 group-hover:ring-emerald-500/50 transition-all overflow-hidden">
+                                                <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="h-10 w-10 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-slate-300 group-hover:ring-1 group-hover:ring-emerald-500/50 transition-all overflow-hidden">
                                                     <img
                                                         src={firm.logoUrl}
                                                         alt={firm.name}
                                                         className="h-full w-full object-cover"
                                                     />
-                                                </div>
+                                                </Link>
                                                 <Link href={`/${lang}/prop-firm/${generateSlug(firm.name)}`} className="font-bold text-white text-base hover:text-emerald-400 transition-colors">{firm.name}</Link>
                                             </div>
                                         </td>
