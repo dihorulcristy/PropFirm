@@ -45,13 +45,22 @@ const translations = {
 const blogPosts = {
     en: [
         {
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'How to Pass FTMO Challenge – Why Most Traders Fail',
+            description: 'Discover why 8 out of 10 traders fail the FTMO challenge and learn the exact strategies to pass. Daily loss rules, risk management, and proven tips.',
+            date: 'January 10, 2025',
+            readTime: '12 min read',
+            category: 'Guide',
+            featured: true,
+        },
+        {
             slug: 'how-to-pass-prop-firm-challenge',
             title: 'How to Pass a Prop Firm Challenge: 10 Proven Steps',
             description: 'Learn exactly how to pass prop firm challenges with our comprehensive guide. Discover risk management strategies, profit targets, drawdown rules, and psychology tips.',
             date: 'December 30, 2025',
             readTime: '15 min read',
             category: 'Guide',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'pass-rates-2026',
@@ -101,13 +110,22 @@ const blogPosts = {
     ],
     ro: [
         {
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'Cum să Treci Challenge-ul FTMO – De Ce Majoritatea Pică',
+            description: 'Descoperă de ce 8 din 10 traderi pică challenge-ul FTMO și învață strategiile exacte pentru a trece. Reguli daily loss, risk management și sfaturi dovedite.',
+            date: '10 Ianuarie, 2025',
+            readTime: '12 min citire',
+            category: 'Ghid',
+            featured: true,
+        },
+        {
             slug: 'how-to-pass-prop-firm-challenge',
             title: 'Cum să Treci un Challenge Prop Firm: 10 Pași Dovediți',
             description: 'Învață exact cum să treci challenge-urile prop firm cu ghidul nostru complet. Descoperă strategii de risk management, obiective de profit și sfaturi de psihologie.',
             date: '30 Decembrie, 2025',
             readTime: '15 min citire',
             category: 'Ghid',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'pass-rates-2026',
@@ -157,13 +175,22 @@ const blogPosts = {
     ],
     es: [
         {
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'Cómo Pasar el Desafío FTMO – Por Qué la Mayoría Falla',
+            description: 'Descubre por qué 8 de cada 10 traders fallan el desafío FTMO y aprende las estrategias exactas para aprobarlo. Reglas de pérdida diaria y gestión de riesgo.',
+            date: '10 Enero, 2025',
+            readTime: '12 min lectura',
+            category: 'Guía',
+            featured: true,
+        },
+        {
             slug: 'how-to-pass-prop-firm-challenge',
             title: 'Cómo Pasar un Desafío de Firma Prop: 10 Pasos Probados',
             description: 'Aprende exactamente cómo pasar los desafíos de firmas prop con nuestra guía completa. Descubre estrategias de gestión de riesgos y consejos de psicología.',
             date: '30 Diciembre, 2025',
             readTime: '15 min lectura',
             category: 'Guía',
-            featured: true,
+            featured: false,
         },
         {
             slug: 'pass-rates-2026',

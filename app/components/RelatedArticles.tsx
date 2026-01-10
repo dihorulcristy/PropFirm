@@ -46,6 +46,12 @@ const relatedContent: Record<Locale, RelatedItem[]> = {
     en: [
         {
             type: 'article',
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'How to Pass FTMO Challenge – Why Most Traders Fail',
+            description: 'The exact strategies to pass your FTMO challenge.'
+        },
+        {
+            type: 'article',
             slug: 'how-to-pass-prop-firm-challenge',
             title: 'How to Pass a Prop Firm Challenge: 10 Proven Steps',
             description: 'Master the strategies that help traders pass their evaluations.'
@@ -80,6 +86,12 @@ const relatedContent: Record<Locale, RelatedItem[]> = {
     ro: [
         {
             type: 'article',
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'Cum să Treci Challenge-ul FTMO – De Ce Majoritatea Pică',
+            description: 'Strategiile exacte pentru a trece challenge-ul FTMO.'
+        },
+        {
+            type: 'article',
             slug: 'how-to-pass-prop-firm-challenge',
             title: 'Cum să Treci un Challenge Prop Firm: 10 Pași',
             description: 'Stăpânește strategiile care ajută traderii să treacă evaluările.'
@@ -112,6 +124,12 @@ const relatedContent: Record<Locale, RelatedItem[]> = {
         }
     ],
     es: [
+        {
+            type: 'article',
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'Cómo Pasar el Desafío FTMO – Por Qué la Mayoría Falla',
+            description: 'Las estrategias exactas para aprobar tu desafío FTMO.'
+        },
         {
             type: 'article',
             slug: 'how-to-pass-prop-firm-challenge',
