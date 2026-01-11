@@ -25,6 +25,14 @@ function getLocaleFromPath(pathname: string): Locale | null {
 export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
+    // Specialized redirect for prop-firm pages that are missing from root app directory
+    // This fixes the issue where /prop-firm/slug return 404 because the file only exists in [lang]
+    if (pathname.startsWith('/prop-firm/')) {
+        const url = request.nextUrl.clone();
+        url.pathname = `/en${pathname}`;
+        return NextResponse.redirect(url);
+    }
+
     // Skip public paths
     if (publicPaths.some(path => pathname.startsWith(path))) {
         return NextResponse.next();

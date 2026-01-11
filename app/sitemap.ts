@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { getAllFirmSlugs } from '@/lib/firms-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://propfirms-hub.com'
@@ -36,6 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Legal Pages - exist under /[lang]/(legal)/
     const legalPages = ['privacy-policy', 'terms-of-service', 'cookie-policy', 'affiliate-disclosure', 'contact']
+
+    // Get all prop firm slugs
+    const firmSlugs = getAllFirmSlugs()
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
@@ -125,6 +129,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.5,
+        })
+    }
+
+    // 6. Generate Prop Firm Pages (EN + RO + ES)
+    for (const slug of firmSlugs) {
+        // English
+        sitemapEntries.push({
+            url: `${baseUrl}/en/prop-firm/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        })
+        // Romanian
+        sitemapEntries.push({
+            url: `${baseUrl}/ro/prop-firm/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        })
+        // Spanish
+        sitemapEntries.push({
+            url: `${baseUrl}/es/prop-firm/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
         })
     }
 

@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const t = pageTranslations[lang] || pageTranslations.en;
     const baseUrl = 'https://propfirmhub.com';
-    const path = lang === 'en' ? `/prop-firm/${slug}` : `/${lang}/prop-firm/${slug}`;
+    const path = `/${lang}/prop-firm/${slug}`;
 
     const titles = {
         en: `${firm.name} Review 2025 – ${firm.offer} Discount Code & Pricing`,
