@@ -135,9 +135,9 @@ const allDeals: DealFirm[] = [
         id: 11,
         name: 'Funded Futures Network',
         logoUrl: '/logos/funded-futures-network.png',
-        discount: '50% OFF',
-        coupon: 'T2ISFNWP',
-        offer: '50% OFF (All)',
+        discount: '50% OFF + BOGO',
+        coupon: 'NEWYEAR50',
+        offer: '50% OFF + BOGO + No Activation Fee',
         link: 'https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian',
         verified: true,
         priority: 11,
@@ -155,41 +155,18 @@ const allDeals: DealFirm[] = [
         priority: 12,
         hasActiveCoupon: true
     },
-    {
-        id: 13,
-        name: 'FundedHero',
-        logoUrl: '/logos/fundedhero.jpg',
-        discount: '50% OFF (Crypto)',
-        coupon: 'CRYPTO50',
-        offer: '50% OFF (Crypto) / 40% OFF (Card)',
-        link: 'https://fundedhero.com/ref/5371/',
-        verified: true,
-        priority: 13,
-        hasActiveCoupon: true
-    },
-    {
-        id: 14,
-        name: 'FundedHero Futures',
-        logoUrl: '/logos/fundedhero.jpg',
-        discount: '90% OFF',
-        coupon: 'HERO',
-        offer: '90% OFF',
-        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
-        verified: true,
-        priority: 14,
-        hasActiveCoupon: true
-    },
+
     {
         id: 15,
         name: 'InstantFunding',
         logoUrl: '/logos/instantfunding.png',
-        discount: 'Get Started',
-        coupon: '',
-        offer: 'Multiple Program Options (Instant, 1-Step, 2-Step)',
+        discount: '35% OFF + 90% Split',
+        coupon: 'TRADER2026',
+        offer: '35% OFF + Free 90% Profit Split',
         link: 'https://instantfunding.com/?partner=419',
         verified: true,
         priority: 15,
-        hasActiveCoupon: false
+        hasActiveCoupon: true
     },
 
     {
@@ -442,6 +419,25 @@ function FlashSalesSection() {
                 </div>
 
                 <div className="space-y-4">
+                    {/* Flash Sale - Funded Futures Network */}
+                    <div className="bg-gradient-to-br from-yellow-900/60 to-yellow-950/60 border border-yellow-500/30 rounded-xl p-4">
+                        <div className="flex items-start gap-3 mb-3">
+                            <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 animate-pulse" />
+                            <div>
+                                <p className="text-sm font-bold text-yellow-400 mb-1">🎁 BOGO + NO ACTIVATION FEE!</p>
+                                <p className="text-white font-semibold">Funded Futures Network</p>
+                                <p className="text-sm text-slate-300">50% OFF + BOGO with code <span className="text-yellow-400 font-mono">NEWYEAR50</span></p>
+                            </div>
+                        </div>
+                        <Link
+                            href="https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian"
+                            target="_blank"
+                            className="text-xs text-yellow-400 hover:text-yellow-300 font-medium underline"
+                        >
+                            Get 50% OFF + BOGO →
+                        </Link>
+                    </div>
+
                     {/* Flash Sale 1 - FTMO New Year Sale */}
                     <div className="bg-gradient-to-br from-emerald-900/60 to-emerald-950/60 border border-emerald-500/30 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">

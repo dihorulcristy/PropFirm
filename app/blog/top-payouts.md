@@ -155,7 +155,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: Bi-weekly
 - **Rating**: 4.6/5
-- **Discount**: 50% OFF (code: T2ISFNWP)
+- **Discount**: 50% OFF + BOGO (code: NEWYEAR50)
 - [Get Funded →](https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian)
 
 ---

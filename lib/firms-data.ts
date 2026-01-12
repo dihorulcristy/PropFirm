@@ -397,56 +397,7 @@ export const allPropFirms: PropFirm[] = [
             es: ['Solo futuros', 'Requisitos de capital más altos', 'Más nuevo en el mercado']
         }
     },
-    {
-        id: 8,
-        slug: 'fundedhero',
-        name: 'FundedHero',
-        rating: 4.8,
-        verified: true,
-        maxDD: '10%',
-        profitSplit: '80%',
-        price: '$479',
-        oldPrice: '$479',
-        coupon: 'CRYPTO50 / HERO40',
-        offer: '50% OFF (Crypto) / 40% OFF (Card)',
-        link: 'https://fundedhero.com/ref/5371/',
-        logoUrl: '/logos/fundedhero.jpg',
-        platforms: ['MT4', 'MT5'],
-        challengeType: '2-Step',
-        marketType: 'forex',
-        features: {
-            instantFunding: false,
-            hftAllowed: false,
-            newsTrading: true,
-            cryptoPayout: true,
-            usaAccepted: false,
-            noTimeLimit: true,
-            weeklyPayouts: true,
-        },
-        payoutDays: 14,
-        capitalPricing: {
-            10000: { price: '$65', oldPrice: '$65' },
-            25000: { price: '$129', oldPrice: '$129' },
-            50000: { price: '$249', oldPrice: '$249' },
-            100000: { price: '$479', oldPrice: '$479' },
-            200000: { price: '$949', oldPrice: '$949' },
-        },
-        description: {
-            en: 'FundedHero offers some of the best discounts in the industry, especially for crypto payments. A solid choice for forex traders looking for value.',
-            ro: 'FundedHero oferă unele dintre cele mai bune reduceri din industrie, mai ales pentru plăți crypto. O alegere solidă pentru traderii forex care caută valoare.',
-            es: 'FundedHero ofrece algunos de los mejores descuentos de la industria, especialmente para pagos crypto. Una elección sólida para traders de forex que buscan valor.'
-        },
-        pros: {
-            en: ['Up to 50% OFF with crypto', 'Weekly payouts', 'No time limit', 'Competitive base pricing', 'MT4/MT5 platforms'],
-            ro: ['Până la 50% REDUCERE cu crypto', 'Plăți săptămânale', 'Fără limită de timp', 'Prețuri de bază competitive', 'Platforme MT4/MT5'],
-            es: ['Hasta 50% DESCUENTO con crypto', 'Pagos semanales', 'Sin límite de tiempo', 'Precios base competitivos', 'Plataformas MT4/MT5']
-        },
-        cons: {
-            en: ['Not available in USA', '14-day payout cycle', 'Only 80% profit split'],
-            ro: ['Nu este disponibil în SUA', 'Ciclu de plată de 14 zile', 'Doar 80% împărțire profit'],
-            es: ['No disponible en EE.UU.', 'Ciclo de pago de 14 días', 'Solo 80% división de ganancias']
-        }
-    },
+
     {
         id: 9,
         slug: 'fundedx',
@@ -695,54 +646,7 @@ export const allPropFirms: PropFirm[] = [
             es: ['Solo futuros', 'Plataformas limitadas', 'Firma más nueva']
         }
     },
-    {
-        id: 14,
-        slug: 'fundedhero-futures',
-        name: 'FundedHero Futures',
-        rating: 4.8,
-        verified: true,
-        maxDD: '4.5%',
-        profitSplit: '90%',
-        price: '$85',
-        oldPrice: '$160',
-        coupon: 'HERO',
-        offer: '90% OFF',
-        link: 'https://app.fundedherofutures.com/checkout/?referral_id=da378c83227e',
-        logoUrl: '/logos/fundedhero.jpg',
-        platforms: ['NinjaTrader', 'Tradovate', 'Rithmic'],
-        challengeType: '2-Step',
-        marketType: 'futures',
-        features: {
-            instantFunding: false,
-            hftAllowed: false,
-            newsTrading: true,
-            cryptoPayout: true,
-            usaAccepted: true,
-            noTimeLimit: true,
-            weeklyPayouts: true,
-        },
-        payoutDays: 7,
-        capitalPricing: {
-            50000: { price: '$45', oldPrice: '$90' },
-            75000: { price: '$65', oldPrice: '$130' },
-            100000: { price: '$85', oldPrice: '$160' },
-        },
-        description: {
-            en: 'FundedHero Futures offers exceptional 90% discount with 90% profit split. Best value for futures traders.',
-            ro: 'FundedHero Futures oferă o reducere excepțională de 90% cu 90% împărțire profit. Cea mai bună valoare pentru traderii de futures.',
-            es: 'FundedHero Futures ofrece un descuento excepcional del 90% con 90% división de ganancias. Mejor valor para traders de futuros.'
-        },
-        pros: {
-            en: ['90% OFF discount', '90% profit split', 'USA traders accepted', 'Weekly payouts', 'Multiple platforms'],
-            ro: ['90% REDUCERE', '90% împărțire profit', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple'],
-            es: ['90% DESCUENTO', '90% división de ganancias', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas']
-        },
-        cons: {
-            en: ['Stricter 4.5% drawdown', 'Futures only', 'Limited account sizes'],
-            ro: ['Drawdown mai strict de 4.5%', 'Doar futures', 'Dimensiuni de cont limitate'],
-            es: ['Drawdown más estricto del 4.5%', 'Solo futuros', 'Tamaños de cuenta limitados']
-        }
-    },
+
     {
         id: 15,
         slug: 'instantfunding',
