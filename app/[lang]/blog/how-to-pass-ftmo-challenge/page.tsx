@@ -32,7 +32,7 @@ const seoData = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { lang } = await params;
     const seo = seoData[lang] || seoData.en;
-    const baseUrl = 'https://propfirmhub.com';
+    const baseUrl = 'https://propfirms-hub.com';
     const path = lang === 'en' ? '/blog/how-to-pass-ftmo-challenge' : `/${lang}/blog/how-to-pass-ftmo-challenge`;
 
     return {

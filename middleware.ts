@@ -42,6 +42,14 @@ export async function middleware(request: NextRequest) {
     const pathnameLocale = getLocaleFromPath(pathname);
 
     if (pathnameLocale) {
+        // Special case: Redirect /en to / (root) to avoid duplicate content
+        // This ensures the main English page is served from path / instead of /en
+        if (pathnameLocale === 'en' && pathname === '/en') {
+            const url = request.nextUrl.clone();
+            url.pathname = '/';
+            return NextResponse.redirect(url);
+        }
+
         // Path has locale, save preference to cookie
         const response = NextResponse.next();
         response.cookies.set('NEXT_LOCALE', pathnameLocale, {

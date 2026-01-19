@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!firm) return { title: 'Not Found' };
 
     const t = pageTranslations[lang] || pageTranslations.en;
-    const baseUrl = 'https://propfirmhub.com';
+    const baseUrl = 'https://propfirms-hub.com';
     const path = `/${lang}/prop-firm/${slug}`;
 
     const titles = {

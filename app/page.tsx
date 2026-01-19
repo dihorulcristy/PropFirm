@@ -35,12 +35,12 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://propfirmhub.com/#organization",
+        "@id": "https://propfirms-hub.com/#organization",
         "name": "PropFirmHub",
-        "url": "https://propfirmhub.com",
+        "url": "https://propfirms-hub.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://propfirmhub.com/og-image.jpg",
+          "url": "https://propfirms-hub.com/og-image.jpg",
           "width": 1200,
           "height": 630
         },
@@ -50,33 +50,33 @@ export default function Home() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://propfirmhub.com/#website",
+        "@id": "https://propfirms-hub.com/#website",
         "name": "PropFirmHub",
-        "url": "https://propfirmhub.com",
+        "url": "https://propfirms-hub.com",
         "description": "Compare top prop trading firms of 2025. Find exclusive discounts, compare evaluation rules, and choose the perfect firm for your trading style.",
         "publisher": {
-          "@id": "https://propfirmhub.com/#organization"
+          "@id": "https://propfirms-hub.com/#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://propfirmhub.com/?search={search_term_string}"
+            "urlTemplate": "https://propfirms-hub.com/?search={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "WebPage",
-        "@id": "https://propfirmhub.com/#webpage",
-        "url": "https://propfirmhub.com",
+        "@id": "https://propfirms-hub.com/#webpage",
+        "url": "https://propfirms-hub.com",
         "name": "PropFirmHub - Compare Top Prop Trading Firms 2025",
         "description": "Compare the best prop trading firms of 2025. Find exclusive discount codes, compare evaluation rules, pricing, and payout speeds.",
         "isPartOf": {
-          "@id": "https://propfirmhub.com/#website"
+          "@id": "https://propfirms-hub.com/#website"
         },
         "about": {
-          "@id": "https://propfirmhub.com/#organization"
+          "@id": "https://propfirms-hub.com/#organization"
         },
         "datePublished": "2025-11-25",
         "dateModified": "2025-11-25"
@@ -117,19 +117,19 @@ export default function Home() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://propfirmhub.com"
+            "item": "https://propfirms-hub.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Compare Firms",
-            "item": "https://propfirmhub.com/#comparison"
+            "item": "https://propfirms-hub.com/#comparison"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Blog",
-            "item": "https://propfirmhub.com/#blog"
+            "item": "https://propfirms-hub.com/#blog"
           }
         ]
       }

@@ -46,9 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1. Generate core routes with explicit language prefixes (EN + RO + ES)
     // All routes now use /en/, /ro/, /es/ to avoid redirect chains
     for (const route of routes) {
-        // English - use /en/ prefix
+        // English - use /en/ prefix, except for home page which is at root /
+        const isHome = route.path === '';
         sitemapEntries.push({
-            url: `${baseUrl}/en${route.path}`,
+            url: isHome ? baseUrl : `${baseUrl}/en${route.path}`,
             lastModified: new Date(),
             changeFrequency: route.changeFreq as any,
             priority: route.priority,

@@ -298,7 +298,7 @@ export default function HowToGetFundedGuide({ params }: PageProps) {
                     "headline": t.title,
                     "description": t.description,
                     "author": { "@type": "Organization", "name": "PropFirmHub" },
-                    "publisher": { "@type": "Organization", "name": "PropFirmHub", "logo": { "@type": "ImageObject", "url": "https://propfirmhub.com/logo.png" } },
+                    "publisher": { "@type": "Organization", "name": "PropFirmHub", "logo": { "@type": "ImageObject", "url": "https://propfirms-hub.com/logo.png" } },
                     "datePublished": "2025-01-01",
                     "dateModified": new Date().toISOString().split('T')[0]
                 })
