@@ -40,7 +40,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: On demand
 - **Rating**: 4.8/5
-- **Discount**: 30% OFF (code: hgc)
+- **Discount**: 20% OFF (code: hgc)
 - [Get Funded →](https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro)
 
 **Trader Review**: *"Requested payout Friday morning, had it Saturday. Incredible!"* - James, $150k trader
@@ -51,7 +51,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: On demand
 - **Rating**: 4.7/5
-- **Discount**: 30% OFF (code: HGC)
+- **Discount**: 20% OFF (code: hgc)
 - [Get Funded →](https://checkout.funderprofutures.com/products?aff=hgc)
 
 **Trader Review**: *"Same-day payouts on crypto. Best in the business."* - Mike, futures trader
@@ -477,8 +477,8 @@ Result: Income every week!
 ## Summary: Best Firms by Payout Speed
 
 ### Fastest Overall:
-1. **FunderPro** - 1 day (30% OFF: hgc)
-2. **FunderPro Futures** - 1 day (30% OFF: HGC)
+1. **FunderPro** - 1 day (20% OFF: hgc)
+2. **FunderPro Futures** - 1 day (20% OFF: hgc)
 3. **FundedNext** - 1-2 days (5% OFF: REF6ZHN86)
 
 ### Best for Crypto:
@@ -492,7 +492,7 @@ Result: Income every week!
 3. **FunderPro** - 1 day
 
 ### Best Value + Speed:
-1. **FunderPro** - 1 day + 30% OFF
+1. **FunderPro** - 1 day + 20% OFF
 2. **TradingCult** - 7 days + 40% OFF + Free Account
 3. **Blue Guardian** - 14 days + 50% OFF
 

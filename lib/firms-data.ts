@@ -262,7 +262,7 @@ export const allPropFirms: PropFirm[] = [
         price: '$549',
         oldPrice: '$549',
         coupon: 'hgc',
-        offer: '30% OFF',
+        offer: '20% OFF',
         link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
         logoUrl: '/logos/funderpro.png',
         platforms: ['TradeLocker', 'MT4', 'MT5', 'cTrader'],
@@ -290,9 +290,9 @@ export const allPropFirms: PropFirm[] = [
             es: 'FunderPro ofrece pagos el mismo día y una amplia gama de plataformas incluyendo el popular TradeLocker. Excelente para traders que quieren acceso rápido a sus ganancias.'
         },
         pros: {
-            en: ['Same-day payouts', 'Multiple platforms', 'Weekly payouts', 'No time limit', '30% permanent discount'],
-            ro: ['Plăți în aceeași zi', 'Platforme multiple', 'Plăți săptămânale', 'Fără limită de timp', '30% reducere permanentă'],
-            es: ['Pagos el mismo día', 'Múltiples plataformas', 'Pagos semanales', 'Sin límite de tiempo', '30% descuento permanente']
+            en: ['Same-day payouts', 'Multiple platforms', 'Weekly payouts', 'No time limit', '20% permanent discount'],
+            ro: ['Plăți în aceeași zi', 'Platforme multiple', 'Plăți săptămânale', 'Fără limită de timp', '20% reducere permanentă'],
+            es: ['Pagos el mismo día', 'Múltiples plataformas', 'Pagos semanales', 'Sin límite de tiempo', '20% descuento permanente']
         },
         cons: {
             en: ['Not available in USA', 'Higher starting capital', 'No HFT allowed'],
@@ -358,8 +358,8 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '80-90%',
         price: '$549',
         oldPrice: '$549',
-        coupon: 'HGC',
-        offer: '30% OFF',
+        coupon: 'hgc',
+        offer: '20% OFF',
         link: 'https://checkout.funderprofutures.com/products?aff=hgc',
         logoUrl: '/logos/funderpro-futures.png',
         platforms: ['TradeLocker', 'NinjaTrader', 'Rithmic'],
@@ -387,9 +387,9 @@ export const allPropFirms: PropFirm[] = [
             es: 'FunderPro Futures trae el mismo servicio confiable a traders de futuros. Pagos el mismo día, EE.UU. aceptado y precios competitivos lo hacen una opción top para trading de futuros.'
         },
         pros: {
-            en: ['Same-day payouts', 'USA traders accepted', 'Weekly payouts', 'Multiple futures platforms', '30% permanent discount'],
-            ro: ['Plăți în aceeași zi', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple de futures', '30% reducere permanentă'],
-            es: ['Pagos el mismo día', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas de futuros', '30% descuento permanente']
+            en: ['Same-day payouts', 'USA traders accepted', 'Weekly payouts', 'Multiple futures platforms', '20% permanent discount'],
+            ro: ['Plăți în aceeași zi', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple de futures', '20% reducere permanentă'],
+            es: ['Pagos el mismo día', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas de futuros', '20% descuento permanente']
         },
         cons: {
             en: ['Futures only', 'Higher capital requirements', 'Newer in the market'],

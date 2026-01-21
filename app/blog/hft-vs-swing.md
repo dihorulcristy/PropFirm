@@ -307,7 +307,7 @@ Friday: Close swing positions or hold over weekend
 ### Best for HFT/Scalping:
 1. **TradingCult** - Unlimited trades, 40% OFF + Free Account (code: NEWYEAR)
 2. **FundingPips** - HFT friendly, 20% OFF (code: b5420489)
-3. **FunderPro** - Moderate limits, 30% OFF (code: hgc)
+3. **FunderPro** - Moderate limits, 20% OFF (code: hgc)
 
 ### Best for Swing Trading:
 1. **FTMO** - Perfect for swing traders, 19% OFF
@@ -315,7 +315,7 @@ Friday: Close swing positions or hold over weekend
 3. **Blue Guardian** - Swing-focused, 50% OFF (code: 1scz)
 
 ### Best for Hybrid:
-1. **FunderPro** - Balanced approach, 30% OFF (code: hgc)
+1. **FunderPro** - Balanced approach, 20% OFF (code: hgc)
 2. **TradingCult** - Maximum flexibility, 40% OFF + Free Account (code: NEWYEAR)
 3. **FundingPips** - All strategies welcome, 20% OFF (code: b5420489)
 

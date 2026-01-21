@@ -116,11 +116,11 @@ export default function FunderProFuturesPage() {
                         <div className="drop-shadow-lg flex flex-wrap items-center justify-center gap-x-1.5 leading-relaxed">
                             <span className="animate-bounce">🔥</span>
                             <span>Exclusive Offer: Get</span>
-                            <span className="text-white bg-white/20 px-2 py-0.5 rounded-md animate-pulse border border-white/30 shadow-[0_0_10px_rgba(255,255,255,0.3)] whitespace-nowrap text-lg sm:text-xl">10% OFF</span>
+                            <span className="text-white bg-white/20 px-2 py-0.5 rounded-md animate-pulse border border-white/30 shadow-[0_0_10px_rgba(255,255,255,0.3)] whitespace-nowrap text-lg sm:text-xl">20% OFF</span>
                             <span>your challenge!</span>
                         </div>
                         <div className="flex items-center gap-3 bg-black/30 rounded-xl px-4 py-1.5 backdrop-blur-md border border-white/40 shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer group mt-1 md:mt-0" onClick={copyCode}>
-                            <span className="font-mono text-yellow-300 font-black text-lg sm:text-xl tracking-widest drop-shadow-md group-hover:text-white transition-colors">HGC</span>
+                            <span className="font-mono text-yellow-300 font-black text-lg sm:text-xl tracking-widest drop-shadow-md group-hover:text-white transition-colors">hgc</span>
                             <button
                                 className="text-white/80 group-hover:text-white transition-colors"
                                 title="Copy Code"

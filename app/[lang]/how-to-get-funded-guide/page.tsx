@@ -271,7 +271,7 @@ export default function HowToGetFundedGuide({ params }: PageProps) {
         instant: [
             { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$299', advantage: lang === 'ro' ? 'Finanțare Instantă' : 'Instant Funding Available', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'NEWYEAR', offer: '40% OFF + Free Account' },
             { name: 'The Concept Trading', logo: 'https://logo.clearbit.com/theconcepttrading.com', rating: 4.8, price: '$648', advantage: lang === 'ro' ? 'Cale Expresă' : 'Express Path', link: 'https://theconcepttrading.com/ref/1837/', coupon: 'RESOLVE35', offer: '35% OFF (Ex-Instant)' },
-            { name: 'FunderPro', logo: 'https://logo.clearbit.com/funderpro.com', rating: 4.8, price: '$549', advantage: lang === 'ro' ? 'Acces Rapid' : 'Quick Access', link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro', coupon: 'hgc', offer: '30% OFF' }
+            { name: 'FunderPro', logo: 'https://logo.clearbit.com/funderpro.com', rating: 4.8, price: '$549', advantage: lang === 'ro' ? 'Acces Rapid' : 'Quick Access', link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro', coupon: 'hgc', offer: '20% OFF' }
         ]
     };
 

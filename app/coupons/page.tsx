@@ -38,9 +38,9 @@ const allDeals: DealFirm[] = [
         id: 6,
         name: 'FunderPro',
         logoUrl: '/logos/funderpro.png',
-        discount: '30% OFF',
+        discount: '20% OFF',
         coupon: 'hgc',
-        offer: '30% OFF (All)',
+        offer: '20% OFF',
         link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
         verified: true,
         priority: 2,
@@ -520,7 +520,7 @@ function FlashSalesSection() {
                             <div>
                                 <p className="text-sm font-bold text-yellow-400 mb-1">Weekend Special</p>
                                 <p className="text-white font-semibold">FunderPro</p>
-                                <p className="text-sm text-slate-300">30% OFF with code <span className="text-emerald-400 font-mono">hgc</span></p>
+                                <p className="text-sm text-slate-300">20% OFF with code <span className="text-emerald-400 font-mono">hgc</span></p>
                             </div>
                         </div>
                         <Link

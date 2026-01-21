@@ -151,9 +151,9 @@ const allDeals: DealFirm[] = [
         id: 6,
         name: 'FunderPro',
         logoUrl: '/logos/funderpro.png',
-        discount: '50% OFF + BOGO',
-        coupon: 'NEWYEAR50',
-        offer: '50% OFF + BOGO + No Activation Fee',
+        discount: '20% OFF',
+        coupon: 'hgc',
+        offer: '20% OFF',
         link: 'https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian',
         verified: true,
         priority: 3,
@@ -374,7 +374,7 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                         <div>
                                                             <p className="text-sm font-bold text-yellow-400 mb-1">{t.weekendSpecial}</p>
                                                             <p className="text-white font-semibold">FunderPro</p>
-                                                            <p className="text-sm text-slate-300">30% {t.off} <span className="text-emerald-400 font-mono">hgc</span></p>
+                                                            <p className="text-sm text-slate-300">20% {t.off} <span className="text-emerald-400 font-mono">hgc</span></p>
                                                         </div>
                                                     </div>
                                                     <a href="https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
