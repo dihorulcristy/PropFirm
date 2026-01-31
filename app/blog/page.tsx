@@ -21,13 +21,40 @@ export const metadata: Metadata = {
 // Blog posts data
 const blogPosts = [
     {
+        slug: 'best-for-beginners',
+        title: '10 Best Prop Firms for Beginners in 2026 (Easy to Pass)',
+        description: 'Discover the best prop trading firms for beginners. We analyzed 15+ firms to rank the 10 easiest prop firms to pass based on pricing, rules, and beginner-friendliness.',
+        date: 'January 31, 2026',
+        readTime: '15 min read',
+        category: 'Rankings',
+        featured: true,
+    },
+    {
+        slug: 'cheapest-prop-firms',
+        title: 'Cheapest Prop Firms Under $100 in 2026 (15 Budget Options)',
+        description: 'Find the cheapest prop trading firms under $100. We ranked 15 affordable prop firms by price, features, and value. Start trading with as little as $32.',
+        date: 'January 31, 2026',
+        readTime: '12 min read',
+        category: 'Budget Picks',
+        featured: false,
+    },
+    {
+        slug: 'best-prop-firms-usa',
+        title: 'Best Prop Firms for USA Traders in 2026 (10 Verified Options)',
+        description: 'Find prop trading firms that accept USA traders. We verified 10 prop firms accepting US residents with fast payouts and competitive pricing.',
+        date: 'January 31, 2026',
+        readTime: '14 min read',
+        category: 'USA Focus',
+        featured: false,
+    },
+    {
         slug: 'how-to-pass-prop-firm-challenge',
         title: 'How to Pass a Prop Firm Challenge: 10 Proven Steps',
         description: 'Learn exactly how to pass prop firm challenges with our comprehensive guide. Discover risk management strategies, profit targets, drawdown rules, and psychology tips.',
         date: 'December 30, 2025',
         readTime: '15 min read',
         category: 'Guide',
-        featured: true,
+        featured: false,
     },
     {
         slug: 'pass-rates-2026',

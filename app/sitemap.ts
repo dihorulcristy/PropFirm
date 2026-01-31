@@ -26,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog posts that exist only in English - use /en/blog/ prefix for consistency
     const englishOnlyBlogPosts = [
         { slug: 'hft-vs-swing', lastMod: '2025-11-27', priority: 0.8 },
+        { slug: 'best-for-beginners', lastMod: '2026-01-31', priority: 0.9 },
+        { slug: 'cheapest-prop-firms', lastMod: '2026-01-31', priority: 0.9 },
+        { slug: 'best-prop-firms-usa', lastMod: '2026-01-31', priority: 0.9 },
     ]
 
     // Other landing pages (English only - no redirect issues)

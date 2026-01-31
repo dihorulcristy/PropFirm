@@ -811,8 +811,8 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '80%',
         price: '$299',
         oldPrice: '$499',
-        coupon: 'NDOGUBVVSK',
-        offer: '40% OFF',
+        coupon: 'QTINSTANT40',
+        offer: '40% OFF + FREE Account',
         link: 'https://qtfunded.quanttekel.com/ref/5570/',
         logoUrl: '/logos/qtfunded.png',
         platforms: ['MT4', 'MT5'],
@@ -836,14 +836,14 @@ export const allPropFirms: PropFirm[] = [
             200000: { price: '$599', oldPrice: '$999' },
         },
         description: {
-            en: 'QTFunded offers 40% discount and accepts USA traders with MT4/MT5 platforms. Great value for forex trading.',
-            ro: 'QTFunded oferă 40% reducere și acceptă traderi din SUA cu platformele MT4/MT5. Valoare excelentă pentru trading forex.',
-            es: 'QTFunded ofrece 40% de descuento y acepta traders de EE.UU. con plataformas MT4/MT5. Gran valor para trading de forex.'
+            en: 'QTFunded offers a massive 40% discount for January plus a FREE QT Instant account of equal size. They accept USA traders and offer MT4/MT5 platforms, including the new QT Ultra evaluation.',
+            ro: 'QTFunded oferă o reducere masivă de 40% pentru ianuarie plus un cont QT Instant GRATUIT de aceeași dimensiune. Acceptă traderi din SUA și oferă platformele MT4/MT5, inclusiv noua evaluare QT Ultra.',
+            es: 'QTFunded ofrece un descuento masivo del 40% para enero más una cuenta QT Instant GRATUITA del mismo tamaño. Aceptan traders de EE.UU. y ofrecen plataformas MT4/MT5, incluida la nueva evaluación QT Ultra.'
         },
         pros: {
-            en: ['40% discount available', 'USA traders accepted', 'MT4/MT5 platforms', 'No time limit', 'Crypto payouts'],
-            ro: ['40% reducere disponibilă', 'Traderi din SUA acceptați', 'Platforme MT4/MT5', 'Fără limită de timp', 'Plăți crypto'],
-            es: ['40% descuento disponible', 'Traders de EE.UU. aceptados', 'Plataformas MT4/MT5', 'Sin límite de tiempo', 'Pagos crypto']
+            en: ['40% discount + FREE Account', '15% OFF new QT Ultra', 'USA traders accepted', 'MT4/MT5 platforms', 'No time limit'],
+            ro: ['40% reducere + Cont GRATUIT', '15% reducere la noul QT Ultra', 'Traderi din SUA acceptați', 'Platforme MT4/MT5', 'Fără limită de timp'],
+            es: ['40% descuento + Cuenta GRATIS', '15% OFF en el nuevo QT Ultra', 'Traders de EE.UU. aceptados', 'Plataformas MT4/MT5', 'Sin límite de tiempo']
         },
         cons: {
             en: ['Only 80% profit split', '14-day payout cycle', 'No weekly payouts'],
