@@ -91,7 +91,7 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-7xl mx-auto">
 
 
-                    {/* FOREX DEAL - FTMO */}
+                    {/* FOREX DEAL - FundedNext */}
                     <motion.div
                         className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-950/90 via-slate-900/90 to-green-950/90 backdrop-blur-sm shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
                         initial={{ opacity: 0, y: 20 }}
@@ -121,12 +121,12 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                     animate={{ scale: [1, 1.03, 1] }}
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
-                                    <span className="text-xs sm:text-sm">🎉</span>
-                                    <span>{t.ftmoRepo}</span>
+                                    <span className="text-xs sm:text-sm">🚀</span>
+                                    <span>TOP PROP FIRM</span>
                                 </motion.div>
 
                                 <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-emerald-900/80 px-2 py-1 rounded-md border border-emerald-500/30">
-                                    <span>🔥</span> {t.kickstart}
+                                    <span>💰</span> UP TO 95% PROFIT SPLIT
                                 </div>
                             </div>
 
@@ -134,32 +134,29 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                             <div className="mb-3 sm:mb-4">
                                 <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                                     <Image
-                                        src="/logos/ftmo.png"
-                                        alt="FTMO Logo"
+                                        src="/logos/fundednext.png"
+                                        alt="FundedNext Logo"
                                         width={40}
                                         height={40}
                                         className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-white/10 p-1"
                                     />
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white italic leading-none drop-shadow-lg">
-                                        FTMO
+                                        Funded<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">Next</span>
                                     </h3>
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">20% INSTANT DISCOUNT</span>
-                                    </p>
-                                    <p className="text-slate-300 text-[10px] sm:text-xs font-medium">
-                                        LIMITED TIME NEW YEAR DEAL
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">5% DISCOUNT</span>
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
-                                        Discount applied automatically via link
+                                        {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-emerald-600 to-green-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">REFER7DVQ</span>
                                     </p>
                                 </div>
                             </div>
 
                             {/* CTA Button */}
                             <motion.a
-                                href={`/api/analytics/track?dest=${encodeURIComponent('https://trader.ftmo.com/?affiliates=4354')}&firm=${encodeURIComponent('FTMO')}`}
+                                href={`/api/analytics/track?dest=${encodeURIComponent('https://fundednext.com/?fpr=prophub')}&firm=${encodeURIComponent('FundedNext')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-500 hover:from-emerald-500 hover:via-green-400 hover:to-emerald-400 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl shadow-lg hover:shadow-emerald-500/50 text-center transition-all duration-300"
@@ -227,10 +224,10 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> now just $69
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> now just $88
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
-                                        {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-orange-600 to-red-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HGC</span> for EXTRA 10% OFF
+                                        {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-orange-600 to-red-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HGC</span> for EXTRA 5% OFF
                                     </p>
                                 </div>
                             </div>

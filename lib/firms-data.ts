@@ -160,8 +160,8 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '80-95%',
         price: '$549',
         oldPrice: '$549',
-        coupon: 'REF6ZHN86',
-        offer: '10% OFF',
+        coupon: 'REFER7DVQ',
+        offer: '5% OFF',
         link: 'https://fundednext.com/',
         logoUrl: '/logos/fundednext.png',
         platforms: ['MT4', 'MT5', 'cTrader', 'Match-Trader'],
@@ -212,7 +212,7 @@ export const allPropFirms: PropFirm[] = [
         price: '$399',
         oldPrice: '$399',
         coupon: 'b5420489',
-        offer: '20% OFF',
+        offer: '5% OFF',
         link: 'https://app.fundingpips.com/register?ref=b5420489',
         logoUrl: '/logos/fundingpips.png',
         platforms: ['Match-Trader', 'cTrader', 'TradeLocker'],
@@ -358,8 +358,8 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '80-90%',
         price: '$549',
         oldPrice: '$549',
-        coupon: 'hgc',
-        offer: '20% OFF',
+        coupon: 'HGC',
+        offer: '10% OFF',
         link: 'https://checkout.funderprofutures.com/products?aff=hgc',
         logoUrl: '/logos/funderpro-futures.png',
         platforms: ['TradeLocker', 'NinjaTrader', 'Rithmic'],
@@ -399,57 +399,6 @@ export const allPropFirms: PropFirm[] = [
     },
 
     {
-        id: 9,
-        slug: 'fundedx',
-        name: 'FundedX',
-        rating: 4.7,
-        verified: true,
-        maxDD: '10%',
-        profitSplit: '80%',
-        price: '$500',
-        oldPrice: '$500',
-        coupon: 'HELLO2026',
-        offer: '20% OFF',
-        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
-        logoUrl: '/logos/fundedx.jpg',
-        platforms: ['cTrader', 'DXtrade', 'Match-Trader'],
-        challengeType: '2-Step',
-        marketType: 'forex',
-        features: {
-            instantFunding: false,
-            hftAllowed: false,
-            newsTrading: true,
-            cryptoPayout: true,
-            usaAccepted: true,
-            noTimeLimit: true,
-            weeklyPayouts: true,
-        },
-        payoutDays: 14,
-        capitalPricing: {
-            5000: { price: '$50', oldPrice: '$50' },
-            10000: { price: '$95', oldPrice: '$95' },
-            25000: { price: '$200', oldPrice: '$200' },
-            50000: { price: '$300', oldPrice: '$300' },
-            100000: { price: '$500', oldPrice: '$500' },
-            200000: { price: '$950', oldPrice: '$950' },
-        },
-        description: {
-            en: 'FundedX accepts USA traders and offers weekly payouts with multiple modern trading platforms. A solid choice for traders seeking flexibility.',
-            ro: 'FundedX acceptă traderi din SUA și oferă plăți săptămânale cu platforme moderne de trading. O alegere solidă pentru traderii care caută flexibilitate.',
-            es: 'FundedX acepta traders de EE.UU. y ofrece pagos semanales con múltiples plataformas modernas. Una elección sólida para traders que buscan flexibilidad.'
-        },
-        pros: {
-            en: ['USA traders accepted', 'Weekly payouts', 'Multiple platforms', 'No time limit', 'Competitive pricing'],
-            ro: ['Traderi din SUA acceptați', 'Plăți săptămânale', 'Platforme multiple', 'Fără limită de timp', 'Prețuri competitive'],
-            es: ['Traders de EE.UU. aceptados', 'Pagos semanales', 'Múltiples plataformas', 'Sin límite de tiempo', 'Precios competitivos']
-        },
-        cons: {
-            en: ['Only 80% profit split', '14-day payout cycle', 'No MT4/MT5'],
-            ro: ['Doar 80% împărțire profit', 'Ciclu de plată de 14 zile', 'Fără MT4/MT5'],
-            es: ['Solo 80% división de ganancias', 'Ciclo de pago de 14 días', 'Sin MT4/MT5']
-        }
-    },
-    {
         id: 10,
         slug: 'dominion-funding',
         name: 'Dominion Funding',
@@ -460,7 +409,7 @@ export const allPropFirms: PropFirm[] = [
         price: '$549',
         oldPrice: '$549',
         coupon: 'PROPHUB',
-        offer: '30% OFF',
+        offer: '5% OFF',
         link: 'https://dominionfunding.trade//?affId=06bqracaI4',
         logoUrl: '/logos/dominion-funding.png',
         platforms: ['cTrader', 'Match-Trader'],
@@ -549,55 +498,6 @@ export const allPropFirms: PropFirm[] = [
         }
     },
     {
-        id: 12,
-        slug: 'fundingticks',
-        name: 'FundingTicks',
-        rating: 4.5,
-        verified: true,
-        maxDD: '10%',
-        profitSplit: '80%',
-        price: '$399',
-        oldPrice: '$399',
-        coupon: 'BC954C87',
-        offer: '20% OFF',
-        link: 'https://app.fundingticks.com/register?ref=BC954C87',
-        logoUrl: '/logos/fundingticks.png',
-        platforms: ['NinjaTrader', 'Rithmic'],
-        challengeType: '2-Step',
-        marketType: 'futures',
-        features: {
-            instantFunding: false,
-            hftAllowed: false,
-            newsTrading: true,
-            cryptoPayout: true,
-            usaAccepted: true,
-            noTimeLimit: true,
-            weeklyPayouts: true,
-        },
-        payoutDays: 7,
-        capitalPricing: {
-            25000: { price: '$199', oldPrice: '$199' },
-            50000: { price: '$299', oldPrice: '$299' },
-            100000: { price: '$399', oldPrice: '$399' },
-            150000: { price: '$599', oldPrice: '$599' },
-        },
-        description: {
-            en: 'FundingTicks offers weekly payouts for futures traders with USA accepted. Solid choice for futures trading.',
-            ro: 'FundingTicks oferă plăți săptămânale pentru traderii de futures cu SUA acceptat. Alegere solidă pentru trading pe futures.',
-            es: 'FundingTicks ofrece pagos semanales para traders de futuros con EE.UU. aceptado. Elección sólida para trading de futuros.'
-        },
-        pros: {
-            en: ['Weekly payouts', 'USA traders accepted', 'No time limit', 'Competitive pricing', 'Crypto payouts'],
-            ro: ['Plăți săptămânale', 'Traderi din SUA acceptați', 'Fără limită de timp', 'Prețuri competitive', 'Plăți crypto'],
-            es: ['Pagos semanales', 'Traders de EE.UU. aceptados', 'Sin límite de tiempo', 'Precios competitivos', 'Pagos crypto']
-        },
-        cons: {
-            en: ['Futures only', 'Limited platforms', 'Only 80% profit split'],
-            ro: ['Doar futures', 'Platforme limitate', 'Doar 80% împărțire profit'],
-            es: ['Solo futuros', 'Plataformas limitadas', 'Solo 80% división de ganancias']
-        }
-    },
-    {
         id: 13,
         slug: 'yrm-prop',
         name: 'YRM Prop',
@@ -608,7 +508,7 @@ export const allPropFirms: PropFirm[] = [
         price: '$45',
         oldPrice: '$149',
         coupon: 'HGC',
-        offer: 'EXTRA 10% OFF',
+        offer: 'EXTRA 5% OFF',
         link: 'https://yrmprop.com/ref/dihorulcristy/',
         logoUrl: '/yrm-prop.png',
         platforms: ['NinjaTrader', 'Rithmic'],
@@ -636,9 +536,9 @@ export const allPropFirms: PropFirm[] = [
             es: 'YRM Prop ofrece los precios más bajos en la industria de prop trading de futuros con 90% división de ganancias. Valor increíble para principiantes.'
         },
         pros: {
-            en: ['Lowest prices in industry', '90% profit split', 'USA traders accepted', 'Weekly payouts', 'Extra 10% discount'],
-            ro: ['Cele mai mici prețuri din industrie', '90% împărțire profit', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Extra 10% reducere'],
-            es: ['Precios más bajos de la industria', '90% división de ganancias', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Extra 10% descuento']
+            en: ['Lowest prices in industry', '90% profit split', 'USA traders accepted', 'Weekly payouts', 'Extra 5% discount with code HGC'],
+            ro: ['Cele mai mici prețuri din industrie', '90% împărțire profit', 'Traderi din SUA acceptați', 'Plăți săptămânale', 'Extra 5% reducere cu codul HGC'],
+            es: ['Precios más bajos de la industria', '90% división de ganancias', 'Traders de EE.UU. aceptados', 'Pagos semanales', 'Extra 5% descuento con código HGC']
         },
         cons: {
             en: ['Futures only', 'Limited platforms', 'Newer firm'],
@@ -657,8 +557,8 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '80%',
         price: '$39',
         oldPrice: '$39',
-        coupon: 'TRADER2026',
-        offer: '35% OFF + 90% Split',
+        coupon: 'AFF011I4E8CIH8',
+        offer: '10% OFF',
         link: 'https://instantfunding.com/?partner=419',
         logoUrl: '/logos/instantfunding.png',
         platforms: ['MT5', 'cTrader', 'Match-Trader'],

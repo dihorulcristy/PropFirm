@@ -50,9 +50,9 @@ const allDeals: DealFirm[] = [
         id: 5,
         name: 'FundingPips',
         logoUrl: '/logos/fundingpips.png',
-        discount: '20% OFF',
+        discount: '5% OFF',
         coupon: 'b5420489',
-        offer: '20% OFF',
+        offer: '5% OFF',
         link: 'https://app.fundingpips.com/register?ref=b5420489',
         verified: true,
         priority: 3,
@@ -71,24 +71,12 @@ const allDeals: DealFirm[] = [
         hasActiveCoupon: true
     },
     {
-        id: 3,
-        name: 'FundedX',
-        logoUrl: '/logos/fundedx.jpg',
-        discount: '20% OFF',
-        coupon: 'HELLO2026',
-        offer: '20% OFF (New Year Promo)',
-        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
-        verified: true,
-        priority: 5,
-        hasActiveCoupon: true
-    },
-    {
         id: 4,
         name: 'FundedNext',
         logoUrl: '/logos/fundednext.png',
-        discount: '10% OFF',
-        coupon: 'REF6ZHN86',
-        offer: '10% OFF',
+        discount: '5% OFF',
+        coupon: 'REFER7DVQ',
+        offer: '5% OFF',
         link: 'https://fundednext.com/',
         verified: true,
         priority: 6,
@@ -111,9 +99,9 @@ const allDeals: DealFirm[] = [
         id: 9,
         name: 'Dominion Funding',
         logoUrl: '/logos/dominion-funding.png',
-        discount: '30% OFF',
+        discount: '5% OFF',
         coupon: 'PROPHUB',
-        offer: '30% OFF (All)',
+        offer: '5% OFF',
         link: 'https://dominionfunding.trade//?affId=06bqracaI4',
         verified: true,
         priority: 9,
@@ -123,9 +111,9 @@ const allDeals: DealFirm[] = [
         id: 10,
         name: 'FunderPro Futures',
         logoUrl: '/logos/funderpro-futures.png',
-        discount: '30% OFF',
+        discount: '10% OFF',
         coupon: 'HGC',
-        offer: '30% OFF',
+        offer: '10% OFF',
         link: 'https://checkout.funderprofutures.com/products?aff=hgc',
         verified: true,
         priority: 10,
@@ -135,24 +123,12 @@ const allDeals: DealFirm[] = [
         id: 11,
         name: 'Funded Futures Network',
         logoUrl: '/logos/funded-futures-network.png',
-        discount: '50% OFF + BOGO',
-        coupon: 'NEWYEAR50',
-        offer: '50% OFF + BOGO + No Activation Fee',
+        discount: '50% OFF',
+        coupon: 'T2ISFNWP',
+        offer: '50% OFF',
         link: 'https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian',
         verified: true,
         priority: 11,
-        hasActiveCoupon: true
-    },
-    {
-        id: 12,
-        name: 'FundingTicks',
-        logoUrl: '/logos/fundingticks.png',
-        discount: '20% OFF',
-        coupon: 'BC954C87',
-        offer: '20% OFF',
-        link: 'https://app.fundingticks.com/register?ref=BC954C87',
-        verified: true,
-        priority: 12,
         hasActiveCoupon: true
     },
 
@@ -160,9 +136,9 @@ const allDeals: DealFirm[] = [
         id: 15,
         name: 'InstantFunding',
         logoUrl: '/logos/instantfunding.png',
-        discount: '35% OFF + 90% Split',
-        coupon: 'TRADER2026',
-        offer: '35% OFF + Free 90% Profit Split',
+        discount: '10% OFF',
+        coupon: 'AFF011I4E8CIH8',
+        offer: '10% OFF',
         link: 'https://instantfunding.com/?partner=419',
         verified: true,
         priority: 15,
@@ -476,25 +452,6 @@ function FlashSalesSection() {
                         </Link>
                     </div>
 
-                    {/* Flash Sale - FundedX New Year Promo */}
-                    <div className="bg-gradient-to-br from-amber-900/60 to-amber-950/60 border border-amber-500/30 rounded-xl p-4">
-                        <div className="flex items-start gap-3 mb-3">
-                            <Zap className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5 animate-pulse" />
-                            <div>
-                                <p className="text-sm font-bold text-amber-400 mb-1">🎆 NEW YEAR PROMO!</p>
-                                <p className="text-white font-semibold">FundedX</p>
-                                <p className="text-sm text-slate-300">20% OFF with code <span className="text-amber-400 font-mono">HELLO2026</span></p>
-                            </div>
-                        </div>
-                        <Link
-                            href="https://prop.fundedx.com/buy-challenge/?referral=d79822dc"
-                            target="_blank"
-                            className="text-xs text-amber-400 hover:text-amber-300 font-medium underline"
-                        >
-                            Get 20% OFF →
-                        </Link>
-                    </div>
-
                     {/* Flash Sale 2 - FundedNext */}
                     <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                         <div className="flex items-start gap-3 mb-3">
@@ -502,7 +459,7 @@ function FlashSalesSection() {
                             <div>
                                 <p className="text-sm font-bold text-red-400 mb-1">🔥 New Offer!</p>
                                 <p className="text-white font-semibold">FundedNext</p>
-                                <p className="text-sm text-slate-300">10% OFF with code <span className="text-emerald-400 font-mono">REF6ZHN86</span></p>
+                                <p className="text-sm text-slate-300">5% OFF with code <span className="text-emerald-400 font-mono">REFER7DVQ</span></p>
                             </div>
                         </div>
                         <Link

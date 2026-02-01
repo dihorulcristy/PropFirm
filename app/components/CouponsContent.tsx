@@ -163,9 +163,9 @@ const allDeals: DealFirm[] = [
         id: 5,
         name: 'FundingPips',
         logoUrl: '/logos/fundingpips.png',
-        discount: '20% OFF',
+        discount: '5% OFF',
         coupon: 'b5420489',
-        offer: '20% OFF',
+        offer: '5% OFF',
         link: 'https://app.fundingpips.com/register?ref=b5420489',
         verified: true,
         priority: 4,
@@ -184,24 +184,12 @@ const allDeals: DealFirm[] = [
         hasActiveCoupon: true
     },
     {
-        id: 3,
-        name: 'FundedX',
-        logoUrl: '/logos/fundedx.jpg',
-        discount: '20% OFF',
-        coupon: 'HELLO2026',
-        offer: '20% OFF (New Year Promo)',
-        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
-        verified: true,
-        priority: 6,
-        hasActiveCoupon: true
-    },
-    {
         id: 4,
         name: 'FundedNext',
         logoUrl: '/logos/fundednext.png',
-        discount: '10% OFF',
-        coupon: 'REF6ZHN86',
-        offer: '10% OFF',
+        discount: '5% OFF',
+        coupon: 'REFER7DVQ',
+        offer: '5% OFF',
         link: 'https://fundednext.com/',
         verified: true,
         priority: 7,
@@ -341,19 +329,6 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                     <a href="https://my.spiceprop.com/agent_pp.html?agent_pp=28203897" target="_blank" rel="noopener noreferrer" className="text-xs text-red-400 hover:text-red-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
 
-                                                {/* FundedX - New Year Promo */}
-                                                <div className="bg-gradient-to-br from-amber-900/60 to-amber-950/60 border border-amber-500/30 rounded-xl p-4">
-                                                    <div className="flex items-start gap-3 mb-3">
-                                                        <Zap className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5 animate-pulse" />
-                                                        <div>
-                                                            <p className="text-sm font-bold text-amber-400 mb-1">🎆 NEW YEAR PROMO!</p>
-                                                            <p className="text-white font-semibold">FundedX</p>
-                                                            <p className="text-sm text-slate-300">20% {t.off} <span className="text-amber-400 font-mono">HELLO2026</span></p>
-                                                        </div>
-                                                    </div>
-                                                    <a href="https://prop.fundedx.com/buy-challenge/?referral=d79822dc" target="_blank" rel="noopener noreferrer" className="text-xs text-amber-400 hover:text-amber-300 font-medium underline">{t.viewOffer}</a>
-                                                </div>
-
                                                 {/* FundedNext */}
                                                 <div className="bg-black/40 border border-white/10 rounded-xl p-4">
                                                     <div className="flex items-start gap-3 mb-3">
@@ -361,7 +336,7 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                         <div>
                                                             <p className="text-sm font-bold text-red-400 mb-1">🔥 {t.newOffer}</p>
                                                             <p className="text-white font-semibold">FundedNext</p>
-                                                            <p className="text-sm text-slate-300">10% {t.off} <span className="text-emerald-400 font-mono">REF6ZHN86</span></p>
+                                                            <p className="text-sm text-slate-300">5% {t.off} <span className="text-emerald-400 font-mono">REFER7DVQ</span></p>
                                                         </div>
                                                     </div>
                                                     <a href="https://fundednext.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>

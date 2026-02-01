@@ -2,13 +2,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Best Prop Trading Discount Codes 2025 | Exclusive Coupons Active Today',
-    description: 'The best discount codes for prop trading firms in 2025. Save up to 50% with our exclusive verified coupons. FTMO, FunderPro, Blue Guardian, and more.',
+    description: 'The best discount codes for prop trading firms in 2025. Save up to 50% with our exclusive verified coupons. FTMO, FunderPro, TradingCult, and more.',
     keywords: [
         'prop trading discount codes',
         'prop firm coupons',
         'ftmo discount code',
         'funderpro coupon',
-        'blue guardian discount',
+        'tradingcult coupon',
         'funded next promo code',
         'funding pips discount code',
         'trading cult coupon',

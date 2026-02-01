@@ -145,7 +145,6 @@ Not all prop firms permit high-frequency trading. Here's the breakdown:
 | TradingCult | ✅ Yes | ✅ Yes | Unlimited | Fully allowed |
 | FunderPro | ⚠️ Limited | ✅ Yes | ~50 | Case by case |
 | FundedNext | ⚠️ Limited | ✅ Yes | ~30 | Review required |
-| Blue Guardian | ❌ No | ⚠️ Limited | ~15 | Discouraged |
 | FundingPips | ✅ Yes | ✅ Yes | Unlimited | Fully allowed |
 
 **Pro Tip**: If you're an HFT trader, choose TradingCult or FundingPips for maximum freedom.
@@ -306,18 +305,18 @@ Friday: Close swing positions or hold over weekend
 
 ### Best for HFT/Scalping:
 1. **TradingCult** - Unlimited trades, 40% OFF + Free Account (code: NEWYEAR)
-2. **FundingPips** - HFT friendly, 20% OFF (code: b5420489)
+2. **FundingPips** - HFT friendly, 5% OFF (code: b5420489)
 3. **FunderPro** - Moderate limits, 20% OFF (code: hgc)
 
 ### Best for Swing Trading:
 1. **FTMO** - Perfect for swing traders, 19% OFF
-2. **FundedNext** - Flexible rules, 5% OFF (code: REF6ZHN86)
-3. **Blue Guardian** - Swing-focused, 50% OFF (code: 1scz)
+2. **FundedNext** - Flexible rules, 5% OFF (code: REFER7DVQ)
+3. **The Concept Trading** - 35% OFF (code: RESOLVE35)
 
 ### Best for Hybrid:
 1. **FunderPro** - Balanced approach, 20% OFF (code: hgc)
 2. **TradingCult** - Maximum flexibility, 40% OFF + Free Account (code: NEWYEAR)
-3. **FundingPips** - All strategies welcome, 20% OFF (code: b5420489)
+3. **FundingPips** - All strategies welcome, 5% OFF (code: b5420489)
 
 ---
 

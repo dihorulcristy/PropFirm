@@ -48,7 +48,7 @@ const usaFirms = [
         profitSplit: '90%',
         maxDD: '10%',
         payoutDays: 14,
-        discount: 'Extra 10% OFF',
+        discount: 'Extra 5% OFF',
         coupon: 'HGC',
         link: 'https://yrmprop.com/ref/dihorulcristy/',
         platforms: 'NinjaTrader, Rithmic',
@@ -99,8 +99,8 @@ const usaFirms = [
         profitSplit: '80-90%',
         maxDD: '10%',
         payoutDays: 1,
-        discount: '20% OFF',
-        coupon: 'hgc',
+        discount: '10% OFF',
+        coupon: 'HGC',
         link: 'https://checkout.funderprofutures.com/products?aff=hgc',
         platforms: 'TradeLocker, NinjaTrader, Rithmic',
         pros: ['Same-day payouts', 'Multiple platforms', 'Weekly payouts', 'No time limit'],
@@ -122,40 +122,6 @@ const usaFirms = [
         platforms: 'NinjaTrader, Rithmic, TradingView',
         pros: ['50% discount', 'TradingView integration', 'No time limit', 'Multiple platforms'],
         whyUSA: 'Excellent value with 50% off. TradingView integration is popular with US traders.',
-    },
-    {
-        rank: 7,
-        name: 'FundedX',
-        badge: 'Weekly Payouts',
-        marketType: 'Forex',
-        price: '$50',
-        accountSize: '5K',
-        profitSplit: '80%',
-        maxDD: '10%',
-        payoutDays: 14,
-        discount: '20% OFF',
-        coupon: 'HELLO2026',
-        link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc',
-        platforms: 'cTrader, DXtrade, Match-Trader',
-        pros: ['Weekly payouts', 'Modern platforms', 'Competitive pricing', 'No time limit'],
-        whyUSA: 'Modern platforms and weekly payouts. Good option for tech-savvy US traders.',
-    },
-    {
-        rank: 8,
-        name: 'FundingTicks',
-        badge: 'Weekly Payouts',
-        marketType: 'Futures',
-        price: '$199',
-        accountSize: '25K',
-        profitSplit: '80%',
-        maxDD: '10%',
-        payoutDays: 7,
-        discount: '20% OFF',
-        coupon: 'BC954C87',
-        link: 'https://app.fundingticks.com/register?ref=BC954C87',
-        platforms: 'NinjaTrader, Rithmic',
-        pros: ['Weekly payouts', 'No time limit', 'Crypto payouts', '20% discount'],
-        whyUSA: 'Weekly payouts and crypto options are convenient for US futures traders.',
     },
     {
         rank: 9,
@@ -293,9 +259,9 @@ export default function BestPropFirmsUSAPage() {
                                     <div className="flex flex-col md:flex-row md:items-center gap-4">
                                         <div className="flex-shrink-0">
                                             <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold ${firm.rank === 1 ? 'bg-gradient-to-br from-yellow-500 to-amber-600 text-white' :
-                                                    firm.rank === 2 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-slate-900' :
-                                                        firm.rank === 3 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' :
-                                                            'bg-slate-800 text-slate-300'
+                                                firm.rank === 2 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-slate-900' :
+                                                    firm.rank === 3 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' :
+                                                        'bg-slate-800 text-slate-300'
                                                 }`}>
                                                 #{firm.rank}
                                             </div>

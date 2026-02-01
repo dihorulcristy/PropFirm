@@ -259,13 +259,13 @@ export default function HowToGetFundedGuide({ params }: PageProps) {
 
     const topPicks: { [key: string]: any[] } = {
         cheapest: [
-            { name: 'FundingPips', logo: 'https://logo.clearbit.com/fundingpips.com', rating: 4.8, price: '$399', advantage: lang === 'ro' ? 'Cel Mai Accesibil' : 'Most Affordable', link: 'https://app.fundingpips.com/register?ref=b5420489', coupon: 'b5420489', offer: '20% OFF' },
+            { name: 'FundingPips', logo: 'https://logo.clearbit.com/fundingpips.com', rating: 4.8, price: '$399', advantage: lang === 'ro' ? 'Cel Mai Accesibil' : 'Most Affordable', link: 'https://app.fundingpips.com/register?ref=b5420489', coupon: 'b5420489', offer: '5% OFF' },
             { name: 'FTMO', logo: 'https://logo.clearbit.com/ftmo.com', rating: 4.9, price: '$482', advantage: lang === 'ro' ? 'Brand De Încredere' : 'Most Trusted Brand', link: 'https://trader.ftmo.com/?affiliates=4354', coupon: '', offer: '19% OFF (100k)' },
-            { name: 'Blue Guardian', logo: 'https://unavatar.io/twitter/BlueGuardianCom', rating: 4.7, price: '$497', advantage: lang === 'ro' ? 'Valoare Excelentă' : 'Great Value', link: 'https://blueguardian.com/?afmc=1scz', coupon: '1scz', offer: '50% OFF (All)' }
+            { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$299', advantage: lang === 'ro' ? 'Valoare Excelentă' : 'Great Value', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'NEWYEAR', offer: '40% OFF + Free Account' }
         ],
         'no-time-limit': [
             { name: 'TradingCult', logo: 'https://logo.clearbit.com/tradingcult.com', rating: 4.8, price: '$299', advantage: lang === 'ro' ? 'Fără Limită de Timp' : 'No Time Limit + Instant Funding', link: 'https://my.tradingcult.com//challenges?affiliateId=hgc', coupon: 'NEWYEAR', offer: '40% OFF + Free Account' },
-            { name: 'FundedX', logo: '/logos/fundedx.jpg', rating: 4.7, price: '$500', advantage: lang === 'ro' ? 'Timp Nelimitat' : 'Unlimited Time', link: 'https://prop.fundedx.com/buy-challenge/?referral=d79822dc', coupon: 'HELLO2026', offer: '20% OFF (New Year)' },
+            { name: 'FundingPips', logo: 'https://logo.clearbit.com/fundingpips.com', rating: 4.8, price: '$399', advantage: lang === 'ro' ? 'Timp Nelimitat' : 'Unlimited Time', link: 'https://app.fundingpips.com/register?ref=b5420489', coupon: 'b5420489', offer: '5% OFF' },
             { name: 'FTMO', logo: 'https://logo.clearbit.com/ftmo.com', rating: 4.9, price: '$482', advantage: lang === 'ro' ? 'Cel Mai De Încredere' : 'Most Trusted', link: 'https://trader.ftmo.com/?affiliates=4354', coupon: '', offer: '19% OFF (100k)' }
         ],
         instant: [

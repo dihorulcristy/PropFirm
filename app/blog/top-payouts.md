@@ -51,7 +51,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: On demand
 - **Rating**: 4.7/5
-- **Discount**: 20% OFF (code: hgc)
+- **Discount**: 10% OFF (code: HGC)
 - [Get Funded →](https://checkout.funderprofutures.com/products?aff=hgc)
 
 **Trader Review**: *"Same-day payouts on crypto. Best in the business."* - Mike, futures trader
@@ -62,7 +62,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: On demand (after first payout)
 - **Rating**: 4.8/5
-- **Discount**: 5% OFF (code: REF6ZHN86)
+- **Discount**: 5% OFF (code: REFER7DVQ)
 - [Get Funded →](https://fundednext.com/)
 
 **Trader Review**: *"Crypto payouts in 6 hours. Bank transfers next day."* - Sarah, $200k trader
@@ -86,7 +86,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Minimum**: $100
 - **Frequency**: Weekly
 - **Rating**: 4.8/5
-- **Discount**: 20% OFF (code: b5420489)
+- **Discount**: 5% OFF (code: b5420489)
 - [Get Funded →](https://app.fundingpips.com/register?ref=b5420489)
 
 #### 6. TradingCult (7 Days)
@@ -97,15 +97,6 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Rating**: 4.8/5
 - **Discount**: 40% OFF + Free Account (code: NEWYEAR)
 - [Get Funded →](https://my.tradingcult.com//challenges?affiliateId=hgc)
-
-#### 7. FundingTicks (7 Days)
-- **Average**: 5-7 days
-- **Method**: Bank transfer
-- **Minimum**: $100
-- **Frequency**: Weekly
-- **Rating**: 4.5/5
-- **Discount**: 20% OFF (code: BC954C87)
-- [Get Funded →](https://app.fundingticks.com/register?ref=BC954C87)
 
 ---
 
@@ -122,40 +113,22 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 
 **Note**: Industry leader, worth the wait for reliability.
 
-#### 9. Blue Guardian (14 Days)
-- **Average**: 10-14 days
-- **Method**: Bank transfer
-- **Minimum**: $100
-- **Frequency**: Bi-weekly
-- **Rating**: 4.7/5
-- **Discount**: 50% OFF (code: 1scz)
-- [Get Funded →](https://blueguardian.com/?afmc=1scz)
-
-#### 10. Dominion Funding (14 Days)
+#### 9. Dominion Funding (14 Days)
 - **Average**: 10-14 days
 - **Method**: Bank transfer, crypto
 - **Minimum**: $100
 - **Frequency**: Bi-weekly
 - **Rating**: 4.6/5
-- **Discount**: 30% OFF (code: PROPHUB)
+- **Discount**: 5% OFF (code: PROPHUB)
 - [Get Funded →](https://dominionfunding.trade//?affId=06bqracaI4)
 
-#### 11. FundedX (14 Days)
-- **Average**: 10-14 days
-- **Method**: Bank transfer, crypto
-- **Minimum**: $100
-- **Frequency**: Weekly
-- **Rating**: 4.7/5
-- **Discount**: 20% OFF (code: HELLO2026)
-- [Get Funded →](https://prop.fundedx.com/buy-challenge/?referral=d79822dc)
-
-#### 12. Funded Futures Network (14 Days)
+#### 11. Funded Futures Network (14 Days)
 - **Average**: 10-14 days
 - **Method**: Bank transfer
 - **Minimum**: $100
 - **Frequency**: Bi-weekly
 - **Rating**: 4.6/5
-- **Discount**: 50% OFF + BOGO (code: NEWYEAR50)
+- **Discount**: 50% OFF (code: T2ISFNWP)
 - [Get Funded →](https://www.fundedfuturesnetwork.com/?via=herghiligiu-cristian)
 
 ---
@@ -221,12 +194,12 @@ Additional firms with 14-30 day payout cycles (alphabetically):
 **Minimum**: Usually $100
 
 ### Weekly
-**Firms**: FundingPips, FundedX, FundingTicks
+**Firms**: FundingPips
 **Benefit**: Regular income stream
 **Day**: Usually Friday
 
 ### Bi-Weekly
-**Firms**: FTMO, TradingCult, Blue Guardian
+**Firms**: FTMO, TradingCult
 **Benefit**: Predictable schedule
 **Days**: 1st and 15th (typically)
 
@@ -396,7 +369,6 @@ Total Time: 46 days 🚩
 | FTMO | Free | Free | Skrill: Free |
 | TradingCult | Free | Free | - |
 | FundingPips | Free | Free | Wise: 1% |
-| Blue Guardian | $25 | Free | - |
 
 **Best**: Most top firms offer free payouts!
 
@@ -478,8 +450,8 @@ Result: Income every week!
 
 ### Fastest Overall:
 1. **FunderPro** - 1 day (20% OFF: hgc)
-2. **FunderPro Futures** - 1 day (20% OFF: hgc)
-3. **FundedNext** - 1-2 days (5% OFF: REF6ZHN86)
+2. **FunderPro Futures** - 1 day (10% OFF: HGC)
+3. **FundedNext** - 1-2 days (5% OFF: REFER7DVQ)
 
 ### Best for Crypto:
 1. **FunderPro** - Same day
@@ -494,7 +466,7 @@ Result: Income every week!
 ### Best Value + Speed:
 1. **FunderPro** - 1 day + 20% OFF
 2. **TradingCult** - 7 days + 40% OFF + Free Account
-3. **Blue Guardian** - 14 days + 50% OFF
+3. **The Concept Trading** - 2 days + 35% OFF
 
 ---
 
@@ -511,6 +483,5 @@ Result: Income every week!
 | FundingPips | 7 | Bank/Crypto | ⭐⭐⭐⭐ |
 | TradingCult | 7 | Bank/Crypto | ⭐⭐⭐⭐ |
 | FTMO | 14 | Bank/Crypto | ⭐⭐⭐⭐⭐ |
-| Blue Guardian | 14 | Bank | ⭐⭐⭐⭐ |
 
 **Remember**: Fast payouts = healthy firm!

@@ -16,7 +16,6 @@ const TRACKED_ACCOUNTS = [
     { id: 'PLACEHOLDER_FUNDINGPIPS', handle: 'fundingpips', name: 'FundingPips' },
     { id: 'PLACEHOLDER_TRADINGCULT', handle: 'trading_cult', name: 'TradingCult' },
     { id: 'PLACEHOLDER_DOMINION', handle: 'DominionFunding', name: 'Dominion Funding' },
-    { id: 'PLACEHOLDER_FUNDEDX', handle: 'FundedXProp', name: 'FundedX' },
     { id: 'PLACEHOLDER_CONCEPT', handle: 'TheConceptTrade', name: 'The Concept Trading' },
     { id: 'PLACEHOLDER_INSTANTFUNDING', handle: 'InstantFunding', name: 'InstantFunding' },
     { id: 'PLACEHOLDER_DNAFUNDED', handle: 'dnafunded', name: 'DnaFunded' },
@@ -26,7 +25,6 @@ const TRACKED_ACCOUNTS = [
     { id: 'PLACEHOLDER_FUNDERPRO_FUTURES', handle: 'FunderProFutures', name: 'FunderPro Futures' },
     { id: 'PLACEHOLDER_YRM', handle: 'yrmprop', name: 'YRM Prop' },
     { id: 'PLACEHOLDER_FFN', handle: 'FundedFuturesNet', name: 'Funded Futures Network' },
-    { id: 'PLACEHOLDER_FUNDINGTICKS', handle: 'FundingTicks', name: 'FundingTicks' },
 ];
 
 // Keywords to detect offers

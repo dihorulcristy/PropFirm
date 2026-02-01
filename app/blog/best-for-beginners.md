@@ -72,7 +72,7 @@ YRM Prop offers the **lowest prices in the industry** making it perfect for begi
 - ✅ 90% profit split
 - ✅ USA traders accepted
 - ✅ Weekly payouts
-- ✅ Extra 10% OFF with code `HGC`
+- ✅ Extra 5% OFF with code `HGC`
 
 | Feature | Details |
 |---------|---------|
@@ -84,7 +84,7 @@ YRM Prop offers the **lowest prices in the industry** making it perfect for begi
 
 **Best For**: Beginners interested in futures trading on a tight budget.
 
-[👉 Get Started with YRM Prop (Extra 10% OFF) →](https://yrmprop.com/ref/dihorulcristy/)
+[👉 Get Started with YRM Prop (Extra 5% OFF with code HGC) →](https://yrmprop.com/ref/dihorulcristy/)
 
 ---
 
@@ -134,7 +134,7 @@ FundingPips stands out with up to **100% profit split** and some of the fairest 
 
 **Best For**: Beginners who want fair rules and potential for 100% profit.
 
-[👉 Get Started with FundingPips (20% OFF) →](https://app.fundingpips.com/register?ref=b5420489)
+[👉 Get Started with FundingPips (5% OFF) →](https://app.fundingpips.com/register?ref=b5420489)
 
 ---
 
@@ -194,7 +194,7 @@ FundedNext allows you to **earn 15% profit share during the challenge phase**, s
 
 **Why It's Great for Beginners:**
 - ✅ Earn money during evaluation
-- ✅ 10% OFF with code `REF6ZHN86`
+- ✅ 5% OFF with code `REFER7DVQ`
 - ✅ Same-day payouts
 - ✅ Up to 95% profit split
 - ✅ Weekly payouts available
@@ -209,7 +209,7 @@ FundedNext allows you to **earn 15% profit share during the challenge phase**, s
 
 **Best For**: Beginners who want to earn while they learn.
 
-[👉 Get Started with FundedNext (10% OFF) →](https://fundednext.com/)
+[👉 Get Started with FundedNext (5% OFF) →](https://fundednext.com/)
 
 ---
 
@@ -263,30 +263,6 @@ FunderPro offers **same-day payouts**, so you see your profits quickly. Great fo
 
 ---
 
-### 10. Blue Guardian - Best Discount
-
-Blue Guardian offers a massive **50% OFF** discount, making it very affordable for beginners.
-
-**Why It's Great for Beginners:**
-- ✅ 50% OFF with code `1scz`
-- ✅ No time limit
-- ✅ News trading allowed
-- ✅ Crypto payouts
-
-| Feature | Details |
-|---------|---------|
-| Starting Price | ~$50 after discount (10K) |
-| Max Drawdown | 10% |
-| Profit Split | 80-85% |
-| Platforms | MT4, MT5 |
-| Payout Speed | 14 days |
-
-**Best For**: Budget-conscious beginners wanting maximum savings.
-
-[👉 Get Started with Blue Guardian (50% OFF) →](https://blueguardian.com/?afmc=1scz)
-
----
-
 ## Quick Comparison Table
 
 | Firm | Price (10K) | Profit Split | USA | Payout | Best For |
@@ -300,7 +276,6 @@ Blue Guardian offers a massive **50% OFF** discount, making it very affordable f
 | FundedNext | $59 | 95% | ❌ | 1-2 days | Earn while learning |
 | Funded Futures | $149 | 80% | ✅ | 14 days | USA futures |
 | FunderPro | $249 | 90% | ❌ | 1 day | Fast payouts |
-| Blue Guardian | ~$50 | 85% | ❌ | 14 days | Best discount |
 
 ---
 
@@ -349,7 +324,7 @@ Forex is generally easier for beginners to learn. Futures can be more volatile b
 [→ Start Trading](https://my.tradingcult.com//challenges?affiliateId=hgc)
 
 ### 💰 Best Budget: YRM Prop
-**Accounts from $45** + Extra 10% OFF with code `HGC`
+**Accounts from $45** + Extra 5% OFF with code `HGC`
 [→ Start Trading](https://yrmprop.com/ref/dihorulcristy/)
 
 ### ⭐ Best Reputation: FTMO

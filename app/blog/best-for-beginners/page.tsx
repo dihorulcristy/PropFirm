@@ -47,7 +47,7 @@ const beginnerFirms = [
         maxDD: '10%',
         payoutDays: 14,
         usaAccepted: true,
-        discount: 'Extra 10% OFF',
+        discount: 'Extra 5% OFF',
         coupon: 'HGC',
         link: 'https://yrmprop.com/ref/dihorulcristy/',
         bestFor: 'Beginners interested in futures trading on a tight budget',
@@ -79,7 +79,7 @@ const beginnerFirms = [
         maxDD: '10%',
         payoutDays: 7,
         usaAccepted: false,
-        discount: '20% OFF',
+        discount: '5% OFF',
         coupon: 'b5420489',
         link: 'https://app.fundingpips.com/register?ref=b5420489',
         bestFor: 'Beginners who want fair rules and potential for 100% profit',
@@ -127,8 +127,8 @@ const beginnerFirms = [
         maxDD: '10%',
         payoutDays: 1,
         usaAccepted: false,
-        discount: '10% OFF',
-        coupon: 'REF6ZHN86',
+        discount: '5% OFF',
+        coupon: 'REFER7DVQ',
         link: 'https://fundednext.com/',
         bestFor: 'Beginners who want to earn money during evaluation',
         pros: ['Earn 15% during challenge', 'Same-day payouts', 'Up to 95% split', 'Weekly payouts'],
@@ -164,22 +164,6 @@ const beginnerFirms = [
         link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
         bestFor: 'Beginners who need fast access to profits',
         pros: ['Same-day payouts', 'Multiple platforms', 'Weekly payouts', 'No time limit'],
-    },
-    {
-        rank: 10,
-        name: 'Blue Guardian',
-        badge: 'Best Discount',
-        price: '~$50',
-        accountSize: '10K',
-        profitSplit: '85%',
-        maxDD: '10%',
-        payoutDays: 14,
-        usaAccepted: false,
-        discount: '50% OFF',
-        coupon: '1scz',
-        link: 'https://blueguardian.com/?afmc=1scz',
-        bestFor: 'Budget-conscious beginners wanting maximum savings',
-        pros: ['50% permanent discount', 'No time limit', 'News trading allowed', 'Crypto payouts'],
     },
 ];
 
@@ -249,9 +233,9 @@ export default function BestForBeginnersPage() {
                                     {/* Rank Badge */}
                                     <div className="flex-shrink-0">
                                         <div className={`w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold ${firm.rank === 1 ? 'bg-gradient-to-br from-yellow-500 to-amber-600 text-white' :
-                                                firm.rank === 2 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-slate-900' :
-                                                    firm.rank === 3 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' :
-                                                        'bg-slate-800 text-slate-300'
+                                            firm.rank === 2 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-slate-900' :
+                                                firm.rank === 3 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' :
+                                                    'bg-slate-800 text-slate-300'
                                             }`}>
                                             #{firm.rank}
                                         </div>

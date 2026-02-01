@@ -110,7 +110,9 @@ export default async function AffiliateDisclosure({ params }: PageProps) {
                                 <ul className="list-disc list-inside text-slate-300 space-y-2">
                                     <li>FTMO</li>
                                     <li>TradingCult</li>
-                                    <li>FundedX</li>
+                                    <li>FundingPips</li>
+                                    <li>FunderPro</li>
+                                    <li>The Concept Trading</li>
                                 </ul>
                             )}
                         </section>
