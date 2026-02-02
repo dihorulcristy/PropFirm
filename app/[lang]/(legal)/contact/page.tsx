@@ -98,6 +98,7 @@ export default function Contact({ params }: PageProps) {
         message: ''
     });
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -121,10 +122,14 @@ export default function Contact({ params }: PageProps) {
             setStatus('success');
             setFormData({ name: '', email: '', subject: '', message: '' });
             setTimeout(() => setStatus('idle'), 5000);
-        } catch (error) {
+        } catch (error: any) {
             console.error('Submission error:', error);
+            setErrorMessage(error.message || 'Unknown error');
             setStatus('error');
-            setTimeout(() => setStatus('idle'), 3000);
+            setTimeout(() => {
+                setStatus('idle');
+                setErrorMessage('');
+            }, 5000);
         }
     };
 
@@ -223,6 +228,9 @@ export default function Contact({ params }: PageProps) {
                     {status === 'error' && (
                         <div className="p-4 bg-red-900/20 border border-red-500/50 rounded-lg text-red-400 text-sm">
                             {t.error}
+                            <div className="mt-2 text-xs font-mono bg-black/20 p-2 rounded">
+                                {errorMessage}
+                            </div>
                         </div>
                     )}
                 </form>

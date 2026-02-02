@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialized lazily in handler to avoid build errors if env var is missing
 
 export async function POST(request: Request) {
   try {
@@ -14,9 +14,20 @@ export async function POST(request: Request) {
       );
     }
 
+    const toAddress = process.env.ADMIN_EMAIL || 'herghiligiu.cristian@yahoo.ro';
+
+    console.log('--- DEBUG START ---');
+    console.log('API Key present:', !!process.env.RESEND_API_KEY);
+    console.log('Sending FROM:', 'PropFirmHub Support <support@propfirms-hub.com>');
+    console.log('Sending TO:', toAddress);
+    console.log('Sending TO:', toAddress);
+    console.log('--- DEBUG END ---');
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const data = await resend.emails.send({
       from: 'PropFirmHub Support <support@propfirms-hub.com>',
-      to: [process.env.ADMIN_EMAIL || 'herghiligiu.cristian@yahoo.ro'],
+      to: [toAddress],
       replyTo: email,
       subject: `New Contact Form Submission: ${subject}`,
       html: `
