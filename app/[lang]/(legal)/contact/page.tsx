@@ -32,7 +32,8 @@ const translations = {
         },
         success: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
         otherWays: "Other Ways to Reach Us",
-        emailLabel: "Email:"
+        emailLabel: "Email:",
+        error: "Something went wrong. Please try again or email us directly."
     },
     ro: {
         title: "Contactați-ne",
@@ -56,7 +57,8 @@ const translations = {
         },
         success: "Vă mulțumim! Mesajul dumneavoastră a fost trimis cu succes. Vă vom răspunde în curând.",
         otherWays: "Alte Moduri de a Ne Contacta",
-        emailLabel: "Email:"
+        emailLabel: "Email:",
+        error: "Ceva nu a mers bine. Vă rugăm să încercați din nou sau să ne trimiteți un email direct."
     },
     es: {
         title: "Contáctanos",
@@ -80,7 +82,8 @@ const translations = {
         },
         success: "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.",
         otherWays: "Otras Formas de Contactarnos",
-        emailLabel: "Correo electrónico:"
+        emailLabel: "Correo electrónico:",
+        error: "Algo salió mal. Por favor, inténtalo de nuevo o envíanos un correo electrónico directamente."
     }
 };
 
@@ -100,13 +103,29 @@ export default function Contact({ params }: PageProps) {
         e.preventDefault();
         setStatus('sending');
 
-        // Simulate form submission
-        setTimeout(() => {
-            console.log('Form submitted:', formData);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to send message');
+            }
+
             setStatus('success');
             setFormData({ name: '', email: '', subject: '', message: '' });
+            setTimeout(() => setStatus('idle'), 5000);
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('error');
             setTimeout(() => setStatus('idle'), 3000);
-        }, 1000);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -199,6 +218,11 @@ export default function Contact({ params }: PageProps) {
                     {status === 'success' && (
                         <div className="p-4 bg-emerald-900/20 border border-emerald-500/50 rounded-lg text-emerald-400 text-sm">
                             {t.success}
+                        </div>
+                    )}
+                    {status === 'error' && (
+                        <div className="p-4 bg-red-900/20 border border-red-500/50 rounded-lg text-red-400 text-sm">
+                            {t.error}
                         </div>
                     )}
                 </form>
