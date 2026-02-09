@@ -1549,8 +1549,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                         </div>
                                     </div>
                                     <div className="text-right flex-shrink-0">
-                                        <div className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</div>
-                                        <div className="text-xl font-bold text-emerald-400">{getPricing(firm).price}</div>
+                                        <div className="text-xl font-bold text-emerald-400">{getPricing(firm).oldPrice}</div>
                                     </div>
                                 </div>
 
@@ -1731,8 +1730,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
 
                                         <td className="px-3 py-3 lg:px-6 lg:py-5 text-center">
                                             <div className="flex flex-col items-center">
-                                                <span className="text-xs text-slate-500 line-through">{getPricing(firm).oldPrice}</span>
-                                                <span className="text-lg font-bold text-emerald-400">{getPricing(firm).price}</span>
+                                                <span className="text-lg font-bold text-emerald-400">{getPricing(firm).oldPrice}</span>
                                             </div>
                                         </td>
 
