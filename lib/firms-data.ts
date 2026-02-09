@@ -753,52 +753,52 @@ export const allPropFirms: PropFirm[] = [
     },
     {
         id: 19,
-        slug: 'nexgen-protrader',
-        name: 'NexGen ProTrader',
+        slug: 'nexgen-protrader-funding',
+        name: 'Nexgen ProTrader Funding',
         rating: 4.7,
         verified: true,
         maxDD: '3-7%',
         profitSplit: '100%',
-        price: '$319/mo',
+        price: '$31.90/mo',
         oldPrice: '$319',
         coupon: '90PRO',
         offer: '90% OFF',
         link: 'https://nexgenprotraderfunding.com/?linkId=lp_263534&sourceId=herghiligiu-cristian&tenantId=protraderfunding&affS1=instagram',
         logoUrl: '/logos/nexgen-protrader.jpg',
-        platforms: ['NinjaTrader', 'Rithmic'],
+        platforms: ['NinjaTrader', 'Rithmic', 'TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
         challengeType: '1-Step',
         marketType: 'futures',
         features: {
             instantFunding: false,
             hftAllowed: false,
             newsTrading: true,
-            cryptoPayout: true,
+            cryptoPayout: false,
             usaAccepted: true,
             noTimeLimit: true,
-            weeklyPayouts: false,
+            weeklyPayouts: true,
         },
-        payoutDays: 14,
+        payoutDays: 1,
         capitalPricing: {
-            25000: { price: '$149/mo', oldPrice: '$149' },
-            50000: { price: '$249/mo', oldPrice: '$249' },
-            75000: { price: '$299/mo', oldPrice: '$299' },
-            100000: { price: '$319/mo', oldPrice: '$319' },
-            150000: { price: '$399/mo', oldPrice: '$399' },
+            25000: { price: '$14.90/mo', oldPrice: '$149' },
+            50000: { price: '$24.90/mo', oldPrice: '$249' },
+            75000: { price: '$29.90/mo', oldPrice: '$299' },
+            100000: { price: '$31.90/mo', oldPrice: '$319' },
+            150000: { price: '$39.90/mo', oldPrice: '$399' },
         },
         description: {
-            en: 'NexGen ProTrader Funding offers an innovative subscription-based futures evaluation program. With just 1 day to pass and up to 100% profit split after 16 payouts, it\'s perfect for consistent traders looking for affordable entry into futures trading.',
-            ro: 'NexGen ProTrader Funding oferă un program innovativ de evaluare futures bazat pe abonament. Cu doar 1 zi pentru a trece și până la 100% împărțire profit după 16 plăți, este perfect pentru traderii constanți care caută o intrare accesibilă în trading pe futures.',
-            es: 'NexGen ProTrader Funding ofrece un innovador programa de evaluación de futuros basado en suscripción. Con solo 1 día para pasar y hasta 100% de división de ganancias después de 16 pagos, es perfecto para traders consistentes que buscan una entrada asequible al trading de futuros.'
+            en: 'Nexgen ProTrader Funding offers an innovative subscription-based futures evaluation program. With just 1 day to pass and up to 100% profit split after 16 payouts, it\'s perfect for consistent traders looking for affordable entry into futures trading.',
+            ro: 'Nexgen ProTrader Funding oferă un program innovativ de evaluare futures bazat pe abonament. Cu doar 1 zi pentru a trece și până la 100% împărțire profit după 16 plăți, este perfect pentru traderii constanți care caută o intrare accesibilă în trading pe futures.',
+            es: 'Nexgen ProTrader Funding ofrece un innovador programa de evaluación de futuros basado en suscripción. Con solo 1 día para pasar y hasta 100% de división de ganancias después de 16 pagos, es perfecto para traders consistentes que buscan una entrada asequible al trading de futuros.'
         },
         pros: {
-            en: ['90% OFF with code 90PRO', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)'],
-            ro: ['90% reducere cu codul 90PRO', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)'],
-            es: ['90% de descuento con código 90PRO', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)']
+            en: ['90% OFF with code 90PRO', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)', 'Same Drawdown in ALL accounts (Evals and Funded)', 'Up to 5 funded accounts', 'Built-in trade copier available'],
+            ro: ['90% reducere cu codul 90PRO', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)', 'Același Drawdown în TOATE conturile (Evaluare și Finanțate)', 'Până la 5 conturi finanțate', 'Trade copier integrat disponibil'],
+            es: ['90% de descuento con código 90PRO', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)', 'Mismo Drawdown en TODAS las cuentas (Evaluación y Financiadas)', 'Hasta 5 cuentas financiadas', 'Copiadora de operaciones integrada disponible']
         },
         cons: {
-            en: ['Futures only', 'Subscription model (recurring payments)', 'Variable drawdown based on account size'],
-            ro: ['Doar futures', 'Model de abonament (plăți recurente)', 'Drawdown variabil în funcție de dimensiunea contului'],
-            es: ['Solo futuros', 'Modelo de suscripción (pagos recurrentes)', 'Drawdown variable según el tamaño de la cuenta']
+            en: ['Futures only', 'Subscription model (recurring payments)'],
+            ro: ['Doar futures', 'Model de abonament (plăți recurente)'],
+            es: ['Solo futuros', 'Modelo de suscripción (pagos recurrentes)']
         }
     }
 ];

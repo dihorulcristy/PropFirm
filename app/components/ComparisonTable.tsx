@@ -811,7 +811,7 @@ const allFirms: Firm[] = [
     },
     {
         id: 25,
-        name: 'NexGen ProTrader',
+        name: 'Nexgen ProTrader Funding',
         rating: 4.7,
         verified: true,
         rules: { maxDD: '3-7%', profit: '100%' },
@@ -823,18 +823,18 @@ const allFirms: Firm[] = [
         link: 'https://nexgenprotraderfunding.com/?linkId=lp_263534&sourceId=herghiligiu-cristian&tenantId=protraderfunding&affS1=instagram',
         logoUrl: '/logos/nexgen-protrader.jpg',
         capital: 100000,
-        platform: ['NinjaTrader', 'Rithmic'],
+        platform: ['NinjaTrader', 'Rithmic', 'TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
         challengeType: '1-Step',
         marketType: 'futures',
         instantFunding: false,
         hftAllowed: false,
         balanceBasedDD: true,
         newsTrading: true,
-        cryptoPayout: true,
+        cryptoPayout: false,
         usaAccepted: true,
         noTimeLimit: true,
-        weeklyPayouts: false,
-        payoutDays: 14,
+        weeklyPayouts: true,
+        payoutDays: 1,
         capitalPricing: {
             25000: { price: '$149/mo', oldPrice: '$149' },
             50000: { price: '$249/mo', oldPrice: '$249' },
@@ -1130,6 +1130,9 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                     <option value="Match-Trader" className="bg-slate-900 text-slate-300">Match-Trader</option>
                                     <option value="MT4/5" className="bg-slate-900 text-slate-300">MT4/5</option>
                                     <option value="MT5" className="bg-slate-900 text-slate-300">MT5</option>
+                                    <option value="NinjaTrader" className="bg-slate-900 text-slate-300">NinjaTrader</option>
+                                    <option value="Rithmic" className="bg-slate-900 text-slate-300">Rithmic</option>
+                                    <option value="TradingView" className="bg-slate-900 text-slate-300">TradingView</option>
                                 </select>
                                 <ChevronDown className={clsx(
                                     "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none transition-colors",
@@ -1293,6 +1296,9 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                     <option value="MT4/5" className="bg-black text-slate-200">MetaTrader 4/5</option>
                                     <option value="MT5" className="bg-black text-slate-200">MetaTrader 5</option>
                                     <option value="TradeLocker" className="bg-black text-slate-200">TradeLocker</option>
+                                    <option value="NinjaTrader" className="bg-black text-slate-200">NinjaTrader</option>
+                                    <option value="Rithmic" className="bg-black text-slate-200">Rithmic</option>
+                                    <option value="TradingView" className="bg-black text-slate-200">TradingView</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-hover:text-white transition pointer-events-none" />
                             </div>
