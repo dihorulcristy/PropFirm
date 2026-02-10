@@ -570,7 +570,7 @@ const allFirms: Firm[] = [
         rating: 4.8,
         verified: true,
         rules: { maxDD: '10%', profit: '90%' },
-        price: '$149',
+        price: '$69',
         oldPrice: '$149',
         coupon: 'HGC',
         offer: 'EXTRA 5% OFF',
@@ -592,7 +592,7 @@ const allFirms: Firm[] = [
         payoutDays: 14,
         capitalPricing: {
             25000: { price: '$59', oldPrice: '$59' },
-            50000: { price: '$149', oldPrice: '$149' },
+            50000: { price: '$69', oldPrice: '$149' },
             100000: { price: '$249', oldPrice: '$249' },
             150000: { price: '$349', oldPrice: '$349' },
         }
@@ -815,15 +815,15 @@ const allFirms: Firm[] = [
         rating: 4.7,
         verified: true,
         rules: { maxDD: '3-7%', profit: '100%' },
-        price: '$319/mo',
+        price: '$31.90/mo',
         oldPrice: '$319',
-        coupon: '90PRO',
+        coupon: 'PFH',
         offer: '90% OFF',
         action: 'Get Funded',
         link: 'https://nexgenprotraderfunding.com/?linkId=lp_263534&sourceId=herghiligiu-cristian&tenantId=protraderfunding&affS1=instagram',
         logoUrl: '/logos/nexgen-protrader.jpg',
         capital: 100000,
-        platform: ['NinjaTrader', 'Rithmic', 'TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
+        platform: ['TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
         challengeType: '1-Step',
         marketType: 'futures',
         instantFunding: false,
@@ -836,11 +836,11 @@ const allFirms: Firm[] = [
         weeklyPayouts: true,
         payoutDays: 1,
         capitalPricing: {
-            25000: { price: '$149/mo', oldPrice: '$149' },
-            50000: { price: '$249/mo', oldPrice: '$249' },
-            75000: { price: '$299/mo', oldPrice: '$299' },
-            100000: { price: '$319/mo', oldPrice: '$319' },
-            150000: { price: '$399/mo', oldPrice: '$399' },
+            25000: { price: '$14.90/mo', oldPrice: '$149' },
+            50000: { price: '$24.90/mo', oldPrice: '$249' },
+            75000: { price: '$29.90/mo', oldPrice: '$299' },
+            100000: { price: '$31.90/mo', oldPrice: '$319' },
+            150000: { price: '$39.90/mo', oldPrice: '$399' },
         }
     }
 ];

@@ -66,7 +66,7 @@ const cheapestFirms = [
     {
         rank: 4,
         name: 'YRM Prop',
-        price: 45,
+        price: 69,
         accountSize: '50K',
         profitSplit: '90%',
         maxDD: '10%',
@@ -75,7 +75,7 @@ const cheapestFirms = [
         discount: 'Extra 5% OFF',
         coupon: 'HGC',
         link: 'https://yrmprop.com/ref/dihorulcristy/',
-        highlight: '$45 for 50K account! Best value',
+        highlight: '$69 for 50K account! Best value',
     },
     {
         rank: 5,

@@ -68,7 +68,7 @@ TradingCult offers the perfect combination of low prices, high profit splits, an
 YRM Prop offers the **lowest prices in the industry** making it perfect for beginners who want to start futures trading without risking much capital.
 
 **Why It's Great for Beginners:**
-- ✅ Accounts starting at just **$45**
+- ✅ Accounts starting at just **$59**
 - ✅ 90% profit split
 - ✅ USA traders accepted
 - ✅ Weekly payouts
@@ -76,7 +76,7 @@ YRM Prop offers the **lowest prices in the industry** making it perfect for begi
 
 | Feature | Details |
 |---------|---------|
-| Starting Price | $45 (50K account!) |
+| Starting Price | $69 (50K account!) |
 | Max Drawdown | 10% |
 | Profit Split | 90% |
 | Platforms | NinjaTrader, Rithmic |

@@ -505,7 +505,7 @@ export const allPropFirms: PropFirm[] = [
         verified: true,
         maxDD: '10%',
         profitSplit: '90%',
-        price: '$149',
+        price: '$69',
         oldPrice: '$149',
         coupon: 'HGC',
         offer: 'EXTRA 5% OFF',
@@ -526,7 +526,7 @@ export const allPropFirms: PropFirm[] = [
         payoutDays: 14,
         capitalPricing: {
             25000: { price: '$59', oldPrice: '$59' },
-            50000: { price: '$149', oldPrice: '$149' },
+            50000: { price: '$69', oldPrice: '$149' },
             100000: { price: '$249', oldPrice: '$249' },
             150000: { price: '$349', oldPrice: '$349' },
         },
@@ -761,11 +761,11 @@ export const allPropFirms: PropFirm[] = [
         profitSplit: '100%',
         price: '$31.90/mo',
         oldPrice: '$319',
-        coupon: '90PRO',
+        coupon: 'PFH',
         offer: '90% OFF',
         link: 'https://nexgenprotraderfunding.com/?linkId=lp_263534&sourceId=herghiligiu-cristian&tenantId=protraderfunding&affS1=instagram',
         logoUrl: '/logos/nexgen-protrader.jpg',
-        platforms: ['NinjaTrader', 'Rithmic', 'TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
+        platforms: ['TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
         challengeType: '1-Step',
         marketType: 'futures',
         features: {
@@ -791,9 +791,9 @@ export const allPropFirms: PropFirm[] = [
             es: 'Nexgen ProTrader Funding ofrece un innovador programa de evaluación de futuros basado en suscripción. Con solo 1 día para pasar y hasta 100% de división de ganancias después de 16 pagos, es perfecto para traders consistentes que buscan una entrada asequible al trading de futuros.'
         },
         pros: {
-            en: ['90% OFF with code 90PRO', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)', 'Same Drawdown in ALL accounts (Evals and Funded)', 'Up to 5 funded accounts', 'Built-in trade copier available'],
-            ro: ['90% reducere cu codul 90PRO', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)', 'Același Drawdown în TOATE conturile (Evaluare și Finanțate)', 'Până la 5 conturi finanțate', 'Trade copier integrat disponibil'],
-            es: ['90% de descuento con código 90PRO', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)', 'Mismo Drawdown en TODAS las cuentas (Evaluación y Financiadas)', 'Hasta 5 cuentas financiadas', 'Copiadora de operaciones integrada disponible']
+            en: ['90% OFF with code PFH', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)', 'Same Drawdown in ALL accounts (Evals and Funded)', 'Up to 5 funded accounts', 'Built-in trade copier available'],
+            ro: ['90% reducere cu codul PFH', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)', 'Același Drawdown în TOATE conturile (Evaluare și Finanțate)', 'Până la 5 conturi finanțate', 'Trade copier integrat disponibil'],
+            es: ['90% de descuento con código PFH', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)', 'Mismo Drawdown en TODAS las cuentas (Evaluación y Financiadas)', 'Hasta 5 cuentas financiadas', 'Copiadora de operaciones integrada disponible']
         },
         cons: {
             en: ['Futures only', 'Subscription model (recurring payments)'],

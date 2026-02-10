@@ -224,7 +224,7 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> now just $88
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> now just $69
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
                                         {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-orange-600 to-red-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HGC</span> for EXTRA 5% OFF
