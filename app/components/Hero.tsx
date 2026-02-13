@@ -140,12 +140,12 @@ export default function Hero({ lang = 'en' }: HeroProps) {
                                     <DollarSign className="h-4 w-4" />
                                     {t.bestValue}
                                 </div>
-                                <h3 className="text-xl font-bold text-white">SpiceProp</h3>
+                                <h3 className="text-xl font-bold text-white">AquaFunded</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">{t.from} €45</p>
+                                <p className="text-sm text-slate-400">{t.from} $14.25</p>
                             </div>
                         </div>
 
@@ -194,12 +194,12 @@ export default function Hero({ lang = 'en' }: HeroProps) {
                                     <DollarSign className="h-4 w-4" />
                                     {t.bestValue}
                                 </div>
-                                <h3 className="text-xl font-bold text-white">SpiceProp</h3>
+                                <h3 className="text-xl font-bold text-white">AquaFunded</h3>
                                 <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
                                     <Star className="h-4 w-4 fill-current" />
                                     <span className="text-sm font-medium text-slate-300">4.8/5</span>
                                 </div>
-                                <p className="text-sm text-slate-400">{t.from} €45</p>
+                                <p className="text-sm text-slate-400">{t.from} $14.25</p>
                             </div>
                         </div>
 

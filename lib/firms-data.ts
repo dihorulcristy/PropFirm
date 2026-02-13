@@ -800,6 +800,57 @@ export const allPropFirms: PropFirm[] = [
             ro: ['Doar futures', 'Model de abonament (plăți recurente)'],
             es: ['Solo futuros', 'Modelo de suscripción (pagos recurrentes)']
         }
+    },
+    {
+        id: 20,
+        slug: 'aquafunded',
+        name: 'AquaFunded',
+        rating: 4.8,
+        verified: true,
+        maxDD: '10%',
+        profitSplit: 'Up to 90%',
+        price: '$234.50',
+        oldPrice: '$469',
+        coupon: 'WELCOME',
+        offer: '50% OFF + $100 Bonus',
+        link: 'https://www.aquafunded.com/?afmc=dihorulcristy',
+        logoUrl: '/logos/aquafunded.png',
+        platforms: ['DXtrade', 'Match-Trader', 'cTrader', 'MT4', 'MT5', 'TradeLocker'],
+        challengeType: '2-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: true,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: false,
+            noTimeLimit: true,
+            weeklyPayouts: true,
+        },
+        payoutDays: 14,
+        capitalPricing: {
+            5000: { price: '$14.25', oldPrice: '$57' },
+            10000: { price: '$44.50', oldPrice: '$89' },
+            25000: { price: '$69.50', oldPrice: '$139' },
+            50000: { price: '$149.50', oldPrice: '$299' },
+            100000: { price: '$234.50', oldPrice: '$469' },
+            200000: { price: '$473.50', oldPrice: '$947' },
+        },
+        description: {
+            en: 'AquaFunded is a premier prop trading firm providing flexible funding programs with up to 90% profit split and multiple trading platforms. Currently offering a massive Valentine\'s and Welcome promotion.',
+            ro: 'AquaFunded este o firmă prop trading de top care oferă programe de finanțare flexibile, cu o împărțire a profitului de până la 90% și multiple platforme de trading. Oferă în prezent promoții masive de Valentine\'s și Welcome.',
+            es: 'AquaFunded es una firma de prop trading de primer nivel que ofrece programas de financiación flexibles con una división de ganancias de hasta el 90% y múltiples plataformas de trading. Actualmente ofrece promociones masivas de Valentine\'s y Welcome.'
+        },
+        pros: {
+            en: ['Up to 100% profit split with add-on', '50% OFF Welcome Offer', 'Multiple platforms (DXtrade, cTrader, etc.)', 'Instant funding option', 'Weekly payouts available'],
+            ro: ['Până la 100% împărțire profit cu add-on', '50% REDUCERE Ofertă de Bun Venit', 'Multiple platforme (DXtrade, cTrader, etc.)', 'Opțiune finanțare instantă', 'Plăți săptămânale disponibile'],
+            es: ['Hasta 100% división de ganancias con add-on', '50% DTO Oferta de Bienvenida', 'Múltiples plataformas (DXtrade, cTrader, etc.)', 'Opción de financiación instantánea', 'Pagos semanales disponibles']
+        },
+        cons: {
+            en: ['Newer firm', 'Standard consistency rules'],
+            ro: ['Firmă nouă', 'Reguli standard de consistență'],
+            es: ['Firma nueva', 'Reglas estándar de consistencia']
+        }
     }
 ];
 
