@@ -218,6 +218,18 @@ const allDeals: DealFirm[] = [
         verified: true,
         priority: 4,
         hasActiveCoupon: true
+    },
+    {
+        id: 26,
+        name: 'Legacy Funded Futures',
+        logoUrl: '/logos/legacy-funded-futures.png',
+        discount: '20% OFF',
+        coupon: 'OG20',
+        offer: '20% OFF (Pre-Sale)',
+        link: 'https://legacyfundedfutures.com?ref=290',
+        verified: true,
+        priority: 5,
+        hasActiveCoupon: true
     }
 ];
 

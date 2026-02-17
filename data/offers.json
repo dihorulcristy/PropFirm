@@ -60,6 +60,11 @@
             "discount": "DIHORULCRISTY",
             "coupon": "DIHORULCRISTY",
             "promoText": "Exclusive Link Discount"
+        },
+        "legacyfundedfutures": {
+            "discount": "20% OFF",
+            "coupon": "OG20",
+            "promoText": "20% OFF Pre-Sale"
         }
     }
 }

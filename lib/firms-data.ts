@@ -851,6 +851,54 @@ export const allPropFirms: PropFirm[] = [
             ro: ['Firmă nouă', 'Reguli standard de consistență'],
             es: ['Firma nueva', 'Reglas estándar de consistencia']
         }
+    },
+    {
+        id: 21,
+        slug: 'legacy-funded-futures',
+        name: 'Legacy Funded Futures',
+        rating: 4.0,
+        verified: true,
+        maxDD: 'EOD Trailing',
+        profitSplit: '90%',
+        price: '$99/mo',
+        oldPrice: '$99/mo',
+        coupon: 'OG20',
+        offer: '20% OFF',
+        link: 'https://legacyfundedfutures.com?ref=290',
+        logoUrl: '/logos/legacy-funded-futures.png',
+        platforms: ['DXtrade', 'NinjaTrader', 'TradingView', 'Rithmic'],
+        challengeType: '1-Step',
+        marketType: 'futures',
+        features: {
+            instantFunding: false,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: false,
+            usaAccepted: true,
+            noTimeLimit: false,
+            weeklyPayouts: false,
+        },
+        payoutDays: 1,
+        capitalPricing: {
+            50000: { price: '$99/mo', oldPrice: '$99/mo' },
+            100000: { price: '$149/mo', oldPrice: '$149/mo' },
+            150000: { price: '$179/mo', oldPrice: '$179/mo' },
+        },
+        description: {
+            en: 'Legacy Funded Futures is a futures-focused prop trading firm offering Rise and Elite evaluation plans with End-of-Day (EOD) trailing drawdown. With up to 90% profit split, fast payouts (~15 minutes), and support for 160+ countries, it\'s a solid choice for futures traders.',
+            ro: 'Legacy Funded Futures este o firmă prop trading axată pe futures, oferind planuri de evaluare Rise și Elite cu trailing drawdown End-of-Day (EOD). Cu o împărțire a profitului de până la 90%, plăți rapide (~15 minute) și suport pentru 160+ țări, este o alegere solidă pentru traderii de futures.',
+            es: 'Legacy Funded Futures es una firma de prop trading enfocada en futuros que ofrece planes de evaluación Rise y Elite con trailing drawdown End-of-Day (EOD). Con hasta 90% de división de ganancias, pagos rápidos (~15 minutos) y soporte para más de 160 países, es una opción sólida para traders de futuros.'
+        },
+        pros: {
+            en: ['EOD Trailing Drawdown (more forgiving)', '90% profit split', 'Fast payouts (~15 min after approval)', 'USA traders accepted', 'Active Discord community with daily live streams'],
+            ro: ['Trailing Drawdown EOD (mai indulgent)', '90% împărțire profit', 'Plăți rapide (~15 min după aprobare)', 'Traderi din SUA acceptați', 'Comunitate Discord activă cu live streams zilnice'],
+            es: ['Trailing Drawdown EOD (más indulgente)', '90% división de ganancias', 'Pagos rápidos (~15 min tras aprobación)', 'Traders de EE.UU. aceptados', 'Comunidad Discord activa con streams diarios']
+        },
+        cons: {
+            en: ['Futures only', 'Newer firm (fewer reviews)', 'Subscription-based pricing', '60-day max evaluation duration'],
+            ro: ['Doar futures', 'Firmă mai nouă (mai puține recenzii)', 'Prețuri bazate pe abonament', 'Durată maximă de evaluare de 60 de zile'],
+            es: ['Solo futuros', 'Firma más nueva (menos reseñas)', 'Precios basados en suscripción', 'Duración máxima de evaluación de 60 días']
+        }
     }
 ];
 

@@ -877,6 +877,38 @@ const allFirms: Firm[] = [
             100000: { price: '$31.90/mo', oldPrice: '$319' },
             150000: { price: '$39.90/mo', oldPrice: '$399' },
         }
+    },
+    {
+        id: 26,
+        name: 'Legacy Funded Futures',
+        rating: 4.0,
+        verified: true,
+        rules: { maxDD: 'EOD Trailing', profit: '90%' },
+        price: '$99/mo',
+        oldPrice: '$99/mo',
+        coupon: 'OG20',
+        offer: '20% OFF',
+        action: 'Get Funded',
+        link: 'https://legacyfundedfutures.com?ref=290',
+        logoUrl: '/logos/legacy-funded-futures.png',
+        capital: 50000,
+        platform: ['DXtrade', 'NinjaTrader', 'TradingView', 'Rithmic'],
+        challengeType: '1-Step',
+        marketType: 'futures',
+        instantFunding: false,
+        hftAllowed: false,
+        balanceBasedDD: false,
+        newsTrading: true,
+        cryptoPayout: false,
+        usaAccepted: true,
+        noTimeLimit: false,
+        weeklyPayouts: false,
+        payoutDays: 1,
+        capitalPricing: {
+            50000: { price: '$99/mo', oldPrice: '$99/mo' },
+            100000: { price: '$149/mo', oldPrice: '$149/mo' },
+            150000: { price: '$179/mo', oldPrice: '$179/mo' },
+        }
     }
 ];
 
