@@ -23,20 +23,6 @@ export const metadata: Metadata = {
 const cheapestFirms = [
     {
         rank: 1,
-        name: 'AquaFunded',
-        price: 14.25,
-        accountSize: '5K',
-        profitSplit: 'Up to 90%',
-        maxDD: '10%',
-        platforms: 'DXtrade, Match-Trader, cTrader',
-        usaAccepted: false,
-        discount: 'Welcome Deal',
-        coupon: 'WELCOME',
-        link: 'https://www.aquafunded.com/?afmc=dihorulcristy',
-        highlight: 'Cheapest on the market - only $14.25',
-    },
-    {
-        rank: 2,
         name: 'FundingPips',
         price: 32,
         accountSize: '5K',
@@ -226,7 +212,7 @@ export default function CheapestPropFirmsPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
                             <TrendingDown className="h-6 w-6 text-amber-400 mx-auto mb-2" />
-                            <div className="text-2xl font-bold text-white">$14.25</div>
+                            <div className="text-2xl font-bold text-white">$32</div>
                             <div className="text-xs text-slate-400">Lowest Entry Price</div>
                         </div>
                         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4 text-center">
@@ -352,10 +338,10 @@ export default function CheapestPropFirmsPage() {
                             <div className="text-center">
                                 <div className="text-4xl mb-2">💰</div>
                                 <h3 className="text-lg font-bold text-white mb-1">Cheapest Overall</h3>
-                                <div className="text-amber-400 font-bold mb-1">AquaFunded - $14.25</div>
-                                <div className="text-xs text-slate-400 mb-2">5K account + up to 90% split</div>
+                                <div className="text-amber-400 font-bold mb-1">FundingPips - $32</div>
+                                <div className="text-xs text-slate-400 mb-2">5K account + up to 100% split</div>
                                 <a
-                                    href="https://www.aquafunded.com/?afmc=dihorulcristy"
+                                    href="https://app.fundingpips.com/register?ref=b5420489"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center rounded-lg bg-amber-600 px-4 py-2 text-sm font-bold text-white hover:bg-amber-500 transition"
