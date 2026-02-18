@@ -14,7 +14,7 @@ interface PageProps {
 
 const translations = {
     en: {
-        title: "How to Become a Funded Trader in 2025",
+        title: "How to Become a Funded Trader in 2026",
         subtitle: "Complete Guide: Get Funded Forex Account Steps & Funding for Forex Traders",
         description: "Learn the exact steps to get a funded forex account and access funding for forex traders without risking your own capital. Start with up to $100,000 in trading capital.",
         community: "Community of 10,000+ Traders",
@@ -89,7 +89,7 @@ const translations = {
         disclaimer: "Disclaimer: Trading involves significant risks and is not suitable for all investors. This is an informational guide only. All prop firm accounts are demo/simulated environments."
     },
     ro: {
-        title: "Cum să Devii un Trader Finanțat în 2025",
+        title: "Cum să Devii un Trader Finanțat în 2026",
         subtitle: "Ghid Complet: Pașii pentru un Cont Forex Finanțat & Finanțare pentru Traderi",
         description: "Învață pașii exacti pentru a obține un cont forex finanțat și accesează finanțare pentru traderi forex fără a risca propriul capital. Începe cu până la $100,000 capital de trading.",
         community: "Comunitate de 10,000+ Traderi",
@@ -164,7 +164,7 @@ const translations = {
         disclaimer: "Declinare a responsabilității: Tranzacționarea implică riscuri semnificative și nu este potrivită pentru toți investitorii. Acesta este doar un ghid informativ. Toate conturile prop firm sunt medii demo/simulate."
     },
     es: {
-        title: "Cómo Convertirse en un Trader Financiado en 2025",
+        title: "Cómo Convertirse en un Trader Financiado en 2026",
         subtitle: "Guía Completa: Pasos para una Cuenta Forex Financiada & Financiación para Traders",
         description: "Aprende los pasos exactos para obtener una cuenta forex financiada y acceder a financiación para traders forex sin arriesgar tu propio capital. Comienza con hasta $100,000 en capital de trading.",
         community: "Comunidad de 10,000+ Traders",
@@ -316,9 +316,9 @@ export default function HowToGetFundedGuide({ params }: PageProps) {
                                 </div>
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                                     {lang === 'ro' ? (
-                                        <>Cum să Devii un <span className="text-emerald-400">Trader Finanțat</span> în 2025</>
+                                        <>Cum să Devii un <span className="text-emerald-400">Trader Finanțat</span> în 2026</>
                                     ) : (
-                                        <>How to Become a <span className="text-emerald-400">Funded Trader</span> in 2025</>
+                                        <>How to Become a <span className="text-emerald-400">Funded Trader</span> in 2026</>
                                     )}
                                 </h1>
                                 <p className="text-xl text-slate-300 mb-4">{t.subtitle}</p>

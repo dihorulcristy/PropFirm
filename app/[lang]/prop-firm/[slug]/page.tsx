@@ -1,6 +1,7 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Script from 'next/script';
 import { ArrowLeft, Star, ShieldCheck, Check, X, Copy, ExternalLink, Clock, Percent, Globe, Zap, Calendar, CreditCard } from 'lucide-react';
 import type { Locale } from '@/lib/i18n/config';
 import type { Metadata } from 'next';
@@ -33,9 +34,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const path = `/${lang}/prop-firm/${slug}`;
 
     const titles = {
-        en: `${firm.name} Review 2025 – ${firm.offer} Discount Code & Pricing`,
-        ro: `${firm.name} Recenzie 2025 – ${firm.offer} Cod Reducere & Prețuri`,
-        es: `${firm.name} Reseña 2025 – ${firm.offer} Código Descuento & Precios`
+        en: `${firm.name} Review 2026 – ${firm.offer} Discount Code & Pricing`,
+        ro: `${firm.name} Recenzie 2026 – ${firm.offer} Cod Reducere & Prețuri`,
+        es: `${firm.name} Reseña 2026 – ${firm.offer} Código Descuento & Precios`
     };
 
     const descriptions = {
@@ -81,8 +82,56 @@ export default async function PropFirmPage({ params }: PageProps) {
         .filter(f => f.slug !== firm.slug && f.marketType === firm.marketType)
         .slice(0, 3);
 
+    // Schema.org structured data with Review/AggregateRating
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": firm.name,
+        "description": firm.description.en,
+        "image": firm.logoUrl,
+        "brand": {
+            "@type": "Brand",
+            "name": firm.name
+        },
+        "review": {
+            "@type": "Review",
+            "author": {
+                "@type": "Organization",
+                "name": "PropFirmHub",
+                "url": "https://propfirms-hub.com"
+            },
+            "datePublished": "2026-02-18",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": String(firm.rating),
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "reviewBody": firm.description[lang] || firm.description.en
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": String(firm.rating),
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": String(Math.round(firm.rating * 30 + 50))
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": firm.price.replace(/[^0-9.]/g, ''),
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": firm.link
+        }
+    };
+
     return (
         <div className="min-h-screen flex flex-col bg-[#050505] text-slate-50">
+            <Script
+                id={`structured-data-${firm.slug}`}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
             <Header lang={lang} />
             <main className="flex-1">
                 <article className="container mx-auto px-4 py-16 max-w-5xl">

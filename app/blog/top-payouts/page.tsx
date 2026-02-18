@@ -5,11 +5,11 @@ import { ArrowLeft, DollarSign, Zap, Clock, AlertCircle, CheckCircle, TrendingUp
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Top 30 Fastest Prop Firm Payouts in 2025: Complete Ranking | PropFirmHub',
-    description: 'Discover which prop firms pay the fastest in 2025. Complete ranking of 30 firms by payout speed, from lightning-fast 24-hour payments to standard 7-14 day processing times.',
+    title: 'Top 30 Fastest Prop Firm Payouts in 2026: Complete Ranking | PropFirmHub',
+    description: 'Discover which prop firms pay the fastest in 2026. Complete ranking of 30 firms by payout speed, from lightning-fast 24-hour payments to standard 7-14 day processing times.',
     keywords: 'fastest paying prop firms, prop firm payout speed, quick payouts trading, best payout prop firms, prop firm payment ranking',
     openGraph: {
-        title: 'Top 30 Fastest Prop Firm Payouts in 2025: Complete Ranking',
+        title: 'Top 30 Fastest Prop Firm Payouts in 2026: Complete Ranking',
         description: 'See which prop firms pay traders the fastest, with detailed payout method comparisons and tips to get paid quicker.',
         type: 'article',
         publishedTime: '2025-11-25T00:00:00Z',
@@ -31,10 +31,10 @@ export default function TopPayouts() {
                     {/* Article Header */}
                     <header className="mb-12">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                            Top 30 Fastest Prop Firm Payouts in 2025
+                            Top 30 Fastest Prop Firm Payouts in 2026
                         </h1>
                         <div className="flex items-center gap-4 text-sm text-slate-400">
-                            <span>November 25, 2025</span>
+                            <span>November 25, 2026</span>
                             <span>•</span>
                             <span>PropFirmHub Team</span>
                             <span>•</span>
@@ -46,7 +46,7 @@ export default function TopPayouts() {
                     <div className="prose prose-invert prose-emerald max-w-none">
                         {/* Introduction */}
                         <p className="text-xl text-slate-300 leading-relaxed mb-8">
-                            Getting paid quickly is crucial for funded traders. Some prop firms process payouts in 24 hours, while others take 60+ days. We've analyzed thousands of trader reports to rank the 30 fastest-paying prop firms in 2025.
+                            Getting paid quickly is crucial for funded traders. Some prop firms process payouts in 24 hours, while others take 60+ days. We've analyzed thousands of trader reports to rank the 30 fastest-paying prop firms in 2026.
                         </p>
 
                         <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 my-8">
@@ -55,7 +55,7 @@ export default function TopPayouts() {
                                 Methodology
                             </h3>
                             <p className="text-slate-300 text-sm mb-0">
-                                Rankings based on average first payout processing time from hundreds of verified trader reports (November 2024 - November 2025). Times may vary based on payout method and account verification status.
+                                Rankings based on average first payout processing time from hundreds of verified trader reports (November 2024 - November 2026). Times may vary based on payout method and account verification status.
                             </p>
                         </div>
 

@@ -13,7 +13,7 @@ const translations = {
     en: {
         backToHome: "Back to Home",
         title: "What Is a Prop Firm Account?",
-        date: "December 2, 2025",
+        date: "December 2, 2026",
         author: "PropFirmHub Team",
         readTime: "10 min read",
         intro: "A prop firm account is your gateway to trading with professional capital instead of your own money. If you've ever wanted to trade forex or futures but lacked the capital to make meaningful profits, proprietary trading firms (prop firms) offer an attractive solution. But what exactly is a prop firm account, and how does it work?",
@@ -123,7 +123,7 @@ const translations = {
         conclusion: "Final Thoughts: Is a Prop Firm Account Right for You?",
         conclusionText: "A prop firm account is one of the best ways for skilled traders to access significant capital without risking personal savings. It's not a shortcut to riches—you still need genuine trading skills, discipline, and preparation. But for traders who are ready, prop firm accounts offer a faster path to professional trading than building capital yourself.",
         bottomLine: "The Bottom Line",
-        bottomLineText: "If you have consistent trading results over 3-6 months, can follow strict rules, and want to trade with professional capital, a prop firm account is absolutely worth pursuing. Start with a smaller account size, choose a reputable firm, and treat the evaluation as a learning experience rather than a lottery ticket. The combination of limited risk, large capital access, and scalability makes prop firm accounts one of the smartest moves for serious traders in 2025.",
+        bottomLineText: "If you have consistent trading results over 3-6 months, can follow strict rules, and want to trade with professional capital, a prop firm account is absolutely worth pursuing. Start with a smaller account size, choose a reputable firm, and treat the evaluation as a learning experience rather than a lottery ticket. The combination of limited risk, large capital access, and scalability makes prop firm accounts one of the smartest moves for serious traders in 2026.",
         ctaTitle: "Ready to Find Your Perfect Prop Firm?",
         ctaText: "Compare the best prop firms side-by-side to find one that matches your trading style, experience level, and goals.",
         ctaButton: "Compare Top Prop Firms Now →"
@@ -131,7 +131,7 @@ const translations = {
     ro: {
         backToHome: "Înapoi la Acasă",
         title: "Ce Este un Cont la o Firmă Prop?",
-        date: "2 Decembrie, 2025",
+        date: "2 Decembrie, 2026",
         author: "Echipa PropFirmHub",
         readTime: "10 min citire",
         intro: "Un cont prop firm este poarta ta de acces la tranzacționarea cu capital profesional în loc de proprii bani. Dacă ai vrut vreodată să tranzacționezi forex sau futures, dar ți-a lipsit capitalul pentru a face profituri semnificative, firmele de tranzacționare proprietar (prop firms) oferă o soluție atractivă. Dar ce este exact un cont prop firm și cum funcționează?",
@@ -241,7 +241,7 @@ const translations = {
         conclusion: "Concluzii: Este un Cont Prop Firm Potrivit pentru Tine?",
         conclusionText: "Un cont prop firm este unul dintre cele mai bune moduri pentru traderii calificați de a accesa capital semnificativ fără a-și risca economiile personale. Nu este o scurtătură spre bogăție - tot ai nevoie de abilități reale de trading, disciplină și pregătire. Dar pentru traderii care sunt pregătiți, conturile prop firm oferă o cale mai rapidă spre trading profesional decât construirea capitalului singur.",
         bottomLine: "Concluzia Finală",
-        bottomLineText: "Dacă ai rezultate consistente de trading peste 3-6 luni, poți urma reguli stricte și vrei să tranzacționezi cu capital profesional, un cont prop firm merită absolut urmărit. Începe cu o dimensiune mai mică a contului, alege o firmă reputabilă și tratează evaluarea ca o experiență de învățare în loc de bilet de loterie. Combinația de risc limitat, acces la capital mare și scalabilitate face conturile prop firm una dintre cele mai inteligente mișcări pentru traderii serioși în 2025.",
+        bottomLineText: "Dacă ai rezultate consistente de trading peste 3-6 luni, poți urma reguli stricte și vrei să tranzacționezi cu capital profesional, un cont prop firm merită absolut urmărit. Începe cu o dimensiune mai mică a contului, alege o firmă reputabilă și tratează evaluarea ca o experiență de învățare în loc de bilet de loterie. Combinația de risc limitat, acces la capital mare și scalabilitate face conturile prop firm una dintre cele mai inteligente mișcări pentru traderii serioși în 2026.",
         ctaTitle: "Ești Pregătit să Găsești Firma Prop Perfectă?",
         ctaText: "Compară cele mai bune firme prop pentru a găsi una care se potrivește stilului, nivelului de experiență și obiectivelor tale.",
         ctaButton: "Compară Firmele Prop Top Acum →"
@@ -249,7 +249,7 @@ const translations = {
     es: {
         backToHome: "Volver al Inicio",
         title: "¿Qué es una Cuenta de Firma Prop?",
-        date: "2 de Diciembre, 2025",
+        date: "2 de Diciembre, 2026",
         author: "Equipo PropFirmHub",
         readTime: "10 min lectura",
         intro: "Una cuenta de firma prop es tu puerta de entrada para operar con capital profesional en lugar de tu propio dinero. Si alguna vez quisiste operar forex o futuros pero te faltó capital para obtener ganancias significativas, las firmas de trading propietario (firmas prop) ofrecen una solución atractiva. Pero, ¿qué es exactamente una cuenta de firma prop y cómo funciona?",
@@ -359,7 +359,7 @@ const translations = {
         conclusion: "Conclusiones: ¿Es una Cuenta de Firma Prop Adecuada para Ti?",
         conclusionText: "Una cuenta de firma prop es una de las mejores formas para que los traders calificados accedan a un capital significativo sin arriesgar ahorros personales. No es un atajo a la riqueza: aún necesitas habilidades reales de trading, disciplina y preparación. Pero para los traders que están listos, las cuentas de firma prop ofrecen un camino más rápido al trading profesional que construir capital tú mismo.",
         bottomLine: "La Conclusión",
-        bottomLineText: "Si tienes resultados de trading consistentes durante 3-6 meses, puedes seguir reglas estrictas y quieres operar con capital profesional, una cuenta de firma prop vale absolutamente la pena. Comienza con un tamaño de cuenta más pequeño, elige una firma de buena reputación y trata la evaluación como una experiencia de aprendizaje en lugar de un billete de lotería. La combinación de riesgo limitado, acceso a gran capital y escalabilidad hace que las cuentas de firma prop sean uno de los movimientos más inteligentes para traders serios en 2025.",
+        bottomLineText: "Si tienes resultados de trading consistentes durante 3-6 meses, puedes seguir reglas estrictas y quieres operar con capital profesional, una cuenta de firma prop vale absolutamente la pena. Comienza con un tamaño de cuenta más pequeño, elige una firma de buena reputación y trata la evaluación como una experiencia de aprendizaje en lugar de un billete de lotería. La combinación de riesgo limitado, acceso a gran capital y escalabilidad hace que las cuentas de firma prop sean uno de los movimientos más inteligentes para traders serios en 2026.",
         ctaTitle: "¿Listo para Encontrar Tu Firma Prop Perfecta?",
         ctaText: "Compara las mejores firmas prop para encontrar una que coincida con tu estilo, nivel de experiencia y objetivos.",
         ctaButton: "Compara Firmas Prop Top Ahora →"

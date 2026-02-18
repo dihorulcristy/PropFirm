@@ -16,8 +16,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PropFirmHub - Compare Top Prop Trading Firms 2025 | Exclusive Discounts",
-  description: "Compare top prop firms 2025. Exclusive discounts, evaluation rules & pricing. FTMO, FunderPro, TradingCult & more. Find your perfect firm!",
+  title: "PropFirmHub - Compare Top Prop Trading Firms 2026 | Exclusive Discounts",
+  description: "Compare top prop firms 2026. Exclusive discounts, evaluation rules & pricing. FTMO, FunderPro, TradingCult & more. Find your perfect firm!",
   keywords: ["prop trading", "prop firms", "FTMO", "funded trading", "trading evaluation", "prop firm comparison", "FunderPro", "TradingCult", "forex prop firms", "futures prop firms"],
   authors: [{ name: "PropFirmHub Team" }],
   creator: "PropFirmHub",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'PropFirmHub - Compare Top Prop Trading Firms 2025',
+    title: 'PropFirmHub - Compare Top Prop Trading Firms 2026',
     description: 'Compare the best prop trading firms with exclusive discount codes. FTMO, FunderPro, TradingCult & more. Find the perfect firm for your trading style.',
     url: 'https://propfirms-hub.com',
     siteName: 'PropFirmHub',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PropFirmHub - Compare Top Prop Trading Firms 2025',
+    title: 'PropFirmHub - Compare Top Prop Trading Firms 2026',
     description: 'Compare the best prop trading firms with exclusive discount codes. Find the perfect firm for your trading style.',
     images: ['/og-image.jpg'],
   },

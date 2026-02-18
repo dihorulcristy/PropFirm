@@ -5,11 +5,11 @@ import { ArrowLeft, CheckCircle, AlertCircle, TrendingUp, Clock, Target, Award }
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'How Hard Is It To Get Funded Trading? Complete 2025 Guide | PropFirmHub',
-    description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to increase your chances of passing prop firm evaluations in 2025.',
+    title: 'How Hard Is It To Get Funded Trading? Complete 2026 Guide | PropFirmHub',
+    description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to increase your chances of passing prop firm evaluations in 2026.',
     keywords: 'how hard is it to get funded trading, prop firm funding difficulty, prop trading success rate, get funded trading, prop firm challenge pass rate, funded trader success, prop trading evaluation',
     openGraph: {
-        title: 'How Hard Is It To Get Funded Trading? Complete 2025 Guide',
+        title: 'How Hard Is It To Get Funded Trading? Complete 2026 Guide',
         description: 'Discover the real difficulty of getting funded in prop trading. Learn success rates, key challenges, and proven strategies to pass prop firm evaluations.',
         type: 'article',
         publishedTime: '2025-11-27T00:00:00Z',
@@ -34,7 +34,7 @@ export default function HowHardIsItToGetFundedTrading() {
                             How Hard Is It To Get Funded Trading?
                         </h1>
                         <div className="flex items-center gap-4 text-sm text-slate-400">
-                            <span>November 27, 2025</span>
+                            <span>November 27, 2026</span>
                             <span>•</span>
                             <span>PropFirmHub Team</span>
                             <span>•</span>

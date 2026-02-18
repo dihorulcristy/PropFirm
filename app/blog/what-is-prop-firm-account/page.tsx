@@ -5,11 +5,11 @@ import { ArrowLeft, CheckCircle, TrendingUp, DollarSign, Shield, Users, Target, 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'What Is a Prop Firm Account? Complete 2025 Guide for Traders | PropFirmHub',
-    description: 'Learn everything about prop firm accounts: how they work, benefits, risks, and how to get one. Complete guide to proprietary trading accounts for forex and futures traders in 2025.',
+    title: 'What Is a Prop Firm Account? Complete 2026 Guide for Traders | PropFirmHub',
+    description: 'Learn everything about prop firm accounts: how they work, benefits, risks, and how to get one. Complete guide to proprietary trading accounts for forex and futures traders in 2026.',
     keywords: 'what is a prop firm account, prop firm trading account, proprietary trading account, prop trading explained, funded trading account, prop firm account benefits, how prop firms work',
     openGraph: {
-        title: 'What Is a Prop Firm Account? Complete 2025 Guide for Traders',
+        title: 'What Is a Prop Firm Account? Complete 2026 Guide for Traders',
         description: 'Learn everything about prop firm accounts: how they work, benefits, risks, and how to get one. Complete guide to proprietary trading accounts.',
         type: 'article',
         publishedTime: '2025-12-02T00:00:00Z',
@@ -34,7 +34,7 @@ export default function WhatIsPropFirmAccount() {
                             What Is a Prop Firm Account?
                         </h1>
                         <div className="flex items-center gap-4 text-sm text-slate-400">
-                            <span>December 2, 2025</span>
+                            <span>December 2, 2026</span>
                             <span>•</span>
                             <span>PropFirmHub Team</span>
                             <span>•</span>
@@ -426,7 +426,7 @@ export default function WhatIsPropFirmAccount() {
                                 <div>
                                     <h3 className="text-xl font-bold text-white mt-0 mb-3">The Bottom Line</h3>
                                     <p className="text-slate-300 mb-0">
-                                        If you have consistent trading results over 3-6 months, can follow strict rules, and want to trade with professional capital, a prop firm account is absolutely worth pursuing. Start with a smaller account size, choose a reputable firm, and treat the evaluation as a learning experience rather than a lottery ticket. The combination of limited risk, large capital access, and scalability makes prop firm accounts one of the smartest moves for serious traders in 2025.
+                                        If you have consistent trading results over 3-6 months, can follow strict rules, and want to trade with professional capital, a prop firm account is absolutely worth pursuing. Start with a smaller account size, choose a reputable firm, and treat the evaluation as a learning experience rather than a lottery ticket. The combination of limited risk, large capital access, and scalability makes prop firm accounts one of the smartest moves for serious traders in 2026.
                                     </p>
                                 </div>
                             </div>

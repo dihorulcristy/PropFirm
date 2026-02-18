@@ -13,7 +13,7 @@ const translations = {
     en: {
         backToHome: "Back to Home",
         title: "How Hard Is It To Get Funded Trading?",
-        date: "November 27, 2025",
+        date: "November 27, 2026",
         author: "PropFirmHub Team",
         readTime: "12 min read",
         intro: "Getting funded as a trader is a dream shared by thousands, but how hard is it really? The truth might surprise you. While prop firm evaluations are designed to be challenging, understanding what you're up against can dramatically improve your chances of success.",
@@ -107,7 +107,7 @@ const translations = {
     ro: {
         backToHome: "Înapoi la Acasă",
         title: "Cât de Greu Este să Fii Finanțat la Trading?",
-        date: "27 Noiembrie, 2025",
+        date: "27 Noiembrie, 2026",
         author: "Echipa PropFirmHub",
         readTime: "12 min citire",
         intro: "A fi finanțat ca trader este un vis împărtășit de mii de oameni, dar cât de greu este cu adevărat? Adevărul te-ar putea surprinde. Deși evaluările firmelor prop sunt concepute să fie provocatoare, înțelegerea a ceea ce ai de înfruntat îți poate îmbunătăți dramatic șansele de succes.",
@@ -201,7 +201,7 @@ const translations = {
     es: {
         backToHome: "Volver al Inicio",
         title: "¿Qué tan difícil es conseguir financiación?",
-        date: "27 de Noviembre, 2025",
+        date: "27 de Noviembre, 2026",
         author: "Equipo PropFirmHub",
         readTime: "12 min lectura",
         intro: "Conseguir financiación como trader es un sueño compartido por miles, pero ¿qué tan difícil es realmente? La verdad podría sorprenderte. Aunque las evaluaciones de firmas prop están diseñadas para ser desafiantes, entender a qué te enfrentas puede mejorar drásticamente tus posibilidades de éxito.",

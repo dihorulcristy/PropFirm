@@ -17,15 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const localizedBlogPosts = [
         { slug: 'how-to-pass-prop-firm-challenge', lastMod: '2026-01-02', priority: 0.9 },
         { slug: 'pass-rates-2026', lastMod: '2026-01-07', priority: 0.9 },
-        { slug: 'how-hard-is-it-to-get-funded-trading', lastMod: '2025-11-27', priority: 0.85 },
-        { slug: 'what-is-prop-firm-account', lastMod: '2025-12-02', priority: 0.85 },
-        { slug: 'taxes-2025', lastMod: '2025-11-27', priority: 0.8 },
-        { slug: 'top-payouts', lastMod: '2025-11-27', priority: 0.8 },
+        { slug: 'how-hard-is-it-to-get-funded-trading', lastMod: '2026-02-18', priority: 0.85 },
+        { slug: 'what-is-prop-firm-account', lastMod: '2026-02-18', priority: 0.85 },
+        { slug: 'taxes-2025', lastMod: '2026-02-18', priority: 0.8 },
+        { slug: 'top-payouts', lastMod: '2026-02-18', priority: 0.8 },
     ]
 
     // Blog posts that exist only in English - use /en/blog/ prefix for consistency
     const englishOnlyBlogPosts = [
-        { slug: 'hft-vs-swing', lastMod: '2025-11-27', priority: 0.8 },
+        { slug: 'hft-vs-swing', lastMod: '2026-02-18', priority: 0.8 },
         { slug: 'best-for-beginners', lastMod: '2026-01-31', priority: 0.9 },
         { slug: 'cheapest-prop-firms', lastMod: '2026-01-31', priority: 0.9 },
         { slug: 'best-prop-firms-usa', lastMod: '2026-01-31', priority: 0.9 },
@@ -33,13 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Other landing pages (English only - no redirect issues)
     const landingPages = [
-        { path: '/dominion-funding', lastMod: '2025-11-24', priority: 0.7 },
+        { path: '/dominion-funding', lastMod: '2026-02-18', priority: 0.7 },
         { path: '/funderprofutures', lastMod: new Date(), priority: 0.8 },
         { path: '/dnafunded', lastMod: new Date(), priority: 0.8 },
     ]
 
     // Legal Pages - exist under /[lang]/(legal)/
-    const legalPages = ['privacy-policy', 'terms-of-service', 'cookie-policy', 'affiliate-disclosure', 'contact']
+    const legalPages = ['privacy-policy', 'terms-of-service', 'cookie-policy', 'affiliate-disclosure', 'contact', 'about']
 
     // Get all prop firm slugs
     const firmSlugs = getAllFirmSlugs()

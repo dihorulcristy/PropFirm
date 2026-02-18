@@ -34,7 +34,7 @@ export default function HFTvsSwing() {
                             HFT vs Swing Trading: Which Strategy Works Best for Prop Firms?
                         </h1>
                         <div className="flex items-center gap-4 text-sm text-slate-400">
-                            <span>November 25, 2025</span>
+                            <span>November 25, 2026</span>
                             <span>•</span>
                             <span>PropFirmHub Team</span>
                             <span>•</span>

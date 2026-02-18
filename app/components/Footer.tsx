@@ -12,6 +12,7 @@ const translations = {
         compareFirms: "Compare Firms",
         dealOfTheWeek: "Deal of the Week",
         howToGetFunded: "How to Get Funded",
+        aboutUs: "About Us",
         contactUs: "Contact Us",
         legal: "Legal",
         privacyPolicy: "Privacy Policy",
@@ -32,6 +33,7 @@ const translations = {
         compareFirms: "Compară Firme",
         dealOfTheWeek: "Oferta Săptămânii",
         howToGetFunded: "Cum Să Fii Finanțat",
+        aboutUs: "Despre Noi",
         contactUs: "Contactează-ne",
         legal: "Legal",
         privacyPolicy: "Politica de Confidențialitate",
@@ -52,6 +54,7 @@ const translations = {
         compareFirms: "Comparar Firmas",
         dealOfTheWeek: "Oferta de la Semana",
         howToGetFunded: "Cómo Conseguir Financiación",
+        aboutUs: "Sobre Nosotros",
         contactUs: "Contáctanos",
         legal: "Legal",
         privacyPolicy: "Política de Privacidad",
@@ -105,6 +108,7 @@ export default function Footer({ lang = 'en' }: FooterProps) {
                             <li><Link href={`${basePath}/#compare`} className="text-slate-400 hover:text-emerald-400 transition-colors">{t.compareFirms}</Link></li>
                             <li><Link href={`${basePath}/#deal`} className="text-slate-400 hover:text-emerald-400 transition-colors">{t.dealOfTheWeek}</Link></li>
                             <li><Link href={`${basePath}/how-to-get-funded-guide`} className="text-slate-400 hover:text-emerald-400 transition-colors">{t.howToGetFunded}</Link></li>
+                            <li><Link href={`${basePath}/about`} className="text-slate-400 hover:text-emerald-400 transition-colors">{t.aboutUs}</Link></li>
                             <li><Link href={`${basePath}/contact`} className="text-slate-400 hover:text-emerald-400 transition-colors">{t.contactUs}</Link></li>
                         </ul>
                     </div>

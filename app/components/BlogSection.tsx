@@ -16,8 +16,8 @@ const translations = {
             },
             {
                 slug: "taxes-2025",
-                title: "Taxes 2025",
-                description: "Compare taxes and fees for 2025. Complete guide for traders."
+                title: "Taxes 2026",
+                description: "Compare taxes and fees for 2026. Complete guide for traders."
             },
             {
                 slug: "top-payouts",
@@ -35,8 +35,8 @@ const translations = {
             },
             {
                 slug: "taxes-2025",
-                title: "Taxe 2025",
-                description: "Compară taxele și comisioanele pentru 2025. Ghid complet pentru traderi."
+                title: "Taxe 2026",
+                description: "Compară taxele și comisioanele pentru 2026. Ghid complet pentru traderi."
             },
             {
                 slug: "top-payouts",
@@ -54,8 +54,8 @@ const translations = {
             },
             {
                 slug: "taxes-2025",
-                title: "Impuestos 2025",
-                description: "Compara impuestos y tarifas para 2025. Guía completa para traders."
+                title: "Impuestos 2026",
+                description: "Compara impuestos y tarifas para 2026. Guía completa para traders."
             },
             {
                 slug: "top-payouts",

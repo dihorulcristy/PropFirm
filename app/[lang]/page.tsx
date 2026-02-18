@@ -56,7 +56,7 @@ export default function Home() {
                 "@id": "https://propfirms-hub.com/#website",
                 "name": "PropFirmHub",
                 "url": "https://propfirms-hub.com",
-                "description": "Compare top prop trading firms of 2025. Find exclusive discounts, compare evaluation rules, and choose the perfect firm for your trading style.",
+                "description": "Compare top prop trading firms of 2026. Find exclusive discounts, compare evaluation rules, and choose the perfect firm for your trading style.",
                 "publisher": {
                     "@id": "https://propfirms-hub.com/#organization"
                 },
@@ -73,8 +73,8 @@ export default function Home() {
                 "@type": "WebPage",
                 "@id": "https://propfirms-hub.com/#webpage",
                 "url": "https://propfirms-hub.com",
-                "name": "PropFirmHub - Compare Top Prop Trading Firms 2025",
-                "description": "Compare the best prop trading firms of 2025. Find exclusive discount codes, compare evaluation rules, pricing, and payout speeds.",
+                "name": "PropFirmHub - Compare Top Prop Trading Firms 2026",
+                "description": "Compare the best prop trading firms of 2026. Find exclusive discount codes, compare evaluation rules, pricing, and payout speeds.",
                 "isPartOf": {
                     "@id": "https://propfirms-hub.com/#website"
                 },
@@ -82,7 +82,7 @@ export default function Home() {
                     "@id": "https://propfirms-hub.com/#organization"
                 },
                 "datePublished": "2025-11-25",
-                "dateModified": "2025-11-25"
+                "dateModified": "2026-02-18"
             },
             {
                 "@type": "FAQPage",

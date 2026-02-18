@@ -12,11 +12,11 @@ interface PageProps {
 const translations = {
     en: {
         backToHome: "Back to Blog",
-        title: "Prop Firm Taxes 2025: Complete Guide for Traders",
-        date: "November 25, 2025",
+        title: "Prop Firm Taxes 2026: Complete Guide for Traders",
+        date: "November 25, 2026",
         author: "PropFirmHub Team",
         readTime: "18 min read",
-        intro: "Taxes on prop firm profits can be confusing. Are you an employee or independent contractor? How much will you actually keep? This complete guide answers all your questions about prop firm taxation in 2025.",
+        intro: "Taxes on prop firm profits can be confusing. Are you an employee or independent contractor? How much will you actually keep? This complete guide answers all your questions about prop firm taxation in 2026.",
         disclaimer: "Disclaimer",
         disclaimerText: "This guide provides general tax information. Always consult with a qualified tax professional in your jurisdiction for personalized advice. Tax laws vary by country and change frequently.",
         taxStatus: "Your Tax Status: Independent Contractor",
@@ -69,7 +69,7 @@ const translations = {
         faq3A: "You still report income where YOU live and pay taxes there. The prop firm's location doesn't change your tax obligations. Always report all worldwide income.",
         faq4Q: "How do I track everything for taxes?",
         faq4A: "Use accounting software (QuickBooks, FreshBooks, Wave) or spreadsheets. Track all payouts, expenses, and save receipts. Consider hiring a trading-specialized accountant.",
-        calendar: "Tax Planning Calendar 2025",
+        calendar: "Tax Planning Calendar 2026",
         keyTakeaways: "Key Takeaways",
         takeaway1: "You're self-employed - plan to pay 25-40% of earnings in taxes",
         takeaway2: "Save tax money separately from every payout immediately",
@@ -83,11 +83,11 @@ const translations = {
     },
     ro: {
         backToHome: "Înapoi la Blog",
-        title: "Taxe Prop Firm 2025: Ghid Complet pentru Traderi",
-        date: "25 Noiembrie, 2025",
+        title: "Taxe Prop Firm 2026: Ghid Complet pentru Traderi",
+        date: "25 Noiembrie, 2026",
         author: "Echipa PropFirmHub",
         readTime: "18 min citire",
-        intro: "Taxele pe profiturile prop firm pot fi confuze. Ești angajat sau contractor independent? Cât vei păstra de fapt? Acest ghid complet răspunde tuturor întrebărilor tale despre impozitarea prop firm în 2025.",
+        intro: "Taxele pe profiturile prop firm pot fi confuze. Ești angajat sau contractor independent? Cât vei păstra de fapt? Acest ghid complet răspunde tuturor întrebărilor tale despre impozitarea prop firm în 2026.",
         disclaimer: "Declinarea Responsabilității",
         disclaimerText: "Acest ghid oferă informații fiscale generale. Consultă întotdeauna un profesionist fiscal calificat în jurisdicția ta pentru sfaturi personalizate. Legile fiscale variază în funcție de țară și se schimbă frecvent.",
         taxStatus: "Statutul Tău Fiscal: Contractor Independent",
@@ -140,7 +140,7 @@ const translations = {
         faq3A: "Tot raportezi veniturile unde TU locuiești și plătești taxe acolo. Locația firmei prop nu îți schimbă obligațiile fiscale. Raportează întotdeauna toate veniturile mondiale.",
         faq4Q: "Cum urmăresc totul pentru taxe?",
         faq4A: "Folosește software de contabilitate (QuickBooks, FreshBooks, Wave) sau foi de calcul. Urmărește toate plățile, cheltuielile și păstrează chitanțele. Ia în considerare angajarea unui contabil specializat în trading.",
-        calendar: "Calendar de Planificare Fiscală 2025",
+        calendar: "Calendar de Planificare Fiscală 2026",
         keyTakeaways: "Concluzii Cheie",
         takeaway1: "Ești auto-angajat - planifică să plătești 25-40% din câștiguri în taxe",
         takeaway2: "Salvează banii pentru taxe separat din fiecare plată imediat",
@@ -154,11 +154,11 @@ const translations = {
     },
     es: {
         backToHome: "Volver al Blog",
-        title: "Impuestos de Firmas Prop 2025: Guía Completa para Traders",
-        date: "25 de Noviembre, 2025",
+        title: "Impuestos de Firmas Prop 2026: Guía Completa para Traders",
+        date: "25 de Noviembre, 2026",
         author: "Equipo PropFirmHub",
         readTime: "18 min lectura",
-        intro: "Los impuestos sobre las ganancias de firmas prop pueden ser confusos. ¿Eres empleado o contratista independiente? ¿Cuánto te quedarás realmente? Esta guía completa responde todas tus preguntas sobre la fiscalidad de firmas prop en 2025.",
+        intro: "Los impuestos sobre las ganancias de firmas prop pueden ser confusos. ¿Eres empleado o contratista independiente? ¿Cuánto te quedarás realmente? Esta guía completa responde todas tus preguntas sobre la fiscalidad de firmas prop en 2026.",
         disclaimer: "Descargo de Responsabilidad",
         disclaimerText: "Esta guía proporciona información fiscal general. Consulta siempre con un profesional fiscal calificado en tu jurisdicción para obtener asesoramiento personalizado. Las leyes fiscales varían según el país y cambian con frecuencia.",
         taxStatus: "Tu Estatus Fiscal: Contratista Independiente",
@@ -211,7 +211,7 @@ const translations = {
         faq3A: "Todavía reportas ingresos donde TÚ vives y pagas impuestos allí. La ubicación de la firma prop no cambia tus obligaciones fiscales. Reporta siempre todos los ingresos mundiales.",
         faq4Q: "¿Cómo rastreo todo para los impuestos?",
         faq4A: "Usa software de contabilidad (QuickBooks, FreshBooks, Wave) o hojas de cálculo. Rastrea todos los pagos, gastos y guarda recibos. Considera contratar un contador especializado en trading.",
-        calendar: "Calendario de Planificación Fiscal 2025",
+        calendar: "Calendario de Planificación Fiscal 2026",
         keyTakeaways: "Puntos Clave",
         takeaway1: "Eres autónomo - planea pagar el 25-40% de las ganancias en impuestos",
         takeaway2: "Guarda dinero para impuestos por separado de cada pago inmediatamente",
@@ -423,9 +423,9 @@ export default async function Taxes2025Page({ params }: PageProps) {
                             <div className="bg-black/30 rounded-lg p-4">
                                 <h4 className="text-white font-bold mb-2 text-sm">{t.usDeadlines}</h4>
                                 <div className="grid grid-cols-2 gap-2 text-sm text-slate-300">
-                                    <div>• Q1: April 15, 2025</div>
-                                    <div>• Q2: June 15, 2025</div>
-                                    <div>• Q3: September 15, 2025</div>
+                                    <div>• Q1: April 15, 2026</div>
+                                    <div>• Q2: June 15, 2026</div>
+                                    <div>• Q3: September 15, 2026</div>
                                     <div>• Q4: January 15, 2026</div>
                                 </div>
                             </div>

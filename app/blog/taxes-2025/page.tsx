@@ -5,12 +5,12 @@ import { ArrowLeft, FileText, DollarSign, Calculator, AlertTriangle, CheckCircle
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Prop Firm Taxes 2025: Complete Guide for Funded Traders | PropFirmHub',
-    description: 'Complete tax guide for prop firm traders. Learn about tax status, rates by country, deductions, quarterly payments, and optimization strategies to maximize your earnings in 2025.',
-    keywords: 'prop firm taxes, funded trader taxes, prop trading taxation, self-employed trader taxes, prop firm tax deductions, trading taxes 2025',
+    title: 'Prop Firm Taxes 2026: Complete Guide for Funded Traders | PropFirmHub',
+    description: 'Complete tax guide for prop firm traders. Learn about tax status, rates by country, deductions, quarterly payments, and optimization strategies to maximize your earnings in 2026.',
+    keywords: 'prop firm taxes, funded trader taxes, prop trading taxation, self-employed trader taxes, prop firm tax deductions, trading taxes 2026',
     openGraph: {
-        title: 'Prop Firm Taxes 2025: Complete Guide for Funded Traders',
-        description: 'Everything you need to know about prop firm taxation, deductions, and optimization strategies for 2025.',
+        title: 'Prop Firm Taxes 2026: Complete Guide for Funded Traders',
+        description: 'Everything you need to know about prop firm taxation, deductions, and optimization strategies for 2026.',
         type: 'article',
         publishedTime: '2025-11-25T00:00:00Z',
     },
@@ -31,10 +31,10 @@ export default function Taxes2025() {
                     {/* Article Header */}
                     <header className="mb-12">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                            Prop Firm Taxes 2025: Complete Guide for Traders
+                            Prop Firm Taxes 2026: Complete Guide for Traders
                         </h1>
                         <div className="flex items-center gap-4 text-sm text-slate-400">
-                            <span>November 25, 2025</span>
+                            <span>November 25, 2026</span>
                             <span>•</span>
                             <span>PropFirmHub Team</span>
                             <span>•</span>
@@ -46,7 +46,7 @@ export default function Taxes2025() {
                     <div className="prose prose-invert prose-emerald max-w-none">
                         {/* Introduction */}
                         <p className="text-xl text-slate-300 leading-relaxed mb-8">
-                            Taxes on prop firm profits can be confusing. Are you an employee or independent contractor? How much will you actually keep? This complete guide answers all your questions about prop firm taxation in 2025.
+                            Taxes on prop firm profits can be confusing. Are you an employee or independent contractor? How much will you actually keep? This complete guide answers all your questions about prop firm taxation in 2026.
                         </p>
 
                         <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-6 my-8">
@@ -306,9 +306,9 @@ export default function Taxes2025() {
                             <div className="bg-black/30 rounded-lg p-4">
                                 <h4 className="text-white font-bold mb-2 text-sm">US Quarterly Deadlines (2025):</h4>
                                 <div className="grid grid-cols-2 gap-2 text-sm text-slate-300">
-                                    <div>• Q1: April 15, 2025</div>
-                                    <div>• Q2: June 15, 2025</div>
-                                    <div>• Q3: September 15, 2025</div>
+                                    <div>• Q1: April 15, 2026</div>
+                                    <div>• Q2: June 15, 2026</div>
+                                    <div>• Q3: September 15, 2026</div>
                                     <div>• Q4: January 15, 2026</div>
                                 </div>
                             </div>
@@ -422,7 +422,7 @@ export default function Taxes2025() {
                         </div>
 
                         {/* Tax Planning Calendar */}
-                        <h2 className="text-3xl font-bold text-white mt-12 mb-4">Tax Planning Calendar 2025</h2>
+                        <h2 className="text-3xl font-bold text-white mt-12 mb-4">Tax Planning Calendar 2026</h2>
 
                         <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border border-emerald-500/30 rounded-xl p-6 my-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
