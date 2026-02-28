@@ -23,7 +23,7 @@ export default function CopyCouponButton({ coupon, variant = 'large' }: CopyCoup
         return (
             <button
                 onClick={handleCopy}
-                className="ml-2 inline-flex items-center gap-1.5 px-3 py-1 bg-white/20 hover:bg-white/30 active:bg-white/40 rounded-md border border-white/10 transition-colors text-sm font-mono shadow-sm"
+                className="ml-2 inline-flex items-center gap-1.5 px-3 py-1 bg-black/30 hover:bg-black/40 active:bg-black/50 text-white rounded-md border border-white/20 transition-colors text-sm font-mono shadow-sm"
                 title="Copy Coupon"
             >
                 {coupon}
@@ -36,8 +36,8 @@ export default function CopyCouponButton({ coupon, variant = 'large' }: CopyCoup
         <button
             onClick={handleCopy}
             className={`inline-flex items-center gap-3 px-8 py-4 rounded-xl font-mono text-2xl font-bold transition-all shadow-xl active:scale-95 border-2 ${copied
-                    ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
-                    : 'bg-slate-900 border-slate-700 text-white hover:bg-slate-800 hover:border-emerald-500 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#050505]'
+                ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
+                : 'bg-slate-900 border-slate-700 text-white hover:bg-slate-800 hover:border-emerald-500 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#050505]'
                 }`}
             title="Click to copy coupon code"
         >
