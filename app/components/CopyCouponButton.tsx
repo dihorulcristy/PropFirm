@@ -35,14 +35,27 @@ export default function CopyCouponButton({ coupon, variant = 'large' }: CopyCoup
     return (
         <button
             onClick={handleCopy}
-            className={`inline-flex items-center gap-3 px-8 py-4 rounded-xl font-mono text-2xl font-bold transition-all shadow-xl active:scale-95 border-2 ${copied
-                ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
-                : 'bg-slate-900 border-slate-700 text-white hover:bg-slate-800 hover:border-emerald-500 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#050505]'
+            className={`group relative overflow-hidden inline-flex items-center gap-4 px-10 py-5 rounded-2xl font-mono text-3xl font-black transition-all active:scale-95 border-2 ${copied
+                    ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400 shadow-[0_0_30px_rgba(16,185,129,0.4)]'
+                    : 'bg-gradient-to-r from-emerald-950/80 to-slate-900/80 border-emerald-500/50 text-white hover:border-emerald-400 hover:shadow-[0_0_40px_rgba(16,185,129,0.3)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#050505] shadow-[0_0_20px_rgba(16,185,129,0.15)]'
                 }`}
             title="Click to copy coupon code"
         >
-            <span className="tracking-wider">{coupon}</span>
-            {copied ? <Check className="h-6 w-6 text-emerald-400" /> : <Copy className="h-6 w-6 text-slate-400 group-hover:text-emerald-400" />}
+            {/* Animated shimmer effect on hover */}
+            {!copied && (
+                <div className="absolute inset-0 -translate-x-full animate-[shimmer_3s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            )}
+
+            <div className="flex flex-col items-start gap-1 z-10">
+                <span className="text-[10px] uppercase tracking-[0.2em] font-sans font-bold text-emerald-400/80">
+                    {copied ? 'Copied to clipboard' : 'Click to copy code'}
+                </span>
+                <span className="tracking-widest drop-shadow-lg">{coupon}</span>
+            </div>
+
+            <div className={`flex items-center justify-center p-3 rounded-xl transition-colors z-10 ${copied ? 'bg-emerald-500/20' : 'bg-emerald-500/10 group-hover:bg-emerald-500/30'}`}>
+                {copied ? <Check className="h-7 w-7 text-emerald-400" /> : <Copy className="h-7 w-7 text-emerald-400 group-hover:scale-110 transition-transform" />}
+            </div>
         </button>
     );
 }
