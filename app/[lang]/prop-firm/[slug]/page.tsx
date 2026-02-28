@@ -6,6 +6,7 @@ import { ArrowLeft, Star, ShieldCheck, Check, X, Copy, ExternalLink, Clock, Perc
 import type { Locale } from '@/lib/i18n/config';
 import type { Metadata } from 'next';
 import { getFirmBySlug, getAllFirmSlugs, pageTranslations, allPropFirms } from '@/lib/firms-data';
+import CopyCouponButton from '../../../components/CopyCouponButton';
 import { notFound } from 'next/navigation';
 
 interface PageProps {
@@ -176,9 +177,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                                         <Zap className="h-4 w-4" />
                                         {firm.offer}
                                         {firm.coupon && firm.coupon !== 'No Code' && (
-                                            <span className="ml-2 px-2 py-0.5 bg-white/20 rounded text-sm">
-                                                {firm.coupon}
-                                            </span>
+                                            <CopyCouponButton coupon={firm.coupon} variant="badge" />
                                         )}
                                     </div>
                                 )}
@@ -375,9 +374,10 @@ export default async function PropFirmPage({ params }: PageProps) {
                             <ExternalLink className="h-5 w-5" />
                         </a>
                         {firm.coupon && firm.coupon !== 'No Code' && (
-                            <p className="mt-4 text-slate-400">
-                                {t.copyCode}: <code className="px-2 py-1 bg-slate-800 rounded text-emerald-400 font-mono">{firm.coupon}</code>
-                            </p>
+                            <div className="mt-8 flex flex-col items-center justify-center gap-3">
+                                <span className="text-slate-400 text-sm font-medium uppercase tracking-wider">{t.copyCode}</span>
+                                <CopyCouponButton coupon={firm.coupon} variant="large" />
+                            </div>
                         )}
                     </section>
 
