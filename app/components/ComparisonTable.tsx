@@ -83,7 +83,9 @@ const translations = {
         activeOffer: "Active Offer",
         showing: "Showing",
         firms: "firms",
-        noCode: "No Code"
+        noCode: "No Code",
+        perMonth: "/mo",
+        freeAccount: "Free Account"
     },
     ro: {
         title: "Compară",
@@ -151,7 +153,9 @@ const translations = {
         activeOffer: "Ofertă Activă",
         showing: "Afișare",
         firms: "firme",
-        noCode: "Fără Cod"
+        noCode: "Fără Cod",
+        perMonth: "/lună",
+        freeAccount: "Cont Gratuit"
     },
     es: {
         title: "Comparar",
@@ -219,7 +223,79 @@ const translations = {
         activeOffer: "Oferta Activa",
         showing: "Mostrando",
         firms: "firmas",
-        noCode: "Sin Código"
+        noCode: "Sin Código",
+        perMonth: "/mes",
+        freeAccount: "Cuenta Gratis"
+    },
+    it: {
+        title: "Confronta",
+        titleHighlight: "Programmi di Valutazione",
+        subtitle: "Trova il programma di valutazione di trading simulato perfetto per le tue esigenze",
+        allMarkets: "Tutti i Mercati",
+        forex: "Forex",
+        futures: "Futures",
+        all: "Tutti",
+        allSizes: "Tutte le Dimensioni",
+        platform: "Piattaforma",
+        anyPlatform: "Qualsiasi Piattaforma",
+        type: "Tipo",
+        anyType: "Qualsiasi Tipo",
+        sort: "Ordina",
+        recommended: "Consigliato",
+        bestValue: "Miglior Valore",
+        cheapest: "Più Economico",
+        fastestPayout: "Pagamento Più Veloce",
+        moreFilters: "Più Filtri",
+        reset: "Resetta",
+        instantFunding: "Finanziamento Istantaneo",
+        hftAllowed: "HFT Consentito",
+        balanceBasedDD: "DD su Saldo",
+        newsTrading: "Trading su Notizie",
+        cryptoPayout: "Pagamento Crypto",
+        usaAccepted: "USA Accettato",
+        noTimeLimit: "Senza Limite di Tempo",
+        weeklyPayouts: "Pagamenti Settimanali",
+        verified: "Verificato",
+        rules: "Regole",
+        maxDD: "DD Max",
+        profitSplit: "Divisione Profitti",
+        startFrom: "A partire da",
+        getFunded: "Inizia Ora",
+        copyCoupon: "Copia coupon",
+        copied: "Copiato!",
+        noFirmsFound: "Nessuna firm corrisponde ai tuoi filtri",
+        tryAdjusting: "Prova a modificare i filtri per vedere più opzioni",
+        clearFilters: "Cancella Filtri",
+        payout: "Pagamento",
+        days: "giorni",
+        // Capital sizes
+        mini: "Mini",
+        starter: "Principiante",
+        growth: "Crescita",
+        standard: "Standard",
+        pro: "Pro",
+        whale: "Avanzato",
+        // Filter labels
+        firm: "Azienda",
+        rating: "Valutazione",
+        keyRules: "Regole Chiave",
+        price: "Prezzo",
+        action: "Azione",
+        offer: "Offerta",
+        // New offer labels
+        newOffer: "Nuova Offerta",
+        limitedTime: "Tempo Limitato",
+        hotDeal: "Offerta Imperdibile",
+        // Table headers
+        community: "Comunità",
+        coupon: "Codice Sconto",
+        activeOffers: "Offerte Attive",
+        activeOffer: "Offerta Attiva",
+        showing: "Mostrando",
+        firms: "firm",
+        noCode: "Senza Codice",
+        perMonth: "/mese",
+        freeAccount: "Conto Gratuito"
     }
 };
 
@@ -1601,7 +1677,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                             onClick={() => copyToClipboard(firm.coupon, firm.id)}
                                             className="text-white font-mono bg-emerald-500/10 px-2 py-0.5 rounded border border-dashed border-emerald-500/40 text-sm font-bold flex items-center gap-1"
                                         >
-                                            {firm.coupon}
+                                            {firm.coupon === 'No Code' ? t.noCode : firm.coupon}
                                             {copiedId === firm.id ? (
                                                 <Check className="h-3 w-3 text-emerald-400" />
                                             ) : (
@@ -1620,7 +1696,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                             <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">{t.activeOffer}</span>
                                         </div>
                                         <div className="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">
-                                            {firm.offer}
+                                            {firm.offer.replace(/Free Account/ig, t.freeAccount || 'Free Account')}
                                         </div>
                                     </div>
                                 )}
@@ -1772,7 +1848,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                                     onClick={() => copyToClipboard(firm.coupon, firm.id)}
                                                     className="group/btn relative inline-flex items-center gap-2 rounded-lg border-2 border-dashed border-emerald-500/40 bg-emerald-500/5 px-4 py-2 text-sm font-mono font-bold text-white hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 transition-all shadow-sm hover:shadow-emerald-500/20"
                                                 >
-                                                    {firm.coupon}
+                                                    {firm.coupon === 'No Code' ? t.noCode : firm.coupon}
                                                     {copiedId === firm.id ? (
                                                         <Check className="h-4 w-4 text-emerald-400" />
                                                     ) : (
@@ -1793,7 +1869,7 @@ export default function ComparisonTable({ lang = 'en' }: ComparisonTableProps) {
                                                         <span className="text-[9px] lg:text-[10px] font-bold text-emerald-400 uppercase tracking-wider">{t.newOffer}</span>
                                                     </div>
                                                     <div className="text-sm lg:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 mb-0.5 lg:mb-1">
-                                                        {firm.offer}
+                                                        {firm.offer.replace(/Free Account/ig, t.freeAccount || 'Free Account')}
                                                     </div>
                                                     <div className="inline-flex items-center gap-1 bg-emerald-500/10 px-1.5 py-0.5 rounded text-[9px] lg:text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
                                                         <Trophy className="w-2.5 h-2.5 lg:w-3 lg:h-3" />

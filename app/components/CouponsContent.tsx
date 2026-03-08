@@ -35,7 +35,11 @@ const translations = {
         claimOffer: "Claim 20% OFF →",
         discountOnLink: "(Discount on Link)",
         freeReset: "FREE RESET!",
-        newOffer: "New Offer!"
+        newOffer: "New Offer!",
+        bogoOffer: "🎁 BOGO + NO ACTIVATION FEE!",
+        withCode: "with code",
+        freeResetOffer: "🌶️ FREE RESET!",
+        freeResetWithCode: "Free Reset + 10% OFF with code"
     },
     ro: {
         title: "Cele Mai Bune",
@@ -63,7 +67,11 @@ const translations = {
         claimOffer: "Ia 20% REDUCERE →",
         discountOnLink: "(Reducere pe Link)",
         freeReset: "RESETARE GRATUITĂ!",
-        newOffer: "Ofertă Nouă!"
+        newOffer: "Ofertă Nouă!",
+        bogoOffer: "🎁 BOGO + FĂRĂ TAXĂ ACTIVARE!",
+        withCode: "cu codul",
+        freeResetOffer: "🌶️ RESETARE GRATUITĂ!",
+        freeResetWithCode: "Resetare gratuită + 10% reducere cu codul"
     },
     es: {
         title: "Mejores",
@@ -91,7 +99,43 @@ const translations = {
         claimOffer: "Obtén 20% DTO →",
         discountOnLink: "(Descuento en Enlace)",
         freeReset: "¡REINICIO GRATIS!",
-        newOffer: "¡Nueva Oferta!"
+        newOffer: "¡Nueva Oferta!",
+        bogoOffer: "🎁 BOGO + ¡SIN TARIFA DE ACTIVACIÓN!",
+        withCode: "con el código",
+        freeResetOffer: "🌶️ ¡REINICIO GRATIS!",
+        freeResetWithCode: "Reinicio gratis + 10% DTO con código"
+    },
+    it: {
+        title: "Migliori",
+        titleHighlight: "Codici Sconto",
+        activeToday: "Attivi Oggi",
+        subtitle: "Negoziamo direttamente con le firm per sconti esclusivi",
+        searchPlaceholder: "Cerca la tua firm qui...",
+        flashSales: "Offerte Flash",
+        flashSalesSubtitle: "Offerte a tempo limitato che scadono presto",
+        viewOffer: "Vedi Offerta →",
+        proTip: "Consiglio Pro:",
+        proTipText: "I codici vengono verificati quotidianamente. Usali il prima possibile per il miglior prezzo!",
+        verified: "Verificato",
+        copyCoupon: "Copia & Vai",
+        copied: "Copiato!",
+        noCoupon: "Usa Link",
+        off: "SCONTO",
+        flashSale24h: "OFFERTA FLASH 24H!",
+        limitedTime: "Tempo Limitato!",
+        weekendSpecial: "Speciale Weekend",
+        couponCode: "Codice Coupon",
+        showCode: "Mostra Codice",
+        kickstart: "Inizia 2026!",
+        newYearSale: "Saldi Anno Nuovo",
+        claimOffer: "Ottieni 20% SCONTO →",
+        discountOnLink: "(Sconto sul Link)",
+        freeReset: "RESET GRATUITO!",
+        newOffer: "Nuova Offerta!",
+        bogoOffer: "🎁 BOGO + NESSUN COSTO DI ATTIVAZIONE!",
+        withCode: "con il codice",
+        freeResetOffer: "🌶️ RESET GRATUITO!",
+        freeResetWithCode: "Reset gratuito + 10% SCONTO con codice"
     }
 };
 

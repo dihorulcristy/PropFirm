@@ -38,6 +38,16 @@ const translations = {
         moreInfo: "para más información.",
         decline: "Rechazar",
         accept: "Aceptar Cookies"
+    },
+    it: {
+        title: "🍪 Consenso sui Cookie",
+        text: "Utilizziamo i cookie per migliorare la tua esperienza di navigazione, analizzare il traffico del sito e personalizzare i contenuti. Cliccando \"Accetta\", acconsenti al nostro uso dei cookie. Leggi la nostra",
+        privacy: "Informativa sulla Privacy",
+        and: "e la",
+        cookie: "Politica sui Cookie",
+        moreInfo: "per maggiori informazioni.",
+        decline: "Rifiuta",
+        accept: "Accetta Cookie"
     }
 };
 

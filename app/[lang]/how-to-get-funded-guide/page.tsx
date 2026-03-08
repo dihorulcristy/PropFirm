@@ -242,7 +242,7 @@ const translations = {
 
 export default function HowToGetFundedGuide({ params }: PageProps) {
     const { lang } = use(params);
-    const t = translations[lang] || translations.en;
+    const t = translations[lang as keyof typeof translations] || translations.en;
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const [activeFilter, setActiveFilter] = useState<'cheapest' | 'no-time-limit' | 'instant'>('cheapest');
 

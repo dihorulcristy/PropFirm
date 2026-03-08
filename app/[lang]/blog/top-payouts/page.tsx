@@ -245,7 +245,7 @@ const translations = {
 
 export default async function TopPayoutsPage({ params }: PageProps) {
     const { lang } = await params;
-    const t = translations[lang] || translations.en;
+    const t = translations[lang as keyof typeof translations] || translations.en;
     const blogLink = lang === 'en' ? '/blog' : `/${lang}/blog`;
     const homeLink = lang === 'en' ? '/' : `/${lang}`;
 

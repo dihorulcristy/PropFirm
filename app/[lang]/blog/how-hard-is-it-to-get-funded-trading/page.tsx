@@ -296,7 +296,7 @@ const translations = {
 
 export default async function HowHardToGetFundedPage({ params }: PageProps) {
     const { lang } = await params;
-    const t = translations[lang] || translations.en;
+    const t = translations[lang as keyof typeof translations] || translations.en;
     const homeLink = lang === 'en' ? '/' : `/${lang}`;
 
     return (

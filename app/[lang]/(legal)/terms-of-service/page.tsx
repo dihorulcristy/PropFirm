@@ -84,6 +84,32 @@ const translations = {
                 content: "PropFirmHub contiene enlaces de afiliados a sitios web de terceros. Podemos recibir una compensación cuando haces clic en estos enlaces. Esto no afecta el precio que pagas ni nuestra independencia editorial."
             }
         ]
+    },
+    it: {
+        title: "Termini di Servizio",
+        lastUpdated: "Ultimo aggiornamento:",
+        sections: [
+            {
+                title: "1. Accettazione dei Termini",
+                content: "Accedendo e utilizzando PropFirmHub, accetti e acconsenti a essere vincolato dai termini e dalle disposizioni di questo accordo."
+            },
+            {
+                title: "2. Licenza d'Uso",
+                content: "È concesso il permesso di accedere temporaneamente ai materiali su PropFirmHub solo per la visualizzazione personale, non commerciale e transitoria."
+            },
+            {
+                title: "3. Esclusione di Responsabilità",
+                content: "I materiali su PropFirmHub sono forniti 'così come sono'. PropFirmHub non fornisce garanzie, espresse o implicite, e con la presente declina e nega tutte le altre garanzie incluse, senza limitazione, garanzie implicite o condizioni di commerciabilità."
+            },
+            {
+                title: "4. Limitazioni",
+                content: "In nessun caso PropFirmHub o i suoi fornitori saranno responsabili per eventuali danni derivanti dall'uso o dall'impossibilità di utilizzare i materiali su PropFirmHub."
+            },
+            {
+                title: "5. Link di Affiliazione",
+                content: "PropFirmHub contiene link di affiliazione a siti web di terze parti. Potremmo ricevere un compenso quando fai clic su questi link. Ciò non influisce sul prezzo che paghi né sulla nostra indipendenza editoriale."
+            }
+        ]
     }
 };
 

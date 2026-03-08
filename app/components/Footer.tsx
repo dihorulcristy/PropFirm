@@ -68,6 +68,27 @@ const translations = {
         riskText2: "Entorno de Trading Simulado: Todas las evaluaciones de firmas de trading propietario y cuentas financiadas operan en un entorno de trading simulado. Los traders reciben asignación de capital virtual y operan en cuentas demo. La división de ganancias se basa en el rendimiento en este entorno simulado.",
         affiliateText: "Divulgación de Afiliados: Algunos enlaces en este sitio son enlaces de afiliados. Si compras un servicio a través de estos enlaces, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el sitio gratuito. Solo recomendamos programas de evaluación que creemos que agregarán valor a los traders.",
         copyright: "PropFirmHub. Todos los derechos reservados."
+    },
+    it: {
+        about: "La tua fonte affidabile per confrontare le società di trading proprietario. Trova la migliore prop firm per il tuo stile di trading.",
+        quickLinks: "Link Rapidi",
+        compareFirms: "Confronta Firm",
+        dealOfTheWeek: "Offerta della Settimana",
+        howToGetFunded: "Come Ottenere un Finanziamento",
+        aboutUs: "Chi Siamo",
+        contactUs: "Contattaci",
+        legal: "Legale",
+        privacyPolicy: "Informativa sulla Privacy",
+        termsOfService: "Termini di Servizio",
+        cookiePolicy: "Politica sui Cookie",
+        affiliateDisclosure: "Divulgazione Affiliazione",
+        contact: "Contatto",
+        contactForm: "Modulo di Contatto →",
+        riskDisclaimer: "⚠️ Avvertenza sui Rischi",
+        riskText1: "Tutte le attività di trading comportano rischi significativi e non sono adatte a tutti gli investitori. PropFirmHub non fornisce servizi di investimento né consulenza finanziaria. Tutti i conti offerti dalle firm elencate sono conti demo (simulati) con fondi virtuali. Non avvengono transazioni sul mercato reale. I risultati passati non garantiscono risultati futuri.",
+        riskText2: "Ambiente di Trading Simulato: Tutte le valutazioni delle prop trading firm e i conti finanziati operano in un ambiente di trading simulato. I trader ricevono un'allocazione di capitale virtuale e operano su conti demo. La divisione dei profitti si basa sulle performance in questo ambiente simulato.",
+        affiliateText: "Divulgazione Affiliazione: Alcuni link su questo sito sono link di affiliazione. Se acquisti un servizio tramite questi link, potremmo ricevere una commissione senza costi aggiuntivi per te. Questo ci aiuta a mantenere il sito gratuito. Raccomandiamo solo programmi di valutazione che riteniamo possano aggiungere valore ai trader.",
+        copyright: "PropFirmHub. Tutti i diritti riservati."
     }
 };
 

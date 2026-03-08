@@ -31,7 +31,7 @@ const seoData = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { lang } = await params;
-    const seo = seoData[lang] || seoData.en;
+    const seo = seoData[lang as keyof typeof seoData] || seoData.en;
     const baseUrl = 'https://propfirms-hub.com';
     const path = lang === 'en' ? '/blog/how-to-pass-ftmo-challenge' : `/${lang}/blog/how-to-pass-ftmo-challenge`;
 
@@ -382,7 +382,7 @@ const translations = {
 
 export default async function HowToPassFTMOChallengePage({ params }: PageProps) {
     const { lang } = await params;
-    const t = translations[lang] || translations.en;
+    const t = translations[lang as keyof typeof translations] || translations.en;
     const blogLink = lang === 'en' ? '/blog' : `/${lang}/blog`;
     const ftmoLink = 'https://trader.ftmo.com/?affiliates=4354';
 

@@ -32,6 +32,14 @@ const translations = {
         blog: "Blog",
         faq: "Preguntas",
         searchPlaceholder: "Buscar firmas..."
+    },
+    it: {
+        home: "Home",
+        compare: "Confronta",
+        coupons: "Coupon",
+        blog: "Blog",
+        faq: "FAQ",
+        searchPlaceholder: "Cerca firm..."
     }
 };
 

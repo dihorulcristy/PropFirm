@@ -68,6 +68,27 @@ const translations = {
         spotsLeft: "Solo quedan 7 lugares",
         todayOffer: "hoy a este precio de oferta",
         error: "Algo salió mal. Por favor inténtalo de nuevo."
+    },
+    it: {
+        limitedTimeOffer: "OFFERTA A TEMPO LIMITATO",
+        getYourFree: "Ottieni il Tuo GRATUITO",
+        fundedAccount: "Conto Finanziato da $25,000",
+        joinTraders: "Unisciti a",
+        tradersCount: "10,000+ trader",
+        tradersText: "che stanno già operando con il nostro capitale. Senza vincoli!",
+        instantAccess: "Accesso Istantaneo",
+        keepProfits: "Tieni l'80% dei Profitti",
+        scaleTo: "Scala a $200K",
+        yourFullName: "Il Tuo Nome Completo",
+        yourEmail: "Il Tuo Indirizzo Email",
+        processing: "Elaborazione...",
+        claimButton: "🎯 Richiedi il Mio Conto GRATUITO da $25K Ora",
+        secureInfo: "🔒 Le tue informazioni sono al 100% sicure e non saranno mai condivise",
+        welcomeAboard: "Benvenuto a Bordo! 🎉",
+        checkEmail: "Controlla la tua email per l'accesso istantaneo al tuo conto finanziato da $25,000!",
+        spotsLeft: "Solo 7 posti rimasti",
+        todayOffer: "oggi a questo prezzo",
+        error: "Qualcosa è andato storto. Per favore riprova."
     }
 };
 

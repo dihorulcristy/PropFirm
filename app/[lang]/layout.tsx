@@ -43,6 +43,7 @@ export async function generateMetadata({
                 'en': baseUrl,
                 'ro': `${baseUrl}/ro`,
                 'es': `${baseUrl}/es`,
+                'it': `${baseUrl}/it`,
                 'x-default': baseUrl,
             },
         },
@@ -59,7 +60,7 @@ export async function generateMetadata({
                     alt: 'PropFirmHub - Compare Top Prop Trading Firms',
                 },
             ],
-            locale: lang === 'ro' ? 'ro_RO' : 'en_US',
+            locale: lang === 'ro' ? 'ro_RO' : lang === 'es' ? 'es_ES' : lang === 'it' ? 'it_IT' : 'en_US',
             type: 'website',
         },
         twitter: {

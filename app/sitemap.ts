@@ -4,7 +4,7 @@ import { getAllFirmSlugs } from '@/lib/firms-data'
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://propfirms-hub.com'
 
-    // Base routes - use /en/, /ro/, /es/ prefixes for all languages
+    // Base routes - use /en/, /ro/, /es/, /it/ prefixes for all languages
     // This avoids generating URLs that redirect (e.g., /blog -> /en/blog)
     const routes = [
         { path: '', changeFreq: 'daily', priority: 1 },
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const sitemapEntries: MetadataRoute.Sitemap = []
 
     // 1. Generate core routes with explicit language prefixes (EN + RO + ES)
-    // All routes now use /en/, /ro/, /es/ to avoid redirect chains
+    // All routes now use /en/, /ro/, /es/, /it/ to avoid redirect chains
     for (const route of routes) {
         // English - use /en/ prefix, except for home page which is at root /
         const isHome = route.path === '';
@@ -71,9 +71,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: route.changeFreq as any,
             priority: route.priority,
         })
+        // Italian
+        sitemapEntries.push({
+            url: `${baseUrl}/it${route.path}`,
+            lastModified: new Date(),
+            changeFrequency: route.changeFreq as any,
+            priority: route.priority,
+        })
     }
 
-    // 2. Generate localized blog routes (EN + RO + ES) - under /[lang]/blog/
+    // 2. Generate localized blog routes (EN + RO + ES + IT) - under /[lang]/blog/
     for (const post of localizedBlogPosts) {
         // English
         sitemapEntries.push({
@@ -92,6 +99,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Spanish
         sitemapEntries.push({
             url: `${baseUrl}/es/blog/${post.slug}`,
+            lastModified: new Date(post.lastMod),
+            changeFrequency: 'weekly',
+            priority: post.priority,
+        })
+        // Italian
+        sitemapEntries.push({
+            url: `${baseUrl}/it/blog/${post.slug}`,
             lastModified: new Date(post.lastMod),
             changeFrequency: 'weekly',
             priority: post.priority,
@@ -118,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     }
 
-    // 5. Add Legal Pages with correct /[lang]/ prefix (EN + RO)
+    // 5. Add Legal Pages with correct /[lang]/ prefix (EN + RO + ES + IT)
     for (const page of legalPages) {
         // English - use /en/ prefix to match actual page location
         sitemapEntries.push({
@@ -134,9 +148,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.5,
         })
+        // Spanish
+        sitemapEntries.push({
+            url: `${baseUrl}/es/${page}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        })
+        // Italian
+        sitemapEntries.push({
+            url: `${baseUrl}/it/${page}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        })
     }
 
-    // 6. Generate Prop Firm Pages (EN + RO + ES)
+    // 6. Generate Prop Firm Pages (EN + RO + ES + IT)
     for (const slug of firmSlugs) {
         // English
         sitemapEntries.push({
@@ -155,6 +183,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Spanish
         sitemapEntries.push({
             url: `${baseUrl}/es/prop-firm/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        })
+        // Italian
+        sitemapEntries.push({
+            url: `${baseUrl}/it/prop-firm/${slug}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,

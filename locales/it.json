@@ -1,0 +1,77 @@
+{
+    "seo": {
+        "title": "PropFirmHub - Confronta le Migliori Prop Trading Firm 2026 | Sconti Esclusivi",
+        "description": "Confronta le migliori prop firm 2026. Sconti esclusivi, regole di valutazione e prezzi. FTMO, FunderPro, TradingCult e altre. Trova la firm perfetta per te!",
+        "keywords": "prop trading italia, prop firm italiane, FTMO, trading finanziato, valutazione trading, confronto prop firm, conti finanziati forex"
+    },
+    "header": {
+        "home": "Home",
+        "compare": "Confronta",
+        "coupons": "Coupon",
+        "blog": "Blog",
+        "faq": "FAQ",
+        "searchPlaceholder": "Cerca firm..."
+    },
+    "hero": {
+        "title": "Confronta i Programmi di Valutazione",
+        "titleHighlight": "Fino a $1M di Capitale Virtuale",
+        "subtitle": "Confrontiamo i programmi di valutazione per trader e le opportunità di finanziamento simulate. Trova la migliore prop firm per le tue capacità di trading.",
+        "disclaimer": "Tutte le attività di trading si svolgono in un ambiente simulato con fondi virtuali.",
+        "trustedPlatforms": "Piattaforme di Trading Affidabili",
+        "scroll": "Scorri",
+        "cards": {
+            "bestOverall": "Migliore in Assoluto",
+            "bestValue": "Miglior Rapporto Qualità-Prezzo",
+            "hftAllowed": "HFT Consentito",
+            "maximumSafety": "Massima Sicurezza",
+            "from": "A partire da",
+            "passIn1Step": "Supera in 1 Fase"
+        }
+    },
+    "faq": {
+        "title": "Domande Frequenti",
+        "subtitle": "Risposte alle domande più comuni sulle prop trading firm e il processo di finanziamento.",
+        "questions": [
+            {
+                "question": "Cos'è una prop trading firm?",
+                "answer": "Una società di trading proprietario (prop firm) fornisce capitale a trader talentuosi per operare sui mercati finanziari. In cambio di una quota di valutazione e della dimostrazione delle proprie capacità, i trader possono trattenere una percentuale significativa dei profitti generati (solitamente tra l'80% e il 90%)."
+            },
+            {
+                "question": "Come funziona il processo di valutazione?",
+                "answer": "La maggior parte delle firm richiede ai trader di superare una valutazione in 1 o 2 fasi. È necessario raggiungere un obiettivo di profitto senza violare le regole di drawdown (perdita massima). Una volta superato il test, si riceve un conto finanziato."
+            },
+            {
+                "question": "Quali sono le regole principali?",
+                "answer": "Le regole comuni includono: Drawdown Giornaliero Massimo (quanto puoi perdere in un giorno), Drawdown Totale Massimo (quanto puoi perdere in totale dal conto) e talvolta restrizioni di trading durante eventi economici importanti."
+            },
+            {
+                "question": "Quanto velocemente posso prelevare i profitti?",
+                "answer": "Ogni firm ha la propria politica. Alcune consentono prelievi ogni 14 giorni, altre mensilmente, e alcune anche settimanalmente o su richiesta dopo il primo prelievo."
+            },
+            {
+                "question": "È consentito il trading automatizzato (EA)?",
+                "answer": "Molte firm consentono l'uso di Expert Advisor (EA), ma spesso a condizione che sia la propria strategia e non un EA di arbitraggio pubblico o HFT (Trading ad Alta Frequenza) che sfrutta la latenza del server."
+            }
+        ]
+    },
+    "footer": {
+        "about": "La tua fonte affidabile per confrontare le società di trading proprietario. Trova la migliore prop firm per il tuo stile di trading.",
+        "quickLinks": "Link Rapidi",
+        "compareFirms": "Confronta Firm",
+        "dealOfTheWeek": "Offerta della Settimana",
+        "howToGetFunded": "Come Ottenere un Finanziamento",
+        "contactUs": "Contattaci",
+        "legal": "Legale",
+        "privacyPolicy": "Informativa sulla Privacy",
+        "termsOfService": "Termini di Servizio",
+        "cookiePolicy": "Politica sui Cookie",
+        "affiliateDisclosure": "Divulgazione Affiliazione",
+        "contact": "Contatto",
+        "contactForm": "Modulo di Contatto →",
+        "riskDisclaimer": "⚠️ Avvertenza sui Rischi",
+        "riskText1": "Tutte le attività di trading comportano rischi significativi e non sono adatte a tutti gli investitori. PropFirmHub non fornisce servizi di investimento né consulenza finanziaria. Tutti i conti offerti dalle firm elencate sono conti demo (simulati) con fondi virtuali. Non avvengono transazioni sul mercato reale. I risultati passati non garantiscono risultati futuri.",
+        "riskText2": "Ambiente di Trading Simulato: Tutte le valutazioni delle prop trading firm e i conti finanziati operano in un ambiente di trading simulato. I trader ricevono un'allocazione di capitale virtuale e operano su conti demo. La divisione dei profitti si basa sulle performance in questo ambiente simulato.",
+        "affiliateText": "Divulgazione Affiliazione: Alcuni link su questo sito sono link di affiliazione. Se acquisti un servizio tramite questi link, potremmo ricevere una commissione senza costi aggiuntivi per te. Questo ci aiuta a mantenere il sito gratuito. Raccomandiamo solo programmi di valutazione che riteniamo possano aggiungere valore ai trader.",
+        "copyright": "© {year} PropFirmHub. Tutti i diritti riservati."
+    }
+}

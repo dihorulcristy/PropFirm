@@ -100,6 +100,37 @@ const translations = {
                 linkText: "nuestra página de contacto"
             }
         ]
+    },
+    it: {
+        title: "Informativa sulla Privacy",
+        lastUpdated: "Ultimo aggiornamento:",
+        sections: [
+            {
+                title: "1. Informazioni che Raccogliamo",
+                content: "Raccogliamo le informazioni che ci fornisci direttamente, anche quando utilizzi il nostro sito web, ti iscrivi alla nostra newsletter o ci contatti per supporto."
+            },
+            {
+                title: "2. Come Utilizziamo le Tue Informazioni",
+                content: "Utilizziamo le informazioni raccolte per fornire, mantenere e migliorare i nostri servizi, comunicare con te e adempiere agli obblighi legali."
+            },
+            {
+                title: "3. Cookie",
+                content: "Utilizziamo cookie e tecnologie di tracciamento simili per monitorare l'attività sul nostro sito web e conservare determinate informazioni. Puoi impostare il tuo browser per rifiutare tutti i cookie o per indicare quando un cookie viene inviato."
+            },
+            {
+                title: "4. Sicurezza dei Dati",
+                content: "Implementiamo misure tecniche e organizzative appropriate per proteggere i tuoi dati personali da trattamenti non autorizzati o illegali e da perdita accidentale, distruzione o danno."
+            },
+            {
+                title: "5. I Tuoi Diritti",
+                content: "Hai il diritto di accedere, correggere o eliminare i tuoi dati personali. Puoi anche opporti al trattamento o richiedere la limitazione del trattamento dei tuoi dati personali."
+            },
+            {
+                title: "6. Contattaci",
+                content: "Se hai domande su questa Informativa sulla Privacy, contattaci tramite",
+                linkText: "la nostra pagina di contatto"
+            }
+        ]
     }
 };
 

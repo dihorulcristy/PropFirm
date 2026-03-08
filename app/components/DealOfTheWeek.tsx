@@ -23,7 +23,12 @@ const translations = {
         get90Off: "Get 90% OFF",
         ftmoRepo: "NEW FTMO PROMO",
         kickstart: "KICKSTART 2026",
-        discount20: "20% OFF ALL CHALLENGES"
+        discount20: "20% OFF ALL CHALLENGES",
+        topPropFirm: "TOP PROP FIRM",
+        upTo95: "UP TO 95% PROFIT SPLIT",
+        discount5: "5% DISCOUNT",
+        challengeAccounts: "CHALLENGE ACCOUNTS",
+        nowJust: "now just"
     },
     ro: {
         forex: "FOREX",
@@ -41,7 +46,12 @@ const translations = {
         get90Off: "Obține 90% REDUCERE",
         ftmoRepo: "NOUA PROMOȚIE FTMO",
         kickstart: "START 2026",
-        discount20: "20% REDUCERE LA TOT"
+        discount20: "20% REDUCERE LA TOT",
+        topPropFirm: "TOP PROP FIRM",
+        upTo95: "PÂNĂ LA 95% PROFIT SPLIT",
+        discount5: "5% REDUCERE",
+        challengeAccounts: "CONTURI CHALLENGE",
+        nowJust: "acum doar"
     },
     es: {
         forex: "FOREX",
@@ -59,7 +69,35 @@ const translations = {
         get90Off: "Obtén 90% DTO",
         ftmoRepo: "NUEVA PROMO FTMO",
         kickstart: "INICIO 2026",
-        discount20: "20% DTO EN TODO"
+        discount20: "20% DTO EN TODO",
+        topPropFirm: "MEJOR FIRMA PROP",
+        upTo95: "HASTA 95% DIVISIÓN GANANCIAS",
+        discount5: "5% DESCUENTO",
+        challengeAccounts: "CUENTAS DESAFÍO",
+        nowJust: "ahora solo"
+    },
+    it: {
+        forex: "FOREX",
+        futures: "FUTURES",
+        freeReset: "RESET GRATUITO",
+        exclusive: "Esclusiva SpiceProp",
+        freeResetOn1stStep: "RESET GRATUITO AL 1° STEP",
+        extraBonus: "+ 10% SCONTO & 5% PROFIT SPLIT EXTRA",
+        useCode: "Usa il codice",
+        getStarted: "Inizia Ora",
+        hugeSavings: "GRANDI RISPARMI",
+        limitedTime: "Offerta a Tempo Limitato",
+        allFutures: "SU TUTTI I FUTURES",
+        insaneDiscount: "SCONTO INCREDIBILE SU TUTTE LE SFIDE",
+        get90Off: "Ottieni 90% DI SCONTO",
+        ftmoRepo: "NUOVA PROMO FTMO",
+        kickstart: "INIZIO 2026",
+        discount20: "20% SCONTO SU TUTTO",
+        topPropFirm: "MIGLIOR PROP FIRM",
+        upTo95: "FINO AL 95% PROFIT SPLIT",
+        discount5: "5% DI SCONTO",
+        challengeAccounts: "CONTI CHALLENGE",
+        nowJust: "ora solo"
     }
 };
 
@@ -122,11 +160,11 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
                                     <span className="text-xs sm:text-sm">🚀</span>
-                                    <span>TOP PROP FIRM</span>
+                                    <span>{t.topPropFirm}</span>
                                 </motion.div>
 
                                 <div className="inline-flex items-center gap-1 self-start text-[10px] sm:text-xs font-bold text-white bg-emerald-900/80 px-2 py-1 rounded-md border border-emerald-500/30">
-                                    <span>💰</span> UP TO 95% PROFIT SPLIT
+                                    <span>💰</span> {t.upTo95}
                                 </div>
                             </div>
 
@@ -146,7 +184,7 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">5% DISCOUNT</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">{t.discount5}</span>
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
                                         {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-emerald-600 to-green-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">REFER7DVQ</span>
@@ -204,7 +242,7 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                     transition={{ repeat: Infinity, duration: 2.5 }}
                                 >
                                     <span className="text-xs sm:text-sm">🎄</span>
-                                    <span>CHALLENGE ACCOUNTS</span>
+                                    <span>{t.challengeAccounts}</span>
                                 </motion.div>
                             </div>
 
@@ -224,7 +262,7 @@ export default function DealOfTheWeek({ lang = 'en' }: DealOfTheWeekProps) {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-white text-lg sm:text-xl font-black leading-tight">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> now just $69
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">$50K Challenge</span> {t.nowJust} $69
                                     </p>
                                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
                                         {t.useCode} <span className="inline-flex items-center font-mono text-white bg-gradient-to-r from-orange-600 to-red-600 px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold shadow-md">HGC</span> for EXTRA 5% OFF

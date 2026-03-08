@@ -96,6 +96,36 @@ const translations = {
                 list: []
             }
         ]
+    },
+    it: {
+        title: "Politica sui Cookie",
+        lastUpdated: "Ultimo aggiornamento:",
+        sections: [
+            {
+                title: "Cosa Sono i Cookie",
+                content: "I cookie sono piccoli file di testo che vengono inseriti nel tuo computer o dispositivo mobile quando visiti il nostro sito web.",
+                list: []
+            },
+            {
+                title: "Come Utilizziamo i Cookie",
+                content: "Utilizziamo i cookie per capire come utilizzi il nostro sito web e per migliorare la tua esperienza. Ciò include la personalizzazione dei contenuti e della pubblicità.",
+                list: []
+            },
+            {
+                title: "Tipi di Cookie che Utilizziamo",
+                content: "",
+                list: [
+                    "<strong>Cookie Essenziali:</strong> Necessari per il corretto funzionamento del sito web",
+                    "<strong>Cookie di Analisi:</strong> Ci aiutano a capire come i visitatori interagiscono con il nostro sito web",
+                    "<strong>Cookie Pubblicitari:</strong> Utilizzati per mostrare annunci pertinenti"
+                ]
+            },
+            {
+                title: "Gestione dei Cookie",
+                content: "Puoi controllare e/o eliminare i cookie come desideri. Puoi eliminare tutti i cookie già presenti nel tuo computer e puoi impostare la maggior parte dei browser per impedirne l'inserimento.",
+                list: []
+            }
+        ]
     }
 };
 

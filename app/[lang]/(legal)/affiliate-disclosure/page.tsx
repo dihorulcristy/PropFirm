@@ -84,6 +84,32 @@ const translations = {
                 content: "Actualmente tenemos relaciones de afiliados con las siguientes firmas de trading propietario:"
             }
         ]
+    },
+    it: {
+        title: "Divulgazione Affiliazione",
+        lastUpdated: "Ultimo aggiornamento:",
+        sections: [
+            {
+                title: "Relazioni di Affiliazione",
+                content: "PropFirmHub partecipa a programmi di marketing di affiliazione. Ciò significa che potremmo ricevere una commissione quando fai clic su link a prodotti o servizi ed effettui un acquisto."
+            },
+            {
+                title: "Come Funziona",
+                content: "Quando fai clic su un link di affiliazione ed effettui un acquisto, l'azienda ci paga una commissione. Questo non comporta costi aggiuntivi per te. Il prezzo che paghi è lo stesso sia che utilizzi il nostro link di affiliazione o meno."
+            },
+            {
+                title: "Il Nostro Impegno verso di Te",
+                content: "Raccomandiamo solo prodotti e servizi che crediamo aggiungano valore ai nostri lettori. Le nostre relazioni di affiliazione non influenzano la nostra indipendenza editoriale o l'accuratezza delle nostre recensioni."
+            },
+            {
+                title: "Trasparenza",
+                content: "Ci impegniamo alla trasparenza. Tutti i link di affiliazione sono chiaramente contrassegnati e divulghiamo le nostre relazioni di affiliazione in conformità con le linee guida FTC e le leggi applicabili."
+            },
+            {
+                title: "Partner Affiliati Attuali",
+                content: "Attualmente abbiamo relazioni di affiliazione con le seguenti società di trading proprietario:"
+            }
+        ]
     }
 };
 

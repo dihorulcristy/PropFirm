@@ -30,6 +30,14 @@ const translations = {
         signUp: "Regístrate",
         joinTelegram: "Únete a",
         telegram: "Telegram"
+    },
+    it: {
+        giveaway: "OMAGGIO",
+        message: "🎁 Unisciti al nostro Telegram per il",
+        fundedDraw: "Sorteggio Conto Finanziato",
+        signUp: "Iscriviti",
+        joinTelegram: "Unisciti a",
+        telegram: "Telegram"
     }
 };
 

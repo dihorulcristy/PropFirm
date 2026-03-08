@@ -83,6 +83,32 @@ const translations = {
                 answer: "Muchas firmas permiten el uso de Asesores Expertos (EAs), pero a menudo con la condición de que debe ser tu propia estrategia y no un EA de arbitraje público o HFT (Trading de Alta Frecuencia) que explote la latencia del servidor."
             }
         ]
+    },
+    it: {
+        title: "Domande Frequenti",
+        subtitle: "Risposte alle domande più comuni sulle prop trading firm e il processo di finanziamento.",
+        questions: [
+            {
+                question: "Cos'è una prop trading firm?",
+                answer: "Una società di trading proprietario (prop firm) fornisce capitale a trader talentuosi per operare sui mercati finanziari. In cambio di una quota di valutazione e della dimostrazione delle proprie capacità, i trader possono trattenere una percentuale significativa dei profitti generati (solitamente tra l'80% e il 90%)."
+            },
+            {
+                question: "Come funziona il processo di valutazione?",
+                answer: "La maggior parte delle firm richiede ai trader di superare una valutazione in 1 o 2 fasi. È necessario raggiungere un obiettivo di profitto senza violare le regole di drawdown (perdita massima). Una volta superato il test, si riceve un conto finanziato."
+            },
+            {
+                question: "Quali sono le regole principali?",
+                answer: "Le regole comuni includono: Drawdown Giornaliero Massimo (quanto puoi perdere in un giorno), Drawdown Totale Massimo (quanto puoi perdere in totale dal conto) e talvolta restrizioni di trading durante eventi economici importanti."
+            },
+            {
+                question: "Quanto velocemente posso prelevare i profitti?",
+                answer: "Ogni firm ha la propria politica. Alcune consentono prelievi ogni 14 giorni, altre mensilmente, e alcune anche settimanalmente o su richiesta dopo il primo prelievo."
+            },
+            {
+                question: "È consentito il trading automatizzato (EA)?",
+                answer: "Molte firm consentono l'uso di Expert Advisor (EA), ma spesso a condizione che sia la propria strategia e non un EA di arbitraggio pubblico o HFT (Trading ad Alta Frequenza) che sfrutta la latenza del server."
+            }
+        ]
     }
 };
 

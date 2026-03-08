@@ -38,6 +38,13 @@ const translations = {
         viewDeal: "Ver Oferta",
         articles: "Más Artículos",
         deals: "Mejores Ofertas"
+    },
+    it: {
+        title: "Potrebbe Piacerti Anche",
+        readMore: "Leggi di Più",
+        viewDeal: "Vedi Offerta",
+        articles: "Altri Articoli",
+        deals: "Migliori Offerte"
     }
 };
 
@@ -161,6 +168,46 @@ const relatedContent: Record<Locale, RelatedItem[]> = {
             title: 'FundedNext',
             highlight: '15% Profit Share',
             description: 'Gana durante tu fase de desafío.'
+        }
+    ],
+    it: [
+        {
+            type: 'article',
+            slug: 'how-to-pass-ftmo-challenge',
+            title: 'Come Superare la Sfida FTMO – Perché la Maggior Parte Fallisce',
+            description: 'Le strategie esatte per superare la sfida FTMO.'
+        },
+        {
+            type: 'article',
+            slug: 'how-to-pass-prop-firm-challenge',
+            title: 'Come Superare una Sfida Prop Firm: 10 Passaggi',
+            description: 'Padroneggia le strategie che aiutano i trader a superare le valutazioni.'
+        },
+        {
+            type: 'article',
+            slug: 'pass-rates-2026',
+            title: 'Tassi di Superamento Prop Firm 2026: Statistiche Reali',
+            description: 'Scopri i tassi di successo reali di oltre 15 firm.'
+        },
+        {
+            type: 'article',
+            slug: 'how-hard-is-it-to-get-funded-trading',
+            title: 'Quanto è Difficile Ottenere un Finanziamento?',
+            description: 'La reale difficoltà di diventare un trader finanziato.'
+        },
+        {
+            type: 'deal',
+            slug: 'ftmo',
+            title: 'FTMO',
+            highlight: '19% SCONTO',
+            description: 'Leader del settore con pagamenti costanti.'
+        },
+        {
+            type: 'deal',
+            slug: 'fundednext',
+            title: 'FundedNext',
+            highlight: '15% Profit Share',
+            description: 'Guadagna durante la fase di sfida.'
         }
     ]
 };

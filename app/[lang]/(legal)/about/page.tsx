@@ -168,6 +168,59 @@ const translations = {
         contactTitle: "Contáctanos",
         contactText: "¿Tienes preguntas, sugerencias o encontraste un error? Nos encantaría saber de ti.",
         contactButton: "Contáctanos →"
+    },
+    it: {
+        title: "Informazioni su PropFirmHub",
+        subtitle: "La Tua Guida Affidabile alle Società di Trading Proprietario",
+        missionTitle: "La Nostra Missione",
+        missionText: "PropFirmHub è stato fondato con uno scopo chiaro: aiutare i trader a prendere decisioni informate nella scelta di una società di trading proprietario. Forniamo confronti imparziali e basati sui dati delle migliori prop firm al mondo, risparmiandoti ore di ricerca e aiutandoti a evitare errori costosi.",
+        whoWeAreTitle: "Chi Siamo",
+        whoWeAreText: "Siamo un team di trader esperti e analisti finanziari che hanno personalmente testato e valutato decine di società di trading proprietario. Il nostro team combina oltre 15 anni di esperienza di trading complessiva nei mercati forex, futures e azionari. Comprendiamo le sfide che i trader affrontano perché le abbiamo vissute noi stessi.",
+        methodologyTitle: "La Nostra Metodologia di Revisione",
+        methodologySubtitle: "Ogni recensione su PropFirmHub segue un rigoroso processo di valutazione a più fasi:",
+        methodologySteps: [
+            {
+                title: "Test dei Conti",
+                description: "Acquistiamo e testiamo personalmente i conti di valutazione di ogni firm che recensiamo. Questo ci offre un'esperienza diretta con le loro piattaforme, regole e condizioni di trading."
+            },
+            {
+                title: "Verifica dei Pagamenti",
+                description: "Raccogliamo e verifichiamo i dati sui pagamenti da centinaia di trader reali. Le nostre classifiche sulla velocità dei pagamenti si basano su esperienze reali di prelievo, non su affermazioni di marketing."
+            },
+            {
+                title: "Analisi delle Regole",
+                description: "Documentiamo meticolosamente ogni regola, commissione e restrizione per ogni firm. Le nostre tabelle comparative ti permettono di vedere le differenze a colpo d'occhio."
+            },
+            {
+                title: "Feedback della Comunità",
+                description: "Monitoriamo le comunità di trader, i forum e i siti di recensioni per incorporare le esperienze reali degli utenti nelle nostre valutazioni."
+            },
+            {
+                title: "Aggiornamenti Regolari",
+                description: "Le prop firm cambiano frequentemente le loro offerte. Aggiorniamo continuamente i nostri dati per garantire accuratezza e rilevanza."
+            }
+        ],
+        editorialTitle: "Standard Editoriali",
+        editorialText: "Siamo impegnati nell'indipendenza editoriale e nella trasparenza:",
+        editorialPoints: [
+            "Tutte le recensioni riflettono la nostra valutazione onesta e imparziale",
+            "Le relazioni di affiliazione non influenzano mai le nostre valutazioni o classifiche",
+            "Divulghiamo chiaramente tutte le partnership di affiliazione",
+            "Gli errori fattuali vengono corretti tempestivamente quando identificati",
+            "Separiamo il contenuto editoriale dal contenuto sponsorizzato"
+        ],
+        experienceTitle: "La Nostra Esperienza di Trading",
+        experienceText: "Il nostro team ha esperienza diretta con molteplici valutazioni di prop firm, conti finanziati e pagamenti. Abbiamo fatto trading in diverse condizioni di mercato e comprendiamo le sfide reali del raggiungimento degli obiettivi di profitto nel rispetto delle regole di drawdown. Questa esperienza diretta informa ogni recensione che scriviamo.",
+        trustTitle: "Perché i Trader Si Fidano di Noi",
+        trustPoints: [
+            { title: "10.000+ Trader", description: "nella nostra comunità si affidano ai nostri confronti" },
+            { title: "Oltre 30 Firm", description: "recensite e confrontate in dettaglio" },
+            { title: "Aggiornato Settimanalmente", description: "prezzi e dati sulle offerte mantenuti regolarmente" },
+            { title: "100% Indipendente", description: "decisioni editoriali libere dall'influenza delle firm" }
+        ],
+        contactTitle: "Contattaci",
+        contactText: "Hai domande, suggerimenti o hai trovato un errore? Ci piacerebbe sentire da te.",
+        contactButton: "Contattaci →"
     }
 };
 

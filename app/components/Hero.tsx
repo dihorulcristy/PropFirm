@@ -47,6 +47,20 @@ const translations = {
         maximumSafety: "Máxima Seguridad",
         from: "Desde",
         passIn1Step: "Pasa en 1 Paso"
+    },
+    it: {
+        title: "Confronta i Programmi di Valutazione",
+        titleHighlight: "Fino a $1M di Capitale Virtuale",
+        subtitle: "Confrontiamo i programmi di valutazione per trader e le opportunità di finanziamento simulate. Trova la migliore prop firm per le tue capacità di trading.",
+        disclaimer: "Tutte le attività di trading si svolgono in un ambiente simulato con fondi virtuali.",
+        trustedPlatforms: "Piattaforme di Trading Affidabili",
+        scroll: "Scorri",
+        bestOverall: "Migliore in Assoluto",
+        bestValue: "Miglior Rapporto Qualità-Prezzo",
+        hftAllowed: "HFT Consentito",
+        maximumSafety: "Massima Sicurezza",
+        from: "A partire da",
+        passIn1Step: "Supera in 1 Fase"
     }
 };
 

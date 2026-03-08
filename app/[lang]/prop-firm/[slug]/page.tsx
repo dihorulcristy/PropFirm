@@ -16,7 +16,7 @@ interface PageProps {
 // Generate static paths for all firms
 export async function generateStaticParams() {
     const slugs = getAllFirmSlugs();
-    const langs: Locale[] = ['en', 'ro', 'es'];
+    const langs: Locale[] = ['en', 'ro', 'es', 'it'];
 
     return langs.flatMap(lang =>
         slugs.map(slug => ({ lang, slug }))
@@ -47,8 +47,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 
     return {
-        title: titles[lang] || titles.en,
-        description: descriptions[lang] || descriptions.en,
+        title: titles[lang as keyof typeof titles] || titles.en,
+        description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
         keywords: `${firm.name} review, ${firm.name} discount code, ${firm.name} coupon, ${firm.name} ${firm.coupon}, prop firm review, ${firm.name} pricing`,
         alternates: {
             canonical: `${baseUrl}${path}`,
@@ -59,8 +59,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             }
         },
         openGraph: {
-            title: titles[lang] || titles.en,
-            description: descriptions[lang] || descriptions.en,
+            title: titles[lang as keyof typeof titles] || titles.en,
+            description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
             url: `${baseUrl}${path}`,
             type: 'article'
         }
@@ -108,7 +108,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                 "bestRating": "5",
                 "worstRating": "1"
             },
-            "reviewBody": firm.description[lang] || firm.description.en
+            "reviewBody": firm.description[lang as keyof typeof firm.description] || firm.description.en
         },
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -208,7 +208,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold text-white mb-4">{t.overview}</h2>
                         <p className="text-lg text-slate-300 leading-relaxed">
-                            {firm.description[lang] || firm.description.en}
+                            {firm.description[lang as keyof typeof firm.description] || firm.description.en}
                         </p>
                     </section>
 
@@ -318,7 +318,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                                     {t.pros}
                                 </h3>
                                 <ul className="space-y-2">
-                                    {(firm.pros[lang] || firm.pros.en).map((pro, i) => (
+                                    {(firm.pros[lang as keyof typeof firm.pros] || firm.pros.en).map((pro, i) => (
                                         <li key={i} className="flex items-start gap-2 text-slate-300">
                                             <Check className="h-4 w-4 text-emerald-400 mt-1 flex-shrink-0" />
                                             {pro}
@@ -332,7 +332,7 @@ export default async function PropFirmPage({ params }: PageProps) {
                                     {t.cons}
                                 </h3>
                                 <ul className="space-y-2">
-                                    {(firm.cons[lang] || firm.cons.en).map((con, i) => (
+                                    {(firm.cons[lang as keyof typeof firm.cons] || firm.cons.en).map((con, i) => (
                                         <li key={i} className="flex items-start gap-2 text-slate-300">
                                             <X className="h-4 w-4 text-red-400 mt-1 flex-shrink-0" />
                                             {con}

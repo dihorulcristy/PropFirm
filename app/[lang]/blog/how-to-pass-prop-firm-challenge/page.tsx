@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         }
     };
 
-    const m = meta[lang] || meta.en;
+    const m = meta[lang as keyof typeof meta] || meta.en;
     const baseUrl = 'https://propfirms-hub.com';
     const articlePath = '/blog/how-to-pass-prop-firm-challenge';
     const canonicalUrl = `${baseUrl}/${lang}${articlePath}`;
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             type: 'article',
             url: canonicalUrl,
             siteName: 'PropFirmHub',
-            locale: localeMap[lang] || 'en_US',
+            locale: localeMap[lang as keyof typeof localeMap] || 'en_US',
             publishedTime: '2025-12-30T12:00:00Z',
             modifiedTime: '2026-01-02T12:00:00Z',
             authors: ['PropFirmHub Team'],
@@ -410,7 +410,7 @@ const translations = {
 
 export default async function HowToPassPropFirmChallengePage({ params }: PageProps) {
     const { lang } = await params;
-    const t = translations[lang] || translations.en;
+    const t = translations[lang as keyof typeof translations] || translations.en;
     const homeLink = lang === 'en' ? '/' : `/${lang}`;
     const blogLink = lang === 'en' ? '/blog' : `/${lang}/blog`;
 

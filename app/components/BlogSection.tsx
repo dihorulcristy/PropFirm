@@ -63,6 +63,25 @@ const translations = {
                 description: "Top 10 pagos procesados el mes pasado. Mira quién paga más rápido."
             }
         ]
+    },
+    it: {
+        blogs: [
+            {
+                slug: "how-to-pass-prop-firm-challenge",
+                title: "Supera la Sfida Prop Firm",
+                description: "10 passaggi comprovati per superare la valutazione prop firm e ottenere un finanziamento."
+            },
+            {
+                slug: "taxes-2025",
+                title: "Tasse 2026",
+                description: "Confronta tasse e commissioni per il 2026. Guida completa per i trader."
+            },
+            {
+                slug: "top-payouts",
+                title: "Migliori Pagamenti",
+                description: "I 10 migliori pagamenti elaborati il mese scorso. Scopri chi paga più velocemente."
+            }
+        ]
     }
 };
 

@@ -84,6 +84,31 @@ const translations = {
         otherWays: "Otras Formas de Contactarnos",
         emailLabel: "Correo electrónico:",
         error: "Algo salió mal. Por favor, inténtalo de nuevo o envíanos un correo electrónico directamente."
+    },
+    it: {
+        title: "Contattaci",
+        intro: "Hai una domanda o un feedback? Ci piacerebbe sentire da te. Compila il modulo sottostante e ti risponderemo il prima possibile.",
+        labels: {
+            name: "Nome *",
+            email: "Email *",
+            subject: "Oggetto *",
+            message: "Messaggio *"
+        },
+        placeholders: {
+            name: "Il tuo nome",
+            email: "tuo@email.com",
+            subject: "Di cosa si tratta?",
+            message: "Il tuo messaggio..."
+        },
+        buttons: {
+            send: "Invia Messaggio",
+            sending: "Invio in corso...",
+            sent: "✓ Inviato!"
+        },
+        success: "Grazie! Il tuo messaggio è stato inviato con successo. Ti risponderemo presto.",
+        otherWays: "Altri Modi per Contattarci",
+        emailLabel: "Email:",
+        error: "Qualcosa è andato storto. Per favore riprova o inviaci un'email direttamente."
     }
 };
 
