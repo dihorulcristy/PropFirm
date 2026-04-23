@@ -802,6 +802,57 @@ export const allPropFirms: PropFirm[] = [
         }
     },
     {
+        id: 20,
+        slug: 'fundedelite',
+        name: 'FundedElite',
+        rating: 4.8,
+        verified: true,
+        maxDD: '14%',
+        profitSplit: '80%',
+        price: '$16.8',
+        oldPrice: '$24',
+        coupon: 'No Code (Auto-Applied)',
+        offer: '30% OFF',
+        link: 'https://app.fundedelite.com?aff=AFF1115772',
+        logoUrl: '/logos/fundedelite.png',
+        platforms: ['MT5', 'Match-Trader'],
+        challengeType: '1-Step',
+        marketType: 'forex',
+        features: {
+            instantFunding: true,
+            hftAllowed: false,
+            newsTrading: true,
+            cryptoPayout: true,
+            usaAccepted: false,
+            noTimeLimit: true,
+            weeklyPayouts: false,
+        },
+        payoutDays: 21,
+        capitalPricing: {
+            5000: { price: '$16.8', oldPrice: '$24' },
+            10000: { price: '$27.3', oldPrice: '$39' },
+            25000: { price: '$76.3', oldPrice: '$109' },
+            50000: { price: '$160.3', oldPrice: '$229' },
+            100000: { price: '$258.3', oldPrice: '$369' },
+            200000: { price: '$510.3', oldPrice: '$729' },
+        },
+        description: {
+            en: 'FundedElite offers flexible funding up to $400K with up to 80% profit splits for their Lite 1-Step accounts. Features include 14% max drawdown, no time limits, and news trading allowed.',
+            ro: 'FundedElite oferă finanțare flexibilă de până la $400K cu împărțire a profitului de până la 80% pentru conturile Lite 1-Step. Caracteristicile includ drawdown maxim de 14%, fără limite de timp și tranzacționare la știri permisă.',
+            es: 'FundedElite ofrece financiación flexible de hasta $400K con una división de beneficios de hasta el 80% para sus cuentas Lite 1-Step. Las características incluyen un drawdown máximo del 14%, sin límites de tiempo y comercio de noticias permitido.'
+        },
+        pros: {
+            en: ['High 14% max drawdown', '30% discount auto-applied', 'Instant funding available', 'No time limits', 'News trading allowed'],
+            ro: ['Drawdown maxim mare de 14%', '30% reducere aplicată automat', 'Finanțare instantă disponibilă', 'Fără limite de timp', 'Tranzacționarea la știri permisă'],
+            es: ['Alto drawdown máximo del 14%', '30% de descuento aplicado automáticamente', 'Financiación instantánea disponible', 'Sin límites de tiempo', 'Permitido operar con noticias']
+        },
+        cons: {
+            en: ['First payout after 21 days', 'Newer in the market', 'Profit split drops to 70% on Instant accounts'],
+            ro: ['Primul payout după 21 de zile', 'Mai nou pe piață', 'Profit split scade la 70% pe conturile Instant'],
+            es: ['Primer pago después de 21 días', 'Más nuevo en el mercado', 'La división de beneficios cae al 70% en cuentas Instant']
+        }
+    },
+    {
         id: 21,
         slug: 'legacy-funded-futures',
         name: 'Legacy Funded Futures',
