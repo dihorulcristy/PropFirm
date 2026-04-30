@@ -409,7 +409,7 @@ export default function LocalizedCouponsPage({ lang = 'en' }: CouponsPageProps) 
                                                             <p className="text-sm text-slate-300">20% {t.off} <span className="text-emerald-400 font-mono">hgc</span></p>
                                                         </div>
                                                     </div>
-                                                    <a href="https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
+                                                    <a href="https://funderpro.cxclick.com/visit/?bta=35241&nci=5350" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-400 hover:text-emerald-300 font-medium underline">{t.viewOffer}</a>
                                                 </div>
                                             </div>
 

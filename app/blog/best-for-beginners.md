@@ -259,7 +259,7 @@ FunderPro offers **same-day payouts**, so you see your profits quickly. Great fo
 
 **Best For**: Beginners who need fast access to profits.
 
-[👉 Get Started with FunderPro (20% OFF) →](https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro)
+[👉 Get Started with FunderPro (20% OFF) →](https://funderpro.cxclick.com/visit/?bta=35241&nci=5350)
 
 ---
 

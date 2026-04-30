@@ -41,7 +41,7 @@ const allDeals: DealFirm[] = [
         discount: '20% OFF',
         coupon: 'hgc',
         offer: '20% OFF',
-        link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
+        link: 'https://funderpro.cxclick.com/visit/?bta=35241&nci=5350',
         verified: true,
         priority: 2,
         hasActiveCoupon: true

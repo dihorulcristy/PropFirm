@@ -161,7 +161,7 @@ const beginnerFirms = [
         usaAccepted: false,
         discount: '20% OFF',
         coupon: 'hgc',
-        link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
+        link: 'https://funderpro.cxclick.com/visit/?bta=35241&nci=5350',
         bestFor: 'Beginners who need fast access to profits',
         pros: ['Same-day payouts', 'Multiple platforms', 'Weekly payouts', 'No time limit'],
     },

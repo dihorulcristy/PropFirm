@@ -485,7 +485,7 @@ const allFirms: Firm[] = [
         coupon: 'hgc',
         offer: '20% OFF',
         action: 'Get Funded',
-        link: 'https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro',
+        link: 'https://funderpro.cxclick.com/visit/?bta=35241&nci=5350',
         logoUrl: '/logos/funderpro.png',
         capital: 100000,
         platform: ['TradeLocker', 'MT4', 'MT5', 'cTrader'],

@@ -41,7 +41,7 @@ Getting paid quickly is crucial. Some firms pay in 24 hours, others take 60+ day
 - **Frequency**: On demand
 - **Rating**: 4.8/5
 - **Discount**: 20% OFF (code: hgc)
-- [Get Funded →](https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro)
+- [Get Funded →](https://funderpro.cxclick.com/visit/?bta=35241&nci=5350)
 
 **Trader Review**: *"Requested payout Friday morning, had it Saturday. Incredible!"* - James, $150k trader
 
