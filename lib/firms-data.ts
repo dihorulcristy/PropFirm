@@ -759,17 +759,17 @@ export const allPropFirms: PropFirm[] = [
         verified: true,
         maxDD: '3-7%',
         profitSplit: '100%',
-        price: '$31.90/mo',
+        price: '$63.80/mo',
         oldPrice: '$319',
         coupon: 'PFH',
-        offer: '90% OFF',
+        offer: '80% OFF',
         link: 'https://nexgenprotraderfunding.com/?linkId=lp_263534&sourceId=herghiligiu-cristian&tenantId=protraderfunding&affS1=instagram',
         logoUrl: '/logos/nexgen-protrader.jpg',
         platforms: ['TradingView', 'Sierra Chart', 'CQG', 'Multi Charts', 'Bluewater', 'Agenda Trader', 'ZlanTrader', 'AdvancedTS', 'MotiveWave', 'Book Map', 'Jigsaw', 'Linn Soft', 'Rocket Scooter', 'Go Charting'],
         challengeType: '1-Step',
         marketType: 'futures',
         features: {
-            instantFunding: false,
+            instantFunding: true,
             hftAllowed: false,
             newsTrading: true,
             cryptoPayout: false,
@@ -779,11 +779,11 @@ export const allPropFirms: PropFirm[] = [
         },
         payoutDays: 1,
         capitalPricing: {
-            25000: { price: '$14.90/mo', oldPrice: '$149' },
-            50000: { price: '$24.90/mo', oldPrice: '$249' },
-            75000: { price: '$29.90/mo', oldPrice: '$299' },
-            100000: { price: '$31.90/mo', oldPrice: '$319' },
-            150000: { price: '$39.90/mo', oldPrice: '$399' },
+            25000: { price: '$29.80/mo', oldPrice: '$149' },
+            50000: { price: '$49.80/mo', oldPrice: '$249' },
+            75000: { price: '$59.80/mo', oldPrice: '$299' },
+            100000: { price: '$63.80/mo', oldPrice: '$319' },
+            150000: { price: '$79.80/mo', oldPrice: '$399' },
         },
         description: {
             en: 'Nexgen ProTrader Funding offers an innovative subscription-based futures evaluation program. With just 1 day to pass and up to 100% profit split after 16 payouts, it\'s perfect for consistent traders looking for affordable entry into futures trading.',
@@ -791,9 +791,9 @@ export const allPropFirms: PropFirm[] = [
             es: 'Nexgen ProTrader Funding ofrece un innovador programa de evaluación de futuros basado en suscripción. Con solo 1 día para pasar y hasta 100% de división de ganancias después de 16 pagos, es perfecto para traders consistentes que buscan una entrada asequible al trading de futuros.'
         },
         pros: {
-            en: ['90% OFF with code PFH', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)', 'Same Drawdown in ALL accounts (Evals and Funded)', 'Up to 5 funded accounts', 'Built-in trade copier available'],
-            ro: ['90% reducere cu codul PFH', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)', 'Același Drawdown în TOATE conturile (Evaluare și Finanțate)', 'Până la 5 conturi finanțate', 'Trade copier integrat disponibil'],
-            es: ['90% de descuento con código PFH', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)', 'Mismo Drawdown en TODAS las cuentas (Evaluación y Financiadas)', 'Hasta 5 cuentas financiadas', 'Copiadora de operaciones integrada disponible']
+            en: ['80% OFF Evals (Code: PFH)', '40% OFF Instant & Activation (Code: PFH40)', 'Up to 100% profit split', '1-Step evaluation', 'USA traders accepted', 'Subscription-based (low entry cost)', 'Same Drawdown in ALL accounts (Evals and Funded)', 'Up to 5 funded accounts', 'Built-in trade copier available'],
+            ro: ['80% reducere Evaluări (Cod: PFH)', '40% reducere Instant & Activare (Cod: PFH40)', 'Până la 100% împărțire profit', 'Evaluare 1-Step', 'Traderi din SUA acceptați', 'Bazat pe abonament (cost de intrare redus)', 'Același Drawdown în TOATE conturile (Evaluare și Finanțate)', 'Până la 5 conturi finanțate', 'Trade copier integrat disponibil'],
+            es: ['80% dto. Evaluaciones (Código: PFH)', '40% dto. Instantáneas y Activación (Código: PFH40)', 'Hasta 100% división de ganancias', 'Evaluación 1-Step', 'Traders de EE.UU. aceptados', 'Basado en suscripción (bajo costo de entrada)', 'Mismo Drawdown en TODAS las cuentas (Evaluación y Financiadas)', 'Hasta 5 cuentas financiadas', 'Copiadora de operaciones integrada disponible']
         },
         cons: {
             en: ['Futures only', 'Subscription model (recurring payments)'],
