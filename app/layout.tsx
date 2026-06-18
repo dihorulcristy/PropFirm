@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import GDPRBanner from "./components/GDPRBanner";
 import EmailCapturePopup from "./components/EmailCapturePopup";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -131,6 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <Analytics />
       </body>
     </html>
   );
